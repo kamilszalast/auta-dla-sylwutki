@@ -1,16 +1,14 @@
 {
- "lastRun": "2026-11-10T14:15:18+01:00",
- "lastAttempt": "2026-11-10T14:15:18+01:00",
+ "lastRun": "2026-11-10T15:08:35+01:00",
+ "lastAttempt": "2026-11-10T15:08:35+01:00",
  "ranBy": "mac",
- "newCount": 263,
- "activeCount": 263,
+ "newCount": 278,
+ "activeCount": 278,
  "rejectedCount": 70,
  "pendingDetails": 0,
  "sources": {
-  "otomoto": "częściowo",
+  "otomoto": "ok",
   "olx": "zablokowane dla automatu (403), sprawdzaj ręcznie"
  },
- "errors": [
-  "Pobieranie ogłoszeń przerwane po 20 minutach. Reszta przy następnej aktualizacji."
- ]
+ "errors": []
 }
