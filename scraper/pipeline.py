@@ -59,7 +59,13 @@ def _store_classification(car, result):
 
 
 def _details(cars, fetcher, today, limit, errors):
-    queue = [c for c in cars if c["status"] == "active" and not c.get("detailed") and not c.get("manual")]
+    queue = []
+    for car in cars:
+        if car["status"] != "active" or car.get("detailed") or car.get("manual"):
+            continue
+        _store_classification(car, rules.classify(car, None, car.get("inAc")))
+        if not car["auto"]["reject"]:
+            queue.append(car)
     queue.sort(key=lambda c: (not c.get("inAc"), -c["year"], c["km"]))
     failed = 0
     for car in queue[:limit]:
@@ -83,9 +89,6 @@ def _details(cars, fetcher, today, limit, errors):
         car.update(detailed=True, detailedAt=today)
     if failed:
         errors.append("Nie udało się pobrać %d ogłoszeń. Spróbuję przy następnej aktualizacji." % failed)
-    for car in cars:
-        if not car.get("detailed") and not car.get("manual"):
-            _store_classification(car, rules.classify(car, None, car.get("inAc")))
 
 
 def run(root, fetcher, now, ran_by, detail_limit, force):

@@ -150,3 +150,17 @@ class PipelineTest(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class DetailQueueTest(unittest.TestCase):
+    def test_title_rejected_cars_not_fetched(self):
+        from scraper import store
+        from tests.helpers import item
+        cesja = store.car_from_item(dict(item(otoId="1", url="https://www.otomoto.pl/osobowe/oferta/a-ID1.html",
+                                              title="Toyota Corolla cesja leasingu"), inAc=True), "2026-11-11")
+        ok = store.car_from_item(dict(item(otoId="2", url="https://www.otomoto.pl/osobowe/oferta/b-ID2.html"),
+                                      inAc=True), "2026-11-11")
+        f = FakeFetcher()
+        pipeline._details([cesja, ok], f, "2026-11-11", 100, [])
+        self.assertEqual(f.ads(), ["https://www.otomoto.pl/osobowe/oferta/b-ID2.html"])
+        self.assertIn("Cesja", cesja["auto"]["reject"])
