@@ -202,7 +202,6 @@ h2.book { font-size: 1.95rem; line-height: 1.02; font-weight: 850; font-stretch:
 .voided ul li { padding-block: 0; border-bottom: 0; }
 .voided li a { display: flex; min-height: 44px; align-items: center; color: var(--ink-2); font-size: .95rem; }
 .show-all { appearance: none; width: 100%; min-height: 50px; margin-top: 16px; border-radius: 10px; border: 2px solid var(--ink); background: transparent; color: var(--ink); font: 750 1rem var(--f-read); cursor: pointer; }
-.kamil { font-weight: 750; }
 .calls .gone { color: #24121c; font-weight: 700; }
 .loading { padding-block: 22px; color: var(--ink-2); }
 
@@ -404,7 +403,7 @@ h2.book { font-size: 1.95rem; line-height: 1.02; font-weight: 850; font-stretch:
 <footer class="back">
   <div class="in">
     <b>Auta dla Sylwutki</b>
-    <p>Oferty z Otomoto sprawdzane codziennie automatycznie, około 6:00. Uwagi oznaczone „Kamil” dopisał Kamil. Przed wyjazdem potwierdź cenę i dostępność ze sprzedającym.</p>
+    <p>Oferty z Otomoto sprawdzane codziennie automatycznie, około 6:00. Przed wyjazdem potwierdź cenę i dostępność ze sprzedającym.</p>
   </div>
 </footer>
 
@@ -421,7 +420,6 @@ h2.book { font-size: 1.95rem; line-height: 1.02; font-weight: 850; font-stretch:
   var load = function (k, d) { try { var v = JSON.parse(localStorage.getItem(k) || 'null'); return v == null ? d : v; } catch (e) { return d; } };
   var save = function (k, v) { try { localStorage.setItem(k, JSON.stringify(v)); } catch (e) {} };
   var mark = function (id) { return '<svg aria-hidden="true"><use href="#' + id + '"/></svg>'; };
-  var kamil = function (c, field) { return c.byKamil && c.byKamil.indexOf(field) > -1 ? '<b class="kamil">Kamil:</b> ' : ''; };
 
   var calls = load('sylwia-telefon', []);
 
@@ -490,10 +488,10 @@ h2.book { font-size: 1.95rem; line-height: 1.02; font-weight: 850; font-stretch:
         '<div class="wide"><dt>Pochodzenie</dt><dd>' + esc(origin(c)) + '</dd></div>' +
       '</dl>' +
       '<ul class="equip" aria-label="Wyposażenie">' + equip('Klima auto', c.ac) + equip('Kamera', c.cam) + equip('Czujniki', c.pdc) + equip('CarPlay', c.cp) + '</ul>' +
-      (ranked && c.why ? '<p class="why">' + kamil(c, 'why') + esc(c.why) + '</p>' : '') +
+      (ranked && c.why ? '<p class="why">' + esc(c.why) + '</p>' : '') +
       '<div class="notes">' +
-        (c.plus ? '<p>' + mark('m-plus') + '<span>' + kamil(c, 'plus') + esc(c.plus) + '</span></p>' : '') +
-        (c.watch ? '<p>' + mark('m-ask') + '<span><span class="sr">Do dopytania: </span>' + kamil(c, 'watch') + esc(c.watch) + '</span></p>' : '') +
+        (c.plus ? '<p>' + mark('m-plus') + '<span>' + esc(c.plus) + '</span></p>' : '') +
+        (c.watch ? '<p>' + mark('m-ask') + '<span><span class="sr">Do dopytania: </span>' + esc(c.watch) + '</span></p>' : '') +
         (pending ? '<p>' + mark('m-ask') + '<span>Szczegóły ogłoszenia sprawdzimy przy następnej aktualizacji. Do tego czasu kamerę, czujniki i CarPlay trzeba dopytać.</span></p>' : '') +
       '</div>' +
       '<div class="acts-row">' + links(c) +
