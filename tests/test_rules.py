@@ -1,0 +1,153 @@
+import unittest
+
+from scraper import rules
+from tests.helpers import AUTO_LABEL, ad, item
+
+
+def run(description="", label=AUTO_LABEL, keys=(), details=None, in_ac=False, **item_kw):
+    return rules.classify(item(**item_kw), ad(description, label, keys, details), in_ac)
+
+
+class AirConditioningTest(unittest.TestCase):
+    def test_ac_from_param(self):
+        r = run(label=AUTO_LABEL)
+        self.assertEqual(r["equipment"]["ac"], 1)
+        self.assertIsNone(r["reject"])
+
+    def test_ac_from_description(self):
+        r = run("Auto ma climatronic i tempomat.", label=None)
+        self.assertEqual(r["equipment"]["ac"], 1)
+        self.assertIsNone(r["reject"])
+
+    def test_ac_plain_klimatyzacja_is_ask(self):
+        r = run("Sprawna klimatyzacja, nowe opony.", label=None)
+        self.assertEqual(r["equipment"]["ac"], 2)
+        self.assertTrue(any("automatyczna" in w for w in r["watch"]))
+
+    def test_ac_manual_label_rejected(self):
+        r = run("Zadbany.", label="Klimatyzacja manualna")
+        self.assertEqual(r["reject"], "Klimatyzacja manualna")
+
+    def test_no_ac_rejected(self):
+        r = run("Zadbany, nowe opony.", label=None)
+        self.assertEqual(r["reject"], "Brak klimy automatycznej w ogłoszeniu")
+
+
+class RedFlagsTest(unittest.TestCase):
+    def test_cesja_rejected(self):
+        self.assertIn("Cesja", run("Cesja leasingu, odstępne 19 900 zł.")["reject"])
+        self.assertIn("Cesja", run("Do zapłaty odstępne, dalej raty.")["reject"])
+
+    def test_leasing_word_alone_ok(self):
+        self.assertIsNone(run("Możliwy leasing i kredyt.")["reject"])
+
+    def test_damage_rejected(self):
+        self.assertEqual(run("Auto uszkodzone z przodu.")["reject"], "Uszkodzone według opisu")
+
+    def test_negated_damage_ok(self):
+        for text in ("Auto nieuszkodzony, bezwypadkowy.", "Stan idealny, bez uszkodzeń.", "Brak uszkodzeń blacharskich."):
+            self.assertIsNone(run(text)["reject"], text)
+
+    def test_do_naprawy_is_watch_not_reject(self):
+        r = run("Do naprawy czujnik ciśnienia w oponach.")
+        self.assertIsNone(r["reject"])
+        self.assertTrue(any("naprawy" in w for w in r["watch"]))
+
+    def test_low_mileage_rejected(self):
+        self.assertIn("mały przebieg", run(km=190, year=2018)["reject"])
+
+    def test_low_mileage_new_car_ok(self):
+        self.assertIsNone(run(km=9000, year=2023)["reject"])
+
+
+class MileageTest(unittest.TestCase):
+    def test_mileage_higher_in_description_rejected(self):
+        r = run("Przebieg: 159 900 km, serwisowany.", km=119900)
+        self.assertEqual(r["reject"], "Przebieg w opisie (159 900 km) wyższy niż w ogłoszeniu (119 900 km)")
+
+    def test_mileage_typo_is_watch(self):
+        r = run("Niski przebieg 9 347 km.", km=93500)
+        self.assertIsNone(r["reject"])
+        self.assertTrue(any("9 347 km" in w and "93 500 km" in w for w in r["watch"]))
+
+    def test_mileage_in_thousands(self):
+        self.assertIsNone(run("Przebieg 100 tys. km udokumentowany.", km=100500)["reject"])
+
+    def test_unrelated_km_ignored(self):
+        r = run("Rozrząd wymieniony przy 90 000 km.", km=100000)
+        self.assertIsNone(r["reject"])
+        self.assertEqual(r["watch"], [])
+
+
+class EquipmentTest(unittest.TestCase):
+    def test_equipment_from_keys(self):
+        r = run(keys=("rear_view_camera", "park_distance_control_rear", "apple_carplay"))
+        self.assertEqual(r["equipment"], {"ac": 1, "cam": 1, "pdc": 1, "cp": 1})
+
+    def test_equipment_from_description(self):
+        r = run("Kamera cofania, czujniki parkowania przód i tył, Apple CarPlay.")
+        self.assertEqual(r["equipment"], {"ac": 1, "cam": 1, "pdc": 1, "cp": 1})
+
+    def test_rain_sensor_is_not_parking_sensor(self):
+        self.assertEqual(run("Czujnik deszczu i zmierzchu.")["equipment"]["pdc"], 0)
+
+    def test_android_auto_only_is_ask(self):
+        r = run(keys=("android_auto",))
+        self.assertEqual(r["equipment"]["cp"], 2)
+        self.assertTrue(any("CarPlay" in w for w in r["watch"]))
+
+    def test_facts_and_plus(self):
+        details = {"country_origin": "Polska", "original_owner": "Tak", "service_record": "Tak",
+                   "no_accident": "Tak", "vin": "", "body_type": "Kombi"}
+        r = run(details=details)
+        self.assertEqual(r["facts"], {"salonPL": True, "firstOwner": True, "aso": True, "noAccident": True,
+                                      "origin": "Polska", "hasVin": True})
+        self.assertEqual(r["body"], "kombi")
+        self.assertEqual(r["plus"][:4], ["polski salon", "pierwszy właściciel", "serwis w ASO", "bezwypadkowy"])
+        self.assertIn("klima dwustrefowa", r["plus"])
+
+    def test_imported_watch(self):
+        r = run(details={"country_origin": "Francja"})
+        self.assertTrue(any(w.startswith("Sprowadzony") and "Francja" in w for w in r["watch"]))
+        self.assertFalse(r["facts"]["salonPL"])
+
+
+class PendingTest(unittest.TestCase):
+    def test_pending_without_details(self):
+        r = rules.classify(item(), None, True)
+        self.assertTrue(r["pending"])
+        self.assertEqual(r["equipment"], {"ac": 1, "cam": 2, "pdc": 2, "cp": 2})
+        self.assertEqual(rules.classify(item(), None, False)["equipment"]["ac"], 2)
+
+    def test_pending_still_checks_title_and_mileage(self):
+        self.assertIn("Cesja", rules.classify(item(title="Toyota Corolla cesja leasingu"), None, True)["reject"])
+        self.assertIn("mały przebieg", rules.classify(item(km=1, year=2019), None, True)["reject"])
+
+
+class CriteriaTest(unittest.TestCase):
+    def test_soft_out(self):
+        self.assertIn("30 000", rules.soft_out(item(price=30900)))
+        self.assertIn("120 000", rules.soft_out(item(fuel="hev", km=156000)))
+        self.assertIsNone(rules.soft_out(item(price=29999, km=119000)))
+
+    def test_hard_ok_adam_needs_100hp(self):
+        adam = dict(make="opel", model="adam", fuel="pb", cc=1398)
+        self.assertFalse(rules.hard_ok(item(hp=90, **adam)))
+        self.assertTrue(rules.hard_ok(item(hp=100, **adam)))
+        self.assertFalse(rules.hard_ok(item(make="opel", model="corsa", fuel="pb", hp=100)))
+
+    def test_hard_ok_diesel_cc(self):
+        self.assertTrue(rules.hard_ok(item(cc=1598)))
+        self.assertFalse(rules.hard_ok(item(cc=1995)))
+
+    def test_hard_ok_limits(self):
+        self.assertFalse(rules.hard_ok(item(year=2010)))
+        self.assertFalse(rules.hard_ok(item(hp=90)))
+        self.assertFalse(rules.hard_ok(item(price=31001)))
+        self.assertFalse(rules.hard_ok(item(km=126000)))
+        self.assertTrue(rules.hard_ok(item(fuel="hev", km=159000)))
+        self.assertFalse(rules.hard_ok(item(fuel="other")))
+
+
+if __name__ == "__main__":
+    unittest.main()
