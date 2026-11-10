@@ -113,6 +113,8 @@ h2.book { font-size: 1.95rem; line-height: 1.02; font-weight: 850; font-stretch:
 .out svg { width: 20px; height: 20px; color: var(--stamp); }
 .new-entry { margin: 0 0 6px; color: var(--stamp); font-size: .875rem; font-weight: 700; }
 .price { font: 800 1.4rem/1.1 var(--f-book); font-stretch: 100%; font-variant-numeric: tabular-nums; }
+.price-note { grid-column: 1; font-size: .9rem; color: var(--ink-2); font-variant-numeric: tabular-nums; }
+.avg { font-weight: 650; font-variant-numeric: tabular-nums; padding-top: 4px; }
 .fields { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 16px; }
 .fields div { display: grid; grid-template-columns: auto 1fr; gap: 10px; align-items: baseline; padding-block: 8px 6px; border-bottom: 1px solid var(--rule); min-width: 0; }
 .fields dt { font: 500 .8rem/1.2 var(--f-book); color: var(--ink-2); }
@@ -339,6 +341,7 @@ h2.book { font-size: 1.95rem; line-height: 1.02; font-weight: 850; font-stretch:
       </div>
     </div>
     <p class="count" id="count" aria-live="polite"></p>
+    <p class="avg" id="avg" hidden></p>
     <div class="entries" id="list"></div>
     <button type="button" class="show-all" id="show-all" hidden></button>
   </section>
@@ -421,7 +424,8 @@ h2.book { font-size: 1.95rem; line-height: 1.02; font-weight: 850; font-stretch:
   var FUEL = { on: 'diesel', lpg: 'benzyna z gazem', hev: 'hybryda', pb: 'benzyna' };
   var LIMIT = 30;
   var STALE_MS = 36 * 3600 * 1000;
-  var cars = [], byId = {}, meta = {}, runDay = '', stampDate = '', showAll = false;
+  var cars = [], byId = {}, meta = {}, runDay = '', stampDate = '', showAll = false, avg = {};
+  var AVG_MIN = 5, AVG_BAND = 0.05;
 
   var nb = function (n) { return n.toLocaleString('pl-PL').replace(/[\s ]/g, ' '); };
   var esc = function (s) { return String(s).replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }); };
@@ -450,6 +454,23 @@ h2.book { font-size: 1.95rem; line-height: 1.02; font-weight: 850; font-stretch:
     if (!f.origin) return 'nie podano';
     if (f.origin === 'Polska') return f.originFrom === 'opis' ? 'Polska, według opisu' : 'Polska od nowości';
     return 'sprowadzony: ' + f.origin;
+  }
+  function averages() {
+    var groups = {};
+    cars.filter(visible).forEach(function (c) { (groups[c.name] = groups[c.name] || []).push(c.price); });
+    avg = {};
+    Object.keys(groups).forEach(function (k) {
+      var g = groups[k];
+      if (g.length >= AVG_MIN) avg[k] = { mean: Math.round(g.reduce(function (a, b) { return a + b; }, 0) / g.length / 100) * 100, n: g.length };
+    });
+  }
+  function priceNote(c) {
+    var a = avg[c.name];
+    if (!a) return '';
+    var diff = Math.round((c.price - a.mean) / 100) * 100;
+    var text = Math.abs(c.price - a.mean) <= a.mean * AVG_BAND ? 'W średniej cenie'
+      : nb(Math.abs(diff)) + '&nbsp;zł ' + (diff < 0 ? 'poniżej' : 'powyżej') + ' średniej';
+    return '<p class="price-note">' + text + ' (' + nb(a.mean) + '&nbsp;zł z ' + a.n + ' ofert)</p>';
   }
   function visible(c) { return c.status === 'active' && !c.reject && (c.detailed || c.inAc || c.manual); }
 
@@ -484,7 +505,7 @@ h2.book { font-size: 1.95rem; line-height: 1.02; font-weight: 850; font-stretch:
     return '<article class="entry' + (ranked ? ' top' : '') + (picked ? ' picked' : '') + '" data-id="' + esc(c.id) + '">' +
       (ranked ? '<p class="ledger" aria-hidden="true"><span>Wpis ' + c.top + '</span><span>polecane</span><span>' + stampDate + '</span></p>' : '') +
       '<div class="entry-h">' + (ranked ? roundStamp(c.top) : '') + (picked ? callStamp(pressId === c.id) : '') +
-        '<h3>' + (ranked ? '<span class="sr">Polecane numer ' + c.top + ': </span>' : '') + esc(c.name) + (picked ? '<span class="sr"> (na liście do telefonu)</span>' : '') + '</h3><p class="price">' + nb(c.price) + '&nbsp;zł</p></div>' +
+        '<h3>' + (ranked ? '<span class="sr">Polecane numer ' + c.top + ': </span>' : '') + esc(c.name) + (picked ? '<span class="sr"> (na liście do telefonu)</span>' : '') + '</h3><p class="price">' + nb(c.price) + '&nbsp;zł</p>' + priceNote(c) + '</div>' +
       (c.fresh ? '<p class="new-entry">Nowa na liście</p>' : '') +
       (c.out ? '<p class="out">' + mark('m-ask') + '<span>Poza kryteriami: ' + esc(c.out) + '</span></p>' : '') +
       '<dl class="fields">' +
@@ -551,6 +572,9 @@ h2.book { font-size: 1.95rem; line-height: 1.02; font-weight: 850; font-stretch:
     document.getElementById('count').textContent = !n ? '' : shown.length < n
       ? 'Pokazuję ' + shown.length + ' najlepszych. Wszystkich aut poza polecanymi: ' + n
       : n + ' ' + plural(n, 'auto', 'auta', 'aut') + ' poza trzema polecanymi';
+    var avgEl = document.getElementById('avg'), adam = avg['Opel Adam'];
+    avgEl.hidden = !(state.fuel === 'pb' && adam);
+    avgEl.textContent = adam ? 'Średnia cena Opla Adama: ' + nb(adam.mean) + ' zł (z ' + adam.n + ' ofert).' : '';
     moreEl.hidden = shown.length >= n;
     moreEl.textContent = 'Pokaż wszystkie (' + n + ')';
     tabs.forEach(function (b) { b.setAttribute('aria-pressed', String(b.dataset.fuel === state.fuel)); });
@@ -605,6 +629,7 @@ h2.book { font-size: 1.95rem; line-height: 1.02; font-weight: 850; font-stretch:
     stampDate = runDay ? fmtDay(runDay) : '';
     byId = {};
     cars.forEach(function (c) { byId[c.id] = view(c); });
+    averages();
     renderCover(); renderCalls(); renderTop(); renderList(); renderVoid();
   }
   function fail() {
