@@ -5,7 +5,7 @@ from pathlib import Path
 
 from . import config
 
-LIST_FIELDS = ("price", "km", "city", "region", "seller")
+LIST_FIELDS = ("price", "km", "city", "region", "seller", "photo")
 
 
 def load(path, default):
@@ -33,6 +33,7 @@ def car_from_item(item, today):
         "year": item["year"], "km": item["km"], "hp": item["hp"], "cc": item.get("cc"),
         "price": item["price"], "city": item["city"], "region": item["region"], "seller": item["seller"],
         "make": item.get("make"), "model": item.get("model"), "title": item.get("title"), "origin": item.get("origin"),
+        "photo": item.get("photo"),
         "equipment": {"ac": 2, "cam": 2, "pdc": 2, "cp": 2}, "facts": None,
         "out": None, "plus": None, "watch": None, "why": None, "score": 0, "top": None,
         "reject": None, "pending": True, "detailed": False, "inAc": bool(item.get("inAc")),

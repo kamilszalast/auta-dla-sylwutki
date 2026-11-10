@@ -33,7 +33,7 @@ def trim_list(src):
         inner = json.loads(inner) if isinstance(inner, str) else inner
         if inner and "advertSearch" in inner:
             search = inner["advertSearch"]
-            keep = ("id", "title", "url", "location", "price", "parameters", "seller")
+            keep = ("id", "title", "url", "location", "price", "parameters", "seller", "thumbnail")
             edges = [{"node": {k: e["node"].get(k) for k in keep}} for e in search["edges"]]
             trimmed = {"advertSearch": {"totalCount": search["totalCount"], "pageInfo": search["pageInfo"], "edges": edges}}
             state = {"k1": {"data": json.dumps(trimmed, ensure_ascii=False)}}

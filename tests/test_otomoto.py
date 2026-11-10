@@ -28,6 +28,7 @@ class ParseListTest(unittest.TestCase):
         self.assertEqual((first["fuel"], first["gear"], first["seller"]), ("on", "manualna", "prywatnie"))
         self.assertEqual((first["price"], first["city"], first["region"]), (28900, "Tomnice", "Wielkopolskie"))
         self.assertEqual(first["origin"], "Francja")
+        self.assertEqual(first["photo"], "https://ireland.apollo.olxcdn.com/v1/files/tfdg9sv7y8nj-OTOMOTOPL/image;s=640x480")
 
     def test_parse_list_skips_broken_nodes(self):
         import json, re

@@ -5,7 +5,7 @@ def item(**kw):
     base = dict(otoId="1", url="https://www.otomoto.pl/osobowe/oferta/opel-astra-ID1.html", title="Opel Astra",
                 make="opel", model="astra", name="Opel Astra", version="1.6 CDTI", year=2017, km=100000,
                 hp=110, cc=1598, fuel="on", gear="manualna", price=28000, city="Rzeszów",
-                region="Podkarpackie", seller="prywatnie", origin=None)
+                region="Podkarpackie", seller="prywatnie", origin=None, photo=None)
     base.update(kw)
     return base
 

@@ -84,6 +84,7 @@ def _item(node):
         "region": ((location.get("region") or {}).get("name")) or "",
         "seller": "prywatnie" if seller == "PrivateSeller" else "komis",
         "origin": disp("country_origin"),
+        "photo": (node.get("thumbnail") or {}).get("x2"),  # first listing photo, 640x480, linked not copied
     }
 
 

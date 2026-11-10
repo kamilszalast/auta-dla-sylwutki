@@ -12,13 +12,14 @@ def seen(*items, in_ac=False):
 
 class CarFromItemTest(unittest.TestCase):
     def test_car_fields(self):
-        c = store.car_from_item(dict(item(otoId="42", cc=1560, hp=92), inAc=True), "2026-11-11")
+        c = store.car_from_item(dict(item(otoId="42", cc=1560, hp=92, photo="https://img.example/1.jpg"), inAc=True), "2026-11-11")
         self.assertEqual(c["id"], "otomoto:42")
         self.assertEqual(c["links"], {"otomoto": "https://www.otomoto.pl/osobowe/oferta/opel-astra-ID1.html", "olx": None})
         self.assertEqual(c["engine"], "1.6, 92 KM")
         self.assertEqual((c["firstSeen"], c["lastSeen"], c["status"]), ("2026-11-11", "2026-11-11", "active"))
         self.assertFalse(c["detailed"])
         self.assertTrue(c["inAc"])
+        self.assertEqual(c["photo"], "https://img.example/1.jpg")
 
 
 class MergeTest(unittest.TestCase):
@@ -30,8 +31,9 @@ class MergeTest(unittest.TestCase):
     def test_existing_updates_price_keeps_first_seen(self):
         old = store.car_from_item(dict(item(otoId="1", price=29000), inAc=False), "2026-11-10")
         old["detailed"] = True
-        cars, new = store.merge([old], seen(item(otoId="1", price=27500)), "2026-11-11", True)
+        cars, new = store.merge([old], seen(item(otoId="1", price=27500, photo="https://img.example/new.jpg")), "2026-11-11", True)
         self.assertEqual(new, [])
+        self.assertEqual(cars[0]["photo"], "https://img.example/new.jpg")
         self.assertEqual((cars[0]["price"], cars[0]["firstSeen"], cars[0]["lastSeen"]), (27500, "2026-11-10", "2026-11-11"))
         self.assertTrue(cars[0]["detailed"])
 
