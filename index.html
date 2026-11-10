@@ -80,6 +80,7 @@ h1 { font-size: clamp(2.9rem, 13.6vw, 4.4rem); line-height: .9; font-weight: 900
 
 /* Pages */
 main { display: grid; gap: 64px; padding-block: 36px 56px; }
+main > section { min-width: 0; }
 .page-h { display: grid; gap: 8px; border-top: 3px double var(--ink); padding-top: 14px; margin-bottom: 4px; }
 h2.book { font-size: 1.95rem; line-height: 1.02; font-weight: 850; font-stretch: 118%; letter-spacing: -0.015em; }
 .page-h p { color: var(--ink-2); max-width: 60ch; }
@@ -136,7 +137,7 @@ h2.book { font-size: 1.95rem; line-height: 1.02; font-weight: 850; font-stretch:
 /* Filters */
 .bar { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5; background: var(--paper); border-bottom: 1px solid var(--rule); margin-inline: calc(-1 * max(16px, env(safe-area-inset-left, 0px))); padding-inline: max(16px, env(safe-area-inset-left, 0px)); padding-top: 4px; }
 .tabs { display: flex; gap: 2px; overflow-x: auto; scrollbar-width: none; }
-.tabs button { appearance: none; background: none; border: 0; border-bottom: 3px solid transparent; color: var(--ink-2); font: 650 1rem var(--f-read); min-height: 46px; padding: 0 10px; cursor: pointer; white-space: nowrap; }
+.tabs button { appearance: none; background: none; border: 0; border-bottom: 3px solid transparent; color: var(--ink-2); font: 650 1rem var(--f-read); min-height: 46px; padding: 0 8px; cursor: pointer; white-space: nowrap; }
 .tabs button[aria-pressed="true"] { color: var(--ink); border-bottom-color: var(--ink); }
 .opts { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); align-items: center; gap: 0 10px; padding-block: 2px 8px; }
 .opts .full-row { grid-column: 1 / -1; }
@@ -177,6 +178,23 @@ h2.book { font-size: 1.95rem; line-height: 1.02; font-weight: 850; font-stretch:
 .voided li { padding-block: 12px; border-bottom: 1px solid var(--rule); color: var(--ink-2); }
 .voided s { color: var(--ink); text-decoration-color: var(--stamp); text-decoration-thickness: 2px; }
 
+.void-intro { color: var(--ink-2); max-width: 60ch; padding-bottom: 6px; }
+.voided details { border-bottom: 1px solid var(--rule); }
+.voided summary { display: flex; justify-content: space-between; gap: 12px; align-items: center; min-height: 48px; padding-block: 10px; cursor: pointer; list-style: none; }
+.voided summary::-webkit-details-marker { display: none; }
+.voided summary s { color: var(--ink); text-decoration-color: var(--stamp); text-decoration-thickness: 2px; font-weight: 600; }
+.voided summary span { flex: none; color: var(--ink-2); font-size: .92rem; font-variant-numeric: tabular-nums; }
+.voided summary span::after { content: " ▾"; }
+.voided details[open] summary span::after { content: " ▴"; }
+.voided ul { list-style: none; padding: 0 0 10px; display: grid; }
+.voided ul li { padding-block: 0; border-bottom: 0; }
+.voided li a { display: flex; min-height: 44px; align-items: center; color: var(--ink-2); font-size: .95rem; }
+.show-all { appearance: none; width: 100%; min-height: 50px; margin-top: 16px; border-radius: 10px; border: 2px solid var(--ink); background: transparent; color: var(--ink); font: 750 1rem var(--f-read); cursor: pointer; }
+.stale { background: var(--label); color: #24121c; border-radius: 4px; padding: 10px 12px; font-size: .95rem; font-weight: 600; }
+.kamil { font-weight: 750; }
+.calls .gone { color: #8a2f4f; font-weight: 650; }
+.loading { padding-block: 22px; color: var(--ink-2); }
+
 /* Back cover */
 .back { background: var(--cover); color: var(--on-cover); }
 .back .in { padding-block: 28px 40px; display: grid; gap: 8px; font-size: .95rem; }
@@ -206,7 +224,8 @@ h2.book { font-size: 1.95rem; line-height: 1.02; font-weight: 850; font-stretch:
     <div class="plate" aria-hidden="true"><b>PL</b><span>SYL 30K</span></div>
     <h1>Auta dla Sylwutki</h1>
     <p class="deck">Książka poszukiwań auta</p>
-    <p class="when">Przegląd Otomoto i OLX z 10 listopada 2026, godz. 12:25. <strong>4 nowe oferty</strong>, 27 aut na liście.</p>
+    <p class="when" id="when">Wczytuję oferty…</p>
+    <p class="stale" id="stale" role="status" hidden></p>
     <nav class="toc" aria-label="Spis treści">
       <a href="#polecane">Polecane</a>
       <a href="#wszystkie">Wszystkie auta</a>
@@ -225,6 +244,73 @@ h2.book { font-size: 1.95rem; line-height: 1.02; font-weight: 850; font-stretch:
       <h2 class="book" id="top-h">Polecane</h2>
     </div>
     <div class="entries" id="top"></div>
+  </section>
+
+  <section aria-labelledby="all-h" id="wszystkie">
+    <div class="page-h">
+      <h2 class="book" id="all-h">Wszystkie auta</h2>
+      <p>Najlepiej ocenione auta są na górze. Wyposażenie wpisali sprzedający, więc potwierdź je przez telefon, zanim pojedziesz.</p>
+    </div>
+    <ul class="legend" aria-label="Znaczenie znaków">
+      <li><svg aria-hidden="true"><use href="#m-yes"/></svg>jest w ogłoszeniu</li>
+      <li><svg aria-hidden="true"><use href="#m-ask"/></svg>trzeba dopytać</li>
+      <li><svg aria-hidden="true"><use href="#m-no"/></svg>brak w ogłoszeniu</li>
+    </ul>
+    <div class="bar">
+      <div class="tabs" role="group" aria-label="Rodzaj napędu">
+        <button type="button" id="t-all" data-fuel="all" aria-pressed="true">Wszystkie</button>
+        <button type="button" id="t-on" data-fuel="on" aria-pressed="false">Diesel</button>
+        <button type="button" id="t-lpg" data-fuel="lpg" aria-pressed="false">Gaz</button>
+        <button type="button" id="t-hev" data-fuel="hev" aria-pressed="false">Hybryda</button>
+        <button type="button" id="t-pb" data-fuel="pb" aria-pressed="false" aria-label="Opel Adam">Adam</button>
+      </div>
+      <div class="opts">
+        <label for="o-full" class="full-row"><input type="checkbox" id="o-full">Tylko z kamerą i CarPlay</label>
+        <label for="o-seller"><span class="sr">Sprzedawca</span>
+          <select id="o-seller">
+            <option value="all">Wszyscy sprzedawcy</option>
+            <option value="prywatnie">Tylko prywatni</option>
+            <option value="komis">Tylko firmy (komis)</option>
+          </select>
+        </label>
+        <label for="o-sort"><span class="sr">Kolejność</span>
+          <select id="o-sort">
+            <option value="rec">Polecana kolejność</option>
+            <option value="price">Od najtańszych</option>
+            <option value="km">Od najmniejszego przebiegu</option>
+            <option value="year">Od najmłodszych</option>
+          </select>
+        </label>
+      </div>
+    </div>
+    <p class="count" id="count" aria-live="polite"></p>
+    <div class="entries" id="list"></div>
+    <button type="button" class="show-all" id="show-all" hidden></button>
+  </section>
+
+  <section aria-labelledby="check-h" id="przeglad">
+    <div class="page-h">
+      <h2 class="book" id="check-h">Przed oglądaniem</h2>
+      <p>Odhaczone punkty zostaną zapamiętane na tym telefonie.</p>
+    </div>
+    <ul class="check" id="check"></ul>
+  </section>
+
+  <section aria-labelledby="more-h">
+    <div class="page-h">
+      <h2 class="book" id="more-h">Szukaj dalej</h2>
+      <p>Wyszukiwania z tymi samymi filtrami. Nowe ogłoszenia pojawiają się codziennie.</p>
+    </div>
+    <ul class="more" id="more"></ul>
+  </section>
+
+  <section aria-labelledby="void-h" class="void">
+    <div class="page-h">
+      <h2 class="book" id="void-h">Odrzucone</h2>
+      <svg class="stamp stamp-void" viewBox="0 0 132 46" aria-hidden="true"><g filter="url(#ink)"><rect x="2" y="2" width="128" height="42" rx="4" fill="none" stroke="currentColor" stroke-width="3"/><text x="66" y="31" text-anchor="middle" font-size="21" style="font-stretch:72%" letter-spacing="1.5">ODRZUCONE</text></g></svg>
+    </div>
+    <p class="void-intro">Te ogłoszenia pasowały do wyszukiwania, ale coś je skreśliło. Stuknij powód, żeby zobaczyć auta.</p>
+    <div class="voided" id="void-list"></div>
   </section>
 
   <section aria-labelledby="fuel-h">
@@ -256,192 +342,56 @@ h2.book { font-size: 1.95rem; line-height: 1.02; font-weight: 850; font-stretch:
         <div><dt>Uwaga</dt><dd>w tym budżecie to starsze auta; kamerę i CarPlay da się dołożyć nowym radiem za kilkaset złotych</dd></div>
       </dl>
     </div>
-    <p class="aside">Na Otomoto filtry pokazały trzy hybrydy. Dwie były cesjami leasingu. Na liście znajdziesz też hybrydy sprawdzone na OLX.</p>
-  </section>
-
-  <section aria-labelledby="all-h" id="wszystkie">
-    <div class="page-h">
-      <h2 class="book" id="all-h">Wszystkie auta</h2>
-      <p>Wyposażenie wpisali sprzedający. Zadzwoń i potwierdź je, zanim pojedziesz.</p>
+    <div class="fuel">
+      <h3>Benzyna: tylko Opel Adam</h3>
+      <dl>
+        <div><dt>Spalanie</dt><dd>6–7 l benzyny na 100 km</dd></div>
+        <div><dt>Zaleta</dt><dd>małe, zwrotne auto, łatwo zaparkować w mieście</dd></div>
+        <div><dt>Uwaga</dt><dd>bierzemy tylko wersje od 100 KM: 1.4 (100 KM) i 1.0 Turbo (115 KM); słabsze wersje 70 i 87 KM są za wolne na trasy</dd></div>
+      </dl>
     </div>
-    <ul class="legend" aria-label="Znaczenie znaków">
-      <li><svg aria-hidden="true"><use href="#m-yes"/></svg>jest w ogłoszeniu</li>
-      <li><svg aria-hidden="true"><use href="#m-ask"/></svg>trzeba dopytać</li>
-      <li><svg aria-hidden="true"><use href="#m-no"/></svg>brak w ogłoszeniu</li>
-    </ul>
-    <div class="bar">
-      <div class="tabs" role="group" aria-label="Rodzaj napędu">
-        <button type="button" id="t-all" data-fuel="all" aria-pressed="true">Wszystkie</button>
-        <button type="button" id="t-on" data-fuel="on" aria-pressed="false">Diesel</button>
-        <button type="button" id="t-lpg" data-fuel="lpg" aria-pressed="false">Gaz</button>
-        <button type="button" id="t-hev" data-fuel="hev" aria-pressed="false">Hybryda</button>
-      </div>
-      <div class="opts">
-        <label for="o-full" class="full-row"><input type="checkbox" id="o-full">Tylko z kamerą i CarPlay</label>
-        <label for="o-seller"><span class="sr">Sprzedawca</span>
-          <select id="o-seller">
-            <option value="all">Wszyscy sprzedawcy</option>
-            <option value="prywatnie">Tylko prywatni</option>
-            <option value="komis">Tylko firmy (komis)</option>
-          </select>
-        </label>
-        <label for="o-sort"><span class="sr">Kolejność</span>
-          <select id="o-sort">
-            <option value="rec">Polecana kolejność</option>
-            <option value="price">Od najtańszych</option>
-            <option value="km">Od najmniejszego przebiegu</option>
-            <option value="year">Od najmłodszych</option>
-          </select>
-        </label>
-      </div>
-    </div>
-    <p class="count" id="count" aria-live="polite"></p>
-    <div class="entries" id="list"></div>
-  </section>
-
-  <section aria-labelledby="check-h" id="przeglad">
-    <div class="page-h">
-      <h2 class="book" id="check-h">Przed oglądaniem</h2>
-      <p>Odhaczone punkty zostaną zapamiętane na tym telefonie.</p>
-    </div>
-    <ul class="check" id="check"></ul>
-  </section>
-
-  <section aria-labelledby="more-h">
-    <div class="page-h">
-      <h2 class="book" id="more-h">Szukaj dalej</h2>
-      <p>Wyszukiwania z tymi samymi filtrami. Nowe ogłoszenia pojawiają się codziennie.</p>
-    </div>
-    <ul class="more" id="more"></ul>
-  </section>
-
-  <section aria-labelledby="void-h" class="void">
-    <div class="page-h">
-      <h2 class="book" id="void-h">Odrzucone</h2>
-      <svg class="stamp stamp-void" viewBox="0 0 132 46" aria-hidden="true"><g filter="url(#ink)"><rect x="2" y="2" width="128" height="42" rx="4" fill="none" stroke="currentColor" stroke-width="3"/><text x="66" y="31" text-anchor="middle" font-size="21" style="font-stretch:72%" letter-spacing="1.5">ODRZUCONE</text></g></svg>
-    </div>
-    <ul class="voided">
-      <li><s>Ford B-MAX 1.6 TDCi, Dąbrowa Górnicza.</s> W opisie przebieg 159&nbsp;900 km, w ogłoszeniu 119&nbsp;900 km.</li>
-      <li><s>Cesje leasingu, np. Toyota Corolla z 2021 roku za 19&nbsp;900 zł.</s> To tylko odstępne, do tego dochodzą raty.</li>
-      <li><s>Ogłoszenia z przebiegiem „190 km” albo „1 km”.</s> Sprzedający nie wpisał prawdziwego przebiegu.</li>
-      <li><s>Auta uszkodzone i po wypadku.</s> Nawet bardzo tanie.</li>
-    </ul>
+    <p class="aside">Hybryd w tym budżecie jest mało, a część z nich to cesje leasingu. Odrzucamy je automatycznie.</p>
   </section>
 </main>
 
 <footer class="back">
   <div class="in">
     <b>Auta dla Sylwutki</b>
-    <p>Ręczny przegląd z 10 listopada 2026. Przed wyjazdem potwierdź cenę i dostępność ze sprzedającym.</p>
+    <p>Oferty z Otomoto sprawdzane codziennie automatycznie, około 6:00. Uwagi oznaczone „Kamil” dopisał Kamil. Przed wyjazdem potwierdź cenę i dostępność ze sprzedającym.</p>
   </div>
 </footer>
 
 <script>
 (function () {
-  var O = 'https://www.otomoto.pl/osobowe/oferta/';
-  var X = 'https://www.olx.pl/d/oferta/';
-  var FUEL = { on: 'diesel', lpg: 'benzyna z gazem', hev: 'hybryda' };
-  // ac/cam/pdc/cp: 1 = in the listing, 2 = ask the seller, 0 = not in the listing
-  var cars = [
-    { id: 'astra-st-19', top: 1, fuel: 'on', name: 'Opel Astra K Sports Tourer', engine: '1.6 CDTI, 136 KM', gear: 'manualna', body: 'kombi', year: 2019, km: 100300, price: 29999, city: 'Rzeszów', seller: 'prywatnie',
-      ac: 1, cam: 1, pdc: 1, cp: 1, why: 'Najbogatszy egzemplarz na liście, z polskiego salonu i od pierwszego właściciela. Duży bagażnik.',
-      plus: 'Serwis w ASO, bezwypadkowy, wentylowane fotele, reflektory LED Matrix.',
-      oto: O + 'opel-astra-ID6IisiI.html', olx: X + 'opel-astra-opel-astra-k-2019-bogate-wyposazenie-pierwszy-wlasciciel-bezwpadkowy-CID5-ID1cYZox.html' },
-    { id: 'c3-20', top: 2, fuel: 'on', name: 'Citroën C3', engine: '1.5 BlueHDi, 102 KM', gear: 'manualna', body: 'hatchback', year: 2020, km: 99865, price: 27999, city: 'Ostrów Wielkopolski', seller: 'komis',
-      ac: 1, cam: 1, pdc: 1, cp: 1, why: 'Najmłodsze auto z pełnym wyposażeniem. Małe, zwrotne i tanie w utrzymaniu, dobre do miasta.',
-      plus: 'Bezwypadkowy, jeden właściciel, serwisowany, nawigacja.',
-      oto: O + 'citroen-c3-ID6Ig0Y5.html', olx: X + 'citroen-c3-serwisowany-bogate-wyposazenie-alufelgi-nawi-1-5-102km-kamera-asystent-CID5-ID1csROm.html' },
-    { id: 'meriva-lpg-17', top: 3, fuel: 'lpg', name: 'Opel Meriva', engine: '1.4 Turbo, 120 KM, gaz z fabryki', gear: 'manualna', body: 'minivan', year: 2017, km: 89950, price: 29500, city: 'Gdańsk', seller: 'prywatnie',
-      ac: 1, cam: 1, pdc: 1, cp: 0, why: 'Najlepsza na krótkie trasy po mieście: gaz montowany w fabryce, wysoko się siedzi i wygodnie wsiada.',
-      plus: 'Polski salon, jeden właściciel, serwis w ASO, bezwypadkowa, czujniki z przodu i z tyłu, nowy akumulator.',
-      oto: O + 'opel-meriva-ID6IjlOu.html', olx: X + 'opel-meriva-salon-pl-i-wl-kamera-klima-auto-lpg-led-CID5-ID1dbo5m.html' },
+  var FUEL = { on: 'diesel', lpg: 'benzyna z gazem', hev: 'hybryda', pb: 'benzyna' };
+  var LIMIT = 30;
+  var STALE_MS = 36 * 3600 * 1000;
+  var cars = [], byId = {}, meta = {}, runDay = '', stampDate = '', showAll = false;
 
-    { id: 'p2008-lpg-14', fresh: true, fuel: 'lpg', name: 'Peugeot 2008 Allure', engine: '1.6 VTi, 120 KM, gaz', gear: 'automat', body: 'crossover', year: 2014, km: 114785, price: 23000, city: 'Gryfice', seller: 'prywatnie',
-      ac: 1, cam: 0, pdc: 1, cp: 0, plus: 'Dwustrefowa klima, tylne czujniki. Sprzedający podaje wymianę rozrządu i oleju w skrzyni.', watch: 'Zapytaj o dokumenty instalacji LPG i termin ważności butli.',
-      oto: O + 'peugeot-2008-ID6Ii0xz.html' },
-    { id: 'astra-olsztyn-20', fresh: true, fuel: 'on', name: 'Opel Astra K Edition', engine: '1.5 CDTI, 122 KM', gear: 'manualna', body: 'kompakt', year: 2020, km: 116107, price: 29900, city: 'Olsztyn', seller: 'komis',
-      ac: 1, cam: 0, pdc: 1, cp: 1, plus: 'Polski salon, pierwszy właściciel i serwis w ASO według ogłoszenia. Czujniki z przodu i z tyłu.',
-      oto: O + 'opel-astra-ID6IiZ4n.html' },
-    { id: 'megane-ostrorog-15', fresh: true, fuel: 'on', name: 'Renault Mégane Life', engine: '1.5 dCi, 110 KM', gear: 'manualna', body: 'kompakt', year: 2015, km: 108310, price: 19900, city: 'Ostroróg', seller: 'prywatnie',
-      ac: 1, cam: 0, pdc: 0, cp: 0, plus: 'Automatyczna klima i tempomat. Cena zostawia 10 100 zł z budżetu.', watch: 'Zapytaj, kiedy wymieniono rozrząd.',
-      oto: O + 'renault-megane-ID6Ijhh6.html' },
-    { id: 'p2008-tomnice-15', fresh: true, fuel: 'on', name: 'Peugeot 2008 Allure', engine: '1.6 e-HDi, 92 KM', gear: 'manualna', body: 'crossover', year: 2015, km: 87000, price: 28900, city: 'Tomnice', seller: 'prywatnie',
-      ac: 1, cam: 0, pdc: 1, cp: 0, plus: 'Dwustrefowa klima i tylne czujniki.', watch: 'Sprowadzony z Francji. Poproś o historię serwisową.',
-      oto: O + 'peugeot-2008-ID6Ig0Ez.html' },
-
-    { id: 'p308-18', fuel: 'on', name: 'Peugeot 308', engine: '1.5 BlueHDi, 130 KM', gear: 'manualna', body: 'hatchback', year: 2018, km: 101000, price: 27900, city: 'Mysłowice', seller: 'komis',
-      ac: 1, cam: 1, pdc: 1, cp: 1, plus: 'Bezwypadkowy, serwisowany, dwustrefowa klima, ekran dotykowy.', watch: 'Sprowadzony. Zapytaj o historię serwisu i naprawy układu AdBlue.',
-      oto: O + 'peugeot-308-ID6IavwA.html', olx: X + 'peugeot-308-niski-przebieg-ladny-CID5-ID1byQYw.html' },
-    { id: 'p308sw-16', fuel: 'on', name: 'Peugeot 308 SW', engine: '1.6 BlueHDi, 120 KM', gear: 'manualna', body: 'kombi', year: 2016, km: 114000, price: 29900, city: 'Rzeszów', seller: 'komis',
-      ac: 1, cam: 1, pdc: 1, cp: 1, plus: 'Bezwypadkowy, jeden właściciel, serwisowany, dach panoramiczny, czujniki z przodu i z tyłu.',
-      oto: O + 'peugeot-308-ID6IjfgK.html', olx: X + 'peugeot-308-bezwypadkowy-serisowany-1-wlasciciel-navi-led-panorama-pdc-grz-fotele-CID5-ID1d7Uuh.html' },
-    { id: 'astra-19', fuel: 'on', name: 'Opel Astra K', engine: '1.6 CDTI, 136 KM', gear: 'manualna', body: 'hatchback', year: 2019, km: 106500, price: 29900, city: 'Budzyń', seller: 'prywatnie',
-      ac: 1, cam: 1, pdc: 1, cp: 1, plus: 'Przebieg potwierdzony w książce serwisowej, dwa oryginalne kluczyki.', watch: 'Sprowadzony z Niemiec. Czujniki tylko z tyłu.',
-      oto: O + 'opel-astra-ID6HWyvU.html' },
-    { id: 'focus-18', fuel: 'on', name: 'Ford Focus', engine: '1.5 EcoBlue, 120 KM', gear: 'manualna', body: 'hatchback', year: 2018, km: 115300, price: 29999, city: 'Borkowo, pomorskie', seller: 'komis',
-      ac: 1, cam: 1, pdc: 1, cp: 1, plus: 'Od pierwszego właściciela z Niemiec, oryginalny lakier, sprzedawca pokaże raport Carvertical.',
-      oto: O + 'ford-focus-ID6IeV8Z.html' },
-    { id: 'c3-19', fuel: 'on', name: 'Citroën C3', engine: '1.5 BlueHDi, 102 KM', gear: 'manualna', body: 'hatchback', year: 2019, km: 37000, price: 31000, city: 'Nowa Sól', seller: 'prywatnie',
-      ac: 1, cam: 1, pdc: 1, cp: 1, out: 'cena o 1000 zł ponad budżet, do negocjacji', plus: 'Bardzo mały przebieg jak na rocznik.', watch: 'Przy tak niskim przebiegu sprawdź historię na historiapojazdu.gov.pl.',
-      oto: O + 'citroen-c3-ID6Idi9t.html' },
-    { id: 'p2008-19', fuel: 'on', name: 'Peugeot 2008', engine: '1.5 BlueHDi, 102 KM', gear: 'manualna', body: 'crossover', year: 2019, km: 93500, price: 29900, city: 'Grabów nad Prosną', seller: 'prywatnie',
-      ac: 2, cam: 1, pdc: 1, cp: 1, plus: 'Wyżej się siedzi, asystent pasa ruchu, ostrzeganie przed kolizją.', watch: 'W opisie przebieg „9 347 km” i sama „klimatyzacja”. Dopytaj o przebieg i czy klima jest automatyczna.',
-      oto: O + 'peugeot-2008-ID6IfUyz.html' },
-    { id: 'astra-17', fuel: 'on', name: 'Opel Astra K', engine: '1.6 CDTI, 110 KM', gear: 'manualna', body: 'hatchback', year: 2017, km: 118274, price: 29999, city: 'Piekoszów', seller: 'komis',
-      ac: 1, cam: 1, pdc: 1, cp: 2, plus: 'Bezwypadkowy, jeden właściciel, serwis w ASO.', watch: 'W ogłoszeniu jest tylko Android Auto. Zapytaj, czy działa CarPlay.',
-      oto: O + 'opel-astra-ID6IhGLE.html', olx: X + 'opel-astra-118-000km-CID5-ID1cNw40.html' },
-    { id: 'clio-17', fuel: 'on', name: 'Renault Clio IV', engine: '1.5 dCi, 110 KM', gear: 'manualna', body: 'hatchback', year: 2017, km: 75563, price: 28900, city: 'Oświęcim', seller: 'komis',
-      ac: 1, cam: 1, pdc: 1, cp: 0, plus: 'Mały przebieg, nawigacja, światła LED. Jeden z najoszczędniejszych silników na liście.', watch: 'Ogłoszenie jest tylko na OLX.',
-      olx: X + 'renault-clio-iv-1-5-1-5dci-110km-climatronic-navi-kamera-full-led-CID5-ID1cuRnS.html' },
-    { id: 'meriva-d-16', fuel: 'on', name: 'Opel Meriva', engine: '1.6 CDTI, 110 KM', gear: 'manualna', body: 'minivan', year: 2016, km: 87753, price: 25900, city: 'Elbląg', seller: 'komis',
-      ac: 1, cam: 1, pdc: 1, cp: 0, plus: 'Bezwypadkowa, serwis w ASO, dwa komplety kół, opłacona.', watch: 'Sprowadzona z Niemiec.',
-      oto: O + 'opel-meriva-ID6IiJZa.html', olx: X + 'opel-meriva-1-6cdti-110km-6b-led-kamera-pdc-tempomat-grz-fotele-oplaty-gwarancja-CID5-ID1d1c3x.html' },
-    { id: 'juke-14', fuel: 'on', name: 'Nissan Juke', engine: '1.5 dCi, 110 KM', gear: 'manualna', body: 'crossover', year: 2014, km: 114500, price: 27990, city: 'Starogard Gdański', seller: 'prywatnie',
-      ac: 1, cam: 1, pdc: 1, cp: 0, plus: 'Od pierwszego właściciela z Niemiec, bezwypadkowy, serwis w ASO.',
-      oto: O + 'nissan-juke-ID6IiFOz.html', olx: X + 'nissan-juke-kamera-cofania-klimatronic-alu-CID5-ID1d0rQ6.html' },
-    { id: 'mokka-15', fuel: 'on', name: 'Opel Mokka', engine: '1.6 CDTI, 136 KM', gear: 'manualna', body: 'SUV', year: 2015, km: 97173, price: 29500, city: 'Częstochowa', seller: 'prywatnie',
-      ac: 1, cam: 1, pdc: 1, cp: 0, plus: 'Świeżo wymienione oleje, filtry, tarcze i klocki z przodu. Opony zimowe w komplecie.', watch: 'Do naprawy czujnik ciśnienia w oponach, według sprzedającego ok. 400 zł.',
-      oto: O + 'opel-mokka-ID6Iiqyi.html', olx: X + 'opel-mokka-opel-mokka-2016-hak-niski-przebieg-1-6-136km-CID5-ID1cX7SE.html' },
-    { id: 'ceed-15', fuel: 'on', name: 'Kia Ceed', engine: '1.6 CRDi, 136 KM', gear: 'manualna', body: 'hatchback', year: 2015, km: 118000, price: 29500, city: 'Częstochowa', seller: 'prywatnie',
-      ac: 1, cam: 1, pdc: 1, cp: 0, plus: 'Wersja po liftingu, bogate wyposażenie.', watch: 'Sprowadzona, przebieg blisko limitu.',
-      oto: O + 'kia-ceed-ID6IiIc8.html' },
-
-    { id: 'meriva-lpg-16', fuel: 'lpg', name: 'Opel Meriva', engine: '1.4 Turbo, 120 KM, gaz', gear: 'manualna', body: 'minivan', year: 2016, km: 94000, price: 23900, city: 'Sosnowiec', seller: 'prywatnie',
-      ac: 1, cam: 1, pdc: 2, cp: 0, plus: 'Bogata wersja Cosmo, dwustrefowa klima, koła zimowe, hak.', watch: 'Sprowadzona. Sprzedający podaje, że prawy tylny błotnik wymaga lakierowania. Zapytaj o przyczynę i czujniki.',
-      olx: X + 'opel-meriva-opel-meriva-2016-lpg-wersja-cosmo-bogate-wyposazenie-CID5-ID1cYKbl.html' },
-    { id: 'picasso-13', fuel: 'lpg', name: 'Citroën C4 Picasso', engine: '1.6 THP, 156 KM, gaz', gear: 'manualna', body: 'minivan', year: 2013, km: 97190, price: 29000, city: 'Chorzów', seller: 'prywatnie',
-      ac: 1, cam: 1, pdc: 1, cp: 0, plus: 'Cała historia serwisowa z fakturami. Wymieniony rozrząd, turbo i sprzęgło.', watch: 'Silnik THP źle znosi zaniedbania. Pali więcej niż reszta, ok. 11–12 l gazu.',
-      oto: O + 'citroen-c4-picasso-ID6Iiu3M.html', olx: X + 'citroen-c4-picasso-1-6-thp-156-km-lpg-nowy-rozrzad-turbo-sprzeglo-hak-CID5-ID1cYaOh.html' },
-    { id: 'mazda5-11', fuel: 'lpg', name: 'Mazda 5', engine: '1.8, 115 KM, gaz', gear: 'manualna', body: 'minivan, 7 miejsc', year: 2011, km: 84445, price: 27000, city: 'Bolesławiec', seller: 'prywatnie',
-      ac: 1, cam: 0, pdc: 1, cp: 0, plus: 'Bezwypadkowa, mały przebieg, dwa komplety opon, przesuwne tylne drzwi.', watch: 'Najstarsza na liście, sprowadzona z Niemiec.',
-      oto: O + 'mazda-5-ID6If7Hj.html' },
-    { id: 'elysee-16', fuel: 'lpg', name: 'Citroën C-Elysée', engine: '1.6 VTi, 115 KM, gaz', gear: 'manualna', body: 'sedan', year: 2016, km: 113800, price: 24900, city: 'Nowa Wieś (Śląskie)', seller: 'komis',
-      ac: 1, cam: 0, pdc: 1, cp: 0, plus: 'Polski salon, jeden właściciel, bezwypadkowy. Prosta i tania w naprawach konstrukcja.',
-      oto: O + 'citroen-c-elysee-ID6IiuGw.html' },
-
-    { id: 'insight-11', fuel: 'hev', name: 'Honda Insight', engine: '1.3 hybryda, 100 KM', gear: 'automat', body: 'hatchback', year: 2011, km: 70000, price: 24500, city: 'Kraków', seller: 'prywatnie',
-      ac: 2, cam: 1, pdc: 0, cp: 2, plus: 'Najlepsza hybryda w budżecie: mały przebieg, kamera cofania, skórzana tapicerka, bez korozji.', watch: 'W opisie „klima” i radio z Androidem. Dopytaj, czy klima jest automatyczna i czy radio obsługuje CarPlay. Sprawdź baterię hybrydy.',
-      olx: X + 'honda-insight-hybryda-2011r-tylko-70tys-przebiegu-kamera-cofania-nowa-cena-na-weekend-CID5-ID1cjTqU.html' },
-    { id: 'insight-12', fuel: 'hev', name: 'Honda Insight', engine: '1.3 hybryda, 98 KM', gear: 'automat', body: 'hatchback', year: 2012, km: 115608, price: 29900, city: 'Marcinowice', seller: 'prywatnie',
-      ac: 1, cam: 0, pdc: 1, cp: 0, plus: 'Automatyczna klima, podgrzewane fotele, czujniki z tyłu.', watch: 'Sprawdź baterię hybrydy.',
-      oto: O + 'honda-insight-ID6IjpoO.html', olx: X + 'honda-insight-CID5-ID1d9PEf.html' },
-    { id: 'jazz-14', fuel: 'hev', name: 'Honda Jazz', engine: '1.3 hybryda, 98 KM', gear: 'automat', body: 'hatchback', year: 2014, km: 109153, price: 29900, city: 'Wiry, wielkopolskie', seller: 'prywatnie',
-      ac: 1, cam: 0, pdc: 0, cp: 0, plus: 'Bardzo pakowne małe auto, dach panoramiczny.', watch: 'Sprowadzona ze Szwajcarii, bez kamery i czujników. Sprawdź baterię hybrydy.',
-      oto: O + 'honda-jazz-ID6IbyDV.html', olx: X + 'honda-jazz-automat-hybryda-niski-przebieg-szwajcaria-CID5-ID1bJ0TY.html' },
-    { id: 'auris-12', fuel: 'hev', name: 'Toyota Auris', engine: '1.8 hybryda, 99 KM', gear: 'automat', body: 'hatchback', year: 2012, km: 156000, price: 27400, city: 'Psary', seller: 'prywatnie',
-      ac: 1, cam: 0, pdc: 0, cp: 0, out: 'przebieg 156 tys. km, ponad limit 120 tys.', plus: 'Jeden właściciel, serwis w ASO, bezwypadkowa. Napęd hybrydowy Toyoty dobrze znosi duże przebiegi.', watch: 'Bez kamery i czujników.',
-      oto: O + 'toyota-auris-ID6IiPyz.html' }
-  ];
-  var byId = {}; cars.forEach(function (c) { byId[c.id] = c; });
-
-  var nb = function (n) { return n.toLocaleString('pl-PL').replace(/[\s ]/g, ' '); };
+  var nb = function (n) { return n.toLocaleString('pl-PL').replace(/[\s ]/g, ' '); };
   var esc = function (s) { return String(s).replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }); };
   var plural = function (n, one, few, many) { if (n === 1) return one; var d = n % 10, h = n % 100; return d >= 2 && d <= 4 && (h < 12 || h > 14) ? few : many; };
   var load = function (k, d) { try { var v = JSON.parse(localStorage.getItem(k) || 'null'); return v == null ? d : v; } catch (e) { return d; } };
   var save = function (k, v) { try { localStorage.setItem(k, JSON.stringify(v)); } catch (e) {} };
   var mark = function (id) { return '<svg aria-hidden="true"><use href="#' + id + '"/></svg>'; };
+  var kamil = function (c, field) { return c.byKamil && c.byKamil.indexOf(field) > -1 ? '<b class="kamil">Kamil:</b> ' : ''; };
 
-  var calls = load('sylwia-telefon', []).filter(function (id) { return byId[id]; });
+  var calls = load('sylwia-telefon', []);
+
+  function fmtDay(iso) { var d = iso.split('-'); return d[2] + '.' + d[1] + '.' + d[0]; }
+  function fmtStamp(iso) {
+    var d = new Date(iso), tz = { timeZone: 'Europe/Warsaw' };
+    return d.toLocaleDateString('pl-PL', Object.assign({ day: 'numeric', month: 'long', year: 'numeric' }, tz)) + ', ' +
+      d.toLocaleTimeString('pl-PL', Object.assign({ hour: 'numeric', minute: '2-digit' }, tz));
+  }
+  function view(c) {
+    var e = c.equipment || {};
+    c.oto = c.links && c.links.otomoto; c.olx = c.links && c.links.olx;
+    c.ac = e.ac; c.cam = e.cam; c.pdc = e.pdc; c.cp = e.cp;
+    c.fresh = c.shownSince === runDay;
+    return c;
+  }
+  function visible(c) { return c.status === 'active' && !c.reject && (c.detailed || c.inAc || c.manual); }
 
   function equip(label, v) {
     var m = v === 1 ? 'm-yes' : v === 2 ? 'm-ask' : 'm-no';
@@ -452,7 +402,7 @@ h2.book { font-size: 1.95rem; line-height: 1.02; font-weight: 850; font-stretch:
     return '<svg class="stamp stamp-round" viewBox="0 0 120 120" aria-hidden="true"><g filter="url(#ink)">' +
       '<circle cx="60" cy="60" r="56" fill="none" stroke="currentColor" stroke-width="3"/>' +
       '<circle cx="60" cy="60" r="33" fill="none" stroke="currentColor" stroke-width="1.6"/>' +
-      '<text font-size="11" style="font-stretch:70%"><textPath href="#ring" textLength="268" lengthAdjust="spacing">POLECANE • SPRAWDZONE 10.11.2026 •</textPath></text>' +
+      '<text font-size="11" style="font-stretch:70%"><textPath href="#ring" textLength="268" lengthAdjust="spacing">POLECANE • SPRAWDZONE ' + stampDate + ' •</textPath></text>' +
       '<text x="60" y="74" text-anchor="middle" font-size="40" style="font-stretch:90%">' + n + '</text></g></svg>';
   }
   function callStamp(press) {
@@ -463,14 +413,16 @@ h2.book { font-size: 1.95rem; line-height: 1.02; font-weight: 850; font-stretch:
   }
   function links(c) {
     var s = '';
-    if (c.oto) s += '<a class="go" href="' + c.oto + '" target="_blank" rel="noopener"><span class="sr">Otwórz ogłoszenie na </span>Otomoto<span class="sr"> (nowa karta)</span></a>';
-    if (c.olx) s += '<a class="go' + (c.oto ? ' alt' : '') + '" href="' + c.olx + '" target="_blank" rel="noopener"><span class="sr">Otwórz ogłoszenie na </span>OLX<span class="sr"> (nowa karta)</span></a>';
+    if (c.oto) s += '<a class="go" href="' + esc(c.oto) + '" target="_blank" rel="noopener"><span class="sr">Otwórz ogłoszenie na </span>Otomoto<span class="sr"> (nowa karta)</span></a>';
+    if (c.olx) s += '<a class="go' + (c.oto ? ' alt' : '') + '" href="' + esc(c.olx) + '" target="_blank" rel="noopener"><span class="sr">Otwórz ogłoszenie na </span>OLX<span class="sr"> (nowa karta)</span></a>';
     return s;
   }
   function entry(c, ranked, pressId) {
     var picked = calls.indexOf(c.id) > -1;
-    return '<article class="entry' + (ranked ? ' top' : '') + (picked ? ' picked' : '') + '" data-id="' + c.id + '">' +
-      (ranked ? '<p class="ledger" aria-hidden="true"><span>Wpis ' + c.top + '</span><span>polecane</span><span>10.11.2026</span></p>' : '') +
+    var engine = /gaz|hybryd/.test(c.engine) ? c.engine : c.engine + ', ' + FUEL[c.fuel];
+    var pending = !c.detailed && !c.manual;
+    return '<article class="entry' + (ranked ? ' top' : '') + (picked ? ' picked' : '') + '" data-id="' + esc(c.id) + '">' +
+      (ranked ? '<p class="ledger" aria-hidden="true"><span>Wpis ' + c.top + '</span><span>polecane</span><span>' + stampDate + '</span></p>' : '') +
       '<div class="entry-h">' + (ranked ? roundStamp(c.top) : '') + (picked ? callStamp(pressId === c.id) : '') +
         '<h3>' + (ranked ? '<span class="sr">Polecane numer ' + c.top + ': </span>' : '') + esc(c.name) + (picked ? '<span class="sr"> (na liście do telefonu)</span>' : '') + '</h3><p class="price">' + nb(c.price) + '&nbsp;zł</p></div>' +
       (c.fresh ? '<p class="new-entry">Nowa na liście</p>' : '') +
@@ -478,16 +430,20 @@ h2.book { font-size: 1.95rem; line-height: 1.02; font-weight: 850; font-stretch:
       '<dl class="fields">' +
         '<div><dt>Rok</dt><dd>' + c.year + '</dd></div>' +
         '<div><dt>Przebieg</dt><dd>' + nb(c.km) + '&nbsp;km</dd></div>' +
-        '<div class="wide"><dt>Silnik</dt><dd>' + esc(/gaz|hybryd/.test(c.engine) ? c.engine : c.engine + ', ' + FUEL[c.fuel]) + '</dd></div>' +
-        '<div><dt>Skrzynia</dt><dd>' + c.gear + '</dd></div>' +
-        '<div><dt>Nadwozie</dt><dd>' + esc(c.body) + '</dd></div>' +
-        '<div class="wide"><dt>Gdzie</dt><dd>' + esc(c.city) + ', ' + c.seller + '</dd></div>' +
+        '<div class="wide"><dt>Silnik</dt><dd>' + esc(engine) + '</dd></div>' +
+        '<div' + (c.body ? '' : ' class="wide"') + '><dt>Skrzynia</dt><dd>' + esc(c.gear) + '</dd></div>' +
+        (c.body ? '<div><dt>Nadwozie</dt><dd>' + esc(c.body) + '</dd></div>' : '') +
+        '<div class="wide"><dt>Gdzie</dt><dd>' + esc(c.city) + ', ' + esc(c.seller) + '</dd></div>' +
       '</dl>' +
       '<ul class="equip" aria-label="Wyposażenie">' + equip('Klima auto', c.ac) + equip('Kamera', c.cam) + equip('Czujniki', c.pdc) + equip('CarPlay', c.cp) + '</ul>' +
-      (ranked && c.why ? '<p class="why">' + esc(c.why) + '</p>' : '') +
-      '<div class="notes">' + (c.plus ? '<p>' + mark('m-plus') + '<span>' + esc(c.plus) + '</span></p>' : '') + (c.watch ? '<p>' + mark('m-ask') + '<span><span class="sr">Do dopytania: </span>' + esc(c.watch) + '</span></p>' : '') + '</div>' +
+      (ranked && c.why ? '<p class="why">' + kamil(c, 'why') + esc(c.why) + '</p>' : '') +
+      '<div class="notes">' +
+        (c.plus ? '<p>' + mark('m-plus') + '<span>' + kamil(c, 'plus') + esc(c.plus) + '</span></p>' : '') +
+        (c.watch ? '<p>' + mark('m-ask') + '<span><span class="sr">Do dopytania: </span>' + kamil(c, 'watch') + esc(c.watch) + '</span></p>' : '') +
+        (pending ? '<p>' + mark('m-ask') + '<span>Szczegóły ogłoszenia sprawdzimy przy następnej aktualizacji. Do tego czasu kamerę, czujniki i CarPlay trzeba dopytać.</span></p>' : '') +
+      '</div>' +
       '<div class="acts-row">' + links(c) +
-        '<button type="button" class="pick' + (picked ? ' on' : '') + '" data-pick="' + c.id + '">' + (picked ? 'Usuń z listy do telefonu<span class="sr">: ' + esc(c.name) + '</span>' : 'Do telefonu<span class="sr">: dodaj ' + esc(c.name) + ' do listy</span>') + '</button></div>' +
+        '<button type="button" class="pick' + (picked ? ' on' : '') + '" data-pick="' + esc(c.id) + '">' + (picked ? 'Usuń z listy do telefonu<span class="sr">: ' + esc(c.name) + '</span>' : 'Do telefonu<span class="sr">: dodaj ' + esc(c.name) + ' do listy</span>') + '</button></div>' +
       '</article>';
   }
 
@@ -496,10 +452,11 @@ h2.book { font-size: 1.95rem; line-height: 1.02; font-weight: 850; font-stretch:
     document.getElementById('telefon').classList.toggle('is-empty', !calls.length);
     if (!calls.length) { el.innerHTML = '<p class="empty-call">Stuknij „Do telefonu” przy aucie, a trafi tutaj.</p>'; return; }
     el.innerHTML = '<ul class="calls">' + calls.map(function (id) {
-      var c = byId[id], href = c.oto || c.olx;
-      return '<li><b>' + esc(c.name) + ', ' + c.year + '</b><small class="num">' + nb(c.price) + ' zł, ' + esc(c.city) + '</small>' +
-        '<span class="acts"><a href="' + href + '" target="_blank" rel="noopener">Ogłoszenie<span class="sr"> ' + esc(c.name) + ' (nowa karta)</span></a>' +
-        '<button type="button" data-unpick="' + id + '">Usuń<span class="sr"> ' + esc(c.name) + ' z listy</span></button></span></li>';
+      var c = byId[id], href = c.oto || c.olx, gone = c.status !== 'active';
+      return '<li><b>' + esc(c.name) + ', ' + c.year + '</b><small class="num">' + nb(c.price) + ' zł, ' + esc(c.city) +
+        (gone ? ' · <span class="gone">Ogłoszenie nieaktywne</span>' : '') + '</small>' +
+        '<span class="acts"><a href="' + esc(href) + '" target="_blank" rel="noopener">Ogłoszenie<span class="sr"> ' + esc(c.name) + ' (nowa karta)</span></a>' +
+        '<button type="button" data-unpick="' + esc(id) + '">Usuń<span class="sr"> ' + esc(c.name) + ' z listy</span></button></span></li>';
     }).join('') + '</ul>';
   }
 
@@ -508,28 +465,60 @@ h2.book { font-size: 1.95rem; line-height: 1.02; font-weight: 850; font-stretch:
   var tabs = document.querySelectorAll('.tabs button');
   var fullEl = document.getElementById('o-full');
   var sortEl = document.getElementById('o-sort');
+  var moreEl = document.getElementById('show-all');
 
   function renderTop(pressId) {
-    document.getElementById('top').innerHTML = cars.filter(function (c) { return c.top; })
-      .sort(function (a, b) { return a.top - b.top; }).map(function (c) { return entry(c, true, pressId); }).join('');
+    var top = cars.filter(function (c) { return c.top && visible(c); }).sort(function (a, b) { return a.top - b.top; });
+    document.getElementById('top').innerHTML = top.length ? top.map(function (c) { return entry(c, true, pressId); }).join('')
+      : '<p class="empty">Polecane pojawią się, gdy automat sprawdzi szczegóły ogłoszeń.</p>';
   }
   function renderList(pressId) {
-    var list = cars.filter(function (c) { return !c.top; })
+    var list = cars.filter(function (c) { return !c.top && visible(c); })
       .filter(function (c) { return state.fuel === 'all' || c.fuel === state.fuel; })
       .filter(function (c) { return state.seller === 'all' || c.seller === state.seller; })
       .filter(function (c) { return !state.full || (c.cam === 1 && c.cp === 1); });
     if (state.sort === 'price') list.sort(function (a, b) { return a.price - b.price; });
     if (state.sort === 'km') list.sort(function (a, b) { return a.km - b.km; });
     if (state.sort === 'year') list.sort(function (a, b) { return b.year - a.year || a.km - b.km; });
-    document.getElementById('list').innerHTML = list.length ? list.map(function (c) { return entry(c, false, pressId); }).join('')
-      : '<p class="empty">Żadne auto nie pasuje do tych filtrów. Wybierz inne paliwo albo sprzedawcę, albo odznacz „Tylko z kamerą i CarPlay”.</p>';
-    var n = list.length;
-    document.getElementById('count').textContent = n ? n + ' ' + plural(n, 'auto', 'auta', 'aut') + ' poza trzema polecanymi' : '';
+    var n = list.length, shown = showAll ? list : list.slice(0, LIMIT);
+    document.getElementById('list').innerHTML = n ? shown.map(function (c) { return entry(c, false, pressId); }).join('')
+      : '<p class="empty">Żadne auto nie pasuje do tych filtrów. Wybierz inny napęd albo sprzedawcę, albo odznacz „Tylko z kamerą i CarPlay”.</p>';
+    document.getElementById('count').textContent = !n ? '' : shown.length < n
+      ? 'Pokazuję ' + shown.length + ' najlepszych z ' + n + ' aut poza trzema polecanymi'
+      : n + ' ' + plural(n, 'auto', 'auta', 'aut') + ' poza trzema polecanymi';
+    moreEl.hidden = shown.length >= n;
+    moreEl.textContent = 'Pokaż wszystkie (' + n + ')';
     tabs.forEach(function (b) { b.setAttribute('aria-pressed', String(b.dataset.fuel === state.fuel)); });
     fullEl.checked = state.full;
     sortEl.value = state.sort;
     sellerEl.value = state.seller;
     save('sylwia-filtry', state);
+  }
+  function renderVoid() {
+    var groups = {};
+    cars.filter(function (c) { return c.status === 'active' && c.reject; }).forEach(function (c) {
+      var key = c.reject.replace(/\s*\([^)]*\)/g, '');
+      (groups[key] = groups[key] || []).push(c);
+    });
+    var keys = Object.keys(groups).sort(function (a, b) { return groups[b].length - groups[a].length; });
+    document.getElementById('void-list').innerHTML = keys.length ? keys.map(function (k) {
+      var g = groups[k];
+      return '<details><summary><s>' + esc(k) + '</s><span>' + g.length + ' ' + plural(g.length, 'auto', 'auta', 'aut') + '</span></summary><ul>' +
+        g.map(function (c) {
+          return '<li><a href="' + esc(c.oto || c.olx) + '" target="_blank" rel="noopener">' + esc(c.name) + ', ' + c.year + ', ' + nb(c.price) + '&nbsp;zł<span class="sr"> (nowa karta)</span></a></li>';
+        }).join('') + '</ul></details>';
+    }).join('') : '<p class="empty">Na razie nic nie odrzuciliśmy.</p>';
+  }
+  function renderCover() {
+    var n = cars.filter(visible).length;
+    var today = new Date().toLocaleDateString('sv-SE', { timeZone: 'Europe/Warsaw' });
+    var label = runDay === today ? 'Nowe dziś' : 'Nowe w ostatniej aktualizacji';
+    document.getElementById('when').innerHTML = 'Aktualizacja: ' + esc(fmtStamp(meta.lastRun)) + '. ' +
+      (meta.newCount ? '<strong>' + label + ': ' + meta.newCount + '</strong>' : 'Brak nowych ofert od ostatniej aktualizacji') +
+      '. ' + n + ' ' + plural(n, 'auto', 'auta', 'aut') + ' na liście.';
+    var stale = document.getElementById('stale');
+    stale.hidden = Date.now() - Date.parse(meta.lastRun) <= STALE_MS;
+    stale.textContent = 'Ostatnia aktualizacja była ponad półtorej doby temu. Automat mógł nie zadziałać, daj znać Kamilowi.';
   }
   function toggle(id) {
     var i = calls.indexOf(id);
@@ -540,17 +529,45 @@ h2.book { font-size: 1.95rem; line-height: 1.02; font-weight: 850; font-stretch:
     var btn = document.querySelector('[data-pick="' + id + '"]');
     if (btn) btn.focus({ preventScroll: true });
   }
+  function refilter() { showAll = false; renderList(); }
+
+  function init(data) {
+    cars = data[0]; meta = data[1];
+    runDay = (meta.lastRun || '').slice(0, 10);
+    stampDate = runDay ? fmtDay(runDay) : '';
+    byId = {};
+    cars.forEach(function (c) { byId[c.id] = view(c); });
+    calls = calls.filter(function (id) { return byId[id]; });
+    save('sylwia-telefon', calls);
+    renderCover(); renderCalls(); renderTop(); renderList(); renderVoid();
+  }
+  function fail() {
+    var msg = 'Nie udało się wczytać ofert. Odśwież stronę za chwilę, a jeśli to nie pomoże, daj znać Kamilowi.';
+    document.getElementById('when').textContent = msg;
+    document.getElementById('top').innerHTML = '<p class="empty">' + msg + '</p>';
+    document.getElementById('list').innerHTML = '';
+  }
+
+  document.getElementById('top').innerHTML = '<p class="loading">Wczytuję oferty…</p>';
+  document.getElementById('list').innerHTML = '<p class="loading">Wczytuję oferty…</p>';
   document.addEventListener('click', function (e) {
     var p = e.target.closest('[data-pick]');
     if (p) { toggle(p.getAttribute('data-pick')); return; }
     var u = e.target.closest('[data-unpick]');
     if (u) { toggle(u.getAttribute('data-unpick')); }
   });
-  tabs.forEach(function (b) { b.addEventListener('click', function () { state.fuel = b.dataset.fuel; renderList(); }); });
-  fullEl.addEventListener('change', function () { state.full = fullEl.checked; renderList(); });
-  sortEl.addEventListener('change', function () { state.sort = sortEl.value; renderList(); });
-  sellerEl.addEventListener('change', function () { state.seller = sellerEl.value; renderList(); });
-  renderCalls(); renderTop(); renderList();
+  tabs.forEach(function (b) { b.addEventListener('click', function () { state.fuel = b.dataset.fuel; refilter(); }); });
+  fullEl.addEventListener('change', function () { state.full = fullEl.checked; refilter(); });
+  sortEl.addEventListener('change', function () { state.sort = sortEl.value; refilter(); });
+  sellerEl.addEventListener('change', function () { state.seller = sellerEl.value; refilter(); });
+  moreEl.addEventListener('click', function () {
+    showAll = true; renderList();
+    var next = document.querySelectorAll('#list .entry')[LIMIT];
+    if (next) { next.setAttribute('tabindex', '-1'); next.focus({ preventScroll: true }); }
+  });
+  Promise.all([fetch('data/offers.json', { cache: 'no-store' }), fetch('data/meta.json', { cache: 'no-store' })])
+    .then(function (r) { if (!r[0].ok || !r[1].ok) throw new Error('HTTP'); return Promise.all([r[0].json(), r[1].json()]); })
+    .then(init, fail);
 
   var checks = [
     ['Sprawdź historię auta', 'Na historiapojazdu.gov.pl wpisz VIN, numer rejestracyjny i datę pierwszej rejestracji. Zobaczysz przebiegi z przeglądów i szkody. Poproś sprzedającego o te dane przez telefon.'],
@@ -562,7 +579,8 @@ h2.book { font-size: 1.95rem; line-height: 1.02; font-weight: 850; font-stretch:
     ['Hybryda Hondy: sprawdź baterię', 'Kontrolka IMA nie może się świecić, a auto powinno wyraźnie pomagać sobie prądem przy ruszaniu. Nowa bateria kosztuje kilka tysięcy złotych.'],
     ['Jazda próbna na zimnym silniku', 'Poproś, żeby sprzedający nie uruchamiał auta przed Twoim przyjazdem.'],
     ['Oględziny u niezależnego mechanika', 'Zanim wpłacisz zaliczkę. Przyda się też miernik grubości lakieru.'],
-    ['Dokumenty', 'Dwa kluczyki, książka serwisowa, faktury za naprawy, ważny przegląd.']
+    ['Dokumenty', 'Dwa kluczyki, książka serwisowa, faktury za naprawy, ważny przegląd.'],
+    ['Opel Adam: sprawdź silnik', 'W dowodzie rejestracyjnym moc ma wynosić co najmniej 74 kW, czyli 100 KM. To silnik 1.4 (100 KM) albo 1.0 Turbo (115 KM).']
   ];
   var done = load('sylwia-lista', {});
   var checkEl = document.getElementById('check');
@@ -581,6 +599,7 @@ h2.book { font-size: 1.95rem; line-height: 1.02; font-weight: 850; font-stretch:
     ['Hybrydy na Otomoto', 'z automatyczną klimą, nieuszkodzone', oto([['search[filter_enum_fuel_type]', 'hybrid']])],
     ['Benzyna z gazem na Otomoto', 'z automatyczną klimą, nieuszkodzone', oto([['search[filter_enum_fuel_type]', 'petrol-lpg']])],
     ['Diesle do 1,6 l na Otomoto', 'z automatyczną klimą i czujnikami', oto([['search[filter_enum_fuel_type]', 'diesel'], ['search[filter_float_engine_capacity:to]', '1600'], ['search[filter_enum_park_distance_control_rear]', '1']])],
+    ['Opel Adam na Otomoto', 'od 100 KM, nieuszkodzony', 'https://www.otomoto.pl/osobowe/opel/adam/od-2011?' + q([['search[filter_float_price:to]', '30000'], ['search[filter_float_mileage:to]', '120000'], ['search[filter_float_engine_power:from]', '100'], ['search[filter_enum_damaged]', '0']])],
     ['Hybrydy na OLX', 'kategoria „CNG i Hybryda”, nieuszkodzone', olx([['search[filter_enum_petrol][0]', 'cng']])],
     ['Benzyna z gazem na OLX', 'nieuszkodzone, klimę sprawdzaj w opisie', olx([['search[filter_enum_petrol][0]', 'lpg']])],
     ['Diesle do 1,6 l na OLX', 'nieuszkodzone, klimę sprawdzaj w opisie', olx([['search[filter_enum_petrol][0]', 'diesel'], ['search[filter_float_enginesize:to]', '1600']])]
