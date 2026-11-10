@@ -198,9 +198,10 @@ class CriteriaTest(unittest.TestCase):
         self.assertIn("120 000", rules.soft_out(item(fuel="hev", km=156000)))
         self.assertIsNone(rules.soft_out(item(price=29999, km=119000)))
 
-    def test_hard_ok_adam_needs_100hp(self):
+    def test_hard_ok_adam_needs_85hp(self):
         adam = dict(make="opel", model="adam", fuel="pb", cc=1398)
-        self.assertFalse(rules.hard_ok(item(hp=90, **adam)))
+        self.assertFalse(rules.hard_ok(item(hp=70, **adam)))
+        self.assertTrue(rules.hard_ok(item(hp=87, **adam)))
         self.assertTrue(rules.hard_ok(item(hp=100, **adam)))
         self.assertFalse(rules.hard_ok(item(make="opel", model="corsa", fuel="pb", hp=100)))
 

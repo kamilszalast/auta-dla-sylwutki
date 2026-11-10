@@ -97,7 +97,7 @@ class SearchUrlTest(unittest.TestCase):
         url = otomoto.search_url(query("pb"), with_ac=False, page=1)
         self.assertTrue(url.startswith("https://www.otomoto.pl/osobowe/opel/adam/od-2011?"))
         p = self.params(url)
-        self.assertEqual(p["search[filter_float_engine_power:from]"], "100")
+        self.assertEqual(p["search[filter_float_engine_power:from]"], "85")
         self.assertNotIn("search[filter_enum_fuel_type]", p)
 
     def test_hybrid_mileage_limit(self):

@@ -404,7 +404,7 @@ h2.book { font-size: 1.95rem; line-height: 1.02; font-weight: 850; font-stretch:
       <dl>
         <div><dt>Spalanie</dt><dd>6–7 l benzyny na 100 km</dd></div>
         <div><dt>Zaleta</dt><dd>małe, zwrotne auto, łatwo zaparkować w mieście</dd></div>
-        <div><dt>Uwaga</dt><dd>bierzemy tylko wersje od 100 KM: 1.4 (100 KM) i 1.0 Turbo (115 KM); słabsze wersje 70 i 87 KM są za wolne na trasy</dd></div>
+        <div><dt>Uwaga</dt><dd>bierzemy wersje od 85 KM: 1.4 (87 lub 100 KM) i 1.0 Turbo (115 KM); najsłabsza 1.2 (70 KM) jest za wolna na trasy</dd></div>
       </dl>
     </div>
     <p class="aside">Hybryd w tym budżecie jest mało, a część z nich to cesje leasingu. Odrzucamy je automatycznie.</p>
@@ -654,7 +654,7 @@ h2.book { font-size: 1.95rem; line-height: 1.02; font-weight: 850; font-stretch:
     ['Jazda próbna na zimnym silniku', 'Poproś, żeby sprzedający nie uruchamiał auta przed Twoim przyjazdem.'],
     ['Oględziny u niezależnego mechanika', 'Zanim wpłacisz zaliczkę. Przyda się też miernik grubości lakieru.'],
     ['Dokumenty', 'Dwa kluczyki, książka serwisowa, faktury za naprawy, ważny przegląd.'],
-    ['Opel Adam: sprawdź silnik', 'W dowodzie rejestracyjnym moc ma wynosić co najmniej 74 kW, czyli 100 KM. To silnik 1.4 (100 KM) albo 1.0 Turbo (115 KM).']
+    ['Opel Adam: sprawdź silnik', 'W dowodzie rejestracyjnym moc ma wynosić co najmniej 64 kW, czyli 87 KM. To silnik 1.4 (87 lub 100 KM) albo 1.0 Turbo (115 KM).']
   ];
   var done = load('sylwia-lista', {});
   var checkEl = document.getElementById('check');
@@ -672,7 +672,7 @@ h2.book { font-size: 1.95rem; line-height: 1.02; font-weight: 850; font-stretch:
     ['Hybrydy na Otomoto', 'nieuszkodzone', oto([['search[filter_enum_fuel_type]', 'hybrid']])],
     ['Benzyna z gazem na Otomoto', 'nieuszkodzone', oto([['search[filter_enum_fuel_type]', 'petrol-lpg']])],
     ['Diesle do 1,6 l na Otomoto', 'z czujnikami, nieuszkodzone', oto([['search[filter_enum_fuel_type]', 'diesel'], ['search[filter_float_engine_capacity:to]', '1600'], ['search[filter_enum_park_distance_control_rear]', '1']])],
-    ['Opel Adam na Otomoto', 'od 100 KM, nieuszkodzony', 'https://www.otomoto.pl/osobowe/opel/adam/od-2011?' + q([['search[filter_float_price:to]', '30000'], ['search[filter_float_mileage:to]', '120000'], ['search[filter_float_engine_power:from]', '100'], ['search[filter_enum_damaged]', '0']])],
+    ['Opel Adam na Otomoto', 'od 85 KM, nieuszkodzony', 'https://www.otomoto.pl/osobowe/opel/adam/od-2011?' + q([['search[filter_float_price:to]', '30000'], ['search[filter_float_mileage:to]', '120000'], ['search[filter_float_engine_power:from]', '85'], ['search[filter_enum_damaged]', '0']])],
     ['Hybrydy na OLX', 'kategoria „CNG i Hybryda”, nieuszkodzone', olx([['search[filter_enum_petrol][0]', 'cng']])],
     ['Benzyna z gazem na OLX', 'nieuszkodzone, klimę sprawdzaj w opisie', olx([['search[filter_enum_petrol][0]', 'lpg']])],
     ['Diesle do 1,6 l na OLX', 'nieuszkodzone, klimę sprawdzaj w opisie', olx([['search[filter_enum_petrol][0]', 'diesel'], ['search[filter_float_enginesize:to]', '1600']])]
