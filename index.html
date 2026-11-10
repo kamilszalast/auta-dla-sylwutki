@@ -114,14 +114,9 @@ h2.book { font-size: 1.95rem; line-height: 1.02; font-weight: 850; font-stretch:
 .new-entry { margin: 0 0 6px; color: var(--stamp); font-size: .875rem; font-weight: 700; }
 .price { font: 800 1.4rem/1.1 var(--f-book); font-stretch: 100%; font-variant-numeric: tabular-nums; }
 .nw { white-space: nowrap; }
-/* Pasted photo (first photo of the listing, linked from Otomoto) */
-.shot { position: relative; margin: 0; padding: 6px; background: #fff7fa; border-radius: 2px; box-shadow: 0 2px 6px -2px rgba(74, 14, 40, .35); }
-.shot img { display: block; width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: cover; background: #f0c4d5; }
-.shot .pc { position: absolute; width: 20px; height: 20px; background: #24121c; }
-.shot .pc-tl { top: 0; left: 0; clip-path: polygon(0 0, 100% 0, 0 100%); }
-.shot .pc-tr { top: 0; right: 0; clip-path: polygon(0 0, 100% 0, 100% 100%); }
-.shot .pc-bl { bottom: 0; left: 0; clip-path: polygon(0 0, 0 100%, 100% 100%); }
-.shot .pc-br { bottom: 0; right: 0; clip-path: polygon(100% 0, 100% 100%, 0 100%); }
+/* First photo of the listing, linked from Otomoto */
+.shot { position: relative; margin: 0; }
+.shot img { display: block; width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: cover; background: var(--rule); border-radius: 8px; }
 .entry.top .shot-wrap { position: relative; }
 .entry.top .shot-wrap .stamp-round { position: absolute; right: -6px; bottom: -22px; margin: 0; z-index: 1; }
 /* Price gauge: offer price against the model average, -20%..+20%, average band ±5% */
@@ -537,7 +532,7 @@ h2.book { font-size: 1.95rem; line-height: 1.02; font-weight: 850; font-stretch:
   function shot(c) {
     if (!c.photo || !/^https:\/\//.test(c.photo)) return '';
     return '<figure class="shot"><img src="' + esc(c.photo) + '" alt="" width="640" height="480" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.closest(\'figure\').remove()">' +
-      '<i class="pc pc-tl"></i><i class="pc pc-tr"></i><i class="pc pc-bl"></i><i class="pc pc-br"></i></figure>';
+      '</figure>';
   }
   function entry(c, ranked, pressId) {
     var picked = calls.indexOf(c.id) > -1;
