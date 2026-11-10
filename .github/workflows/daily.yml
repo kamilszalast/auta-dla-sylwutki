@@ -1,0 +1,69 @@
+name: Codzienna aktualizacja ofert
+
+on:
+  schedule:
+    # 6:00 w Polsce: 4:07 UTC latem, 5:07 UTC zimą. Bramka niżej przepuszcza tylko godziny 6–9 w Polsce,
+    # a skrypt kończy bez zmian, jeśli dzisiejsze dane już są.
+    - cron: '7 4 * * *'
+    - cron: '7 5 * * *'
+  workflow_dispatch:
+    inputs:
+      force:
+        description: 'Uruchom mimo dzisiejszych danych'
+        type: boolean
+        default: false
+      detail_limit:
+        description: 'Ile stron ogłoszeń pobrać'
+        default: '100'
+
+permissions:
+  contents: write
+  pages: write
+
+concurrency:
+  group: daily-update
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - name: Tylko rano czasu polskiego
+        id: gate
+        run: |
+          h=$(TZ=Europe/Warsaw date +%H)
+          if [ "${{ github.event_name }}" = "schedule" ] && { [ "$h" -lt 6 ] || [ "$h" -gt 9 ]; }; then
+            echo "Godzina $h w Polsce, pomijam."
+            echo "run=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "run=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - uses: actions/checkout@v4
+        if: steps.gate.outputs.run == 'true'
+
+      - uses: actions/setup-python@v5
+        if: steps.gate.outputs.run == 'true'
+        with:
+          python-version: '3.12'
+
+      - name: Testy
+        if: steps.gate.outputs.run == 'true'
+        run: python -m unittest discover -s tests -t . -b
+
+      - name: Pobierz oferty i opublikuj dane
+        if: steps.gate.outputs.run == 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          args="--ran-by actions --push --detail-limit ${{ inputs.detail_limit || '100' }}"
+          if [ "${{ inputs.force }}" = "true" ]; then args="$args --force"; fi
+          python -m scraper run $args
+
+      - name: Odśwież GitHub Pages
+        if: steps.gate.outputs.run == 'true'
+        continue-on-error: true
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh api -X POST "repos/${{ github.repository }}/pages/builds"
