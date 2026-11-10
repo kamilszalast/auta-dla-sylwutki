@@ -108,7 +108,7 @@ class EquipmentTest(unittest.TestCase):
 
     def test_imported_watch(self):
         r = run(details={"country_origin": "Francja"})
-        self.assertTrue(any(w.startswith("Sprowadzony") and "Francja" in w for w in r["watch"]))
+        self.assertIn("Auto sprowadzone (kraj pochodzenia: Francja). Poproś o raport historii z zagranicy, np. z Carvertical.", r["watch"])
         self.assertFalse(r["facts"]["salonPL"])
 
 

@@ -309,7 +309,7 @@ h2.book { font-size: 1.95rem; line-height: 1.02; font-weight: 850; font-stretch:
       <h2 class="book" id="void-h">Odrzucone</h2>
       <svg class="stamp stamp-void" viewBox="0 0 132 46" aria-hidden="true"><g filter="url(#ink)"><rect x="2" y="2" width="128" height="42" rx="4" fill="none" stroke="currentColor" stroke-width="3"/><text x="66" y="31" text-anchor="middle" font-size="21" style="font-stretch:72%" letter-spacing="1.5">ODRZUCONE</text></g></svg>
     </div>
-    <p class="void-intro">Te ogłoszenia pasowały do wyszukiwania, ale coś je skreśliło. Stuknij powód, żeby zobaczyć auta.</p>
+    <p class="void-intro">Te ogłoszenia pasowały do wyszukiwania, ale odrzuciliśmy je z powodu podanego niżej. Stuknij powód, żeby zobaczyć auta.</p>
     <div class="voided" id="void-list"></div>
   </section>
 
@@ -484,7 +484,7 @@ h2.book { font-size: 1.95rem; line-height: 1.02; font-weight: 850; font-stretch:
     document.getElementById('list').innerHTML = n ? shown.map(function (c) { return entry(c, false, pressId); }).join('')
       : '<p class="empty">Żadne auto nie pasuje do tych filtrów. Wybierz inny napęd albo sprzedawcę, albo odznacz „Tylko z kamerą i CarPlay”.</p>';
     document.getElementById('count').textContent = !n ? '' : shown.length < n
-      ? 'Pokazuję ' + shown.length + ' najlepszych z ' + n + ' aut poza trzema polecanymi'
+      ? 'Pokazuję ' + shown.length + ' najlepszych. Wszystkich aut poza polecanymi: ' + n
       : n + ' ' + plural(n, 'auto', 'auta', 'aut') + ' poza trzema polecanymi';
     moreEl.hidden = shown.length >= n;
     moreEl.textContent = 'Pokaż wszystkie (' + n + ')';

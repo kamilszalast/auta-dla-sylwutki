@@ -96,7 +96,7 @@ def _facts(item, details):
 
 def _imported(facts, watch):
     if facts["origin"] and facts["origin"] != "Polska":
-        watch.append("Sprowadzony, kraj pochodzenia: %s. Poproś o raport historii z zagranicy (np. Carvertical)." % facts["origin"])
+        watch.append("Auto sprowadzone (kraj pochodzenia: %s). Poproś o raport historii z zagranicy, np. z Carvertical." % facts["origin"])
 
 
 def classify(item, ad, in_ac_filter):
