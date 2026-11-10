@@ -59,6 +59,10 @@ class PickTopTest(unittest.TestCase):
     def test_small_body_bonus(self):
         self.assertGreater(car("adam", name="Opel Adam", body="auta małe")["score"], car("astra", body="kompakt")["score"])
 
+    def test_automatic_ac_scores_higher_than_manual(self):
+        self.assertGreater(car("auto")["score"], car("manual", equipment=dict(FULL, ac=3))["score"])
+        self.assertGreater(car("manual", equipment=dict(FULL, ac=3))["score"], car("ask", equipment=dict(FULL, ac=2))["score"])
+
     def test_vans_and_minivans_never_top(self):
         cars = [car("van", km=1000, name="Toyota ProAce"), car("meriva", km=1000, name="Opel Meriva"),
                 car("a", name="Opel Astra"), car("b", name="Citroën C3"), car("c", name="Opel Adam")]

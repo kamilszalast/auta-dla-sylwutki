@@ -44,6 +44,26 @@ SMALL_BODIES = ("auta małe", "auta miejskie")
 VAN_REASON = "Dostawczak z szybami, nie dla Sylwii"
 
 
+NO_AC_NOTE = "W ogłoszeniu nie ma słowa o klimatyzacji. Dopytaj."
+OLD_PLAIN_AC_NOTE = "W ogłoszeniu sama „klimatyzacja”. Dopytaj, czy jest automatyczna."
+
+
+def migrate_ac(auto):
+    """Rewrites a stored classification from the time automatic AC was required (before 10.11 evening)."""
+    if not auto:
+        return
+    eq = auto["equipment"]
+    if auto.get("reject") == "Klimatyzacja manualna":
+        auto["reject"], eq["ac"] = None, 3
+        auto["plus"] = (auto["plus"][:-1] + ", klima manualna." if auto.get("plus") else "Klima manualna.")
+    elif auto.get("reject") == "Brak klimy automatycznej w ogłoszeniu":
+        auto["reject"], eq["ac"] = None, 2
+        auto["watch"] = " ".join(x for x in (auto.get("watch"), NO_AC_NOTE) if x)
+    if OLD_PLAIN_AC_NOTE in (auto.get("watch") or ""):
+        auto["watch"] = auto["watch"].replace(OLD_PLAIN_AC_NOTE, "").strip() or None
+        eq["ac"] = 3
+
+
 def body_kind(car):
     """van / minivan / small / other, from the model name first (Otomoto body types are unreliable)."""
     name, body = car.get("name") or "", car.get("body") or ""
@@ -147,22 +167,16 @@ def classify(item, ad, in_ac_filter):
     label = (ad.get("ac_label") or "").lower()
     reject = _common_flags(item, text)
 
+    # ac: 1 automatic, 3 present (manual or type not stated), 2 ask the seller. Kamil 10.11: manual AC is fine.
     auto_label = "automatyczn" in label
     manual_label = "manualn" in label
-    if auto_label or (in_ac_filter and not manual_label):
+    if auto_label or (in_ac_filter and not manual_label) or (AUTO_AC.search(text) and not manual_label):
         ac = 1
-    elif AUTO_AC.search(text) and not manual_label:
-        ac = 1
-    elif AUTO_AC.search(text):
-        ac = 2
-        watch.append("W parametrach klima manualna, w opisie automatyczna. Dopytaj, która jest prawdziwa.")
-    elif manual_label:
-        ac, reject = 0, reject or "Klimatyzacja manualna"
-    elif ANY_AC.search(text):
-        ac = 2
-        watch.append("W ogłoszeniu sama „klimatyzacja”. Dopytaj, czy jest automatyczna.")
+    elif manual_label or ANY_AC.search(text):
+        ac = 3
     else:
-        ac, reject = 0, reject or "Brak klimy automatycznej w ogłoszeniu"
+        ac = 2
+        watch.append(NO_AC_NOTE)
 
     cam = 1 if any("camera" in k for k in keys) or CAMERA.search(text) else 0
     pdc = 1 if any(k.startswith("park_distance_control") for k in keys) or SENSORS.search(text) else 0
@@ -186,6 +200,8 @@ def classify(item, ad, in_ac_filter):
     if auto_label:
         kind = label.split(":", 1)[1].strip() if ":" in label else "automatyczna"
         plus.append("klima " + kind)
+    elif manual_label:
+        plus.append("klima manualna")
     body = (details.get("body_type") or "").lower() or None
     return {"equipment": {"ac": ac, "cam": cam, "pdc": pdc, "cp": cp}, "facts": facts, "body": body,
             "reject": reject, "watch": watch, "plus": plus, "pending": False}

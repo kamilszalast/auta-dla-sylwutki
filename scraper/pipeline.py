@@ -120,6 +120,8 @@ def _details(cars, fetcher, today, limit, errors):
 
 def finalize(cars, data, today, errors):
     """Overrides, rules that need no listing page, score and Polecane. Runs every day without network."""
+    for car in cars:
+        rules.migrate_ac(car.get("auto"))
     ov, ov_error = overrides.load(data / "overrides.json")
     if ov_error:
         errors.append(ov_error)

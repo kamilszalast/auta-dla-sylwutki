@@ -19,18 +19,37 @@ class AirConditioningTest(unittest.TestCase):
         self.assertEqual(r["equipment"]["ac"], 1)
         self.assertIsNone(r["reject"])
 
-    def test_ac_plain_klimatyzacja_is_ask(self):
+    def test_ac_plain_klimatyzacja_is_present(self):
         r = run("Sprawna klimatyzacja, nowe opony.", label=None)
-        self.assertEqual(r["equipment"]["ac"], 2)
-        self.assertTrue(any("automatyczna" in w for w in r["watch"]))
+        self.assertEqual(r["equipment"]["ac"], 3)
+        self.assertEqual(r["watch"], [])
 
-    def test_ac_manual_label_rejected(self):
+    def test_ac_manual_label_accepted(self):
         r = run("Zadbany.", label="Klimatyzacja manualna")
-        self.assertEqual(r["reject"], "Klimatyzacja manualna")
+        self.assertIsNone(r["reject"])
+        self.assertEqual(r["equipment"]["ac"], 3)
+        self.assertIn("klima manualna", r["plus"])
 
-    def test_no_ac_rejected(self):
+    def test_no_ac_mention_is_ask(self):
         r = run("Zadbany, nowe opony.", label=None)
-        self.assertEqual(r["reject"], "Brak klimy automatycznej w ogłoszeniu")
+        self.assertIsNone(r["reject"])
+        self.assertEqual(r["equipment"]["ac"], 2)
+        self.assertIn("W ogłoszeniu nie ma słowa o klimatyzacji. Dopytaj.", r["watch"])
+
+    def test_migrate_stored_ac_results(self):
+        manual = {"equipment": {"ac": 0, "cam": 1, "pdc": 0, "cp": 0}, "reject": "Klimatyzacja manualna", "plus": None, "watch": None}
+        rules.migrate_ac(manual)
+        self.assertEqual((manual["reject"], manual["equipment"]["ac"], manual["plus"]), (None, 3, "Klima manualna."))
+        none = {"equipment": {"ac": 0, "cam": 0, "pdc": 0, "cp": 0}, "reject": "Brak klimy automatycznej w ogłoszeniu", "plus": "Bezwypadkowy.", "watch": None}
+        rules.migrate_ac(none)
+        self.assertEqual((none["reject"], none["equipment"]["ac"], none["watch"]), (None, 2, "W ogłoszeniu nie ma słowa o klimatyzacji. Dopytaj."))
+        plain = {"equipment": {"ac": 2, "cam": 0, "pdc": 0, "cp": 0}, "reject": None, "plus": None,
+                 "watch": "W ogłoszeniu sama „klimatyzacja”. Dopytaj, czy jest automatyczna. Auto sprowadzone."}
+        rules.migrate_ac(plain)
+        self.assertEqual((plain["equipment"]["ac"], plain["watch"]), (3, "Auto sprowadzone."))
+        damaged = {"equipment": {"ac": 1, "cam": 0, "pdc": 0, "cp": 0}, "reject": "Uszkodzone według opisu", "plus": None, "watch": None}
+        rules.migrate_ac(damaged)
+        self.assertEqual((damaged["reject"], damaged["equipment"]["ac"]), ("Uszkodzone według opisu", 1))
 
 
 class RedFlagsTest(unittest.TestCase):
