@@ -190,10 +190,18 @@ h2.book { font-size: 1.95rem; line-height: 1.02; font-weight: 850; font-stretch:
 .voided ul li { padding-block: 0; border-bottom: 0; }
 .voided li a { display: flex; min-height: 44px; align-items: center; color: var(--ink-2); font-size: .95rem; }
 .show-all { appearance: none; width: 100%; min-height: 50px; margin-top: 16px; border-radius: 10px; border: 2px solid var(--ink); background: transparent; color: var(--ink); font: 750 1rem var(--f-read); cursor: pointer; }
-.stale { background: var(--label); color: #24121c; border-radius: 4px; padding: 10px 12px; font-size: .95rem; font-weight: 600; }
 .kamil { font-weight: 750; }
-.calls .gone { color: #8a2f4f; font-weight: 650; }
+.calls .gone { color: #24121c; font-weight: 700; }
 .loading { padding-block: 22px; color: var(--ink-2); }
+
+.update-ledger { display: grid; border-top: 1px solid rgba(42, 15, 28, .3); }
+.update-ledger div { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; padding-block: 8px 7px; border-bottom: 1px solid rgba(42, 15, 28, .3); }
+.update-ledger dt { font: 600 .85rem/1.2 var(--f-book); font-stretch: 95%; }
+.update-ledger dd { font: 800 1.12rem/1.15 var(--f-book); font-stretch: 105%; font-variant-numeric: tabular-nums; text-align: right; }
+.update-ledger dd.none { font: 600 .95rem/1.3 var(--f-read); }
+.update-note { display: grid; grid-template-columns: 20px 1fr; gap: 8px; font-size: .95rem; font-weight: 700; padding-top: 10px; }
+.update-note[hidden] { display: none; }
+.update-note svg { width: 20px; height: 20px; }
 
 /* Back cover */
 .back { background: var(--cover); color: var(--on-cover); }
@@ -224,8 +232,15 @@ h2.book { font-size: 1.95rem; line-height: 1.02; font-weight: 850; font-stretch:
     <div class="plate" aria-hidden="true"><b>PL</b><span>SYL 30K</span></div>
     <h1>Auta dla Sylwutki</h1>
     <p class="deck">Książka poszukiwań auta</p>
-    <p class="when" id="when">Wczytuję oferty…</p>
-    <p class="stale" id="stale" role="status" hidden></p>
+    <section class="update-b" aria-labelledby="update-h">
+      <h2 class="sr" id="update-h">Aktualizacja ofert</h2>
+      <dl class="update-ledger">
+        <div><dt>Sprawdzone</dt><dd id="when">Wczytuję oferty…</dd></div>
+        <div><dt>Nowe dziś</dt><dd id="u-new">…</dd></div>
+        <div><dt>Na liście</dt><dd id="u-all">…</dd></div>
+      </dl>
+      <p class="update-note" id="stale" role="status" hidden></p>
+    </section>
     <nav class="toc" aria-label="Spis treści">
       <a href="#polecane">Polecane</a>
       <a href="#wszystkie">Wszystkie auta</a>
@@ -527,12 +542,15 @@ h2.book { font-size: 1.95rem; line-height: 1.02; font-weight: 850; font-stretch:
     var n = cars.filter(visible).length;
     var today = new Date().toLocaleDateString('sv-SE', { timeZone: 'Europe/Warsaw' });
     var label = runDay === today ? 'Nowe dziś' : 'Nowe w ostatniej aktualizacji';
-    document.getElementById('when').innerHTML = 'Aktualizacja: ' + esc(fmtStamp(meta.lastRun)) + '. ' +
-      (meta.newCount ? '<strong>' + label + ': ' + meta.newCount + '</strong>' : 'Brak nowych ofert od ostatniej aktualizacji') +
-      '. ' + n + ' ' + plural(n, 'auto', 'auta', 'aut') + ' na liście.';
+    var when = document.getElementById('when'), newEl = document.getElementById('u-new');
+    when.textContent = fmtStamp(meta.lastRun);
+    newEl.previousElementSibling.textContent = label;
+    newEl.className = meta.newCount ? '' : 'none';
+    newEl.textContent = meta.newCount ? meta.newCount : 'brak nowych';
+    document.getElementById('u-all').textContent = n + ' ' + plural(n, 'auto', 'auta', 'aut');
     var stale = document.getElementById('stale');
     stale.hidden = Date.now() - Date.parse(meta.lastRun) <= STALE_MS;
-    stale.textContent = 'Ostatnia aktualizacja była ponad półtorej doby temu. Automat mógł nie zadziałać, daj znać Kamilowi.';
+    stale.innerHTML = mark('m-ask') + '<span>Od ostatniej aktualizacji minęło ponad półtorej doby. Automat mógł nie zadziałać, daj znać Kamilowi.</span>';
   }
   function toggle(id) {
     var i = calls.indexOf(id);
@@ -555,7 +573,10 @@ h2.book { font-size: 1.95rem; line-height: 1.02; font-weight: 850; font-stretch:
   }
   function fail() {
     var msg = 'Nie udało się wczytać ofert. Odśwież stronę za chwilę, a jeśli to nie pomoże, daj znać Kamilowi.';
-    document.getElementById('when').textContent = msg;
+    document.getElementById('when').textContent = 'nie udało się';
+    var note = document.getElementById('stale');
+    note.hidden = false;
+    note.innerHTML = mark('m-ask') + '<span>' + msg + '</span>';
     document.getElementById('top').innerHTML = '<p class="empty">' + msg + '</p>';
     document.getElementById('list').innerHTML = '';
   }
