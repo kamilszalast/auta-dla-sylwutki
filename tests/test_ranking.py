@@ -66,13 +66,16 @@ class PickTopTest(unittest.TestCase):
         self.assertIsNone(cars[0]["top"])
         self.assertIsNone(cars[0]["why"])
 
-    def test_why_from_facts(self):
+    def test_why_does_not_repeat_plus_facts(self):
         facts = dict(NO_FACTS, salonPL=True, firstOwner=True)
-        cars = [car("a", facts=facts), car("b"), car("c")]
+        cars = [car("a", facts=facts, fuel="lpg", year=2019), car("b"), car("c")]
         ranking.pick_top(cars, {})
-        self.assertTrue(cars[0]["why"].startswith("Polski salon"))
-        self.assertIn("pierwszy właściciel", cars[0]["why"])
-        self.assertIn("kamera, czujniki i CarPlay", cars[0]["why"])
+        why = cars[0]["why"]
+        self.assertTrue(why.startswith("Pełne wyposażenie: kamera, czujniki i CarPlay"), why)
+        self.assertIn("gaz", why)
+        self.assertIn("młody rocznik", why)
+        self.assertNotIn("salon", why.lower())
+        self.assertNotIn("właściciel", why)
 
     def test_kamil_why_kept(self):
         cars = [car("a", why="Najlepsza.", byKamil=["why"]), car("b"), car("c")]

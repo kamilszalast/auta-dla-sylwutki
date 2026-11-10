@@ -27,15 +27,9 @@ def _eligible(car):
 
 
 def why_text(car):
-    eq, facts = car["equipment"], car["facts"]
+    eq = car["equipment"]
     have = [name for key, name in (("cam", "kamera"), ("pdc", "czujniki"), ("cp", "CarPlay")) if eq.get(key) == 1]
-    parts = []
-    if facts.get("salonPL"):
-        parts.append("polski salon")
-    if facts.get("firstOwner"):
-        parts.append("pierwszy właściciel")
-    if facts.get("aso"):
-        parts.append("serwis w ASO")
+    parts = []  # salon/owner/ASO facts are already in "plus", so "why" names the rest
     if len(have) == 3:
         parts.append("pełne wyposażenie: kamera, czujniki i CarPlay")
     elif have:
