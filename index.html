@@ -108,7 +108,6 @@ h2.book { font-size: 1.95rem; line-height: 1.02; font-weight: 850; font-stretch:
 .entry-h { display: grid; grid-template-columns: minmax(0, 1fr) auto; column-gap: 10px; row-gap: 4px; align-items: start; }
 .entry-h h3, .entry-h .price { grid-column: 1; }
 .entry h3 { font-size: 1.36rem; line-height: 1.08; font-weight: 800; font-stretch: 110%; }
-.ledger { display: flex; justify-content: space-between; gap: 12px; font: 600 .82rem/1 var(--f-book); font-stretch: 95%; color: var(--ink-2); padding-bottom: 8px; border-bottom: 1px solid var(--rule); font-variant-numeric: tabular-nums; }
 .out { display: grid; grid-template-columns: 20px 1fr; gap: 8px; font-size: .95rem; font-weight: 600; }
 .out svg { width: 20px; height: 20px; color: var(--stamp); }
 .new-entry { margin: 0 0 6px; color: var(--stamp); font-size: .875rem; font-weight: 700; }
@@ -116,9 +115,7 @@ h2.book { font-size: 1.95rem; line-height: 1.02; font-weight: 850; font-stretch:
 .nw { white-space: nowrap; }
 /* First photo of the listing, linked from Otomoto */
 .shot { position: relative; margin: 0; }
-.shot img { display: block; width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: cover; background: var(--rule); border-radius: 8px; }
-.entry.top .shot-wrap { position: relative; }
-.entry.top .shot-wrap .stamp-round { position: absolute; right: -6px; bottom: -22px; margin: 0; z-index: 1; }
+.shot img { display: block; width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: cover; background: var(--rule); border-radius: 16px; }
 /* Price gauge: offer price against the model average, -20%..+20%, average band ±5% */
 .gauge { grid-column: 2; grid-row: 1 / span 3; width: 92px; height: 66px; align-self: center; overflow: visible; }
 .gauge .g-track { fill: none; stroke: var(--rule); stroke-width: 7; stroke-linecap: round; }
@@ -127,7 +124,6 @@ h2.book { font-size: 1.95rem; line-height: 1.02; font-weight: 850; font-stretch:
 .gauge .g-hub { fill: var(--ink); }
 .gauge text { font: 700 9px var(--f-book); fill: var(--ink-2); }
 .gauge .g-read { font: 800 12px var(--f-book); font-stretch: 90%; fill: var(--ink); font-variant-numeric: tabular-nums; }
-.entry-h.has-gauge .stamp-call { grid-column: 1; grid-row: 4; justify-self: start; margin: 6px 0 0 4px; }
 .price-note { grid-column: 1; font-size: .9rem; color: var(--ink-2); font-variant-numeric: tabular-nums; }
 .avg { font-weight: 650; font-variant-numeric: tabular-nums; padding-top: 4px; }
 .fields { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 16px; }
@@ -156,17 +152,8 @@ h2.book { font-size: 1.95rem; line-height: 1.02; font-weight: 850; font-stretch:
 }
 
 /* Stamps */
-.stamp { position: absolute; color: var(--stamp); pointer-events: none; opacity: .9; mix-blend-mode: var(--blend); }
 .cover :focus-visible { outline-color: var(--on-cover); }
 .sticker :focus-visible { outline-color: #5b3fa6; }
-.stamp text { font-family: var(--f-book); font-weight: 800; fill: currentColor; }
-.entry-h .stamp { position: static; }
-.stamp-round { grid-column: 2; grid-row: 1 / span 3; width: 104px; height: 104px; margin: -6px -4px -8px 0; transform: rotate(-11deg); }
-.stamp-call { grid-column: 2; grid-row: 1 / span 2; width: 120px; height: 46px; margin-top: 2px; transform: rotate(-4deg); }
-.entry.top .stamp-call { grid-column: 1; grid-row: 3; justify-self: start; margin: 6px 0 0 4px; }
-.stamp-call.press { animation: press .42s cubic-bezier(.16, 1, .3, 1) both; }
-@keyframes press { from { transform: rotate(-4deg) scale(1.6); opacity: 0; filter: blur(3px); } 60% { opacity: .95; } to { transform: rotate(-4deg) scale(1); opacity: .9; filter: blur(0); } }
-@media (prefers-reduced-motion: reduce) { .stamp-call.press { animation: none; } }
 
 /* Filters */
 .bar { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5; background: var(--paper); border-bottom: 1px solid var(--rule); margin-inline: calc(-1 * max(16px, env(safe-area-inset-left, 0px))); padding-inline: max(16px, env(safe-area-inset-left, 0px)); padding-top: 4px; }
@@ -207,7 +194,6 @@ h2.book { font-size: 1.95rem; line-height: 1.02; font-weight: 850; font-stretch:
 .more small { display: block; color: var(--ink-2); font-weight: 400; font-size: .92rem; }
 
 .void { position: relative; }
-.void .stamp-void { position: absolute; top: -4px; right: 0; width: 132px; height: 46px; transform: rotate(-7deg); }
 .voided { list-style: none; padding: 0; display: grid; }
 .voided li { padding-block: 12px; border-bottom: 1px solid var(--rule); color: var(--ink-2); }
 .voided s { color: var(--ink); text-decoration-color: var(--stamp); text-decoration-thickness: 2px; }
@@ -246,13 +232,6 @@ h2.book { font-size: 1.95rem; line-height: 1.02; font-weight: 850; font-stretch:
 <body>
 <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
   <defs>
-    <filter id="ink" x="-8%" y="-8%" width="116%" height="116%">
-      <feTurbulence type="fractalNoise" baseFrequency="1.1" numOctaves="1" seed="7" result="grain"/>
-      <feColorMatrix in="grain" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 -2.4 2.05" result="holes"/>
-      <feDisplacementMap in="SourceGraphic" in2="grain" scale="1.6" xChannelSelector="R" yChannelSelector="G" result="rough"/>
-      <feComposite in="rough" in2="holes" operator="in"/>
-    </filter>
-    <path id="ring" d="M60,60 m-43,0 a43,43 0 1,1 86,0 a43,43 0 1,1 -86,0"/>
     <symbol id="m-yes" viewBox="0 0 20 20"><path d="M4 10.6l3.8 3.9L16 5.6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></symbol>
     <symbol id="m-ask" viewBox="0 0 20 20"><path d="M7 7.3a3 3 0 1 1 4.5 2.6c-1 .6-1.5 1.2-1.5 2.4v.5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/><circle cx="10" cy="15.7" r="1.35" fill="currentColor"/></symbol>
     <symbol id="m-no" viewBox="0 0 20 20"><path d="M5.5 10h9" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></symbol>
@@ -380,7 +359,6 @@ h2.book { font-size: 1.95rem; line-height: 1.02; font-weight: 850; font-stretch:
   <section aria-labelledby="void-h" class="void">
     <div class="page-h">
       <h2 class="book" id="void-h">Odrzucone</h2>
-      <svg class="stamp stamp-void" viewBox="0 0 132 46" aria-hidden="true"><g filter="url(#ink)"><rect x="2" y="2" width="128" height="42" rx="4" fill="none" stroke="currentColor" stroke-width="3"/><text x="66" y="31" text-anchor="middle" font-size="21" style="font-stretch:72%" letter-spacing="1.5">ODRZUCONE</text></g></svg>
     </div>
     <p class="void-intro">Te ogłoszenia pasowały do wyszukiwania, ale odrzuciliśmy je z powodu podanego niżej. Stuknij powód, żeby zobaczyć auta.</p>
     <div class="voided" id="void-list"></div>
@@ -510,19 +488,6 @@ h2.book { font-size: 1.95rem; line-height: 1.02; font-weight: 850; font-stretch:
     var sr = v === 1 ? 'jest w ogłoszeniu' : v === 2 ? 'trzeba dopytać' : 'brak w ogłoszeniu';
     return '<li class="' + (v === 0 ? 'n' : '') + '">' + mark(m) + label + '<span class="sr">: ' + sr + '</span></li>';
   }
-  function roundStamp(n) {
-    return '<svg class="stamp stamp-round" viewBox="0 0 120 120" aria-hidden="true"><g filter="url(#ink)">' +
-      '<circle cx="60" cy="60" r="56" fill="none" stroke="currentColor" stroke-width="3"/>' +
-      '<circle cx="60" cy="60" r="33" fill="none" stroke="currentColor" stroke-width="1.6"/>' +
-      '<text font-size="11" style="font-stretch:70%"><textPath href="#ring" textLength="268" lengthAdjust="spacing">POLECANE • SPRAWDZONE ' + stampDate + ' •</textPath></text>' +
-      '<text x="60" y="74" text-anchor="middle" font-size="40" style="font-stretch:90%">' + n + '</text></g></svg>';
-  }
-  function callStamp(press) {
-    return '<svg class="stamp stamp-call' + (press ? ' press' : '') + '" viewBox="0 0 120 46" aria-hidden="true"><g filter="url(#ink)">' +
-      '<rect x="2" y="2" width="116" height="42" rx="4" fill="none" stroke="currentColor" stroke-width="3"/>' +
-      '<rect x="7" y="7" width="106" height="32" rx="2" fill="none" stroke="currentColor" stroke-width="1.2"/>' +
-      '<text x="60" y="30" text-anchor="middle" font-size="17" style="font-stretch:68%" letter-spacing="1">DO TELEFONU</text></g></svg>';
-  }
   function links(c) {
     var s = '';
     if (c.oto) s += '<a class="go" href="' + esc(c.oto) + '" target="_blank" rel="noopener"><span class="sr">Otwórz ogłoszenie na </span>Otomoto<span class="sr"> (nowa karta)</span></a>';
@@ -539,11 +504,8 @@ h2.book { font-size: 1.95rem; line-height: 1.02; font-weight: 850; font-stretch:
     var engine = /gaz|hybryd/.test(c.engine) ? c.engine : c.engine + ', ' + FUEL[c.fuel];
     var pending = !c.detailed && !c.manual;
     return '<article class="entry' + (ranked ? ' top' : '') + (picked ? ' picked' : '') + '" data-id="' + esc(c.id) + '">' +
-      (ranked ? '<p class="ledger" aria-hidden="true"><span>Wpis ' + c.top + '</span><span>polecane</span><span>' + stampDate + '</span></p>' : '') +
-      (ranked && c.photo ? '<div class="shot-wrap">' + shot(c) + roundStamp(c.top) + '</div>' : '') +
-      (!ranked ? shot(c) : '') +
+      shot(c) +
       '<div class="entry-h' + (avg[c.name] ? ' has-gauge' : '') + '">' + gauge(c) +
-        (ranked && !c.photo ? roundStamp(c.top) : '') + (picked ? callStamp(pressId === c.id) : '') +
         '<h3>' + (ranked ? '<span class="sr">Polecane numer ' + c.top + ': </span>' : '') + esc(c.name) + (picked ? '<span class="sr"> (na liście do telefonu)</span>' : '') + '</h3><p class="price">' + nb(c.price) + '&nbsp;zł</p>' + priceNote(c) + '</div>' +
       (c.fresh ? '<p class="new-entry">Nowa na liście</p>' : '') +
       (c.out ? '<p class="out">' + mark('m-ask') + '<span>Poza kryteriami: ' + esc(c.out) + '</span></p>' : '') +
