@@ -1,149 +1,5 @@
 [
  {
-  "id": "otomoto:6150772749",
-  "links": {
-   "otomoto": "https://www.otomoto.pl/osobowe/oferta/citroen-c3-ID6Ig0Y5.html",
-   "olx": "https://www.olx.pl/d/oferta/citroen-c3-serwisowany-bogate-wyposazenie-alufelgi-nawi-1-5-102km-kamera-asystent-CID5-ID1csROm.html"
-  },
-  "name": "Citroën C3",
-  "version": "BlueHDi 100 S&S SHINE",
-  "engine": "1.5, 102 KM",
-  "fuel": "on",
-  "gear": "manualna",
-  "body": "kompakt",
-  "year": 2020,
-  "km": 99865,
-  "hp": 102,
-  "cc": 1499,
-  "price": 27999,
-  "city": "Ostrów Wielkopolski",
-  "region": "Wielkopolskie",
-  "seller": "komis",
-  "make": "citroen",
-  "model": "c3",
-  "title": "Citroën C3 BlueHDi 100 S&S SHINE",
-  "origin": null,
-  "equipment": {
-   "ac": 1,
-   "cam": 1,
-   "pdc": 1,
-   "cp": 1
-  },
-  "facts": {
-   "salonPL": false,
-   "firstOwner": true,
-   "aso": true,
-   "noAccident": true,
-   "origin": null,
-   "hasVin": true
-  },
-  "out": null,
-  "plus": "Bezwypadkowy, jeden właściciel, serwisowany, nawigacja.",
-  "watch": null,
-  "why": "Najmłodsze auto z pełnym wyposażeniem. Małe, zwrotne i tanie w utrzymaniu, dobre do miasta.",
-  "score": 73,
-  "top": 1,
-  "reject": null,
-  "pending": false,
-  "detailed": true,
-  "inAc": true,
-  "manual": false,
-  "byKamil": [
-   "plus",
-   "why"
-  ],
-  "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
-  "status": "active",
-  "goneSince": null,
-  "auto": {
-   "equipment": {
-    "ac": 1,
-    "cam": 1,
-    "pdc": 1,
-    "cp": 1
-   },
-   "plus": "Pierwszy właściciel, serwis w ASO, bezwypadkowy, klima automatyczna.",
-   "watch": null,
-   "reject": null
-  },
-  "detailedAt": "2026-11-10",
-  "shownSince": "2026-11-10",
-  "rulesVersion": 2
- },
- {
-  "id": "otomoto:6149464022",
-  "links": {
-   "otomoto": "https://www.otomoto.pl/osobowe/oferta/peugeot-308-ID6IavwA.html",
-   "olx": "https://www.olx.pl/d/oferta/peugeot-308-niski-przebieg-ladny-CID5-ID1byQYw.html"
-  },
-  "name": "Peugeot 308",
-  "version": "BlueHDi FAP 130 Stop & Start Allure",
-  "engine": "1.5, 130 KM",
-  "fuel": "on",
-  "gear": "manualna",
-  "body": "kompakt",
-  "year": 2018,
-  "km": 101000,
-  "hp": 130,
-  "cc": 1499,
-  "price": 27900,
-  "city": "Mysłowice",
-  "region": "Śląskie",
-  "seller": "komis",
-  "make": "peugeot",
-  "model": "308",
-  "title": "Peugeot 308 BlueHDi FAP 130 Stop & Start Allure",
-  "origin": null,
-  "equipment": {
-   "ac": 1,
-   "cam": 1,
-   "pdc": 1,
-   "cp": 1
-  },
-  "facts": {
-   "salonPL": false,
-   "firstOwner": false,
-   "aso": true,
-   "noAccident": true,
-   "origin": null,
-   "hasVin": true
-  },
-  "out": null,
-  "plus": "Bezwypadkowy, serwisowany, dwustrefowa klima, ekran dotykowy.",
-  "watch": "Sprowadzony. Zapytaj o historię serwisu i naprawy układu AdBlue.",
-  "why": "Pełne wyposażenie: kamera, czujniki i CarPlay, młody rocznik.",
-  "score": 63,
-  "top": 2,
-  "reject": null,
-  "pending": false,
-  "detailed": true,
-  "inAc": true,
-  "manual": false,
-  "byKamil": [
-   "plus",
-   "watch"
-  ],
-  "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
-  "status": "active",
-  "goneSince": null,
-  "auto": {
-   "equipment": {
-    "ac": 1,
-    "cam": 1,
-    "pdc": 1,
-    "cp": 1
-   },
-   "plus": "Serwis w ASO, bezwypadkowy, klima dwustrefowa.",
-   "watch": null,
-   "reject": null
-  },
-  "detailedAt": "2026-11-10",
-  "shownSince": "2026-11-10",
-  "rulesVersion": 2
- },
- {
   "id": "otomoto:6151567862",
   "links": {
    "otomoto": "https://www.otomoto.pl/osobowe/oferta/opel-meriva-ID6IjlOu.html",
@@ -179,6 +35,7 @@
    "aso": true,
    "noAccident": true,
    "origin": "Polska",
+   "originFrom": "ogłoszenie",
    "hasVin": true
   },
   "out": null,
@@ -186,7 +43,7 @@
   "watch": null,
   "why": "Najlepsza na krótkie trasy po mieście: gaz montowany w fabryce, wysoko się siedzi i wygodnie wsiada.",
   "score": 61,
-  "top": 3,
+  "top": 1,
   "reject": null,
   "pending": false,
   "detailed": true,
@@ -213,431 +70,7 @@
   },
   "detailedAt": "2026-11-10",
   "shownSince": "2026-11-10",
-  "rulesVersion": 2
- },
- {
-  "id": "otomoto:6151480435",
-  "links": {
-   "otomoto": "https://www.otomoto.pl/osobowe/oferta/opel-astra-ID6IiZ4n.html",
-   "olx": null
-  },
-  "name": "Opel Astra",
-  "version": "1.5 CDTI Edition S&S",
-  "engine": "1.5, 122 KM",
-  "fuel": "on",
-  "gear": "manualna",
-  "body": "kompakt",
-  "year": 2020,
-  "km": 116107,
-  "hp": 122,
-  "cc": 1496,
-  "price": 29900,
-  "city": "Olsztyn",
-  "region": "Warmińsko-mazurskie",
-  "seller": "komis",
-  "make": "opel",
-  "model": "astra",
-  "title": "Opel Astra 1.5 CDTI Edition S&S",
-  "origin": "Polska",
-  "equipment": {
-   "ac": 1,
-   "cam": 0,
-   "pdc": 1,
-   "cp": 1
-  },
-  "facts": {
-   "salonPL": true,
-   "firstOwner": true,
-   "aso": true,
-   "noAccident": true,
-   "origin": "Polska",
-   "hasVin": true
-  },
-  "out": null,
-  "plus": "Polski salon, pierwszy właściciel i serwis w ASO według ogłoszenia. Czujniki z przodu i z tyłu.",
-  "watch": null,
-  "why": null,
-  "score": 61,
-  "top": null,
-  "reject": null,
-  "pending": false,
-  "detailed": true,
-  "inAc": true,
-  "manual": false,
-  "byKamil": [
-   "plus"
-  ],
-  "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
-  "status": "active",
-  "goneSince": null,
-  "auto": {
-   "equipment": {
-    "ac": 1,
-    "cam": 0,
-    "pdc": 1,
-    "cp": 1
-   },
-   "plus": "Polski salon, pierwszy właściciel, serwis w ASO, bezwypadkowy, klima dwustrefowa.",
-   "watch": null,
-   "reject": null
-  },
-  "detailedAt": "2026-11-10",
-  "shownSince": "2026-11-10",
-  "rulesVersion": 2
- },
- {
-  "id": "otomoto:6150123819",
-  "links": {
-   "otomoto": "https://www.otomoto.pl/osobowe/oferta/citroen-c3-ID6Idi9t.html",
-   "olx": null
-  },
-  "name": "Citroën C3",
-  "version": "BlueHDi 100 S&S ORIGINS",
-  "engine": "1.5, 102 KM",
-  "fuel": "on",
-  "gear": "manualna",
-  "body": "auta małe",
-  "year": 2019,
-  "km": 37000,
-  "hp": 102,
-  "cc": 1499,
-  "price": 31000,
-  "city": "Nowa Sól",
-  "region": "Lubuskie",
-  "seller": "prywatnie",
-  "make": "citroen",
-  "model": "c3",
-  "title": "Citroën C3 BlueHDi 100 S&S ORIGINS",
-  "origin": null,
-  "equipment": {
-   "ac": 1,
-   "cam": 1,
-   "pdc": 1,
-   "cp": 1
-  },
-  "facts": {
-   "salonPL": false,
-   "firstOwner": false,
-   "aso": false,
-   "noAccident": false,
-   "origin": null,
-   "hasVin": true
-  },
-  "out": "cena 31 000 zł, ponad budżet 30 000 zł, do negocjacji",
-  "plus": "Bardzo mały przebieg jak na rocznik.",
-  "watch": "Przy tak niskim przebiegu sprawdź historię na historiapojazdu.gov.pl.",
-  "why": null,
-  "score": 58,
-  "top": null,
-  "reject": null,
-  "pending": false,
-  "detailed": true,
-  "inAc": true,
-  "manual": false,
-  "byKamil": [
-   "plus",
-   "watch"
-  ],
-  "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
-  "status": "active",
-  "goneSince": null,
-  "auto": {
-   "equipment": {
-    "ac": 1,
-    "cam": 1,
-    "pdc": 1,
-    "cp": 1
-   },
-   "plus": "Klima automatyczna.",
-   "watch": null,
-   "reject": null
-  },
-  "detailedAt": "2026-11-10",
-  "shownSince": "2026-11-10",
-  "rulesVersion": 2
- },
- {
-  "id": "otomoto:6145896872",
-  "links": {
-   "otomoto": "https://www.otomoto.pl/osobowe/oferta/opel-astra-ID6HWyvU.html",
-   "olx": null
-  },
-  "name": "Opel Astra",
-  "version": "1.6 D (CDTI) Start/Stop Innovation",
-  "engine": "1.6, 136 KM",
-  "fuel": "on",
-  "gear": "manualna",
-  "body": "kompakt",
-  "year": 2019,
-  "km": 106500,
-  "hp": 136,
-  "cc": 1598,
-  "price": 29900,
-  "city": "Budzyń",
-  "region": "Wielkopolskie",
-  "seller": "prywatnie",
-  "make": "opel",
-  "model": "astra",
-  "title": "Opel Astra 1.6 D (CDTI) Start/Stop Innovation",
-  "origin": "Niemcy",
-  "equipment": {
-   "ac": 1,
-   "cam": 1,
-   "pdc": 1,
-   "cp": 1
-  },
-  "facts": {
-   "salonPL": false,
-   "firstOwner": false,
-   "aso": true,
-   "noAccident": false,
-   "origin": "Niemcy",
-   "hasVin": true
-  },
-  "out": null,
-  "plus": "Przebieg potwierdzony w książce serwisowej, dwa oryginalne kluczyki.",
-  "watch": "Sprowadzony z Niemiec. Czujniki tylko z tyłu.",
-  "why": null,
-  "score": 57,
-  "top": null,
-  "reject": null,
-  "pending": false,
-  "detailed": true,
-  "inAc": true,
-  "manual": false,
-  "byKamil": [
-   "plus",
-   "watch"
-  ],
-  "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
-  "status": "active",
-  "goneSince": null,
-  "auto": {
-   "equipment": {
-    "ac": 1,
-    "cam": 1,
-    "pdc": 1,
-    "cp": 1
-   },
-   "plus": "Serwis w ASO, klima dwustrefowa.",
-   "watch": "Auto sprowadzone (kraj pochodzenia: Niemcy). Poproś o raport historii z zagranicy, np. z Carvertical.",
-   "reject": null
-  },
-  "detailedAt": "2026-11-10",
-  "shownSince": "2026-11-10",
-  "rulesVersion": 2
- },
- {
-  "id": "otomoto:6151479061",
-  "links": {
-   "otomoto": "https://www.otomoto.pl/osobowe/oferta/peugeot-208-ID6IiYId.html",
-   "olx": null
-  },
-  "name": "Peugeot 208",
-  "version": null,
-  "engine": "1.6, 110 KM",
-  "fuel": "on",
-  "gear": "manualna",
-  "body": "auta miejskie",
-  "year": 2018,
-  "km": 84000,
-  "hp": 110,
-  "cc": 1560,
-  "price": 10999,
-  "city": "Pleszew",
-  "region": "Wielkopolskie",
-  "seller": "komis",
-  "make": "peugeot",
-  "model": "208",
-  "title": "Peugeot 208",
-  "origin": null,
-  "equipment": {
-   "ac": 1,
-   "cam": 1,
-   "pdc": 1,
-   "cp": 1
-  },
-  "facts": {
-   "salonPL": false,
-   "firstOwner": false,
-   "aso": false,
-   "noAccident": false,
-   "origin": null,
-   "hasVin": true
-  },
-  "out": null,
-  "plus": "Klima automatyczna.",
-  "watch": null,
-  "why": null,
-  "score": 55,
-  "top": null,
-  "reject": null,
-  "pending": false,
-  "detailed": true,
-  "inAc": true,
-  "manual": false,
-  "byKamil": [],
-  "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
-  "status": "active",
-  "goneSince": null,
-  "auto": {
-   "equipment": {
-    "ac": 1,
-    "cam": 1,
-    "pdc": 1,
-    "cp": 1
-   },
-   "plus": "Klima automatyczna.",
-   "watch": null,
-   "reject": null
-  },
-  "detailedAt": "2026-11-10",
-  "shownSince": "2026-11-10",
-  "rulesVersion": 2
- },
- {
-  "id": "otomoto:6150926886",
-  "links": {
-   "otomoto": "https://www.otomoto.pl/osobowe/oferta/opel-astra-ID6IgF4a.html",
-   "olx": null
-  },
-  "name": "Opel Astra",
-  "version": "1.6 D (CDTI) Start/Stop Innovation",
-  "engine": "1.6, 136 KM",
-  "fuel": "on",
-  "gear": "manualna",
-  "body": "kombi",
-  "year": 2017,
-  "km": 110500,
-  "hp": 136,
-  "cc": 1598,
-  "price": 28900,
-  "city": "Stargard",
-  "region": "Zachodniopomorskie",
-  "seller": "prywatnie",
-  "make": "opel",
-  "model": "astra",
-  "title": "Opel Astra 1.6 D (CDTI) Start/Stop Innovation",
-  "origin": "Niemcy",
-  "equipment": {
-   "ac": 1,
-   "cam": 1,
-   "pdc": 0,
-   "cp": 1
-  },
-  "facts": {
-   "salonPL": false,
-   "firstOwner": true,
-   "aso": true,
-   "noAccident": true,
-   "origin": "Niemcy",
-   "hasVin": true
-  },
-  "out": null,
-  "plus": "Pierwszy właściciel, serwis w ASO, bezwypadkowy, klima dwustrefowa.",
-  "watch": "Auto sprowadzone (kraj pochodzenia: Niemcy). Poproś o raport historii z zagranicy, np. z Carvertical.",
-  "why": null,
-  "score": 55,
-  "top": null,
-  "reject": null,
-  "pending": false,
-  "detailed": true,
-  "inAc": true,
-  "manual": false,
-  "byKamil": [],
-  "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
-  "status": "active",
-  "goneSince": null,
-  "auto": {
-   "equipment": {
-    "ac": 1,
-    "cam": 1,
-    "pdc": 0,
-    "cp": 1
-   },
-   "plus": "Pierwszy właściciel, serwis w ASO, bezwypadkowy, klima dwustrefowa.",
-   "watch": "Auto sprowadzone (kraj pochodzenia: Niemcy). Poproś o raport historii z zagranicy, np. z Carvertical.",
-   "reject": null
-  },
-  "detailedAt": "2026-11-10",
-  "shownSince": "2026-11-10",
-  "rulesVersion": 2
- },
- {
-  "id": "otomoto:6150515877",
-  "links": {
-   "otomoto": "https://www.otomoto.pl/osobowe/oferta/ford-focus-ID6IeV8Z.html",
-   "olx": null
-  },
-  "name": "Ford Focus",
-  "version": "1.5 EcoBlue STart-Stopp-System TITANIUM",
-  "engine": "1.5, 120 KM",
-  "fuel": "on",
-  "gear": "manualna",
-  "body": "kompakt",
-  "year": 2018,
-  "km": 115300,
-  "hp": 120,
-  "cc": 1499,
-  "price": 29999,
-  "city": "Borkowo",
-  "region": "Pomorskie",
-  "seller": "komis",
-  "make": "ford",
-  "model": "focus",
-  "title": "Ford Focus 1.5 EcoBlue STart-Stopp-System TITANIUM",
-  "origin": "Niemcy",
-  "equipment": {
-   "ac": 1,
-   "cam": 1,
-   "pdc": 1,
-   "cp": 1
-  },
-  "facts": {
-   "salonPL": false,
-   "firstOwner": false,
-   "aso": true,
-   "noAccident": true,
-   "origin": "Niemcy",
-   "hasVin": true
-  },
-  "out": null,
-  "plus": "Od pierwszego właściciela z Niemiec, oryginalny lakier, sprzedawca pokaże raport Carvertical.",
-  "watch": "Auto sprowadzone (kraj pochodzenia: Niemcy). Poproś o raport historii z zagranicy, np. z Carvertical.",
-  "why": null,
-  "score": 55,
-  "top": null,
-  "reject": null,
-  "pending": false,
-  "detailed": true,
-  "inAc": true,
-  "manual": false,
-  "byKamil": [
-   "plus"
-  ],
-  "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
-  "status": "active",
-  "goneSince": null,
-  "auto": {
-   "equipment": {
-    "ac": 1,
-    "cam": 1,
-    "pdc": 1,
-    "cp": 1
-   },
-   "plus": "Serwis w ASO, bezwypadkowy, klima dwustrefowa.",
-   "watch": "Auto sprowadzone (kraj pochodzenia: Niemcy). Poproś o raport historii z zagranicy, np. z Carvertical.",
-   "reject": null
-  },
-  "detailedAt": "2026-11-10",
-  "shownSince": "2026-11-10",
-  "rulesVersion": 2
+  "rulesVersion": 3
  },
  {
   "id": "otomoto:6151101294",
@@ -675,14 +108,15 @@
    "aso": true,
    "noAccident": false,
    "origin": "Polska",
+   "originFrom": "ogłoszenie",
    "hasVin": true
   },
   "out": null,
   "plus": "Polski salon, serwis w ASO, klima dwustrefowa.",
   "watch": null,
-  "why": null,
+  "why": "Czujniki i CarPlay, młody rocznik.",
   "score": 54,
-  "top": null,
+  "top": 2,
   "reject": null,
   "pending": false,
   "detailed": true,
@@ -706,7 +140,653 @@
   },
   "detailedAt": "2026-11-10",
   "shownSince": "2026-11-10",
-  "rulesVersion": 2
+  "rulesVersion": 3
+ },
+ {
+  "id": "otomoto:6140665764",
+  "links": {
+   "otomoto": "https://www.otomoto.pl/osobowe/oferta/toyota-proace-ID6HzBGc.html",
+   "olx": null
+  },
+  "name": "Toyota ProAce",
+  "version": null,
+  "engine": "1.5, 120 KM",
+  "fuel": "on",
+  "gear": "manualna",
+  "body": "minivan",
+  "year": 2020,
+  "km": 79999,
+  "hp": 120,
+  "cc": 1499,
+  "price": 29999,
+  "city": "Łódź",
+  "region": "Łódzkie",
+  "seller": "prywatnie",
+  "make": "toyota",
+  "model": "proace",
+  "title": "Toyota ProAce",
+  "origin": "Polska",
+  "equipment": {
+   "ac": 1,
+   "cam": 0,
+   "pdc": 0,
+   "cp": 0
+  },
+  "facts": {
+   "salonPL": true,
+   "firstOwner": true,
+   "aso": false,
+   "noAccident": false,
+   "origin": "Polska",
+   "originFrom": "ogłoszenie",
+   "hasVin": true
+  },
+  "out": null,
+  "plus": "Polski salon, pierwszy właściciel, klima automatyczna.",
+  "watch": null,
+  "why": "Młody rocznik, mały przebieg.",
+  "score": 38,
+  "top": 3,
+  "reject": null,
+  "pending": false,
+  "detailed": true,
+  "inAc": true,
+  "manual": false,
+  "byKamil": [],
+  "firstSeen": "2026-11-10",
+  "lastSeen": "2026-11-10",
+  "status": "active",
+  "goneSince": null,
+  "auto": {
+   "equipment": {
+    "ac": 1,
+    "cam": 0,
+    "pdc": 0,
+    "cp": 0
+   },
+   "plus": "Polski salon, pierwszy właściciel, klima automatyczna.",
+   "watch": null,
+   "reject": null
+  },
+  "detailedAt": "2026-11-10",
+  "shownSince": "2026-11-10",
+  "rulesVersion": 3
+ },
+ {
+  "id": "otomoto:6150772749",
+  "links": {
+   "otomoto": "https://www.otomoto.pl/osobowe/oferta/citroen-c3-ID6Ig0Y5.html",
+   "olx": "https://www.olx.pl/d/oferta/citroen-c3-serwisowany-bogate-wyposazenie-alufelgi-nawi-1-5-102km-kamera-asystent-CID5-ID1csROm.html"
+  },
+  "name": "Citroën C3",
+  "version": "BlueHDi 100 S&S SHINE",
+  "engine": "1.5, 102 KM",
+  "fuel": "on",
+  "gear": "manualna",
+  "body": "kompakt",
+  "year": 2020,
+  "km": 99865,
+  "hp": 102,
+  "cc": 1499,
+  "price": 27999,
+  "city": "Ostrów Wielkopolski",
+  "region": "Wielkopolskie",
+  "seller": "komis",
+  "make": "citroen",
+  "model": "c3",
+  "title": "Citroën C3 BlueHDi 100 S&S SHINE",
+  "origin": null,
+  "equipment": {
+   "ac": 1,
+   "cam": 1,
+   "pdc": 1,
+   "cp": 1
+  },
+  "facts": {
+   "salonPL": false,
+   "firstOwner": true,
+   "aso": true,
+   "noAccident": true,
+   "origin": null,
+   "originFrom": null,
+   "hasVin": true
+  },
+  "out": null,
+  "plus": "Bezwypadkowy, jeden właściciel, serwisowany, nawigacja.",
+  "watch": null,
+  "why": "Najmłodsze auto z pełnym wyposażeniem. Małe, zwrotne i tanie w utrzymaniu, dobre do miasta.",
+  "score": 73,
+  "top": null,
+  "reject": null,
+  "pending": false,
+  "detailed": true,
+  "inAc": true,
+  "manual": false,
+  "byKamil": [
+   "plus",
+   "why"
+  ],
+  "firstSeen": "2026-11-10",
+  "lastSeen": "2026-11-10",
+  "status": "active",
+  "goneSince": null,
+  "auto": {
+   "equipment": {
+    "ac": 1,
+    "cam": 1,
+    "pdc": 1,
+    "cp": 1
+   },
+   "plus": "Pierwszy właściciel, serwis w ASO, bezwypadkowy, klima automatyczna.",
+   "watch": null,
+   "reject": null
+  },
+  "detailedAt": "2026-11-10",
+  "shownSince": "2026-11-10",
+  "rulesVersion": 3
+ },
+ {
+  "id": "otomoto:6149464022",
+  "links": {
+   "otomoto": "https://www.otomoto.pl/osobowe/oferta/peugeot-308-ID6IavwA.html",
+   "olx": "https://www.olx.pl/d/oferta/peugeot-308-niski-przebieg-ladny-CID5-ID1byQYw.html"
+  },
+  "name": "Peugeot 308",
+  "version": "BlueHDi FAP 130 Stop & Start Allure",
+  "engine": "1.5, 130 KM",
+  "fuel": "on",
+  "gear": "manualna",
+  "body": "kompakt",
+  "year": 2018,
+  "km": 101000,
+  "hp": 130,
+  "cc": 1499,
+  "price": 27900,
+  "city": "Mysłowice",
+  "region": "Śląskie",
+  "seller": "komis",
+  "make": "peugeot",
+  "model": "308",
+  "title": "Peugeot 308 BlueHDi FAP 130 Stop & Start Allure",
+  "origin": null,
+  "equipment": {
+   "ac": 1,
+   "cam": 1,
+   "pdc": 1,
+   "cp": 1
+  },
+  "facts": {
+   "salonPL": false,
+   "firstOwner": false,
+   "aso": true,
+   "noAccident": true,
+   "origin": null,
+   "originFrom": null,
+   "hasVin": true
+  },
+  "out": null,
+  "plus": "Bezwypadkowy, serwisowany, dwustrefowa klima, ekran dotykowy.",
+  "watch": "Sprowadzony. Zapytaj o historię serwisu i naprawy układu AdBlue.",
+  "why": null,
+  "score": 63,
+  "top": null,
+  "reject": null,
+  "pending": false,
+  "detailed": true,
+  "inAc": true,
+  "manual": false,
+  "byKamil": [
+   "plus",
+   "watch"
+  ],
+  "firstSeen": "2026-11-10",
+  "lastSeen": "2026-11-10",
+  "status": "active",
+  "goneSince": null,
+  "auto": {
+   "equipment": {
+    "ac": 1,
+    "cam": 1,
+    "pdc": 1,
+    "cp": 1
+   },
+   "plus": "Serwis w ASO, bezwypadkowy, klima dwustrefowa.",
+   "watch": null,
+   "reject": null
+  },
+  "detailedAt": "2026-11-10",
+  "shownSince": "2026-11-10",
+  "rulesVersion": 3
+ },
+ {
+  "id": "otomoto:6151480435",
+  "links": {
+   "otomoto": "https://www.otomoto.pl/osobowe/oferta/opel-astra-ID6IiZ4n.html",
+   "olx": null
+  },
+  "name": "Opel Astra",
+  "version": "1.5 CDTI Edition S&S",
+  "engine": "1.5, 122 KM",
+  "fuel": "on",
+  "gear": "manualna",
+  "body": "kompakt",
+  "year": 2020,
+  "km": 116107,
+  "hp": 122,
+  "cc": 1496,
+  "price": 29900,
+  "city": "Olsztyn",
+  "region": "Warmińsko-mazurskie",
+  "seller": "komis",
+  "make": "opel",
+  "model": "astra",
+  "title": "Opel Astra 1.5 CDTI Edition S&S",
+  "origin": "Polska",
+  "equipment": {
+   "ac": 1,
+   "cam": 0,
+   "pdc": 1,
+   "cp": 1
+  },
+  "facts": {
+   "salonPL": true,
+   "firstOwner": true,
+   "aso": true,
+   "noAccident": true,
+   "origin": "Polska",
+   "originFrom": "ogłoszenie",
+   "hasVin": true
+  },
+  "out": null,
+  "plus": "Polski salon, pierwszy właściciel i serwis w ASO według ogłoszenia. Czujniki z przodu i z tyłu.",
+  "watch": null,
+  "why": null,
+  "score": 61,
+  "top": null,
+  "reject": null,
+  "pending": false,
+  "detailed": true,
+  "inAc": true,
+  "manual": false,
+  "byKamil": [
+   "plus"
+  ],
+  "firstSeen": "2026-11-10",
+  "lastSeen": "2026-11-10",
+  "status": "active",
+  "goneSince": null,
+  "auto": {
+   "equipment": {
+    "ac": 1,
+    "cam": 0,
+    "pdc": 1,
+    "cp": 1
+   },
+   "plus": "Polski salon, pierwszy właściciel, serwis w ASO, bezwypadkowy, klima dwustrefowa.",
+   "watch": null,
+   "reject": null
+  },
+  "detailedAt": "2026-11-10",
+  "shownSince": "2026-11-10",
+  "rulesVersion": 3
+ },
+ {
+  "id": "otomoto:6150123819",
+  "links": {
+   "otomoto": "https://www.otomoto.pl/osobowe/oferta/citroen-c3-ID6Idi9t.html",
+   "olx": null
+  },
+  "name": "Citroën C3",
+  "version": "BlueHDi 100 S&S ORIGINS",
+  "engine": "1.5, 102 KM",
+  "fuel": "on",
+  "gear": "manualna",
+  "body": "auta małe",
+  "year": 2019,
+  "km": 37000,
+  "hp": 102,
+  "cc": 1499,
+  "price": 31000,
+  "city": "Nowa Sól",
+  "region": "Lubuskie",
+  "seller": "prywatnie",
+  "make": "citroen",
+  "model": "c3",
+  "title": "Citroën C3 BlueHDi 100 S&S ORIGINS",
+  "origin": null,
+  "equipment": {
+   "ac": 1,
+   "cam": 1,
+   "pdc": 1,
+   "cp": 1
+  },
+  "facts": {
+   "salonPL": false,
+   "firstOwner": false,
+   "aso": false,
+   "noAccident": false,
+   "origin": null,
+   "originFrom": null,
+   "hasVin": true
+  },
+  "out": "cena 31 000 zł, ponad budżet 30 000 zł, do negocjacji",
+  "plus": "Bardzo mały przebieg jak na rocznik.",
+  "watch": "Przy tak niskim przebiegu sprawdź historię na historiapojazdu.gov.pl.",
+  "why": null,
+  "score": 58,
+  "top": null,
+  "reject": null,
+  "pending": false,
+  "detailed": true,
+  "inAc": true,
+  "manual": false,
+  "byKamil": [
+   "plus",
+   "watch"
+  ],
+  "firstSeen": "2026-11-10",
+  "lastSeen": "2026-11-10",
+  "status": "active",
+  "goneSince": null,
+  "auto": {
+   "equipment": {
+    "ac": 1,
+    "cam": 1,
+    "pdc": 1,
+    "cp": 1
+   },
+   "plus": "Klima automatyczna.",
+   "watch": null,
+   "reject": null
+  },
+  "detailedAt": "2026-11-10",
+  "shownSince": "2026-11-10",
+  "rulesVersion": 3
+ },
+ {
+  "id": "otomoto:6145896872",
+  "links": {
+   "otomoto": "https://www.otomoto.pl/osobowe/oferta/opel-astra-ID6HWyvU.html",
+   "olx": null
+  },
+  "name": "Opel Astra",
+  "version": "1.6 D (CDTI) Start/Stop Innovation",
+  "engine": "1.6, 136 KM",
+  "fuel": "on",
+  "gear": "manualna",
+  "body": "kompakt",
+  "year": 2019,
+  "km": 106500,
+  "hp": 136,
+  "cc": 1598,
+  "price": 29900,
+  "city": "Budzyń",
+  "region": "Wielkopolskie",
+  "seller": "prywatnie",
+  "make": "opel",
+  "model": "astra",
+  "title": "Opel Astra 1.6 D (CDTI) Start/Stop Innovation",
+  "origin": "Niemcy",
+  "equipment": {
+   "ac": 1,
+   "cam": 1,
+   "pdc": 1,
+   "cp": 1
+  },
+  "facts": {
+   "salonPL": false,
+   "firstOwner": false,
+   "aso": true,
+   "noAccident": false,
+   "origin": "Niemcy",
+   "originFrom": "ogłoszenie",
+   "hasVin": true
+  },
+  "out": null,
+  "plus": "Przebieg potwierdzony w książce serwisowej, dwa oryginalne kluczyki.",
+  "watch": "Sprowadzony z Niemiec. Czujniki tylko z tyłu.",
+  "why": null,
+  "score": 57,
+  "top": null,
+  "reject": null,
+  "pending": false,
+  "detailed": true,
+  "inAc": true,
+  "manual": false,
+  "byKamil": [
+   "plus",
+   "watch"
+  ],
+  "firstSeen": "2026-11-10",
+  "lastSeen": "2026-11-10",
+  "status": "active",
+  "goneSince": null,
+  "auto": {
+   "equipment": {
+    "ac": 1,
+    "cam": 1,
+    "pdc": 1,
+    "cp": 1
+   },
+   "plus": "Serwis w ASO, klima dwustrefowa.",
+   "watch": "Auto sprowadzone (kraj pochodzenia: Niemcy). Poproś o raport historii z zagranicy, np. z Carvertical.",
+   "reject": null
+  },
+  "detailedAt": "2026-11-10",
+  "shownSince": "2026-11-10",
+  "rulesVersion": 3
+ },
+ {
+  "id": "otomoto:6151479061",
+  "links": {
+   "otomoto": "https://www.otomoto.pl/osobowe/oferta/peugeot-208-ID6IiYId.html",
+   "olx": null
+  },
+  "name": "Peugeot 208",
+  "version": null,
+  "engine": "1.6, 110 KM",
+  "fuel": "on",
+  "gear": "manualna",
+  "body": "auta miejskie",
+  "year": 2018,
+  "km": 84000,
+  "hp": 110,
+  "cc": 1560,
+  "price": 10999,
+  "city": "Pleszew",
+  "region": "Wielkopolskie",
+  "seller": "komis",
+  "make": "peugeot",
+  "model": "208",
+  "title": "Peugeot 208",
+  "origin": null,
+  "equipment": {
+   "ac": 1,
+   "cam": 1,
+   "pdc": 1,
+   "cp": 1
+  },
+  "facts": {
+   "salonPL": false,
+   "firstOwner": false,
+   "aso": false,
+   "noAccident": false,
+   "origin": null,
+   "originFrom": null,
+   "hasVin": true
+  },
+  "out": null,
+  "plus": "Klima automatyczna.",
+  "watch": null,
+  "why": null,
+  "score": 55,
+  "top": null,
+  "reject": null,
+  "pending": false,
+  "detailed": true,
+  "inAc": true,
+  "manual": false,
+  "byKamil": [],
+  "firstSeen": "2026-11-10",
+  "lastSeen": "2026-11-10",
+  "status": "active",
+  "goneSince": null,
+  "auto": {
+   "equipment": {
+    "ac": 1,
+    "cam": 1,
+    "pdc": 1,
+    "cp": 1
+   },
+   "plus": "Klima automatyczna.",
+   "watch": null,
+   "reject": null
+  },
+  "detailedAt": "2026-11-10",
+  "shownSince": "2026-11-10",
+  "rulesVersion": 3
+ },
+ {
+  "id": "otomoto:6150926886",
+  "links": {
+   "otomoto": "https://www.otomoto.pl/osobowe/oferta/opel-astra-ID6IgF4a.html",
+   "olx": null
+  },
+  "name": "Opel Astra",
+  "version": "1.6 D (CDTI) Start/Stop Innovation",
+  "engine": "1.6, 136 KM",
+  "fuel": "on",
+  "gear": "manualna",
+  "body": "kombi",
+  "year": 2017,
+  "km": 110500,
+  "hp": 136,
+  "cc": 1598,
+  "price": 28900,
+  "city": "Stargard",
+  "region": "Zachodniopomorskie",
+  "seller": "prywatnie",
+  "make": "opel",
+  "model": "astra",
+  "title": "Opel Astra 1.6 D (CDTI) Start/Stop Innovation",
+  "origin": "Niemcy",
+  "equipment": {
+   "ac": 1,
+   "cam": 1,
+   "pdc": 0,
+   "cp": 1
+  },
+  "facts": {
+   "salonPL": false,
+   "firstOwner": true,
+   "aso": true,
+   "noAccident": true,
+   "origin": "Niemcy",
+   "originFrom": "ogłoszenie",
+   "hasVin": true
+  },
+  "out": null,
+  "plus": "Pierwszy właściciel, serwis w ASO, bezwypadkowy, klima dwustrefowa.",
+  "watch": "Auto sprowadzone (kraj pochodzenia: Niemcy). Poproś o raport historii z zagranicy, np. z Carvertical.",
+  "why": null,
+  "score": 55,
+  "top": null,
+  "reject": null,
+  "pending": false,
+  "detailed": true,
+  "inAc": true,
+  "manual": false,
+  "byKamil": [],
+  "firstSeen": "2026-11-10",
+  "lastSeen": "2026-11-10",
+  "status": "active",
+  "goneSince": null,
+  "auto": {
+   "equipment": {
+    "ac": 1,
+    "cam": 1,
+    "pdc": 0,
+    "cp": 1
+   },
+   "plus": "Pierwszy właściciel, serwis w ASO, bezwypadkowy, klima dwustrefowa.",
+   "watch": "Auto sprowadzone (kraj pochodzenia: Niemcy). Poproś o raport historii z zagranicy, np. z Carvertical.",
+   "reject": null
+  },
+  "detailedAt": "2026-11-10",
+  "shownSince": "2026-11-10",
+  "rulesVersion": 3
+ },
+ {
+  "id": "otomoto:6150515877",
+  "links": {
+   "otomoto": "https://www.otomoto.pl/osobowe/oferta/ford-focus-ID6IeV8Z.html",
+   "olx": null
+  },
+  "name": "Ford Focus",
+  "version": "1.5 EcoBlue STart-Stopp-System TITANIUM",
+  "engine": "1.5, 120 KM",
+  "fuel": "on",
+  "gear": "manualna",
+  "body": "kompakt",
+  "year": 2018,
+  "km": 115300,
+  "hp": 120,
+  "cc": 1499,
+  "price": 29999,
+  "city": "Borkowo",
+  "region": "Pomorskie",
+  "seller": "komis",
+  "make": "ford",
+  "model": "focus",
+  "title": "Ford Focus 1.5 EcoBlue STart-Stopp-System TITANIUM",
+  "origin": "Niemcy",
+  "equipment": {
+   "ac": 1,
+   "cam": 1,
+   "pdc": 1,
+   "cp": 1
+  },
+  "facts": {
+   "salonPL": false,
+   "firstOwner": false,
+   "aso": true,
+   "noAccident": true,
+   "origin": "Niemcy",
+   "originFrom": "ogłoszenie",
+   "hasVin": true
+  },
+  "out": null,
+  "plus": "Od pierwszego właściciela z Niemiec, oryginalny lakier, sprzedawca pokaże raport Carvertical.",
+  "watch": "Auto sprowadzone (kraj pochodzenia: Niemcy). Poproś o raport historii z zagranicy, np. z Carvertical.",
+  "why": null,
+  "score": 55,
+  "top": null,
+  "reject": null,
+  "pending": false,
+  "detailed": true,
+  "inAc": true,
+  "manual": false,
+  "byKamil": [
+   "plus"
+  ],
+  "firstSeen": "2026-11-10",
+  "lastSeen": "2026-11-10",
+  "status": "active",
+  "goneSince": null,
+  "auto": {
+   "equipment": {
+    "ac": 1,
+    "cam": 1,
+    "pdc": 1,
+    "cp": 1
+   },
+   "plus": "Serwis w ASO, bezwypadkowy, klima dwustrefowa.",
+   "watch": "Auto sprowadzone (kraj pochodzenia: Niemcy). Poproś o raport historii z zagranicy, np. z Carvertical.",
+   "reject": null
+  },
+  "detailedAt": "2026-11-10",
+  "shownSince": "2026-11-10",
+  "rulesVersion": 3
  },
  {
   "id": "otomoto:6150748103",
@@ -744,6 +824,7 @@
    "aso": false,
    "noAccident": false,
    "origin": "Francja",
+   "originFrom": "ogłoszenie",
    "hasVin": true
   },
   "out": null,
@@ -778,7 +859,7 @@
   },
   "detailedAt": "2026-11-10",
   "shownSince": "2026-11-10",
-  "rulesVersion": 2
+  "rulesVersion": 3
  },
  {
   "id": "otomoto:6151542706",
@@ -816,6 +897,7 @@
    "aso": true,
    "noAccident": true,
    "origin": "Niemcy",
+   "originFrom": "ogłoszenie",
    "hasVin": true
   },
   "out": null,
@@ -849,7 +931,7 @@
   },
   "detailedAt": "2026-11-10",
   "shownSince": "2026-11-10",
-  "rulesVersion": 2
+  "rulesVersion": 3
  },
  {
   "id": "otomoto:6151323620",
@@ -887,6 +969,7 @@
    "aso": true,
    "noAccident": false,
    "origin": "Niemcy",
+   "originFrom": "ogłoszenie",
    "hasVin": true
   },
   "out": null,
@@ -918,7 +1001,7 @@
   },
   "detailedAt": "2026-11-10",
   "shownSince": "2026-11-10",
-  "rulesVersion": 2
+  "rulesVersion": 3
  },
  {
   "id": "otomoto:6150527534",
@@ -956,6 +1039,7 @@
    "aso": true,
    "noAccident": true,
    "origin": "Niemcy",
+   "originFrom": "ogłoszenie",
    "hasVin": true
   },
   "out": null,
@@ -987,7 +1071,7 @@
   },
   "detailedAt": "2026-11-10",
   "shownSince": "2026-11-10",
-  "rulesVersion": 2
+  "rulesVersion": 3
  },
  {
   "id": "otomoto:6151321224",
@@ -1025,6 +1109,7 @@
    "aso": true,
    "noAccident": true,
    "origin": "Niemcy",
+   "originFrom": "ogłoszenie",
    "hasVin": true
   },
   "out": null,
@@ -1056,7 +1141,7 @@
   },
   "detailedAt": "2026-11-10",
   "shownSince": "2026-11-10",
-  "rulesVersion": 2
+  "rulesVersion": 3
  },
  {
   "id": "otomoto:6151234944",
@@ -1094,6 +1179,7 @@
    "aso": true,
    "noAccident": true,
    "origin": "Niemcy",
+   "originFrom": "ogłoszenie",
    "hasVin": true
   },
   "out": null,
@@ -1124,7 +1210,7 @@
    "reject": null
   },
   "detailedAt": "2026-11-10",
-  "rulesVersion": 2,
+  "rulesVersion": 3,
   "shownSince": "2026-11-10"
  },
  {
@@ -1163,6 +1249,7 @@
    "aso": true,
    "noAccident": true,
    "origin": "Niemcy",
+   "originFrom": "ogłoszenie",
    "hasVin": true
   },
   "out": null,
@@ -1197,7 +1284,7 @@
   },
   "detailedAt": "2026-11-10",
   "shownSince": "2026-11-10",
-  "rulesVersion": 2
+  "rulesVersion": 3
  },
  {
   "id": "otomoto:6150080564",
@@ -1235,11 +1322,12 @@
    "aso": true,
    "noAccident": true,
    "origin": "Wielka Brytania",
+   "originFrom": "ogłoszenie",
    "hasVin": true
   },
   "out": null,
   "plus": "Serwis w ASO, bezwypadkowy, klima automatyczna.",
-  "watch": "Sprowadzony, kraj pochodzenia: Wielka Brytania. Poproś o raport historii z zagranicy (np. Carvertical).",
+  "watch": "Auto sprowadzone (kraj pochodzenia: Wielka Brytania). Poproś o raport historii z zagranicy, np. z Carvertical.",
   "why": null,
   "score": 46,
   "top": null,
@@ -1261,11 +1349,12 @@
     "cp": 0
    },
    "plus": "Serwis w ASO, bezwypadkowy, klima automatyczna.",
-   "watch": "Sprowadzony, kraj pochodzenia: Wielka Brytania. Poproś o raport historii z zagranicy (np. Carvertical).",
+   "watch": "Auto sprowadzone (kraj pochodzenia: Wielka Brytania). Poproś o raport historii z zagranicy, np. z Carvertical.",
    "reject": null
   },
   "detailedAt": "2026-11-10",
-  "shownSince": "2026-11-10"
+  "shownSince": "2026-11-10",
+  "rulesVersion": 3
  },
  {
   "id": "otomoto:6151171754",
@@ -1303,6 +1392,7 @@
    "aso": true,
    "noAccident": true,
    "origin": "Francja",
+   "originFrom": "ogłoszenie",
    "hasVin": true
   },
   "out": null,
@@ -1332,11 +1422,12 @@
     "cp": 2
    },
    "plus": "Pierwszy właściciel, serwis w ASO, bezwypadkowy, klima dwustrefowa.",
-   "watch": "W ogłoszeniu jest tylko Android Auto. Zapytaj, czy działa CarPlay. Sprowadzony, kraj pochodzenia: Francja. Poproś o raport historii z zagranicy (np. Carvertical).",
+   "watch": "W ogłoszeniu jest tylko Android Auto. Zapytaj, czy działa CarPlay. Auto sprowadzone (kraj pochodzenia: Francja). Poproś o raport historii z zagranicy, np. z Carvertical.",
    "reject": null
   },
   "detailedAt": "2026-11-10",
-  "shownSince": "2026-11-10"
+  "shownSince": "2026-11-10",
+  "rulesVersion": 3
  },
  {
   "id": "otomoto:6151565697",
@@ -1374,11 +1465,12 @@
    "aso": true,
    "noAccident": true,
    "origin": "Niemcy",
+   "originFrom": "ogłoszenie",
    "hasVin": true
   },
   "out": null,
   "plus": "Serwis w ASO, bezwypadkowy, klima automatyczna.",
-  "watch": "Sprowadzony, kraj pochodzenia: Niemcy. Poproś o raport historii z zagranicy (np. Carvertical).",
+  "watch": "Auto sprowadzone (kraj pochodzenia: Niemcy). Poproś o raport historii z zagranicy, np. z Carvertical.",
   "why": null,
   "score": 45,
   "top": null,
@@ -1400,11 +1492,12 @@
     "cp": 1
    },
    "plus": "Serwis w ASO, bezwypadkowy, klima automatyczna.",
-   "watch": "Sprowadzony, kraj pochodzenia: Niemcy. Poproś o raport historii z zagranicy (np. Carvertical).",
+   "watch": "Auto sprowadzone (kraj pochodzenia: Niemcy). Poproś o raport historii z zagranicy, np. z Carvertical.",
    "reject": null
   },
   "detailedAt": "2026-11-10",
-  "shownSince": "2026-11-10"
+  "shownSince": "2026-11-10",
+  "rulesVersion": 3
  },
  {
   "id": "otomoto:6151167538",
@@ -1442,11 +1535,12 @@
    "aso": false,
    "noAccident": false,
    "origin": "Niemcy",
+   "originFrom": "ogłoszenie",
    "hasVin": true
   },
   "out": null,
   "plus": "Klima automatyczna.",
-  "watch": "Sprowadzony, kraj pochodzenia: Niemcy. Poproś o raport historii z zagranicy (np. Carvertical).",
+  "watch": "Auto sprowadzone (kraj pochodzenia: Niemcy). Poproś o raport historii z zagranicy, np. z Carvertical.",
   "why": null,
   "score": 43,
   "top": null,
@@ -1468,11 +1562,12 @@
     "cp": 1
    },
    "plus": "Klima automatyczna.",
-   "watch": "Sprowadzony, kraj pochodzenia: Niemcy. Poproś o raport historii z zagranicy (np. Carvertical).",
+   "watch": "Auto sprowadzone (kraj pochodzenia: Niemcy). Poproś o raport historii z zagranicy, np. z Carvertical.",
    "reject": null
   },
   "detailedAt": "2026-11-10",
-  "shownSince": "2026-11-10"
+  "shownSince": "2026-11-10",
+  "rulesVersion": 3
  },
  {
   "id": "otomoto:6151486095",
@@ -1510,6 +1605,7 @@
    "aso": true,
    "noAccident": true,
    "origin": "Niemcy",
+   "originFrom": "ogłoszenie",
    "hasVin": true
   },
   "out": "przebieg 121 000 km, ponad limit 120 000 km",
@@ -1540,7 +1636,7 @@
    "reject": null
   },
   "detailedAt": "2026-11-10",
-  "rulesVersion": 2,
+  "rulesVersion": 3,
   "shownSince": "2026-11-10"
  },
  {
@@ -1579,11 +1675,12 @@
    "aso": true,
    "noAccident": true,
    "origin": "Niemcy",
+   "originFrom": "ogłoszenie",
    "hasVin": true
   },
   "out": null,
   "plus": "Serwis w ASO, bezwypadkowy, klima dwustrefowa.",
-  "watch": "W ogłoszeniu jest tylko Android Auto. Zapytaj, czy działa CarPlay. W opisie przebieg „90 km”, w ogłoszeniu 97 000 km. Dopytaj, który jest prawdziwy. Sprowadzony, kraj pochodzenia: Niemcy. Poproś o raport historii z zagranicy (np. Carvertical).",
+  "watch": "W ogłoszeniu jest tylko Android Auto. Zapytaj, czy działa CarPlay. Auto sprowadzone (kraj pochodzenia: Niemcy). Poproś o raport historii z zagranicy, np. z Carvertical.",
   "why": null,
   "score": 42,
   "top": null,
@@ -1605,11 +1702,12 @@
     "cp": 2
    },
    "plus": "Serwis w ASO, bezwypadkowy, klima dwustrefowa.",
-   "watch": "W ogłoszeniu jest tylko Android Auto. Zapytaj, czy działa CarPlay. W opisie przebieg „90 km”, w ogłoszeniu 97 000 km. Dopytaj, który jest prawdziwy. Sprowadzony, kraj pochodzenia: Niemcy. Poproś o raport historii z zagranicy (np. Carvertical).",
+   "watch": "W ogłoszeniu jest tylko Android Auto. Zapytaj, czy działa CarPlay. Auto sprowadzone (kraj pochodzenia: Niemcy). Poproś o raport historii z zagranicy, np. z Carvertical.",
    "reject": null
   },
   "detailedAt": "2026-11-10",
-  "shownSince": "2026-11-10"
+  "shownSince": "2026-11-10",
+  "rulesVersion": 3
  },
  {
   "id": "otomoto:6151208377",
@@ -1647,11 +1745,12 @@
    "aso": true,
    "noAccident": true,
    "origin": "Niemcy",
+   "originFrom": "ogłoszenie",
    "hasVin": true
   },
   "out": null,
   "plus": "Pierwszy właściciel, serwis w ASO, bezwypadkowy, klima dwustrefowa.",
-  "watch": "Sprowadzony, kraj pochodzenia: Niemcy. Poproś o raport historii z zagranicy (np. Carvertical).",
+  "watch": "Auto sprowadzone (kraj pochodzenia: Niemcy). Poproś o raport historii z zagranicy, np. z Carvertical.",
   "why": null,
   "score": 42,
   "top": null,
@@ -1673,11 +1772,12 @@
     "cp": 0
    },
    "plus": "Pierwszy właściciel, serwis w ASO, bezwypadkowy, klima dwustrefowa.",
-   "watch": "Sprowadzony, kraj pochodzenia: Niemcy. Poproś o raport historii z zagranicy (np. Carvertical).",
+   "watch": "Auto sprowadzone (kraj pochodzenia: Niemcy). Poproś o raport historii z zagranicy, np. z Carvertical.",
    "reject": null
   },
   "detailedAt": "2026-11-10",
-  "shownSince": "2026-11-10"
+  "shownSince": "2026-11-10",
+  "rulesVersion": 3
  },
  {
   "id": "otomoto:6151248860",
@@ -1715,11 +1815,12 @@
    "aso": true,
    "noAccident": true,
    "origin": "Holandia",
+   "originFrom": "ogłoszenie",
    "hasVin": true
   },
   "out": "przebieg 120 129 km, ponad limit 120 000 km",
   "plus": "Serwis w ASO, bezwypadkowy, klima dwustrefowa.",
-  "watch": "Sprowadzony, kraj pochodzenia: Holandia. Poproś o raport historii z zagranicy (np. Carvertical).",
+  "watch": "Auto sprowadzone (kraj pochodzenia: Holandia). Poproś o raport historii z zagranicy, np. z Carvertical.",
   "why": null,
   "score": 42,
   "top": null,
@@ -1741,11 +1842,12 @@
     "cp": 0
    },
    "plus": "Serwis w ASO, bezwypadkowy, klima dwustrefowa.",
-   "watch": "Sprowadzony, kraj pochodzenia: Holandia. Poproś o raport historii z zagranicy (np. Carvertical).",
+   "watch": "Auto sprowadzone (kraj pochodzenia: Holandia). Poproś o raport historii z zagranicy, np. z Carvertical.",
    "reject": null
   },
   "detailedAt": "2026-11-10",
-  "shownSince": "2026-11-10"
+  "shownSince": "2026-11-10",
+  "rulesVersion": 3
  },
  {
   "id": "otomoto:6151407756",
@@ -1783,11 +1885,12 @@
    "aso": true,
    "noAccident": true,
    "origin": "Niemcy",
+   "originFrom": "ogłoszenie",
    "hasVin": true
   },
   "out": "przebieg 122 000 km, ponad limit 120 000 km",
   "plus": "Serwis w ASO, bezwypadkowy, klima dwustrefowa.",
-  "watch": "Sprowadzony, kraj pochodzenia: Niemcy. Poproś o raport historii z zagranicy (np. Carvertical).",
+  "watch": "Auto sprowadzone (kraj pochodzenia: Niemcy). Poproś o raport historii z zagranicy, np. z Carvertical.",
   "why": null,
   "score": 42,
   "top": null,
@@ -1809,11 +1912,12 @@
     "cp": 1
    },
    "plus": "Serwis w ASO, bezwypadkowy, klima dwustrefowa.",
-   "watch": "Sprowadzony, kraj pochodzenia: Niemcy. Poproś o raport historii z zagranicy (np. Carvertical).",
+   "watch": "Auto sprowadzone (kraj pochodzenia: Niemcy). Poproś o raport historii z zagranicy, np. z Carvertical.",
    "reject": null
   },
   "detailedAt": "2026-11-10",
-  "shownSince": "2026-11-10"
+  "shownSince": "2026-11-10",
+  "rulesVersion": 3
  },
  {
   "id": "otomoto:6151439476",
@@ -1851,6 +1955,7 @@
    "aso": false,
    "noAccident": false,
    "origin": null,
+   "originFrom": null,
    "hasVin": true
   },
   "out": null,
@@ -1881,7 +1986,8 @@
    "reject": null
   },
   "detailedAt": "2026-11-10",
-  "shownSince": "2026-11-10"
+  "shownSince": "2026-11-10",
+  "rulesVersion": 3
  },
  {
   "id": "olx:clio-17",
@@ -1974,11 +2080,12 @@
    "aso": true,
    "noAccident": true,
    "origin": "Niemcy",
+   "originFrom": "ogłoszenie",
    "hasVin": true
   },
   "out": null,
   "plus": "Pierwszy właściciel, serwis w ASO, bezwypadkowy, klima dwustrefowa.",
-  "watch": "Sprowadzony, kraj pochodzenia: Niemcy. Poproś o raport historii z zagranicy (np. Carvertical).",
+  "watch": "Auto sprowadzone (kraj pochodzenia: Niemcy). Poproś o raport historii z zagranicy, np. z Carvertical.",
   "why": null,
   "score": 40,
   "top": null,
@@ -2000,11 +2107,12 @@
     "cp": 0
    },
    "plus": "Pierwszy właściciel, serwis w ASO, bezwypadkowy, klima dwustrefowa.",
-   "watch": "Sprowadzony, kraj pochodzenia: Niemcy. Poproś o raport historii z zagranicy (np. Carvertical).",
+   "watch": "Auto sprowadzone (kraj pochodzenia: Niemcy). Poproś o raport historii z zagranicy, np. z Carvertical.",
    "reject": null
   },
   "detailedAt": "2026-11-10",
-  "shownSince": "2026-11-10"
+  "shownSince": "2026-11-10",
+  "rulesVersion": 3
  },
  {
   "id": "otomoto:6150930360",
@@ -2042,6 +2150,7 @@
    "aso": false,
    "noAccident": true,
    "origin": null,
+   "originFrom": null,
    "hasVin": true
   },
   "out": null,
@@ -2072,7 +2181,8 @@
    "reject": null
   },
   "detailedAt": "2026-11-10",
-  "shownSince": "2026-11-10"
+  "shownSince": "2026-11-10",
+  "rulesVersion": 3
  },
  {
   "id": "otomoto:6145938109",
@@ -2110,11 +2220,12 @@
    "aso": true,
    "noAccident": true,
    "origin": "Holandia",
+   "originFrom": "ogłoszenie",
    "hasVin": true
   },
   "out": "przebieg 125 000 km, ponad limit 120 000 km",
   "plus": "Serwis w ASO, bezwypadkowy, klima dwustrefowa.",
-  "watch": "Sprowadzony, kraj pochodzenia: Holandia. Poproś o raport historii z zagranicy (np. Carvertical).",
+  "watch": "Auto sprowadzone (kraj pochodzenia: Holandia). Poproś o raport historii z zagranicy, np. z Carvertical.",
   "why": null,
   "score": 40,
   "top": null,
@@ -2136,11 +2247,12 @@
     "cp": 0
    },
    "plus": "Serwis w ASO, bezwypadkowy, klima dwustrefowa.",
-   "watch": "Sprowadzony, kraj pochodzenia: Holandia. Poproś o raport historii z zagranicy (np. Carvertical).",
+   "watch": "Auto sprowadzone (kraj pochodzenia: Holandia). Poproś o raport historii z zagranicy, np. z Carvertical.",
    "reject": null
   },
   "detailedAt": "2026-11-10",
-  "shownSince": "2026-11-10"
+  "shownSince": "2026-11-10",
+  "rulesVersion": 3
  },
  {
   "id": "otomoto:6151442440",
@@ -2178,6 +2290,7 @@
    "aso": true,
    "noAccident": true,
    "origin": null,
+   "originFrom": null,
    "hasVin": true
   },
   "out": "przebieg 159 000 km, ponad limit 120 000 km",
@@ -2208,7 +2321,8 @@
    "reject": null
   },
   "detailedAt": "2026-11-10",
-  "shownSince": "2026-11-10"
+  "shownSince": "2026-11-10",
+  "rulesVersion": 3
  },
  {
   "id": "otomoto:6151244449",
@@ -2246,11 +2360,12 @@
    "aso": false,
    "noAccident": false,
    "origin": "Niemcy",
+   "originFrom": "ogłoszenie",
    "hasVin": true
   },
   "out": null,
   "plus": "Klima automatyczna.",
-  "watch": "Sprowadzony, kraj pochodzenia: Niemcy. Poproś o raport historii z zagranicy (np. Carvertical).",
+  "watch": "Auto sprowadzone (kraj pochodzenia: Niemcy). Poproś o raport historii z zagranicy, np. z Carvertical.",
   "why": null,
   "score": 40,
   "top": null,
@@ -2272,11 +2387,12 @@
     "cp": 1
    },
    "plus": "Klima automatyczna.",
-   "watch": "Sprowadzony, kraj pochodzenia: Niemcy. Poproś o raport historii z zagranicy (np. Carvertical).",
+   "watch": "Auto sprowadzone (kraj pochodzenia: Niemcy). Poproś o raport historii z zagranicy, np. z Carvertical.",
    "reject": null
   },
   "detailedAt": "2026-11-10",
-  "shownSince": "2026-11-10"
+  "shownSince": "2026-11-10",
+  "rulesVersion": 3
  },
  {
   "id": "otomoto:6151493717",
@@ -2314,11 +2430,12 @@
    "aso": true,
    "noAccident": false,
    "origin": "Francja",
+   "originFrom": "ogłoszenie",
    "hasVin": false
   },
   "out": null,
   "plus": "Serwis w ASO, klima automatyczna.",
-  "watch": "Sprowadzony, kraj pochodzenia: Francja. Poproś o raport historii z zagranicy (np. Carvertical).",
+  "watch": "Auto sprowadzone (kraj pochodzenia: Francja). Poproś o raport historii z zagranicy, np. z Carvertical.",
   "why": null,
   "score": 39,
   "top": null,
@@ -2340,11 +2457,12 @@
     "cp": 0
    },
    "plus": "Serwis w ASO, klima automatyczna.",
-   "watch": "Sprowadzony, kraj pochodzenia: Francja. Poproś o raport historii z zagranicy (np. Carvertical).",
+   "watch": "Auto sprowadzone (kraj pochodzenia: Francja). Poproś o raport historii z zagranicy, np. z Carvertical.",
    "reject": null
   },
   "detailedAt": "2026-11-10",
-  "shownSince": "2026-11-10"
+  "shownSince": "2026-11-10",
+  "rulesVersion": 3
  },
  {
   "id": "otomoto:6151363635",
@@ -2382,6 +2500,7 @@
    "aso": false,
    "noAccident": true,
    "origin": "Polska",
+   "originFrom": "ogłoszenie",
    "hasVin": true
   },
   "out": null,
@@ -2414,51 +2533,53 @@
    "reject": null
   },
   "detailedAt": "2026-11-10",
-  "shownSince": "2026-11-10"
+  "shownSince": "2026-11-10",
+  "rulesVersion": 3
  },
  {
-  "id": "otomoto:6140665764",
+  "id": "otomoto:6151565012",
   "links": {
-   "otomoto": "https://www.otomoto.pl/osobowe/oferta/toyota-proace-ID6HzBGc.html",
+   "otomoto": "https://www.otomoto.pl/osobowe/oferta/peugeot-3008-ID6Ijl4v.html",
    "olx": null
   },
-  "name": "Toyota ProAce",
-  "version": null,
-  "engine": "1.5, 120 KM",
+  "name": "Peugeot 3008",
+  "version": "1.6 HDi Style",
+  "engine": "1.6, 115 KM",
   "fuel": "on",
   "gear": "manualna",
-  "body": "minivan",
-  "year": 2020,
-  "km": 79999,
-  "hp": 120,
-  "cc": 1499,
-  "price": 29999,
-  "city": "Łódź",
-  "region": "Łódzkie",
+  "body": "kompakt",
+  "year": 2014,
+  "km": 67265,
+  "hp": 115,
+  "cc": 1560,
+  "price": 30500,
+  "city": "Warszawa",
+  "region": "Mazowieckie",
   "seller": "prywatnie",
-  "make": "toyota",
-  "model": "proace",
-  "title": "Toyota ProAce",
-  "origin": "Polska",
+  "make": "peugeot",
+  "model": "3008",
+  "title": "Peugeot 3008 1.6 HDi Style",
+  "origin": null,
   "equipment": {
    "ac": 1,
    "cam": 0,
-   "pdc": 0,
+   "pdc": 1,
    "cp": 0
   },
   "facts": {
    "salonPL": true,
    "firstOwner": true,
    "aso": false,
-   "noAccident": false,
+   "noAccident": true,
    "origin": "Polska",
+   "originFrom": "opis",
    "hasVin": true
   },
-  "out": null,
-  "plus": "Polski salon, pierwszy właściciel, klima automatyczna.",
+  "out": "cena 30 500 zł, ponad budżet 30 000 zł, do negocjacji",
+  "plus": "Polski salon, pierwszy właściciel, bezwypadkowy, klima automatyczna.",
   "watch": null,
   "why": null,
-  "score": 38,
+  "score": 39,
   "top": null,
   "reject": null,
   "pending": false,
@@ -2474,15 +2595,16 @@
    "equipment": {
     "ac": 1,
     "cam": 0,
-    "pdc": 0,
+    "pdc": 1,
     "cp": 0
    },
-   "plus": "Polski salon, pierwszy właściciel, klima automatyczna.",
+   "plus": "Polski salon, pierwszy właściciel, bezwypadkowy, klima automatyczna.",
    "watch": null,
    "reject": null
   },
   "detailedAt": "2026-11-10",
-  "shownSince": "2026-11-10"
+  "shownSince": "2026-11-10",
+  "rulesVersion": 3
  },
  {
   "id": "otomoto:6151412776",
@@ -2520,11 +2642,12 @@
    "aso": false,
    "noAccident": true,
    "origin": "Belgia",
+   "originFrom": "ogłoszenie",
    "hasVin": true
   },
   "out": "przebieg 120 340 km, ponad limit 120 000 km",
   "plus": "Bezwypadkowy, klima automatyczna.",
-  "watch": "Sprowadzony, kraj pochodzenia: Belgia. Poproś o raport historii z zagranicy (np. Carvertical).",
+  "watch": "Auto sprowadzone (kraj pochodzenia: Belgia). Poproś o raport historii z zagranicy, np. z Carvertical.",
   "why": null,
   "score": 38,
   "top": null,
@@ -2546,11 +2669,12 @@
     "cp": 0
    },
    "plus": "Bezwypadkowy, klima automatyczna.",
-   "watch": "Sprowadzony, kraj pochodzenia: Belgia. Poproś o raport historii z zagranicy (np. Carvertical).",
+   "watch": "Auto sprowadzone (kraj pochodzenia: Belgia). Poproś o raport historii z zagranicy, np. z Carvertical.",
    "reject": null
   },
   "detailedAt": "2026-11-10",
-  "shownSince": "2026-11-10"
+  "shownSince": "2026-11-10",
+  "rulesVersion": 3
  },
  {
   "id": "otomoto:6151337890",
@@ -2588,11 +2712,12 @@
    "aso": true,
    "noAccident": false,
    "origin": "Niemcy",
+   "originFrom": "ogłoszenie",
    "hasVin": true
   },
   "out": "przebieg 121 600 km, ponad limit 120 000 km",
   "plus": "Pierwszy właściciel, serwis w ASO, klima automatyczna.",
-  "watch": "Sprowadzony, kraj pochodzenia: Niemcy. Poproś o raport historii z zagranicy (np. Carvertical).",
+  "watch": "Auto sprowadzone (kraj pochodzenia: Niemcy). Poproś o raport historii z zagranicy, np. z Carvertical.",
   "why": null,
   "score": 38,
   "top": null,
@@ -2614,11 +2739,12 @@
     "cp": 1
    },
    "plus": "Pierwszy właściciel, serwis w ASO, klima automatyczna.",
-   "watch": "Sprowadzony, kraj pochodzenia: Niemcy. Poproś o raport historii z zagranicy (np. Carvertical).",
+   "watch": "Auto sprowadzone (kraj pochodzenia: Niemcy). Poproś o raport historii z zagranicy, np. z Carvertical.",
    "reject": null
   },
   "detailedAt": "2026-11-10",
-  "shownSince": "2026-11-10"
+  "shownSince": "2026-11-10",
+  "rulesVersion": 3
  },
  {
   "id": "otomoto:6150786994",
@@ -2656,6 +2782,7 @@
    "aso": false,
    "noAccident": true,
    "origin": null,
+   "originFrom": null,
    "hasVin": true
   },
   "out": null,
@@ -2686,7 +2813,8 @@
    "reject": null
   },
   "detailedAt": "2026-11-10",
-  "shownSince": "2026-11-10"
+  "shownSince": "2026-11-10",
+  "rulesVersion": 3
  },
  {
   "id": "otomoto:6149011982",
@@ -2724,6 +2852,7 @@
    "aso": true,
    "noAccident": false,
    "origin": "Polska",
+   "originFrom": "ogłoszenie",
    "hasVin": true
   },
   "out": null,
@@ -2754,7 +2883,8 @@
    "reject": null
   },
   "detailedAt": "2026-11-10",
-  "shownSince": "2026-11-10"
+  "shownSince": "2026-11-10",
+  "rulesVersion": 3
  },
  {
   "id": "otomoto:6151041946",
@@ -2792,6 +2922,7 @@
    "aso": true,
    "noAccident": true,
    "origin": "Polska",
+   "originFrom": "ogłoszenie",
    "hasVin": true
   },
   "out": null,
@@ -2822,7 +2953,8 @@
    "reject": null
   },
   "detailedAt": "2026-11-10",
-  "shownSince": "2026-11-10"
+  "shownSince": "2026-11-10",
+  "rulesVersion": 3
  },
  {
   "id": "otomoto:6151526412",
@@ -2860,6 +2992,7 @@
    "aso": false,
    "noAccident": false,
    "origin": "Polska",
+   "originFrom": "ogłoszenie",
    "hasVin": true
   },
   "out": null,
@@ -2890,7 +3023,8 @@
    "reject": null
   },
   "detailedAt": "2026-11-10",
-  "shownSince": "2026-11-10"
+  "shownSince": "2026-11-10",
+  "rulesVersion": 3
  },
  {
   "id": "otomoto:6149852293",
@@ -2928,11 +3062,12 @@
    "aso": false,
    "noAccident": false,
    "origin": "Holandia",
+   "originFrom": "ogłoszenie",
    "hasVin": true
   },
   "out": null,
   "plus": "Klima automatyczna.",
-  "watch": "Sprowadzony, kraj pochodzenia: Holandia. Poproś o raport historii z zagranicy (np. Carvertical).",
+  "watch": "Auto sprowadzone (kraj pochodzenia: Holandia). Poproś o raport historii z zagranicy, np. z Carvertical.",
   "why": null,
   "score": 35,
   "top": null,
@@ -2954,11 +3089,12 @@
     "cp": 1
    },
    "plus": "Klima automatyczna.",
-   "watch": "Sprowadzony, kraj pochodzenia: Holandia. Poproś o raport historii z zagranicy (np. Carvertical).",
+   "watch": "Auto sprowadzone (kraj pochodzenia: Holandia). Poproś o raport historii z zagranicy, np. z Carvertical.",
    "reject": null
   },
   "detailedAt": "2026-11-10",
-  "shownSince": "2026-11-10"
+  "shownSince": "2026-11-10",
+  "rulesVersion": 3
  },
  {
   "id": "otomoto:6151199091",
@@ -2996,11 +3132,12 @@
    "aso": true,
    "noAccident": true,
    "origin": "Niemcy",
+   "originFrom": "ogłoszenie",
    "hasVin": true
   },
   "out": null,
   "plus": "Serwis w ASO, bezwypadkowy, klima dwustrefowa.",
-  "watch": "Sprowadzony, kraj pochodzenia: Niemcy. Poproś o raport historii z zagranicy (np. Carvertical).",
+  "watch": "Auto sprowadzone (kraj pochodzenia: Niemcy). Poproś o raport historii z zagranicy, np. z Carvertical.",
   "why": null,
   "score": 35,
   "top": null,
@@ -3022,11 +3159,12 @@
     "cp": 0
    },
    "plus": "Serwis w ASO, bezwypadkowy, klima dwustrefowa.",
-   "watch": "Sprowadzony, kraj pochodzenia: Niemcy. Poproś o raport historii z zagranicy (np. Carvertical).",
+   "watch": "Auto sprowadzone (kraj pochodzenia: Niemcy). Poproś o raport historii z zagranicy, np. z Carvertical.",
    "reject": null
   },
   "detailedAt": "2026-11-10",
-  "shownSince": "2026-11-10"
+  "shownSince": "2026-11-10",
+  "rulesVersion": 3
  },
  {
   "id": "otomoto:6148278721",
@@ -3064,6 +3202,7 @@
    "aso": false,
    "noAccident": false,
    "origin": null,
+   "originFrom": null,
    "hasVin": true
   },
   "out": "cena 30 900 zł, ponad budżet 30 000 zł, do negocjacji",
@@ -3094,7 +3233,8 @@
    "reject": null
   },
   "detailedAt": "2026-11-10",
-  "shownSince": "2026-11-10"
+  "shownSince": "2026-11-10",
+  "rulesVersion": 3
  },
  {
   "id": "otomoto:6151157145",
@@ -3132,6 +3272,7 @@
    "aso": true,
    "noAccident": true,
    "origin": "Polska",
+   "originFrom": "ogłoszenie",
    "hasVin": true
   },
   "out": "przebieg 123 000 km, ponad limit 120 000 km",
@@ -3162,7 +3303,8 @@
    "reject": null
   },
   "detailedAt": "2026-11-10",
-  "shownSince": "2026-11-10"
+  "shownSince": "2026-11-10",
+  "rulesVersion": 3
  },
  {
   "id": "otomoto:6151105010",
@@ -3200,11 +3342,12 @@
    "aso": true,
    "noAccident": true,
    "origin": "Niemcy",
+   "originFrom": "ogłoszenie",
    "hasVin": true
   },
   "out": "przebieg 123 000 km, ponad limit 120 000 km",
   "plus": "Serwis w ASO, bezwypadkowy, klima automatyczna.",
-  "watch": "Sprowadzony, kraj pochodzenia: Niemcy. Poproś o raport historii z zagranicy (np. Carvertical).",
+  "watch": "Auto sprowadzone (kraj pochodzenia: Niemcy). Poproś o raport historii z zagranicy, np. z Carvertical.",
   "why": null,
   "score": 34,
   "top": null,
@@ -3226,11 +3369,12 @@
     "cp": 0
    },
    "plus": "Serwis w ASO, bezwypadkowy, klima automatyczna.",
-   "watch": "Sprowadzony, kraj pochodzenia: Niemcy. Poproś o raport historii z zagranicy (np. Carvertical).",
+   "watch": "Auto sprowadzone (kraj pochodzenia: Niemcy). Poproś o raport historii z zagranicy, np. z Carvertical.",
    "reject": null
   },
   "detailedAt": "2026-11-10",
-  "shownSince": "2026-11-10"
+  "shownSince": "2026-11-10",
+  "rulesVersion": 3
  },
  {
   "id": "otomoto:6151519615",
@@ -3268,11 +3412,12 @@
    "aso": true,
    "noAccident": true,
    "origin": "Włochy",
+   "originFrom": "ogłoszenie",
    "hasVin": true
   },
   "out": null,
   "plus": "Serwis w ASO, bezwypadkowy, klima dwustrefowa.",
-  "watch": "Sprowadzony, kraj pochodzenia: Włochy. Poproś o raport historii z zagranicy (np. Carvertical).",
+  "watch": "Auto sprowadzone (kraj pochodzenia: Włochy). Poproś o raport historii z zagranicy, np. z Carvertical.",
   "why": null,
   "score": 33,
   "top": null,
@@ -3294,11 +3439,12 @@
     "cp": 0
    },
    "plus": "Serwis w ASO, bezwypadkowy, klima dwustrefowa.",
-   "watch": "Sprowadzony, kraj pochodzenia: Włochy. Poproś o raport historii z zagranicy (np. Carvertical).",
+   "watch": "Auto sprowadzone (kraj pochodzenia: Włochy). Poproś o raport historii z zagranicy, np. z Carvertical.",
    "reject": null
   },
   "detailedAt": "2026-11-10",
-  "shownSince": "2026-11-10"
+  "shownSince": "2026-11-10",
+  "rulesVersion": 3
  },
  {
   "id": "otomoto:6151529921",
@@ -3336,6 +3482,7 @@
    "aso": false,
    "noAccident": false,
    "origin": null,
+   "originFrom": null,
    "hasVin": true
   },
   "out": null,
@@ -3366,7 +3513,8 @@
    "reject": null
   },
   "detailedAt": "2026-11-10",
-  "shownSince": "2026-11-10"
+  "shownSince": "2026-11-10",
+  "rulesVersion": 3
  },
  {
   "id": "otomoto:6151347750",
@@ -3404,6 +3552,7 @@
    "aso": false,
    "noAccident": false,
    "origin": null,
+   "originFrom": null,
    "hasVin": true
   },
   "out": null,
@@ -3437,7 +3586,8 @@
    "reject": null
   },
   "detailedAt": "2026-11-10",
-  "shownSince": "2026-11-10"
+  "shownSince": "2026-11-10",
+  "rulesVersion": 3
  },
  {
   "id": "otomoto:6150670828",
@@ -3475,6 +3625,7 @@
    "aso": false,
    "noAccident": false,
    "origin": null,
+   "originFrom": null,
    "hasVin": true
   },
   "out": "przebieg 122 475 km, ponad limit 120 000 km",
@@ -3505,7 +3656,8 @@
    "reject": null
   },
   "detailedAt": "2026-11-10",
-  "shownSince": "2026-11-10"
+  "shownSince": "2026-11-10",
+  "rulesVersion": 3
  },
  {
   "id": "otomoto:6150131396",
@@ -3543,11 +3695,12 @@
    "aso": false,
    "noAccident": true,
    "origin": "Austria",
+   "originFrom": "ogłoszenie",
    "hasVin": true
   },
   "out": "przebieg 125 000 km, ponad limit 120 000 km",
   "plus": "Bezwypadkowy, klima dwustrefowa.",
-  "watch": "Sprowadzony, kraj pochodzenia: Austria. Poproś o raport historii z zagranicy (np. Carvertical).",
+  "watch": "Auto sprowadzone (kraj pochodzenia: Austria). Poproś o raport historii z zagranicy, np. z Carvertical.",
   "why": null,
   "score": 32,
   "top": null,
@@ -3569,11 +3722,12 @@
     "cp": 0
    },
    "plus": "Bezwypadkowy, klima dwustrefowa.",
-   "watch": "Sprowadzony, kraj pochodzenia: Austria. Poproś o raport historii z zagranicy (np. Carvertical).",
+   "watch": "Auto sprowadzone (kraj pochodzenia: Austria). Poproś o raport historii z zagranicy, np. z Carvertical.",
    "reject": null
   },
   "detailedAt": "2026-11-10",
-  "shownSince": "2026-11-10"
+  "shownSince": "2026-11-10",
+  "rulesVersion": 3
  },
  {
   "id": "otomoto:6151549310",
@@ -3611,11 +3765,12 @@
    "aso": true,
    "noAccident": true,
    "origin": "Niemcy",
+   "originFrom": "ogłoszenie",
    "hasVin": true
   },
   "out": null,
   "plus": "Pierwszy właściciel, serwis w ASO, bezwypadkowy, klima dwustrefowa.",
-  "watch": "Sprowadzony, kraj pochodzenia: Niemcy. Poproś o raport historii z zagranicy (np. Carvertical).",
+  "watch": "Auto sprowadzone (kraj pochodzenia: Niemcy). Poproś o raport historii z zagranicy, np. z Carvertical.",
   "why": null,
   "score": 32,
   "top": null,
@@ -3637,11 +3792,12 @@
     "cp": 0
    },
    "plus": "Pierwszy właściciel, serwis w ASO, bezwypadkowy, klima dwustrefowa.",
-   "watch": "Sprowadzony, kraj pochodzenia: Niemcy. Poproś o raport historii z zagranicy (np. Carvertical).",
+   "watch": "Auto sprowadzone (kraj pochodzenia: Niemcy). Poproś o raport historii z zagranicy, np. z Carvertical.",
    "reject": null
   },
   "detailedAt": "2026-11-10",
-  "shownSince": "2026-11-10"
+  "shownSince": "2026-11-10",
+  "rulesVersion": 3
  },
  {
   "id": "otomoto:6151597890",
@@ -3679,6 +3835,7 @@
    "aso": false,
    "noAccident": false,
    "origin": null,
+   "originFrom": null,
    "hasVin": true
   },
   "out": null,
@@ -3709,75 +3866,8 @@
    "reject": null
   },
   "detailedAt": "2026-11-10",
-  "shownSince": "2026-11-10"
- },
- {
-  "id": "otomoto:6151565012",
-  "links": {
-   "otomoto": "https://www.otomoto.pl/osobowe/oferta/peugeot-3008-ID6Ijl4v.html",
-   "olx": null
-  },
-  "name": "Peugeot 3008",
-  "version": "1.6 HDi Style",
-  "engine": "1.6, 115 KM",
-  "fuel": "on",
-  "gear": "manualna",
-  "body": "kompakt",
-  "year": 2014,
-  "km": 67265,
-  "hp": 115,
-  "cc": 1560,
-  "price": 30500,
-  "city": "Warszawa",
-  "region": "Mazowieckie",
-  "seller": "prywatnie",
-  "make": "peugeot",
-  "model": "3008",
-  "title": "Peugeot 3008 1.6 HDi Style",
-  "origin": null,
-  "equipment": {
-   "ac": 1,
-   "cam": 0,
-   "pdc": 1,
-   "cp": 0
-  },
-  "facts": {
-   "salonPL": false,
-   "firstOwner": true,
-   "aso": false,
-   "noAccident": true,
-   "origin": null,
-   "hasVin": true
-  },
-  "out": "cena 30 500 zł, ponad budżet 30 000 zł, do negocjacji",
-  "plus": "Pierwszy właściciel, bezwypadkowy, klima automatyczna.",
-  "watch": null,
-  "why": null,
-  "score": 31,
-  "top": null,
-  "reject": null,
-  "pending": false,
-  "detailed": true,
-  "inAc": true,
-  "manual": false,
-  "byKamil": [],
-  "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
-  "status": "active",
-  "goneSince": null,
-  "auto": {
-   "equipment": {
-    "ac": 1,
-    "cam": 0,
-    "pdc": 1,
-    "cp": 0
-   },
-   "plus": "Pierwszy właściciel, bezwypadkowy, klima automatyczna.",
-   "watch": null,
-   "reject": null
-  },
-  "detailedAt": "2026-11-10",
-  "shownSince": "2026-11-10"
+  "shownSince": "2026-11-10",
+  "rulesVersion": 3
  },
  {
   "id": "otomoto:6148151591",
@@ -3815,6 +3905,7 @@
    "aso": false,
    "noAccident": false,
    "origin": "Polska",
+   "originFrom": "ogłoszenie",
    "hasVin": true
   },
   "out": null,
@@ -3845,7 +3936,8 @@
    "reject": null
   },
   "detailedAt": "2026-11-10",
-  "shownSince": "2026-11-10"
+  "shownSince": "2026-11-10",
+  "rulesVersion": 3
  },
  {
   "id": "otomoto:6151461441",
@@ -3883,6 +3975,7 @@
    "aso": false,
    "noAccident": false,
    "origin": null,
+   "originFrom": null,
    "hasVin": true
   },
   "out": null,
@@ -3913,7 +4006,8 @@
    "reject": null
   },
   "detailedAt": "2026-11-10",
-  "shownSince": "2026-11-10"
+  "shownSince": "2026-11-10",
+  "rulesVersion": 3
  },
  {
   "id": "otomoto:6151406419",
@@ -3951,11 +4045,12 @@
    "aso": true,
    "noAccident": true,
    "origin": "Niemcy",
+   "originFrom": "ogłoszenie",
    "hasVin": true
   },
   "out": null,
   "plus": "Od pierwszego właściciela z Niemiec, bezwypadkowy, serwis w ASO.",
-  "watch": "Sprowadzony, kraj pochodzenia: Niemcy. Poproś o raport historii z zagranicy (np. Carvertical).",
+  "watch": "Auto sprowadzone (kraj pochodzenia: Niemcy). Poproś o raport historii z zagranicy, np. z Carvertical.",
   "why": null,
   "score": 31,
   "top": null,
@@ -3979,11 +4074,12 @@
     "cp": 0
    },
    "plus": "Serwis w ASO, bezwypadkowy, klima automatyczna.",
-   "watch": "Sprowadzony, kraj pochodzenia: Niemcy. Poproś o raport historii z zagranicy (np. Carvertical).",
+   "watch": "Auto sprowadzone (kraj pochodzenia: Niemcy). Poproś o raport historii z zagranicy, np. z Carvertical.",
    "reject": null
   },
   "detailedAt": "2026-11-10",
-  "shownSince": "2026-11-10"
+  "shownSince": "2026-11-10",
+  "rulesVersion": 3
  },
  {
   "id": "otomoto:6151361234",
@@ -4021,6 +4117,7 @@
    "aso": false,
    "noAccident": false,
    "origin": "Holandia",
+   "originFrom": "ogłoszenie",
    "hasVin": true
   },
   "out": null,
@@ -4050,11 +4147,82 @@
     "cp": 0
    },
    "plus": "Klima dwustrefowa.",
-   "watch": "Sprowadzony, kraj pochodzenia: Holandia. Poproś o raport historii z zagranicy (np. Carvertical).",
+   "watch": "Auto sprowadzone (kraj pochodzenia: Holandia). Poproś o raport historii z zagranicy, np. z Carvertical.",
    "reject": null
   },
   "detailedAt": "2026-11-10",
-  "shownSince": "2026-11-10"
+  "shownSince": "2026-11-10",
+  "rulesVersion": 3
+ },
+ {
+  "id": "otomoto:6151612340",
+  "links": {
+   "otomoto": "https://www.otomoto.pl/osobowe/oferta/ford-focus-ID6IjxnS.html",
+   "olx": null
+  },
+  "name": "Ford Focus",
+  "version": "1.6 TDCi Trend",
+  "engine": "1.6, 95 KM",
+  "fuel": "on",
+  "gear": "manualna",
+  "body": "sedan",
+  "year": 2015,
+  "km": 101806,
+  "hp": 95,
+  "cc": 1560,
+  "price": 22900,
+  "city": "Konin",
+  "region": "Wielkopolskie",
+  "seller": "prywatnie",
+  "make": "ford",
+  "model": "focus",
+  "title": "Ford Focus 1.6 TDCi Trend",
+  "origin": null,
+  "equipment": {
+   "ac": 1,
+   "cam": 0,
+   "pdc": 1,
+   "cp": 0
+  },
+  "facts": {
+   "salonPL": true,
+   "firstOwner": false,
+   "aso": false,
+   "noAccident": false,
+   "origin": "Polska",
+   "originFrom": "opis",
+   "hasVin": true
+  },
+  "out": null,
+  "plus": "Polski salon, klima dwustrefowa.",
+  "watch": null,
+  "why": null,
+  "score": 31,
+  "top": null,
+  "reject": null,
+  "pending": false,
+  "detailed": true,
+  "inAc": true,
+  "manual": false,
+  "byKamil": [],
+  "firstSeen": "2026-11-10",
+  "lastSeen": "2026-11-10",
+  "status": "active",
+  "goneSince": null,
+  "auto": {
+   "equipment": {
+    "ac": 1,
+    "cam": 0,
+    "pdc": 1,
+    "cp": 0
+   },
+   "plus": "Polski salon, klima dwustrefowa.",
+   "watch": null,
+   "reject": null
+  },
+  "detailedAt": "2026-11-10",
+  "shownSince": "2026-11-10",
+  "rulesVersion": 3
  },
  {
   "id": "otomoto:6151198931",
@@ -4092,11 +4260,12 @@
    "aso": false,
    "noAccident": false,
    "origin": "Francja",
+   "originFrom": "ogłoszenie",
    "hasVin": true
   },
   "out": null,
   "plus": "Klima dwustrefowa.",
-  "watch": "Sprowadzony, kraj pochodzenia: Francja. Poproś o raport historii z zagranicy (np. Carvertical).",
+  "watch": "Auto sprowadzone (kraj pochodzenia: Francja). Poproś o raport historii z zagranicy, np. z Carvertical.",
   "why": null,
   "score": 30,
   "top": null,
@@ -4118,11 +4287,12 @@
     "cp": 0
    },
    "plus": "Klima dwustrefowa.",
-   "watch": "Sprowadzony, kraj pochodzenia: Francja. Poproś o raport historii z zagranicy (np. Carvertical).",
+   "watch": "Auto sprowadzone (kraj pochodzenia: Francja). Poproś o raport historii z zagranicy, np. z Carvertical.",
    "reject": null
   },
   "detailedAt": "2026-11-10",
-  "shownSince": "2026-11-10"
+  "shownSince": "2026-11-10",
+  "rulesVersion": 3
  },
  {
   "id": "otomoto:6151506604",
@@ -4160,11 +4330,12 @@
    "aso": false,
    "noAccident": false,
    "origin": "Francja",
+   "originFrom": "ogłoszenie",
    "hasVin": true
   },
   "out": "przebieg 124 000 km, ponad limit 120 000 km",
   "plus": "Klima automatyczna.",
-  "watch": "Sprowadzony, kraj pochodzenia: Francja. Poproś o raport historii z zagranicy (np. Carvertical).",
+  "watch": "Auto sprowadzone (kraj pochodzenia: Francja). Poproś o raport historii z zagranicy, np. z Carvertical.",
   "why": null,
   "score": 30,
   "top": null,
@@ -4186,11 +4357,12 @@
     "cp": 1
    },
    "plus": "Klima automatyczna.",
-   "watch": "Sprowadzony, kraj pochodzenia: Francja. Poproś o raport historii z zagranicy (np. Carvertical).",
+   "watch": "Auto sprowadzone (kraj pochodzenia: Francja). Poproś o raport historii z zagranicy, np. z Carvertical.",
    "reject": null
   },
   "detailedAt": "2026-11-10",
-  "shownSince": "2026-11-10"
+  "shownSince": "2026-11-10",
+  "rulesVersion": 3
  },
  {
   "id": "otomoto:6151372797",
@@ -4228,6 +4400,7 @@
    "aso": false,
    "noAccident": false,
    "origin": null,
+   "originFrom": null,
    "hasVin": true
   },
   "out": null,
@@ -4258,7 +4431,8 @@
    "reject": null
   },
   "detailedAt": "2026-11-10",
-  "shownSince": "2026-11-10"
+  "shownSince": "2026-11-10",
+  "rulesVersion": 3
  },
  {
   "id": "otomoto:6147570556",
@@ -4296,11 +4470,12 @@
    "aso": true,
    "noAccident": true,
    "origin": "Niemcy",
+   "originFrom": "ogłoszenie",
    "hasVin": true
   },
   "out": null,
   "plus": "Serwis w ASO, bezwypadkowy, klima dwustrefowa.",
-  "watch": "Sprowadzony, kraj pochodzenia: Niemcy. Poproś o raport historii z zagranicy (np. Carvertical).",
+  "watch": "Auto sprowadzone (kraj pochodzenia: Niemcy). Poproś o raport historii z zagranicy, np. z Carvertical.",
   "why": null,
   "score": 29,
   "top": null,
@@ -4322,11 +4497,12 @@
     "cp": 0
    },
    "plus": "Serwis w ASO, bezwypadkowy, klima dwustrefowa.",
-   "watch": "Sprowadzony, kraj pochodzenia: Niemcy. Poproś o raport historii z zagranicy (np. Carvertical).",
+   "watch": "Auto sprowadzone (kraj pochodzenia: Niemcy). Poproś o raport historii z zagranicy, np. z Carvertical.",
    "reject": null
   },
   "detailedAt": "2026-11-10",
-  "shownSince": "2026-11-10"
+  "shownSince": "2026-11-10",
+  "rulesVersion": 3
  },
  {
   "id": "otomoto:6151424067",
@@ -4364,11 +4540,12 @@
    "aso": true,
    "noAccident": true,
    "origin": "Niemcy",
+   "originFrom": "ogłoszenie",
    "hasVin": true
   },
   "out": null,
   "plus": "Serwis w ASO, bezwypadkowy, klima automatyczna.",
-  "watch": "Sprowadzony, kraj pochodzenia: Niemcy. Poproś o raport historii z zagranicy (np. Carvertical).",
+  "watch": "Auto sprowadzone (kraj pochodzenia: Niemcy). Poproś o raport historii z zagranicy, np. z Carvertical.",
   "why": null,
   "score": 29,
   "top": null,
@@ -4390,11 +4567,12 @@
     "cp": 0
    },
    "plus": "Serwis w ASO, bezwypadkowy, klima automatyczna.",
-   "watch": "Sprowadzony, kraj pochodzenia: Niemcy. Poproś o raport historii z zagranicy (np. Carvertical).",
+   "watch": "Auto sprowadzone (kraj pochodzenia: Niemcy). Poproś o raport historii z zagranicy, np. z Carvertical.",
    "reject": null
   },
   "detailedAt": "2026-11-10",
-  "shownSince": "2026-11-10"
+  "shownSince": "2026-11-10",
+  "rulesVersion": 3
  },
  {
   "id": "otomoto:6148960473",
@@ -4432,11 +4610,12 @@
    "aso": false,
    "noAccident": false,
    "origin": "Francja",
+   "originFrom": "ogłoszenie",
    "hasVin": true
   },
   "out": null,
   "plus": "Klima dwustrefowa.",
-  "watch": "Sprowadzony, kraj pochodzenia: Francja. Poproś o raport historii z zagranicy (np. Carvertical).",
+  "watch": "Auto sprowadzone (kraj pochodzenia: Francja). Poproś o raport historii z zagranicy, np. z Carvertical.",
   "why": null,
   "score": 29,
   "top": null,
@@ -4458,11 +4637,12 @@
     "cp": 1
    },
    "plus": "Klima dwustrefowa.",
-   "watch": "Sprowadzony, kraj pochodzenia: Francja. Poproś o raport historii z zagranicy (np. Carvertical).",
+   "watch": "Auto sprowadzone (kraj pochodzenia: Francja). Poproś o raport historii z zagranicy, np. z Carvertical.",
    "reject": null
   },
   "detailedAt": "2026-11-10",
-  "shownSince": "2026-11-10"
+  "shownSince": "2026-11-10",
+  "rulesVersion": 3
  },
  {
   "id": "otomoto:6150394918",
@@ -4500,6 +4680,7 @@
    "aso": false,
    "noAccident": false,
    "origin": null,
+   "originFrom": null,
    "hasVin": true
   },
   "out": "cena 31 000 zł, ponad budżet 30 000 zł, do negocjacji; przebieg 123 488 km, ponad limit 120 000 km",
@@ -4530,7 +4711,8 @@
    "reject": null
   },
   "detailedAt": "2026-11-10",
-  "shownSince": "2026-11-10"
+  "shownSince": "2026-11-10",
+  "rulesVersion": 3
  },
  {
   "id": "otomoto:6151358397",
@@ -4568,11 +4750,12 @@
    "aso": true,
    "noAccident": true,
    "origin": "Dania",
+   "originFrom": "ogłoszenie",
    "hasVin": true
   },
   "out": null,
   "plus": "Serwis w ASO, bezwypadkowy.",
-  "watch": "W parametrach klima manualna, w opisie automatyczna. Dopytaj, która jest prawdziwa. Sprowadzony, kraj pochodzenia: Dania. Poproś o raport historii z zagranicy (np. Carvertical).",
+  "watch": "W parametrach klima manualna, w opisie automatyczna. Dopytaj, która jest prawdziwa. Auto sprowadzone (kraj pochodzenia: Dania). Poproś o raport historii z zagranicy, np. z Carvertical.",
   "why": null,
   "score": 29,
   "top": null,
@@ -4594,11 +4777,12 @@
     "cp": 1
    },
    "plus": "Serwis w ASO, bezwypadkowy.",
-   "watch": "W parametrach klima manualna, w opisie automatyczna. Dopytaj, która jest prawdziwa. Sprowadzony, kraj pochodzenia: Dania. Poproś o raport historii z zagranicy (np. Carvertical).",
+   "watch": "W parametrach klima manualna, w opisie automatyczna. Dopytaj, która jest prawdziwa. Auto sprowadzone (kraj pochodzenia: Dania). Poproś o raport historii z zagranicy, np. z Carvertical.",
    "reject": null
   },
   "detailedAt": "2026-11-10",
-  "shownSince": "2026-11-10"
+  "shownSince": "2026-11-10",
+  "rulesVersion": 3
  },
  {
   "id": "otomoto:6151356874",
@@ -4636,11 +4820,12 @@
    "aso": true,
    "noAccident": false,
    "origin": "Francja",
+   "originFrom": "ogłoszenie",
    "hasVin": true
   },
   "out": "cena 30 900 zł, ponad budżet 30 000 zł, do negocjacji",
   "plus": "Serwis w ASO, klima automatyczna.",
-  "watch": "Sprowadzony, kraj pochodzenia: Francja. Poproś o raport historii z zagranicy (np. Carvertical).",
+  "watch": "Auto sprowadzone (kraj pochodzenia: Francja). Poproś o raport historii z zagranicy, np. z Carvertical.",
   "why": null,
   "score": 29,
   "top": null,
@@ -4662,11 +4847,12 @@
     "cp": 0
    },
    "plus": "Serwis w ASO, klima automatyczna.",
-   "watch": "Sprowadzony, kraj pochodzenia: Francja. Poproś o raport historii z zagranicy (np. Carvertical).",
+   "watch": "Auto sprowadzone (kraj pochodzenia: Francja). Poproś o raport historii z zagranicy, np. z Carvertical.",
    "reject": null
   },
   "detailedAt": "2026-11-10",
-  "shownSince": "2026-11-10"
+  "shownSince": "2026-11-10",
+  "rulesVersion": 3
  },
  {
   "id": "otomoto:6150771539",
@@ -4704,6 +4890,7 @@
    "aso": false,
    "noAccident": true,
    "origin": "Francja",
+   "originFrom": "ogłoszenie",
    "hasVin": true
   },
   "out": null,
@@ -4733,11 +4920,12 @@
     "cp": 0
    },
    "plus": "Bezwypadkowy, klima dwustrefowa.",
-   "watch": "Sprowadzony, kraj pochodzenia: Francja. Poproś o raport historii z zagranicy (np. Carvertical).",
+   "watch": "Auto sprowadzone (kraj pochodzenia: Francja). Poproś o raport historii z zagranicy, np. z Carvertical.",
    "reject": null
   },
   "detailedAt": "2026-11-10",
-  "shownSince": "2026-11-10"
+  "shownSince": "2026-11-10",
+  "rulesVersion": 3
  },
  {
   "id": "otomoto:6151458103",
@@ -4775,11 +4963,12 @@
    "aso": false,
    "noAccident": false,
    "origin": "Francja",
+   "originFrom": "ogłoszenie",
    "hasVin": true
   },
   "out": null,
   "plus": "Klima automatyczna.",
-  "watch": "Sprowadzony, kraj pochodzenia: Francja. Poproś o raport historii z zagranicy (np. Carvertical).",
+  "watch": "Auto sprowadzone (kraj pochodzenia: Francja). Poproś o raport historii z zagranicy, np. z Carvertical.",
   "why": null,
   "score": 28,
   "top": null,
@@ -4801,11 +4990,12 @@
     "cp": 0
    },
    "plus": "Klima automatyczna.",
-   "watch": "Sprowadzony, kraj pochodzenia: Francja. Poproś o raport historii z zagranicy (np. Carvertical).",
+   "watch": "Auto sprowadzone (kraj pochodzenia: Francja). Poproś o raport historii z zagranicy, np. z Carvertical.",
    "reject": null
   },
   "detailedAt": "2026-11-10",
-  "shownSince": "2026-11-10"
+  "shownSince": "2026-11-10",
+  "rulesVersion": 3
  },
  {
   "id": "otomoto:6149024341",
@@ -4843,6 +5033,7 @@
    "aso": false,
    "noAccident": false,
    "origin": null,
+   "originFrom": null,
    "hasVin": true
   },
   "out": "przebieg 123 455 km, ponad limit 120 000 km",
@@ -4873,7 +5064,8 @@
    "reject": null
   },
   "detailedAt": "2026-11-10",
-  "shownSince": "2026-11-10"
+  "shownSince": "2026-11-10",
+  "rulesVersion": 3
  },
  {
   "id": "otomoto:6151314757",
@@ -4911,11 +5103,12 @@
    "aso": true,
    "noAccident": true,
    "origin": "Niemcy",
+   "originFrom": "ogłoszenie",
    "hasVin": true
   },
   "out": null,
   "plus": "Pierwszy właściciel, serwis w ASO, bezwypadkowy.",
-  "watch": "W ogłoszeniu sama „klimatyzacja”. Dopytaj, czy jest automatyczna. Sprowadzony, kraj pochodzenia: Niemcy. Poproś o raport historii z zagranicy (np. Carvertical).",
+  "watch": "W ogłoszeniu sama „klimatyzacja”. Dopytaj, czy jest automatyczna. Auto sprowadzone (kraj pochodzenia: Niemcy). Poproś o raport historii z zagranicy, np. z Carvertical.",
   "why": null,
   "score": 28,
   "top": null,
@@ -4937,11 +5130,12 @@
     "cp": 0
    },
    "plus": "Pierwszy właściciel, serwis w ASO, bezwypadkowy.",
-   "watch": "W ogłoszeniu sama „klimatyzacja”. Dopytaj, czy jest automatyczna. Sprowadzony, kraj pochodzenia: Niemcy. Poproś o raport historii z zagranicy (np. Carvertical).",
+   "watch": "W ogłoszeniu sama „klimatyzacja”. Dopytaj, czy jest automatyczna. Auto sprowadzone (kraj pochodzenia: Niemcy). Poproś o raport historii z zagranicy, np. z Carvertical.",
    "reject": null
   },
   "detailedAt": "2026-11-10",
-  "shownSince": "2026-11-10"
+  "shownSince": "2026-11-10",
+  "rulesVersion": 3
  },
  {
   "id": "otomoto:6151328539",
@@ -4979,11 +5173,12 @@
    "aso": true,
    "noAccident": true,
    "origin": "Niemcy",
+   "originFrom": "ogłoszenie",
    "hasVin": true
   },
   "out": "cena 30 900 zł, ponad budżet 30 000 zł, do negocjacji; przebieg 120 974 km, ponad limit 120 000 km",
   "plus": "Serwis w ASO, bezwypadkowy.",
-  "watch": "W parametrach klima manualna, w opisie automatyczna. Dopytaj, która jest prawdziwa. Sprowadzony, kraj pochodzenia: Niemcy. Poproś o raport historii z zagranicy (np. Carvertical).",
+  "watch": "W parametrach klima manualna, w opisie automatyczna. Dopytaj, która jest prawdziwa. Auto sprowadzone (kraj pochodzenia: Niemcy). Poproś o raport historii z zagranicy, np. z Carvertical.",
   "why": null,
   "score": 28,
   "top": null,
@@ -5005,11 +5200,12 @@
     "cp": 0
    },
    "plus": "Serwis w ASO, bezwypadkowy.",
-   "watch": "W parametrach klima manualna, w opisie automatyczna. Dopytaj, która jest prawdziwa. Sprowadzony, kraj pochodzenia: Niemcy. Poproś o raport historii z zagranicy (np. Carvertical).",
+   "watch": "W parametrach klima manualna, w opisie automatyczna. Dopytaj, która jest prawdziwa. Auto sprowadzone (kraj pochodzenia: Niemcy). Poproś o raport historii z zagranicy, np. z Carvertical.",
    "reject": null
   },
   "detailedAt": "2026-11-10",
-  "shownSince": "2026-11-10"
+  "shownSince": "2026-11-10",
+  "rulesVersion": 3
  },
  {
   "id": "otomoto:6151162217",
@@ -5047,6 +5243,7 @@
    "aso": false,
    "noAccident": false,
    "origin": null,
+   "originFrom": null,
    "hasVin": true
   },
   "out": null,
@@ -5077,7 +5274,7 @@
    "reject": null
   },
   "detailedAt": "2026-11-10",
-  "rulesVersion": 2,
+  "rulesVersion": 3,
   "shownSince": "2026-11-10"
  },
  {
@@ -5116,6 +5313,7 @@
    "aso": false,
    "noAccident": false,
    "origin": null,
+   "originFrom": null,
    "hasVin": true
   },
   "out": null,
@@ -5146,7 +5344,8 @@
    "reject": null
   },
   "detailedAt": "2026-11-10",
-  "shownSince": "2026-11-10"
+  "shownSince": "2026-11-10",
+  "rulesVersion": 3
  },
  {
   "id": "otomoto:6149573030",
@@ -5184,6 +5383,7 @@
    "aso": false,
    "noAccident": false,
    "origin": null,
+   "originFrom": null,
    "hasVin": true
   },
   "out": null,
@@ -5214,7 +5414,8 @@
    "reject": null
   },
   "detailedAt": "2026-11-10",
-  "shownSince": "2026-11-10"
+  "shownSince": "2026-11-10",
+  "rulesVersion": 3
  },
  {
   "id": "otomoto:6151415568",
@@ -5252,6 +5453,7 @@
    "aso": false,
    "noAccident": false,
    "origin": null,
+   "originFrom": null,
    "hasVin": true
   },
   "out": null,
@@ -5285,7 +5487,8 @@
    "reject": null
   },
   "detailedAt": "2026-11-10",
-  "shownSince": "2026-11-10"
+  "shownSince": "2026-11-10",
+  "rulesVersion": 3
  },
  {
   "id": "otomoto:6146711945",
@@ -5323,6 +5526,7 @@
    "aso": false,
    "noAccident": false,
    "origin": null,
+   "originFrom": null,
    "hasVin": true
   },
   "out": null,
@@ -5353,7 +5557,8 @@
    "reject": null
   },
   "detailedAt": "2026-11-10",
-  "shownSince": "2026-11-10"
+  "shownSince": "2026-11-10",
+  "rulesVersion": 3
  },
  {
   "id": "otomoto:6148775523",
@@ -5391,11 +5596,12 @@
    "aso": false,
    "noAccident": false,
    "origin": "Francja",
+   "originFrom": "ogłoszenie",
    "hasVin": true
   },
   "out": null,
   "plus": "Klima dwustrefowa.",
-  "watch": "Sprowadzony, kraj pochodzenia: Francja. Poproś o raport historii z zagranicy (np. Carvertical).",
+  "watch": "Auto sprowadzone (kraj pochodzenia: Francja). Poproś o raport historii z zagranicy, np. z Carvertical.",
   "why": null,
   "score": 26,
   "top": null,
@@ -5417,11 +5623,12 @@
     "cp": 0
    },
    "plus": "Klima dwustrefowa.",
-   "watch": "Sprowadzony, kraj pochodzenia: Francja. Poproś o raport historii z zagranicy (np. Carvertical).",
+   "watch": "Auto sprowadzone (kraj pochodzenia: Francja). Poproś o raport historii z zagranicy, np. z Carvertical.",
    "reject": null
   },
   "detailedAt": "2026-11-10",
-  "shownSince": "2026-11-10"
+  "shownSince": "2026-11-10",
+  "rulesVersion": 3
  },
  {
   "id": "otomoto:6150389142",
@@ -5459,11 +5666,12 @@
    "aso": false,
    "noAccident": true,
    "origin": "Niemcy",
+   "originFrom": "ogłoszenie",
    "hasVin": true
   },
   "out": null,
   "plus": "Bezwypadkowy, klima automatyczna.",
-  "watch": "Sprowadzony, kraj pochodzenia: Niemcy. Poproś o raport historii z zagranicy (np. Carvertical).",
+  "watch": "Auto sprowadzone (kraj pochodzenia: Niemcy). Poproś o raport historii z zagranicy, np. z Carvertical.",
   "why": null,
   "score": 26,
   "top": null,
@@ -5485,11 +5693,12 @@
     "cp": 0
    },
    "plus": "Bezwypadkowy, klima automatyczna.",
-   "watch": "Sprowadzony, kraj pochodzenia: Niemcy. Poproś o raport historii z zagranicy (np. Carvertical).",
+   "watch": "Auto sprowadzone (kraj pochodzenia: Niemcy). Poproś o raport historii z zagranicy, np. z Carvertical.",
    "reject": null
   },
   "detailedAt": "2026-11-10",
-  "shownSince": "2026-11-10"
+  "shownSince": "2026-11-10",
+  "rulesVersion": 3
  },
  {
   "id": "otomoto:6148335308",
@@ -5527,11 +5736,12 @@
    "aso": true,
    "noAccident": true,
    "origin": "Francja",
+   "originFrom": "ogłoszenie",
    "hasVin": true
   },
   "out": "przebieg 122 000 km, ponad limit 120 000 km",
   "plus": "Serwis w ASO, bezwypadkowy, klima automatyczna.",
-  "watch": "Sprowadzony, kraj pochodzenia: Francja. Poproś o raport historii z zagranicy (np. Carvertical).",
+  "watch": "Auto sprowadzone (kraj pochodzenia: Francja). Poproś o raport historii z zagranicy, np. z Carvertical.",
   "why": null,
   "score": 26,
   "top": null,
@@ -5553,11 +5763,12 @@
     "cp": 0
    },
    "plus": "Serwis w ASO, bezwypadkowy, klima automatyczna.",
-   "watch": "Sprowadzony, kraj pochodzenia: Francja. Poproś o raport historii z zagranicy (np. Carvertical).",
+   "watch": "Auto sprowadzone (kraj pochodzenia: Francja). Poproś o raport historii z zagranicy, np. z Carvertical.",
    "reject": null
   },
   "detailedAt": "2026-11-10",
-  "shownSince": "2026-11-10"
+  "shownSince": "2026-11-10",
+  "rulesVersion": 3
  },
  {
   "id": "otomoto:6151431290",
@@ -5595,11 +5806,12 @@
    "aso": false,
    "noAccident": false,
    "origin": "Francja",
+   "originFrom": "ogłoszenie",
    "hasVin": true
   },
   "out": null,
   "plus": null,
-  "watch": "Sprowadzony, kraj pochodzenia: Francja. Poproś o raport historii z zagranicy (np. Carvertical).",
+  "watch": "Auto sprowadzone (kraj pochodzenia: Francja). Poproś o raport historii z zagranicy, np. z Carvertical.",
   "why": null,
   "score": 26,
   "top": null,
@@ -5621,11 +5833,12 @@
     "cp": 0
    },
    "plus": null,
-   "watch": "Sprowadzony, kraj pochodzenia: Francja. Poproś o raport historii z zagranicy (np. Carvertical).",
+   "watch": "Auto sprowadzone (kraj pochodzenia: Francja). Poproś o raport historii z zagranicy, np. z Carvertical.",
    "reject": null
   },
   "detailedAt": "2026-11-10",
-  "shownSince": "2026-11-10"
+  "shownSince": "2026-11-10",
+  "rulesVersion": 3
  },
  {
   "id": "otomoto:6150533870",
@@ -5663,6 +5876,7 @@
    "aso": true,
    "noAccident": true,
    "origin": null,
+   "originFrom": null,
    "hasVin": true
   },
   "out": null,
@@ -5693,7 +5907,8 @@
    "reject": null
   },
   "detailedAt": "2026-11-10",
-  "shownSince": "2026-11-10"
+  "shownSince": "2026-11-10",
+  "rulesVersion": 3
  },
  {
   "id": "olx:meriva-lpg-16",
@@ -5786,11 +6001,12 @@
    "aso": false,
    "noAccident": false,
    "origin": "Stany Zjednoczone",
+   "originFrom": "ogłoszenie",
    "hasVin": true
   },
   "out": null,
   "plus": "Klima dwustrefowa.",
-  "watch": "Sprowadzony, kraj pochodzenia: Stany Zjednoczone. Poproś o raport historii z zagranicy (np. Carvertical).",
+  "watch": "Auto sprowadzone (kraj pochodzenia: Stany Zjednoczone). Poproś o raport historii z zagranicy, np. z Carvertical.",
   "why": null,
   "score": 25,
   "top": null,
@@ -5812,11 +6028,12 @@
     "cp": 0
    },
    "plus": "Klima dwustrefowa.",
-   "watch": "Sprowadzony, kraj pochodzenia: Stany Zjednoczone. Poproś o raport historii z zagranicy (np. Carvertical).",
+   "watch": "Auto sprowadzone (kraj pochodzenia: Stany Zjednoczone). Poproś o raport historii z zagranicy, np. z Carvertical.",
    "reject": null
   },
   "detailedAt": "2026-11-10",
-  "shownSince": "2026-11-10"
+  "shownSince": "2026-11-10",
+  "rulesVersion": 3
  },
  {
   "id": "otomoto:6151526076",
@@ -5854,6 +6071,7 @@
    "aso": false,
    "noAccident": false,
    "origin": null,
+   "originFrom": null,
    "hasVin": true
   },
   "out": null,
@@ -5884,7 +6102,8 @@
    "reject": null
   },
   "detailedAt": "2026-11-10",
-  "shownSince": "2026-11-10"
+  "shownSince": "2026-11-10",
+  "rulesVersion": 3
  },
  {
   "id": "otomoto:6151362832",
@@ -5922,6 +6141,7 @@
    "aso": false,
    "noAccident": false,
    "origin": null,
+   "originFrom": null,
    "hasVin": true
   },
   "out": "cena 31 000 zł, ponad budżet 30 000 zł, do negocjacji",
@@ -5952,7 +6172,8 @@
    "reject": null
   },
   "detailedAt": "2026-11-10",
-  "shownSince": "2026-11-10"
+  "shownSince": "2026-11-10",
+  "rulesVersion": 3
  },
  {
   "id": "otomoto:6149669340",
@@ -5990,11 +6211,12 @@
    "aso": false,
    "noAccident": true,
    "origin": "Wielka Brytania",
+   "originFrom": "ogłoszenie",
    "hasVin": true
   },
   "out": null,
   "plus": "Bezwypadkowy, klima automatyczna.",
-  "watch": "Sprowadzony, kraj pochodzenia: Wielka Brytania. Poproś o raport historii z zagranicy (np. Carvertical).",
+  "watch": "Auto sprowadzone (kraj pochodzenia: Wielka Brytania). Poproś o raport historii z zagranicy, np. z Carvertical.",
   "why": null,
   "score": 24,
   "top": null,
@@ -6016,11 +6238,12 @@
     "cp": 0
    },
    "plus": "Bezwypadkowy, klima automatyczna.",
-   "watch": "Sprowadzony, kraj pochodzenia: Wielka Brytania. Poproś o raport historii z zagranicy (np. Carvertical).",
+   "watch": "Auto sprowadzone (kraj pochodzenia: Wielka Brytania). Poproś o raport historii z zagranicy, np. z Carvertical.",
    "reject": null
   },
   "detailedAt": "2026-11-10",
-  "shownSince": "2026-11-10"
+  "shownSince": "2026-11-10",
+  "rulesVersion": 3
  },
  {
   "id": "otomoto:6151483196",
@@ -6058,6 +6281,7 @@
    "aso": false,
    "noAccident": false,
    "origin": null,
+   "originFrom": null,
    "hasVin": true
   },
   "out": "przebieg 122 000 km, ponad limit 120 000 km",
@@ -6088,7 +6312,8 @@
    "reject": null
   },
   "detailedAt": "2026-11-10",
-  "shownSince": "2026-11-10"
+  "shownSince": "2026-11-10",
+  "rulesVersion": 3
  },
  {
   "id": "otomoto:6140775044",
@@ -6126,6 +6351,7 @@
    "aso": false,
    "noAccident": false,
    "origin": null,
+   "originFrom": null,
    "hasVin": true
   },
   "out": "przebieg 124 650 km, ponad limit 120 000 km",
@@ -6156,7 +6382,8 @@
    "reject": null
   },
   "detailedAt": "2026-11-10",
-  "shownSince": "2026-11-10"
+  "shownSince": "2026-11-10",
+  "rulesVersion": 3
  },
  {
   "id": "otomoto:6151370570",
@@ -6194,11 +6421,12 @@
    "aso": false,
    "noAccident": false,
    "origin": "Francja",
+   "originFrom": "ogłoszenie",
    "hasVin": true
   },
   "out": null,
   "plus": null,
-  "watch": "Sprowadzony, kraj pochodzenia: Francja. Poproś o raport historii z zagranicy (np. Carvertical).",
+  "watch": "Auto sprowadzone (kraj pochodzenia: Francja). Poproś o raport historii z zagranicy, np. z Carvertical.",
   "why": null,
   "score": 24,
   "top": null,
@@ -6220,11 +6448,12 @@
     "cp": 0
    },
    "plus": null,
-   "watch": "Sprowadzony, kraj pochodzenia: Francja. Poproś o raport historii z zagranicy (np. Carvertical).",
+   "watch": "Auto sprowadzone (kraj pochodzenia: Francja). Poproś o raport historii z zagranicy, np. z Carvertical.",
    "reject": null
   },
   "detailedAt": "2026-11-10",
-  "shownSince": "2026-11-10"
+  "shownSince": "2026-11-10",
+  "rulesVersion": 3
  },
  {
   "id": "otomoto:6149932625",
@@ -6262,6 +6491,7 @@
    "aso": true,
    "noAccident": false,
    "origin": "Polska",
+   "originFrom": "ogłoszenie",
    "hasVin": true
   },
   "out": null,
@@ -6292,7 +6522,8 @@
    "reject": null
   },
   "detailedAt": "2026-11-10",
-  "shownSince": "2026-11-10"
+  "shownSince": "2026-11-10",
+  "rulesVersion": 3
  },
  {
   "id": "otomoto:6151528847",
@@ -6330,6 +6561,7 @@
    "aso": false,
    "noAccident": true,
    "origin": null,
+   "originFrom": null,
    "hasVin": true
   },
   "out": null,
@@ -6360,7 +6592,8 @@
    "reject": null
   },
   "detailedAt": "2026-11-10",
-  "shownSince": "2026-11-10"
+  "shownSince": "2026-11-10",
+  "rulesVersion": 3
  },
  {
   "id": "otomoto:6151128022",
@@ -6398,6 +6631,7 @@
    "aso": false,
    "noAccident": false,
    "origin": null,
+   "originFrom": null,
    "hasVin": true
   },
   "out": null,
@@ -6428,75 +6662,8 @@
    "reject": null
   },
   "detailedAt": "2026-11-10",
-  "shownSince": "2026-11-10"
- },
- {
-  "id": "otomoto:6151612340",
-  "links": {
-   "otomoto": "https://www.otomoto.pl/osobowe/oferta/ford-focus-ID6IjxnS.html",
-   "olx": null
-  },
-  "name": "Ford Focus",
-  "version": "1.6 TDCi Trend",
-  "engine": "1.6, 95 KM",
-  "fuel": "on",
-  "gear": "manualna",
-  "body": "sedan",
-  "year": 2015,
-  "km": 101806,
-  "hp": 95,
-  "cc": 1560,
-  "price": 22900,
-  "city": "Konin",
-  "region": "Wielkopolskie",
-  "seller": "prywatnie",
-  "make": "ford",
-  "model": "focus",
-  "title": "Ford Focus 1.6 TDCi Trend",
-  "origin": null,
-  "equipment": {
-   "ac": 1,
-   "cam": 0,
-   "pdc": 1,
-   "cp": 0
-  },
-  "facts": {
-   "salonPL": false,
-   "firstOwner": false,
-   "aso": false,
-   "noAccident": false,
-   "origin": null,
-   "hasVin": true
-  },
-  "out": null,
-  "plus": "Klima dwustrefowa.",
-  "watch": null,
-  "why": null,
-  "score": 23,
-  "top": null,
-  "reject": null,
-  "pending": false,
-  "detailed": true,
-  "inAc": true,
-  "manual": false,
-  "byKamil": [],
-  "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
-  "status": "active",
-  "goneSince": null,
-  "auto": {
-   "equipment": {
-    "ac": 1,
-    "cam": 0,
-    "pdc": 1,
-    "cp": 0
-   },
-   "plus": "Klima dwustrefowa.",
-   "watch": null,
-   "reject": null
-  },
-  "detailedAt": "2026-11-10",
-  "shownSince": "2026-11-10"
+  "shownSince": "2026-11-10",
+  "rulesVersion": 3
  },
  {
   "id": "otomoto:6151541142",
@@ -6534,6 +6701,7 @@
    "aso": false,
    "noAccident": false,
    "origin": null,
+   "originFrom": null,
    "hasVin": true
   },
   "out": "przebieg 120 778 km, ponad limit 120 000 km",
@@ -6564,7 +6732,8 @@
    "reject": null
   },
   "detailedAt": "2026-11-10",
-  "shownSince": "2026-11-10"
+  "shownSince": "2026-11-10",
+  "rulesVersion": 3
  },
  {
   "id": "otomoto:6151462588",
@@ -6602,11 +6771,12 @@
    "aso": false,
    "noAccident": true,
    "origin": "Niemcy",
+   "originFrom": "ogłoszenie",
    "hasVin": true
   },
   "out": "przebieg 122 000 km, ponad limit 120 000 km",
   "plus": "Bezwypadkowy, klima dwustrefowa.",
-  "watch": "Sprowadzony, kraj pochodzenia: Niemcy. Poproś o raport historii z zagranicy (np. Carvertical).",
+  "watch": "Auto sprowadzone (kraj pochodzenia: Niemcy). Poproś o raport historii z zagranicy, np. z Carvertical.",
   "why": null,
   "score": 22,
   "top": null,
@@ -6628,11 +6798,12 @@
     "cp": 0
    },
    "plus": "Bezwypadkowy, klima dwustrefowa.",
-   "watch": "Sprowadzony, kraj pochodzenia: Niemcy. Poproś o raport historii z zagranicy (np. Carvertical).",
+   "watch": "Auto sprowadzone (kraj pochodzenia: Niemcy). Poproś o raport historii z zagranicy, np. z Carvertical.",
    "reject": null
   },
   "detailedAt": "2026-11-10",
-  "shownSince": "2026-11-10"
+  "shownSince": "2026-11-10",
+  "rulesVersion": 3
  },
  {
   "id": "otomoto:6151270141",
@@ -6670,11 +6841,12 @@
    "aso": false,
    "noAccident": true,
    "origin": "Stany Zjednoczone",
+   "originFrom": "ogłoszenie",
    "hasVin": true
   },
   "out": null,
   "plus": "Bezwypadkowy.",
-  "watch": "Sprowadzony, kraj pochodzenia: Stany Zjednoczone. Poproś o raport historii z zagranicy (np. Carvertical).",
+  "watch": "Auto sprowadzone (kraj pochodzenia: Stany Zjednoczone). Poproś o raport historii z zagranicy, np. z Carvertical.",
   "why": null,
   "score": 22,
   "top": null,
@@ -6696,11 +6868,12 @@
     "cp": 0
    },
    "plus": "Bezwypadkowy.",
-   "watch": "Sprowadzony, kraj pochodzenia: Stany Zjednoczone. Poproś o raport historii z zagranicy (np. Carvertical).",
+   "watch": "Auto sprowadzone (kraj pochodzenia: Stany Zjednoczone). Poproś o raport historii z zagranicy, np. z Carvertical.",
    "reject": null
   },
   "detailedAt": "2026-11-10",
-  "shownSince": "2026-11-10"
+  "shownSince": "2026-11-10",
+  "rulesVersion": 3
  },
  {
   "id": "otomoto:6150717100",
@@ -6738,11 +6911,12 @@
    "aso": false,
    "noAccident": true,
    "origin": "Niemcy",
+   "originFrom": "ogłoszenie",
    "hasVin": true
   },
   "out": null,
   "plus": "Bezwypadkowy, klima automatyczna.",
-  "watch": "Sprowadzony, kraj pochodzenia: Niemcy. Poproś o raport historii z zagranicy (np. Carvertical).",
+  "watch": "Auto sprowadzone (kraj pochodzenia: Niemcy). Poproś o raport historii z zagranicy, np. z Carvertical.",
   "why": null,
   "score": 21,
   "top": null,
@@ -6764,11 +6938,12 @@
     "cp": 0
    },
    "plus": "Bezwypadkowy, klima automatyczna.",
-   "watch": "Sprowadzony, kraj pochodzenia: Niemcy. Poproś o raport historii z zagranicy (np. Carvertical).",
+   "watch": "Auto sprowadzone (kraj pochodzenia: Niemcy). Poproś o raport historii z zagranicy, np. z Carvertical.",
    "reject": null
   },
   "detailedAt": "2026-11-10",
-  "shownSince": "2026-11-10"
+  "shownSince": "2026-11-10",
+  "rulesVersion": 3
  },
  {
   "id": "otomoto:6150886151",
@@ -6806,6 +6981,7 @@
    "aso": false,
    "noAccident": false,
    "origin": null,
+   "originFrom": null,
    "hasVin": true
   },
   "out": null,
@@ -6836,7 +7012,8 @@
    "reject": null
   },
   "detailedAt": "2026-11-10",
-  "shownSince": "2026-11-10"
+  "shownSince": "2026-11-10",
+  "rulesVersion": 3
  },
  {
   "id": "otomoto:6150560289",
@@ -6874,6 +7051,7 @@
    "aso": false,
    "noAccident": true,
    "origin": "Niemcy",
+   "originFrom": "ogłoszenie",
    "hasVin": true
   },
   "out": null,
@@ -6903,11 +7081,12 @@
     "cp": 0
    },
    "plus": "Bezwypadkowy, klima automatyczna.",
-   "watch": "Sprowadzony, kraj pochodzenia: Niemcy. Poproś o raport historii z zagranicy (np. Carvertical).",
+   "watch": "Auto sprowadzone (kraj pochodzenia: Niemcy). Poproś o raport historii z zagranicy, np. z Carvertical.",
    "reject": null
   },
   "detailedAt": "2026-11-10",
-  "shownSince": "2026-11-10"
+  "shownSince": "2026-11-10",
+  "rulesVersion": 3
  },
  {
   "id": "otomoto:6150839610",
@@ -6945,6 +7124,7 @@
    "aso": false,
    "noAccident": false,
    "origin": "Francja",
+   "originFrom": "ogłoszenie",
    "hasVin": true
   },
   "out": null,
@@ -6975,7 +7155,7 @@
    "reject": null
   },
   "detailedAt": "2026-11-10",
-  "rulesVersion": 2,
+  "rulesVersion": 3,
   "shownSince": "2026-11-10"
  },
  {
@@ -7014,6 +7194,7 @@
    "aso": false,
    "noAccident": false,
    "origin": null,
+   "originFrom": null,
    "hasVin": true
   },
   "out": null,
@@ -7044,7 +7225,8 @@
    "reject": null
   },
   "detailedAt": "2026-11-10",
-  "shownSince": "2026-11-10"
+  "shownSince": "2026-11-10",
+  "rulesVersion": 3
  },
  {
   "id": "otomoto:6150009990",
@@ -7082,11 +7264,12 @@
    "aso": false,
    "noAccident": false,
    "origin": "Francja",
+   "originFrom": "ogłoszenie",
    "hasVin": true
   },
   "out": null,
   "plus": "Klima automatyczna.",
-  "watch": "Sprowadzony, kraj pochodzenia: Francja. Poproś o raport historii z zagranicy (np. Carvertical).",
+  "watch": "Auto sprowadzone (kraj pochodzenia: Francja). Poproś o raport historii z zagranicy, np. z Carvertical.",
   "why": null,
   "score": 20,
   "top": null,
@@ -7108,11 +7291,12 @@
     "cp": 0
    },
    "plus": "Klima automatyczna.",
-   "watch": "Sprowadzony, kraj pochodzenia: Francja. Poproś o raport historii z zagranicy (np. Carvertical).",
+   "watch": "Auto sprowadzone (kraj pochodzenia: Francja). Poproś o raport historii z zagranicy, np. z Carvertical.",
    "reject": null
   },
   "detailedAt": "2026-11-10",
-  "shownSince": "2026-11-10"
+  "shownSince": "2026-11-10",
+  "rulesVersion": 3
  },
  {
   "id": "otomoto:6151110410",
@@ -7150,6 +7334,7 @@
    "aso": false,
    "noAccident": false,
    "origin": null,
+   "originFrom": null,
    "hasVin": true
   },
   "out": null,
@@ -7180,7 +7365,8 @@
    "reject": null
   },
   "detailedAt": "2026-11-10",
-  "shownSince": "2026-11-10"
+  "shownSince": "2026-11-10",
+  "rulesVersion": 3
  },
  {
   "id": "otomoto:6151417991",
@@ -7218,6 +7404,7 @@
    "aso": false,
    "noAccident": false,
    "origin": null,
+   "originFrom": null,
    "hasVin": true
   },
   "out": null,
@@ -7248,7 +7435,8 @@
    "reject": null
   },
   "detailedAt": "2026-11-10",
-  "shownSince": "2026-11-10"
+  "shownSince": "2026-11-10",
+  "rulesVersion": 3
  },
  {
   "id": "otomoto:6151286163",
@@ -7286,6 +7474,7 @@
    "aso": false,
    "noAccident": false,
    "origin": null,
+   "originFrom": null,
    "hasVin": true
   },
   "out": null,
@@ -7316,7 +7505,8 @@
    "reject": null
   },
   "detailedAt": "2026-11-10",
-  "shownSince": "2026-11-10"
+  "shownSince": "2026-11-10",
+  "rulesVersion": 3
  },
  {
   "id": "otomoto:6150603476",
@@ -7354,11 +7544,12 @@
    "aso": false,
    "noAccident": false,
    "origin": "Francja",
+   "originFrom": "ogłoszenie",
    "hasVin": true
   },
   "out": "przebieg 123 000 km, ponad limit 120 000 km",
   "plus": "Klima automatyczna.",
-  "watch": "Sprowadzony, kraj pochodzenia: Francja. Poproś o raport historii z zagranicy (np. Carvertical).",
+  "watch": "Auto sprowadzone (kraj pochodzenia: Francja). Poproś o raport historii z zagranicy, np. z Carvertical.",
   "why": null,
   "score": 20,
   "top": null,
@@ -7380,11 +7571,12 @@
     "cp": 0
    },
    "plus": "Klima automatyczna.",
-   "watch": "Sprowadzony, kraj pochodzenia: Francja. Poproś o raport historii z zagranicy (np. Carvertical).",
+   "watch": "Auto sprowadzone (kraj pochodzenia: Francja). Poproś o raport historii z zagranicy, np. z Carvertical.",
    "reject": null
   },
   "detailedAt": "2026-11-10",
-  "shownSince": "2026-11-10"
+  "shownSince": "2026-11-10",
+  "rulesVersion": 3
  },
  {
   "id": "otomoto:6151585722",
@@ -7422,6 +7614,7 @@
    "aso": false,
    "noAccident": false,
    "origin": "Polska",
+   "originFrom": "ogłoszenie",
    "hasVin": true
   },
   "out": "przebieg 123 698 km, ponad limit 120 000 km",
@@ -7452,7 +7645,8 @@
    "reject": null
   },
   "detailedAt": "2026-11-10",
-  "shownSince": "2026-11-10"
+  "shownSince": "2026-11-10",
+  "rulesVersion": 3
  },
  {
   "id": "otomoto:6151433898",
@@ -7490,11 +7684,12 @@
    "aso": true,
    "noAccident": true,
    "origin": "Niemcy",
+   "originFrom": "ogłoszenie",
    "hasVin": true
   },
   "out": "przebieg 125 000 km, ponad limit 120 000 km",
   "plus": "Pierwszy właściciel, serwis w ASO, bezwypadkowy, klima automatyczna.",
-  "watch": "Sprowadzony, kraj pochodzenia: Niemcy. Poproś o raport historii z zagranicy (np. Carvertical).",
+  "watch": "Auto sprowadzone (kraj pochodzenia: Niemcy). Poproś o raport historii z zagranicy, np. z Carvertical.",
   "why": null,
   "score": 20,
   "top": null,
@@ -7516,11 +7711,12 @@
     "cp": 0
    },
    "plus": "Pierwszy właściciel, serwis w ASO, bezwypadkowy, klima automatyczna.",
-   "watch": "Sprowadzony, kraj pochodzenia: Niemcy. Poproś o raport historii z zagranicy (np. Carvertical).",
+   "watch": "Auto sprowadzone (kraj pochodzenia: Niemcy). Poproś o raport historii z zagranicy, np. z Carvertical.",
    "reject": null
   },
   "detailedAt": "2026-11-10",
-  "shownSince": "2026-11-10"
+  "shownSince": "2026-11-10",
+  "rulesVersion": 3
  },
  {
   "id": "otomoto:6151392352",
@@ -7558,11 +7754,12 @@
    "aso": false,
    "noAccident": true,
    "origin": "Niemcy",
+   "originFrom": "ogłoszenie",
    "hasVin": true
   },
   "out": null,
   "plus": "Bezwypadkowy.",
-  "watch": "Sprowadzony, kraj pochodzenia: Niemcy. Poproś o raport historii z zagranicy (np. Carvertical).",
+  "watch": "Auto sprowadzone (kraj pochodzenia: Niemcy). Poproś o raport historii z zagranicy, np. z Carvertical.",
   "why": null,
   "score": 20,
   "top": null,
@@ -7584,11 +7781,12 @@
     "cp": 0
    },
    "plus": "Bezwypadkowy.",
-   "watch": "Sprowadzony, kraj pochodzenia: Niemcy. Poproś o raport historii z zagranicy (np. Carvertical).",
+   "watch": "Auto sprowadzone (kraj pochodzenia: Niemcy). Poproś o raport historii z zagranicy, np. z Carvertical.",
    "reject": null
   },
   "detailedAt": "2026-11-10",
-  "shownSince": "2026-11-10"
+  "shownSince": "2026-11-10",
+  "rulesVersion": 3
  },
  {
   "id": "otomoto:6151443867",
@@ -7626,6 +7824,7 @@
    "aso": true,
    "noAccident": true,
    "origin": "Niemcy",
+   "originFrom": "ogłoszenie",
    "hasVin": true
   },
   "out": "przebieg 156 000 km, ponad limit 120 000 km",
@@ -7655,11 +7854,12 @@
     "cp": 0
    },
    "plus": "Pierwszy właściciel, serwis w ASO, bezwypadkowy, klima automatyczna.",
-   "watch": "Sprowadzony, kraj pochodzenia: Niemcy. Poproś o raport historii z zagranicy (np. Carvertical).",
+   "watch": "Auto sprowadzone (kraj pochodzenia: Niemcy). Poproś o raport historii z zagranicy, np. z Carvertical.",
    "reject": null
   },
   "detailedAt": "2026-11-10",
-  "shownSince": "2026-11-10"
+  "shownSince": "2026-11-10",
+  "rulesVersion": 3
  },
  {
   "id": "otomoto:6150523709",
@@ -7697,6 +7897,7 @@
    "aso": false,
    "noAccident": false,
    "origin": null,
+   "originFrom": null,
    "hasVin": true
   },
   "out": null,
@@ -7727,7 +7928,8 @@
    "reject": null
   },
   "detailedAt": "2026-11-10",
-  "shownSince": "2026-11-10"
+  "shownSince": "2026-11-10",
+  "rulesVersion": 3
  },
  {
   "id": "otomoto:6145893279",
@@ -7765,6 +7967,7 @@
    "aso": false,
    "noAccident": false,
    "origin": null,
+   "originFrom": null,
    "hasVin": true
   },
   "out": null,
@@ -7795,7 +7998,8 @@
    "reject": null
   },
   "detailedAt": "2026-11-10",
-  "shownSince": "2026-11-10"
+  "shownSince": "2026-11-10",
+  "rulesVersion": 3
  },
  {
   "id": "otomoto:6151583444",
@@ -7833,6 +8037,7 @@
    "aso": false,
    "noAccident": false,
    "origin": null,
+   "originFrom": null,
    "hasVin": true
   },
   "out": null,
@@ -7863,7 +8068,8 @@
    "reject": null
   },
   "detailedAt": "2026-11-10",
-  "shownSince": "2026-11-10"
+  "shownSince": "2026-11-10",
+  "rulesVersion": 3
  },
  {
   "id": "otomoto:6151315421",
@@ -7901,6 +8107,7 @@
    "aso": false,
    "noAccident": false,
    "origin": null,
+   "originFrom": null,
    "hasVin": true
   },
   "out": null,
@@ -7931,7 +8138,8 @@
    "reject": null
   },
   "detailedAt": "2026-11-10",
-  "shownSince": "2026-11-10"
+  "shownSince": "2026-11-10",
+  "rulesVersion": 3
  },
  {
   "id": "otomoto:6151247676",
@@ -7969,11 +8177,12 @@
    "aso": true,
    "noAccident": true,
    "origin": "Niemcy",
+   "originFrom": "ogłoszenie",
    "hasVin": true
   },
   "out": null,
   "plus": "Pierwszy właściciel, serwis w ASO, bezwypadkowy, klima automatyczna.",
-  "watch": "Sprowadzony, kraj pochodzenia: Niemcy. Poproś o raport historii z zagranicy (np. Carvertical).",
+  "watch": "Auto sprowadzone (kraj pochodzenia: Niemcy). Poproś o raport historii z zagranicy, np. z Carvertical.",
   "why": null,
   "score": 18,
   "top": null,
@@ -7995,11 +8204,12 @@
     "cp": 0
    },
    "plus": "Pierwszy właściciel, serwis w ASO, bezwypadkowy, klima automatyczna.",
-   "watch": "Sprowadzony, kraj pochodzenia: Niemcy. Poproś o raport historii z zagranicy (np. Carvertical).",
+   "watch": "Auto sprowadzone (kraj pochodzenia: Niemcy). Poproś o raport historii z zagranicy, np. z Carvertical.",
    "reject": null
   },
   "detailedAt": "2026-11-10",
-  "shownSince": "2026-11-10"
+  "shownSince": "2026-11-10",
+  "rulesVersion": 3
  },
  {
   "id": "otomoto:6151346913",
@@ -8037,6 +8247,7 @@
    "aso": false,
    "noAccident": false,
    "origin": null,
+   "originFrom": null,
    "hasVin": true
   },
   "out": null,
@@ -8067,7 +8278,8 @@
    "reject": null
   },
   "detailedAt": "2026-11-10",
-  "shownSince": "2026-11-10"
+  "shownSince": "2026-11-10",
+  "rulesVersion": 3
  },
  {
   "id": "otomoto:6151285721",
@@ -8105,6 +8317,7 @@
    "aso": false,
    "noAccident": true,
    "origin": "Polska",
+   "originFrom": "ogłoszenie",
    "hasVin": true
   },
   "out": null,
@@ -8135,7 +8348,8 @@
    "reject": null
   },
   "detailedAt": "2026-11-10",
-  "shownSince": "2026-11-10"
+  "shownSince": "2026-11-10",
+  "rulesVersion": 3
  },
  {
   "id": "otomoto:6150546893",
@@ -8173,11 +8387,12 @@
    "aso": false,
    "noAccident": false,
    "origin": "Niemcy",
+   "originFrom": "ogłoszenie",
    "hasVin": true
   },
   "out": "przebieg 123 388 km, ponad limit 120 000 km",
   "plus": null,
-  "watch": "Sprowadzony, kraj pochodzenia: Niemcy. Poproś o raport historii z zagranicy (np. Carvertical).",
+  "watch": "Auto sprowadzone (kraj pochodzenia: Niemcy). Poproś o raport historii z zagranicy, np. z Carvertical.",
   "why": null,
   "score": 17,
   "top": null,
@@ -8199,11 +8414,12 @@
     "cp": 0
    },
    "plus": null,
-   "watch": "Sprowadzony, kraj pochodzenia: Niemcy. Poproś o raport historii z zagranicy (np. Carvertical).",
+   "watch": "Auto sprowadzone (kraj pochodzenia: Niemcy). Poproś o raport historii z zagranicy, np. z Carvertical.",
    "reject": null
   },
   "detailedAt": "2026-11-10",
-  "shownSince": "2026-11-10"
+  "shownSince": "2026-11-10",
+  "rulesVersion": 3
  },
  {
   "id": "otomoto:6151247761",
@@ -8241,6 +8457,7 @@
    "aso": false,
    "noAccident": false,
    "origin": null,
+   "originFrom": null,
    "hasVin": true
   },
   "out": null,
@@ -8274,7 +8491,8 @@
    "reject": null
   },
   "detailedAt": "2026-11-10",
-  "shownSince": "2026-11-10"
+  "shownSince": "2026-11-10",
+  "rulesVersion": 3
  },
  {
   "id": "otomoto:6150944268",
@@ -8312,6 +8530,7 @@
    "aso": false,
    "noAccident": false,
    "origin": null,
+   "originFrom": null,
    "hasVin": true
   },
   "out": null,
@@ -8342,7 +8561,8 @@
    "reject": null
   },
   "detailedAt": "2026-11-10",
-  "shownSince": "2026-11-10"
+  "shownSince": "2026-11-10",
+  "rulesVersion": 3
  },
  {
   "id": "otomoto:6151201110",
@@ -8380,6 +8600,7 @@
    "aso": false,
    "noAccident": true,
    "origin": null,
+   "originFrom": null,
    "hasVin": true
   },
   "out": null,
@@ -8410,7 +8631,8 @@
    "reject": null
   },
   "detailedAt": "2026-11-10",
-  "shownSince": "2026-11-10"
+  "shownSince": "2026-11-10",
+  "rulesVersion": 3
  },
  {
   "id": "otomoto:6151379724",
@@ -8448,6 +8670,7 @@
    "aso": false,
    "noAccident": false,
    "origin": null,
+   "originFrom": null,
    "hasVin": true
   },
   "out": null,
@@ -8478,7 +8701,8 @@
    "reject": null
   },
   "detailedAt": "2026-11-10",
-  "shownSince": "2026-11-10"
+  "shownSince": "2026-11-10",
+  "rulesVersion": 3
  },
  {
   "id": "otomoto:6150361285",
@@ -8516,6 +8740,7 @@
    "aso": false,
    "noAccident": false,
    "origin": null,
+   "originFrom": null,
    "hasVin": true
   },
   "out": null,
@@ -8546,7 +8771,8 @@
    "reject": null
   },
   "detailedAt": "2026-11-10",
-  "shownSince": "2026-11-10"
+  "shownSince": "2026-11-10",
+  "rulesVersion": 3
  },
  {
   "id": "otomoto:6151278670",
@@ -8584,11 +8810,12 @@
    "aso": true,
    "noAccident": false,
    "origin": "Niemcy",
+   "originFrom": "ogłoszenie",
    "hasVin": true
   },
   "out": null,
   "plus": "Pierwszy właściciel, serwis w ASO, klima automatyczna.",
-  "watch": "Sprowadzony, kraj pochodzenia: Niemcy. Poproś o raport historii z zagranicy (np. Carvertical).",
+  "watch": "Auto sprowadzone (kraj pochodzenia: Niemcy). Poproś o raport historii z zagranicy, np. z Carvertical.",
   "why": null,
   "score": 16,
   "top": null,
@@ -8610,11 +8837,12 @@
     "cp": 0
    },
    "plus": "Pierwszy właściciel, serwis w ASO, klima automatyczna.",
-   "watch": "Sprowadzony, kraj pochodzenia: Niemcy. Poproś o raport historii z zagranicy (np. Carvertical).",
+   "watch": "Auto sprowadzone (kraj pochodzenia: Niemcy). Poproś o raport historii z zagranicy, np. z Carvertical.",
    "reject": null
   },
   "detailedAt": "2026-11-10",
-  "shownSince": "2026-11-10"
+  "shownSince": "2026-11-10",
+  "rulesVersion": 3
  },
  {
   "id": "otomoto:6149379035",
@@ -8652,6 +8880,7 @@
    "aso": false,
    "noAccident": false,
    "origin": null,
+   "originFrom": null,
    "hasVin": true
   },
   "out": "przebieg 122 000 km, ponad limit 120 000 km",
@@ -8682,7 +8911,8 @@
    "reject": null
   },
   "detailedAt": "2026-11-10",
-  "shownSince": "2026-11-10"
+  "shownSince": "2026-11-10",
+  "rulesVersion": 3
  },
  {
   "id": "otomoto:6151472935",
@@ -8720,11 +8950,12 @@
    "aso": false,
    "noAccident": false,
    "origin": "Belgia",
+   "originFrom": "ogłoszenie",
    "hasVin": false
   },
   "out": null,
   "plus": null,
-  "watch": "W ogłoszeniu sama „klimatyzacja”. Dopytaj, czy jest automatyczna. Sprowadzony, kraj pochodzenia: Belgia. Poproś o raport historii z zagranicy (np. Carvertical).",
+  "watch": "W ogłoszeniu sama „klimatyzacja”. Dopytaj, czy jest automatyczna. Auto sprowadzone (kraj pochodzenia: Belgia). Poproś o raport historii z zagranicy, np. z Carvertical.",
   "why": null,
   "score": 16,
   "top": null,
@@ -8746,11 +8977,12 @@
     "cp": 0
    },
    "plus": null,
-   "watch": "W ogłoszeniu sama „klimatyzacja”. Dopytaj, czy jest automatyczna. Sprowadzony, kraj pochodzenia: Belgia. Poproś o raport historii z zagranicy (np. Carvertical).",
+   "watch": "W ogłoszeniu sama „klimatyzacja”. Dopytaj, czy jest automatyczna. Auto sprowadzone (kraj pochodzenia: Belgia). Poproś o raport historii z zagranicy, np. z Carvertical.",
    "reject": null
   },
   "detailedAt": "2026-11-10",
-  "shownSince": "2026-11-10"
+  "shownSince": "2026-11-10",
+  "rulesVersion": 3
  },
  {
   "id": "otomoto:6151318749",
@@ -8788,11 +9020,12 @@
    "aso": false,
    "noAccident": true,
    "origin": "Włochy",
+   "originFrom": "ogłoszenie",
    "hasVin": true
   },
   "out": null,
   "plus": "Bezwypadkowy, klima automatyczna.",
-  "watch": "Sprowadzony, kraj pochodzenia: Włochy. Poproś o raport historii z zagranicy (np. Carvertical).",
+  "watch": "Auto sprowadzone (kraj pochodzenia: Włochy). Poproś o raport historii z zagranicy, np. z Carvertical.",
   "why": null,
   "score": 16,
   "top": null,
@@ -8814,11 +9047,12 @@
     "cp": 0
    },
    "plus": "Bezwypadkowy, klima automatyczna.",
-   "watch": "Sprowadzony, kraj pochodzenia: Włochy. Poproś o raport historii z zagranicy (np. Carvertical).",
+   "watch": "Auto sprowadzone (kraj pochodzenia: Włochy). Poproś o raport historii z zagranicy, np. z Carvertical.",
    "reject": null
   },
   "detailedAt": "2026-11-10",
-  "shownSince": "2026-11-10"
+  "shownSince": "2026-11-10",
+  "rulesVersion": 3
  },
  {
   "id": "otomoto:6151249086",
@@ -8856,6 +9090,7 @@
    "aso": false,
    "noAccident": false,
    "origin": null,
+   "originFrom": null,
    "hasVin": true
   },
   "out": "przebieg 122 300 km, ponad limit 120 000 km",
@@ -8886,7 +9121,8 @@
    "reject": null
   },
   "detailedAt": "2026-11-10",
-  "shownSince": "2026-11-10"
+  "shownSince": "2026-11-10",
+  "rulesVersion": 3
  },
  {
   "id": "otomoto:6151542016",
@@ -8924,6 +9160,7 @@
    "aso": false,
    "noAccident": false,
    "origin": null,
+   "originFrom": null,
    "hasVin": true
   },
   "out": null,
@@ -8954,7 +9191,8 @@
    "reject": null
   },
   "detailedAt": "2026-11-10",
-  "shownSince": "2026-11-10"
+  "shownSince": "2026-11-10",
+  "rulesVersion": 3
  },
  {
   "id": "otomoto:6151550416",
@@ -8992,6 +9230,7 @@
    "aso": false,
    "noAccident": false,
    "origin": null,
+   "originFrom": null,
    "hasVin": true
   },
   "out": null,
@@ -9025,7 +9264,8 @@
    "reject": null
   },
   "detailedAt": "2026-11-10",
-  "shownSince": "2026-11-10"
+  "shownSince": "2026-11-10",
+  "rulesVersion": 3
  },
  {
   "id": "otomoto:6150680969",
@@ -9063,11 +9303,12 @@
    "aso": false,
    "noAccident": true,
    "origin": "Niemcy",
+   "originFrom": "ogłoszenie",
    "hasVin": true
   },
   "out": "przebieg 128 828 km, ponad limit 120 000 km",
   "plus": "Bezwypadkowy, klima automatyczna.",
-  "watch": "Sprowadzony, kraj pochodzenia: Niemcy. Poproś o raport historii z zagranicy (np. Carvertical).",
+  "watch": "Auto sprowadzone (kraj pochodzenia: Niemcy). Poproś o raport historii z zagranicy, np. z Carvertical.",
   "why": null,
   "score": 14,
   "top": null,
@@ -9089,11 +9330,12 @@
     "cp": 0
    },
    "plus": "Bezwypadkowy, klima automatyczna.",
-   "watch": "Sprowadzony, kraj pochodzenia: Niemcy. Poproś o raport historii z zagranicy (np. Carvertical).",
+   "watch": "Auto sprowadzone (kraj pochodzenia: Niemcy). Poproś o raport historii z zagranicy, np. z Carvertical.",
    "reject": null
   },
   "detailedAt": "2026-11-10",
-  "shownSince": "2026-11-10"
+  "shownSince": "2026-11-10",
+  "rulesVersion": 3
  },
  {
   "id": "otomoto:6150557302",
@@ -9131,11 +9373,12 @@
    "aso": false,
    "noAccident": false,
    "origin": "Francja",
+   "originFrom": "ogłoszenie",
    "hasVin": true
   },
   "out": null,
   "plus": "Klima dwustrefowa.",
-  "watch": "Sprowadzony, kraj pochodzenia: Francja. Poproś o raport historii z zagranicy (np. Carvertical).",
+  "watch": "Auto sprowadzone (kraj pochodzenia: Francja). Poproś o raport historii z zagranicy, np. z Carvertical.",
   "why": null,
   "score": 13,
   "top": null,
@@ -9157,11 +9400,12 @@
     "cp": 0
    },
    "plus": "Klima dwustrefowa.",
-   "watch": "Sprowadzony, kraj pochodzenia: Francja. Poproś o raport historii z zagranicy (np. Carvertical).",
+   "watch": "Auto sprowadzone (kraj pochodzenia: Francja). Poproś o raport historii z zagranicy, np. z Carvertical.",
    "reject": null
   },
   "detailedAt": "2026-11-10",
-  "shownSince": "2026-11-10"
+  "shownSince": "2026-11-10",
+  "rulesVersion": 3
  },
  {
   "id": "otomoto:6150511932",
@@ -9199,11 +9443,12 @@
    "aso": false,
    "noAccident": false,
    "origin": "Niemcy",
+   "originFrom": "ogłoszenie",
    "hasVin": true
   },
   "out": null,
   "plus": null,
-  "watch": "W ogłoszeniu sama „klimatyzacja”. Dopytaj, czy jest automatyczna. Sprowadzony, kraj pochodzenia: Niemcy. Poproś o raport historii z zagranicy (np. Carvertical).",
+  "watch": "W ogłoszeniu sama „klimatyzacja”. Dopytaj, czy jest automatyczna. Auto sprowadzone (kraj pochodzenia: Niemcy). Poproś o raport historii z zagranicy, np. z Carvertical.",
   "why": null,
   "score": 13,
   "top": null,
@@ -9225,11 +9470,12 @@
     "cp": 0
    },
    "plus": null,
-   "watch": "W ogłoszeniu sama „klimatyzacja”. Dopytaj, czy jest automatyczna. Sprowadzony, kraj pochodzenia: Niemcy. Poproś o raport historii z zagranicy (np. Carvertical).",
+   "watch": "W ogłoszeniu sama „klimatyzacja”. Dopytaj, czy jest automatyczna. Auto sprowadzone (kraj pochodzenia: Niemcy). Poproś o raport historii z zagranicy, np. z Carvertical.",
    "reject": null
   },
   "detailedAt": "2026-11-10",
-  "shownSince": "2026-11-10"
+  "shownSince": "2026-11-10",
+  "rulesVersion": 3
  },
  {
   "id": "otomoto:6151193887",
@@ -9267,6 +9513,7 @@
    "aso": false,
    "noAccident": false,
    "origin": null,
+   "originFrom": null,
    "hasVin": true
   },
   "out": null,
@@ -9297,7 +9544,8 @@
    "reject": null
   },
   "detailedAt": "2026-11-10",
-  "shownSince": "2026-11-10"
+  "shownSince": "2026-11-10",
+  "rulesVersion": 3
  },
  {
   "id": "olx:insight-11",
@@ -9390,6 +9638,7 @@
    "aso": false,
    "noAccident": false,
    "origin": null,
+   "originFrom": null,
    "hasVin": true
   },
   "out": null,
@@ -9420,7 +9669,8 @@
    "reject": null
   },
   "detailedAt": "2026-11-10",
-  "shownSince": "2026-11-10"
+  "shownSince": "2026-11-10",
+  "rulesVersion": 3
  },
  {
   "id": "otomoto:6151540851",
@@ -9458,6 +9708,7 @@
    "aso": false,
    "noAccident": false,
    "origin": null,
+   "originFrom": null,
    "hasVin": true
   },
   "out": null,
@@ -9488,7 +9739,8 @@
    "reject": null
   },
   "detailedAt": "2026-11-10",
-  "shownSince": "2026-11-10"
+  "shownSince": "2026-11-10",
+  "rulesVersion": 3
  },
  {
   "id": "otomoto:6151430850",
@@ -9526,6 +9778,7 @@
    "aso": false,
    "noAccident": false,
    "origin": null,
+   "originFrom": null,
    "hasVin": true
   },
   "out": null,
@@ -9556,7 +9809,8 @@
    "reject": null
   },
   "detailedAt": "2026-11-10",
-  "shownSince": "2026-11-10"
+  "shownSince": "2026-11-10",
+  "rulesVersion": 3
  },
  {
   "id": "otomoto:6149995904",
@@ -9594,11 +9848,12 @@
    "aso": false,
    "noAccident": true,
    "origin": "Niemcy",
+   "originFrom": "ogłoszenie",
    "hasVin": true
   },
   "out": "przebieg 125 000 km, ponad limit 120 000 km",
   "plus": "Bezwypadkowy, klima automatyczna.",
-  "watch": "Sprowadzony, kraj pochodzenia: Niemcy. Poproś o raport historii z zagranicy (np. Carvertical).",
+  "watch": "Auto sprowadzone (kraj pochodzenia: Niemcy). Poproś o raport historii z zagranicy, np. z Carvertical.",
   "why": null,
   "score": 10,
   "top": null,
@@ -9620,11 +9875,12 @@
     "cp": 0
    },
    "plus": "Bezwypadkowy, klima automatyczna.",
-   "watch": "Sprowadzony, kraj pochodzenia: Niemcy. Poproś o raport historii z zagranicy (np. Carvertical).",
+   "watch": "Auto sprowadzone (kraj pochodzenia: Niemcy). Poproś o raport historii z zagranicy, np. z Carvertical.",
    "reject": null
   },
   "detailedAt": "2026-11-10",
-  "shownSince": "2026-11-10"
+  "shownSince": "2026-11-10",
+  "rulesVersion": 3
  },
  {
   "id": "otomoto:6151179753",
@@ -9662,11 +9918,12 @@
    "aso": false,
    "noAccident": false,
    "origin": "Austria",
+   "originFrom": "ogłoszenie",
    "hasVin": false
   },
   "out": null,
   "plus": null,
-  "watch": "W ogłoszeniu sama „klimatyzacja”. Dopytaj, czy jest automatyczna. Sprowadzony, kraj pochodzenia: Austria. Poproś o raport historii z zagranicy (np. Carvertical).",
+  "watch": "W ogłoszeniu sama „klimatyzacja”. Dopytaj, czy jest automatyczna. Auto sprowadzone (kraj pochodzenia: Austria). Poproś o raport historii z zagranicy, np. z Carvertical.",
   "why": null,
   "score": 10,
   "top": null,
@@ -9688,11 +9945,12 @@
     "cp": 0
    },
    "plus": null,
-   "watch": "W ogłoszeniu sama „klimatyzacja”. Dopytaj, czy jest automatyczna. Sprowadzony, kraj pochodzenia: Austria. Poproś o raport historii z zagranicy (np. Carvertical).",
+   "watch": "W ogłoszeniu sama „klimatyzacja”. Dopytaj, czy jest automatyczna. Auto sprowadzone (kraj pochodzenia: Austria). Poproś o raport historii z zagranicy, np. z Carvertical.",
    "reject": null
   },
   "detailedAt": "2026-11-10",
-  "shownSince": "2026-11-10"
+  "shownSince": "2026-11-10",
+  "rulesVersion": 3
  },
  {
   "id": "otomoto:6148728239",
@@ -9730,11 +9988,12 @@
    "aso": true,
    "noAccident": true,
    "origin": "Wielka Brytania",
+   "originFrom": "ogłoszenie",
    "hasVin": true
   },
   "out": null,
   "plus": "Serwis w ASO, bezwypadkowy.",
-  "watch": "W ogłoszeniu sama „klimatyzacja”. Dopytaj, czy jest automatyczna. Sprowadzony, kraj pochodzenia: Wielka Brytania. Poproś o raport historii z zagranicy (np. Carvertical).",
+  "watch": "W ogłoszeniu sama „klimatyzacja”. Dopytaj, czy jest automatyczna. Auto sprowadzone (kraj pochodzenia: Wielka Brytania). Poproś o raport historii z zagranicy, np. z Carvertical.",
   "why": null,
   "score": 10,
   "top": null,
@@ -9756,11 +10015,12 @@
     "cp": 0
    },
    "plus": "Serwis w ASO, bezwypadkowy.",
-   "watch": "W ogłoszeniu sama „klimatyzacja”. Dopytaj, czy jest automatyczna. Sprowadzony, kraj pochodzenia: Wielka Brytania. Poproś o raport historii z zagranicy (np. Carvertical).",
+   "watch": "W ogłoszeniu sama „klimatyzacja”. Dopytaj, czy jest automatyczna. Auto sprowadzone (kraj pochodzenia: Wielka Brytania). Poproś o raport historii z zagranicy, np. z Carvertical.",
    "reject": null
   },
   "detailedAt": "2026-11-10",
-  "shownSince": "2026-11-10"
+  "shownSince": "2026-11-10",
+  "rulesVersion": 3
  },
  {
   "id": "otomoto:6151196898",
@@ -9798,6 +10058,7 @@
    "aso": false,
    "noAccident": false,
    "origin": null,
+   "originFrom": null,
    "hasVin": true
   },
   "out": null,
@@ -9828,7 +10089,8 @@
    "reject": null
   },
   "detailedAt": "2026-11-10",
-  "shownSince": "2026-11-10"
+  "shownSince": "2026-11-10",
+  "rulesVersion": 3
  },
  {
   "id": "otomoto:6149710556",
@@ -9866,6 +10128,7 @@
    "aso": false,
    "noAccident": false,
    "origin": "Szwajcaria",
+   "originFrom": "ogłoszenie",
    "hasVin": true
   },
   "out": null,
@@ -9895,11 +10158,12 @@
     "cp": 0
    },
    "plus": "Klima automatyczna.",
-   "watch": "Sprowadzony, kraj pochodzenia: Szwajcaria. Poproś o raport historii z zagranicy (np. Carvertical).",
+   "watch": "Auto sprowadzone (kraj pochodzenia: Szwajcaria). Poproś o raport historii z zagranicy, np. z Carvertical.",
    "reject": null
   },
   "detailedAt": "2026-11-10",
-  "shownSince": "2026-11-10"
+  "shownSince": "2026-11-10",
+  "rulesVersion": 3
  },
  {
   "id": "otomoto:6151469289",
@@ -9937,6 +10201,7 @@
    "aso": false,
    "noAccident": false,
    "origin": null,
+   "originFrom": null,
    "hasVin": true
   },
   "out": null,
@@ -9967,7 +10232,8 @@
    "reject": null
   },
   "detailedAt": "2026-11-10",
-  "shownSince": "2026-11-10"
+  "shownSince": "2026-11-10",
+  "rulesVersion": 3
  },
  {
   "id": "otomoto:6150548705",
@@ -10005,6 +10271,7 @@
    "aso": false,
    "noAccident": false,
    "origin": null,
+   "originFrom": null,
    "hasVin": true
   },
   "out": null,
@@ -10035,7 +10302,8 @@
    "reject": null
   },
   "detailedAt": "2026-11-10",
-  "shownSince": "2026-11-10"
+  "shownSince": "2026-11-10",
+  "rulesVersion": 3
  },
  {
   "id": "otomoto:6151603880",
@@ -10073,6 +10341,7 @@
    "aso": false,
    "noAccident": false,
    "origin": null,
+   "originFrom": null,
    "hasVin": true
   },
   "out": null,
@@ -10103,7 +10372,8 @@
    "reject": null
   },
   "detailedAt": "2026-11-10",
-  "shownSince": "2026-11-10"
+  "shownSince": "2026-11-10",
+  "rulesVersion": 3
  },
  {
   "id": "otomoto:6151214650",
@@ -10141,6 +10411,7 @@
    "aso": false,
    "noAccident": false,
    "origin": null,
+   "originFrom": null,
    "hasVin": true
   },
   "out": "przebieg 123 700 km, ponad limit 120 000 km",
@@ -10171,7 +10442,8 @@
    "reject": null
   },
   "detailedAt": "2026-11-10",
-  "shownSince": "2026-11-10"
+  "shownSince": "2026-11-10",
+  "rulesVersion": 3
  },
  {
   "id": "otomoto:6151461305",
@@ -10209,6 +10481,7 @@
    "aso": false,
    "noAccident": false,
    "origin": null,
+   "originFrom": null,
    "hasVin": true
   },
   "out": null,
@@ -10239,7 +10512,8 @@
    "reject": null
   },
   "detailedAt": "2026-11-10",
-  "shownSince": "2026-11-10"
+  "shownSince": "2026-11-10",
+  "rulesVersion": 3
  },
  {
   "id": "otomoto:6148505317",
@@ -10277,6 +10551,7 @@
    "aso": false,
    "noAccident": false,
    "origin": null,
+   "originFrom": null,
    "hasVin": true
   },
   "out": null,
@@ -10307,7 +10582,8 @@
    "reject": null
   },
   "detailedAt": "2026-11-10",
-  "shownSince": "2026-11-10"
+  "shownSince": "2026-11-10",
+  "rulesVersion": 3
  },
  {
   "id": "otomoto:6151498810",
@@ -10345,6 +10621,7 @@
    "aso": false,
    "noAccident": false,
    "origin": null,
+   "originFrom": null,
    "hasVin": true
   },
   "out": null,
@@ -10375,7 +10652,8 @@
    "reject": null
   },
   "detailedAt": "2026-11-10",
-  "shownSince": "2026-11-10"
+  "shownSince": "2026-11-10",
+  "rulesVersion": 3
  },
  {
   "id": "otomoto:6151613816",
@@ -10413,11 +10691,12 @@
    "aso": true,
    "noAccident": true,
    "origin": "Szwecja",
+   "originFrom": "ogłoszenie",
    "hasVin": true
   },
   "out": null,
   "plus": "Serwis w ASO, bezwypadkowy.",
-  "watch": "W parametrach klima manualna, w opisie automatyczna. Dopytaj, która jest prawdziwa. Sprowadzony, kraj pochodzenia: Szwecja. Poproś o raport historii z zagranicy (np. Carvertical).",
+  "watch": "W parametrach klima manualna, w opisie automatyczna. Dopytaj, która jest prawdziwa. Auto sprowadzone (kraj pochodzenia: Szwecja). Poproś o raport historii z zagranicy, np. z Carvertical.",
   "why": null,
   "score": 6,
   "top": null,
@@ -10439,11 +10718,12 @@
     "cp": 0
    },
    "plus": "Serwis w ASO, bezwypadkowy.",
-   "watch": "W parametrach klima manualna, w opisie automatyczna. Dopytaj, która jest prawdziwa. Sprowadzony, kraj pochodzenia: Szwecja. Poproś o raport historii z zagranicy (np. Carvertical).",
+   "watch": "W parametrach klima manualna, w opisie automatyczna. Dopytaj, która jest prawdziwa. Auto sprowadzone (kraj pochodzenia: Szwecja). Poproś o raport historii z zagranicy, np. z Carvertical.",
    "reject": null
   },
   "detailedAt": "2026-11-10",
-  "shownSince": "2026-11-10"
+  "shownSince": "2026-11-10",
+  "rulesVersion": 3
  },
  {
   "id": "otomoto:6151458937",
@@ -10481,6 +10761,7 @@
    "aso": false,
    "noAccident": false,
    "origin": null,
+   "originFrom": null,
    "hasVin": true
   },
   "out": null,
@@ -10511,7 +10792,8 @@
    "reject": null
   },
   "detailedAt": "2026-11-10",
-  "shownSince": "2026-11-10"
+  "shownSince": "2026-11-10",
+  "rulesVersion": 3
  },
  {
   "id": "otomoto:6151289543",
@@ -10549,6 +10831,7 @@
    "aso": false,
    "noAccident": false,
    "origin": null,
+   "originFrom": null,
    "hasVin": true
   },
   "out": null,
@@ -10579,7 +10862,8 @@
    "reject": null
   },
   "detailedAt": "2026-11-10",
-  "shownSince": "2026-11-10"
+  "shownSince": "2026-11-10",
+  "rulesVersion": 3
  },
  {
   "id": "otomoto:6148778755",
@@ -10617,6 +10901,7 @@
    "aso": false,
    "noAccident": false,
    "origin": "Polska",
+   "originFrom": "ogłoszenie",
    "hasVin": false
   },
   "out": "przebieg 122 000 km, ponad limit 120 000 km",
@@ -10647,7 +10932,8 @@
    "reject": null
   },
   "detailedAt": "2026-11-10",
-  "shownSince": "2026-11-10"
+  "shownSince": "2026-11-10",
+  "rulesVersion": 3
  },
  {
   "id": "otomoto:6151099405",
@@ -10685,6 +10971,7 @@
    "aso": false,
    "noAccident": false,
    "origin": null,
+   "originFrom": null,
    "hasVin": true
   },
   "out": null,
@@ -10715,7 +11002,8 @@
    "reject": null
   },
   "detailedAt": "2026-11-10",
-  "shownSince": "2026-11-10"
+  "shownSince": "2026-11-10",
+  "rulesVersion": 3
  },
  {
   "id": "otomoto:6151447158",
@@ -10753,11 +11041,12 @@
    "aso": false,
    "noAccident": false,
    "origin": "Belgia",
+   "originFrom": "ogłoszenie",
    "hasVin": true
   },
   "out": null,
   "plus": "Klima automatyczna.",
-  "watch": "Sprowadzony, kraj pochodzenia: Belgia. Poproś o raport historii z zagranicy (np. Carvertical).",
+  "watch": "Auto sprowadzone (kraj pochodzenia: Belgia). Poproś o raport historii z zagranicy, np. z Carvertical.",
   "why": null,
   "score": 4,
   "top": null,
@@ -10779,11 +11068,12 @@
     "cp": 0
    },
    "plus": "Klima automatyczna.",
-   "watch": "Sprowadzony, kraj pochodzenia: Belgia. Poproś o raport historii z zagranicy (np. Carvertical).",
+   "watch": "Auto sprowadzone (kraj pochodzenia: Belgia). Poproś o raport historii z zagranicy, np. z Carvertical.",
    "reject": null
   },
   "detailedAt": "2026-11-10",
-  "shownSince": "2026-11-10"
+  "shownSince": "2026-11-10",
+  "rulesVersion": 3
  },
  {
   "id": "otomoto:6151357471",
@@ -10821,11 +11111,12 @@
    "aso": false,
    "noAccident": false,
    "origin": "Niemcy",
+   "originFrom": "ogłoszenie",
    "hasVin": true
   },
   "out": null,
   "plus": "Pierwszy właściciel.",
-  "watch": "W ogłoszeniu sama „klimatyzacja”. Dopytaj, czy jest automatyczna. Sprowadzony, kraj pochodzenia: Niemcy. Poproś o raport historii z zagranicy (np. Carvertical).",
+  "watch": "W ogłoszeniu sama „klimatyzacja”. Dopytaj, czy jest automatyczna. Auto sprowadzone (kraj pochodzenia: Niemcy). Poproś o raport historii z zagranicy, np. z Carvertical.",
   "why": null,
   "score": 4,
   "top": null,
@@ -10847,11 +11138,12 @@
     "cp": 0
    },
    "plus": "Pierwszy właściciel.",
-   "watch": "W ogłoszeniu sama „klimatyzacja”. Dopytaj, czy jest automatyczna. Sprowadzony, kraj pochodzenia: Niemcy. Poproś o raport historii z zagranicy (np. Carvertical).",
+   "watch": "W ogłoszeniu sama „klimatyzacja”. Dopytaj, czy jest automatyczna. Auto sprowadzone (kraj pochodzenia: Niemcy). Poproś o raport historii z zagranicy, np. z Carvertical.",
    "reject": null
   },
   "detailedAt": "2026-11-10",
-  "shownSince": "2026-11-10"
+  "shownSince": "2026-11-10",
+  "rulesVersion": 3
  },
  {
   "id": "otomoto:6151217989",
@@ -10889,6 +11181,7 @@
    "aso": false,
    "noAccident": false,
    "origin": null,
+   "originFrom": null,
    "hasVin": true
   },
   "out": "cena 30 900 zł, ponad budżet 30 000 zł, do negocjacji; przebieg 124 318 km, ponad limit 120 000 km",
@@ -10919,7 +11212,8 @@
    "reject": null
   },
   "detailedAt": "2026-11-10",
-  "shownSince": "2026-11-10"
+  "shownSince": "2026-11-10",
+  "rulesVersion": 3
  },
  {
   "id": "otomoto:6150310239",
@@ -10957,6 +11251,7 @@
    "aso": false,
    "noAccident": false,
    "origin": null,
+   "originFrom": null,
    "hasVin": true
   },
   "out": null,
@@ -10987,7 +11282,8 @@
    "reject": null
   },
   "detailedAt": "2026-11-10",
-  "shownSince": "2026-11-10"
+  "shownSince": "2026-11-10",
+  "rulesVersion": 3
  },
  {
   "id": "otomoto:6150599287",
@@ -11025,11 +11321,12 @@
    "aso": false,
    "noAccident": false,
    "origin": "Dania",
+   "originFrom": "ogłoszenie",
    "hasVin": false
   },
   "out": null,
   "plus": null,
-  "watch": "W ogłoszeniu sama „klimatyzacja”. Dopytaj, czy jest automatyczna. Sprowadzony, kraj pochodzenia: Dania. Poproś o raport historii z zagranicy (np. Carvertical).",
+  "watch": "W ogłoszeniu sama „klimatyzacja”. Dopytaj, czy jest automatyczna. Auto sprowadzone (kraj pochodzenia: Dania). Poproś o raport historii z zagranicy, np. z Carvertical.",
   "why": null,
   "score": 1,
   "top": null,
@@ -11051,11 +11348,12 @@
     "cp": 0
    },
    "plus": null,
-   "watch": "W ogłoszeniu sama „klimatyzacja”. Dopytaj, czy jest automatyczna. Sprowadzony, kraj pochodzenia: Dania. Poproś o raport historii z zagranicy (np. Carvertical).",
+   "watch": "W ogłoszeniu sama „klimatyzacja”. Dopytaj, czy jest automatyczna. Auto sprowadzone (kraj pochodzenia: Dania). Poproś o raport historii z zagranicy, np. z Carvertical.",
    "reject": null
   },
   "detailedAt": "2026-11-10",
-  "shownSince": "2026-11-10"
+  "shownSince": "2026-11-10",
+  "rulesVersion": 3
  },
  {
   "id": "otomoto:6150909254",
@@ -11093,6 +11391,7 @@
    "aso": false,
    "noAccident": false,
    "origin": null,
+   "originFrom": null,
    "hasVin": true
   },
   "out": null,
@@ -11123,7 +11422,8 @@
    "reject": null
   },
   "detailedAt": "2026-11-10",
-  "shownSince": "2026-11-10"
+  "shownSince": "2026-11-10",
+  "rulesVersion": 3
  },
  {
   "id": "otomoto:6151607979",
@@ -11161,6 +11461,7 @@
    "aso": false,
    "noAccident": false,
    "origin": null,
+   "originFrom": null,
    "hasVin": true
   },
   "out": null,
@@ -11191,7 +11492,8 @@
    "reject": null
   },
   "detailedAt": "2026-11-10",
-  "shownSince": "2026-11-10"
+  "shownSince": "2026-11-10",
+  "rulesVersion": 3
  },
  {
   "id": "otomoto:6148988806",
@@ -11229,11 +11531,12 @@
    "aso": false,
    "noAccident": false,
    "origin": "Belgia",
+   "originFrom": "ogłoszenie",
    "hasVin": true
   },
   "out": null,
   "plus": null,
-  "watch": "W ogłoszeniu sama „klimatyzacja”. Dopytaj, czy jest automatyczna. Sprowadzony, kraj pochodzenia: Belgia. Poproś o raport historii z zagranicy (np. Carvertical).",
+  "watch": "W ogłoszeniu sama „klimatyzacja”. Dopytaj, czy jest automatyczna. Auto sprowadzone (kraj pochodzenia: Belgia). Poproś o raport historii z zagranicy, np. z Carvertical.",
   "why": null,
   "score": -4,
   "top": null,
@@ -11255,11 +11558,12 @@
     "cp": 0
    },
    "plus": null,
-   "watch": "W ogłoszeniu sama „klimatyzacja”. Dopytaj, czy jest automatyczna. Sprowadzony, kraj pochodzenia: Belgia. Poproś o raport historii z zagranicy (np. Carvertical).",
+   "watch": "W ogłoszeniu sama „klimatyzacja”. Dopytaj, czy jest automatyczna. Auto sprowadzone (kraj pochodzenia: Belgia). Poproś o raport historii z zagranicy, np. z Carvertical.",
    "reject": null
   },
   "detailedAt": "2026-11-10",
-  "shownSince": "2026-11-10"
+  "shownSince": "2026-11-10",
+  "rulesVersion": 3
  },
  {
   "id": "otomoto:6151319476",
@@ -11297,6 +11601,7 @@
    "aso": false,
    "noAccident": false,
    "origin": null,
+   "originFrom": null,
    "hasVin": true
   },
   "out": "przebieg 124 572 km, ponad limit 120 000 km",
@@ -11327,7 +11632,8 @@
    "reject": null
   },
   "detailedAt": "2026-11-10",
-  "shownSince": "2026-11-10"
+  "shownSince": "2026-11-10",
+  "rulesVersion": 3
  },
  {
   "id": "otomoto:6151614501",
@@ -11365,6 +11671,7 @@
    "aso": true,
    "noAccident": true,
    "origin": "Polska",
+   "originFrom": "ogłoszenie",
    "hasVin": true
   },
   "out": null,
@@ -11395,7 +11702,7 @@
    "reject": "Cesja leasingu: cena to tylko odstępne"
   },
   "detailedAt": "2026-11-10",
-  "rulesVersion": 2
+  "rulesVersion": 3
  },
  {
   "id": "otomoto:6151614316",
@@ -11433,6 +11740,7 @@
    "aso": true,
    "noAccident": true,
    "origin": "Polska",
+   "originFrom": "ogłoszenie",
    "hasVin": true
   },
   "out": null,
@@ -11463,7 +11771,7 @@
    "reject": "Cesja leasingu: cena to tylko odstępne"
   },
   "detailedAt": "2026-11-10",
-  "rulesVersion": 2
+  "rulesVersion": 3
  },
  {
   "id": "otomoto:6151354472",
@@ -11501,6 +11809,7 @@
    "aso": true,
    "noAccident": true,
    "origin": "Polska",
+   "originFrom": "ogłoszenie",
    "hasVin": true
   },
   "out": null,
@@ -11534,7 +11843,7 @@
    "reject": "Uszkodzone według opisu"
   },
   "detailedAt": "2026-11-10",
-  "rulesVersion": 2
+  "rulesVersion": 3
  },
  {
   "id": "otomoto:6149970908",
@@ -11572,6 +11881,7 @@
    "aso": true,
    "noAccident": false,
    "origin": "Polska",
+   "originFrom": "ogłoszenie",
    "hasVin": true
   },
   "out": null,
@@ -11602,7 +11912,7 @@
    "reject": "Cesja leasingu: cena to tylko odstępne"
   },
   "detailedAt": "2026-11-10",
-  "rulesVersion": 2
+  "rulesVersion": 3
  },
  {
   "id": "otomoto:6151188661",
@@ -11640,6 +11950,7 @@
    "aso": true,
    "noAccident": true,
    "origin": null,
+   "originFrom": null,
    "hasVin": true
   },
   "out": null,
@@ -11670,7 +11981,7 @@
    "reject": "Cesja leasingu: cena to tylko odstępne"
   },
   "detailedAt": "2026-11-10",
-  "rulesVersion": 2
+  "rulesVersion": 3
  },
  {
   "id": "otomoto:6147440258",
@@ -11708,6 +12019,7 @@
    "aso": true,
    "noAccident": false,
    "origin": null,
+   "originFrom": null,
    "hasVin": true
   },
   "out": null,
@@ -11738,7 +12050,7 @@
    "reject": "Klimatyzacja manualna"
   },
   "detailedAt": "2026-11-10",
-  "rulesVersion": 2
+  "rulesVersion": 3
  },
  {
   "id": "otomoto:6150390062",
@@ -11776,6 +12088,7 @@
    "aso": false,
    "noAccident": true,
    "origin": "Niemcy",
+   "originFrom": "ogłoszenie",
    "hasVin": true
   },
   "out": null,
@@ -11806,7 +12119,7 @@
    "reject": "Uszkodzone według opisu"
   },
   "detailedAt": "2026-11-10",
-  "rulesVersion": 2
+  "rulesVersion": 3
  },
  {
   "id": "otomoto:6151614038",
@@ -11844,6 +12157,7 @@
    "aso": false,
    "noAccident": false,
    "origin": "Polska",
+   "originFrom": "ogłoszenie",
    "hasVin": true
   },
   "out": null,
@@ -11874,7 +12188,7 @@
    "reject": "Klimatyzacja manualna"
   },
   "detailedAt": "2026-11-10",
-  "rulesVersion": 2
+  "rulesVersion": 3
  },
  {
   "id": "otomoto:6151440991",
@@ -11912,6 +12226,7 @@
    "aso": true,
    "noAccident": true,
    "origin": "Niemcy",
+   "originFrom": "ogłoszenie",
    "hasVin": true
   },
   "out": null,
@@ -11942,7 +12257,7 @@
    "reject": "Klimatyzacja manualna"
   },
   "detailedAt": "2026-11-10",
-  "rulesVersion": 2
+  "rulesVersion": 3
  },
  {
   "id": "otomoto:6151464951",
@@ -11980,6 +12295,7 @@
    "aso": false,
    "noAccident": false,
    "origin": "Polska",
+   "originFrom": "ogłoszenie",
    "hasVin": true
   },
   "out": null,
@@ -12010,7 +12326,7 @@
    "reject": "Brak klimy automatycznej w ogłoszeniu"
   },
   "detailedAt": "2026-11-10",
-  "rulesVersion": 2
+  "rulesVersion": 3
  },
  {
   "id": "otomoto:6151386552",
@@ -12048,6 +12364,7 @@
    "aso": true,
    "noAccident": true,
    "origin": "Polska",
+   "originFrom": "ogłoszenie",
    "hasVin": true
   },
   "out": "cena 30 500 zł, ponad budżet 30 000 zł, do negocjacji",
@@ -12078,7 +12395,7 @@
    "reject": "Klimatyzacja manualna"
   },
   "detailedAt": "2026-11-10",
-  "rulesVersion": 2
+  "rulesVersion": 3
  },
  {
   "id": "otomoto:6150246037",
@@ -12116,6 +12433,7 @@
    "aso": true,
    "noAccident": true,
    "origin": "Niemcy",
+   "originFrom": "ogłoszenie",
    "hasVin": true
   },
   "out": null,
@@ -12146,7 +12464,7 @@
    "reject": "Klimatyzacja manualna"
   },
   "detailedAt": "2026-11-10",
-  "rulesVersion": 2
+  "rulesVersion": 3
  },
  {
   "id": "otomoto:6151331997",
@@ -12184,6 +12502,7 @@
    "aso": true,
    "noAccident": true,
    "origin": "Polska",
+   "originFrom": "ogłoszenie",
    "hasVin": true
   },
   "out": "przebieg 155 000 km, ponad limit 120 000 km",
@@ -12214,7 +12533,7 @@
    "reject": "Cesja leasingu: cena to tylko odstępne"
   },
   "detailedAt": "2026-11-10",
-  "rulesVersion": 2
+  "rulesVersion": 3
  },
  {
   "id": "otomoto:6151217237",
@@ -12252,6 +12571,7 @@
    "aso": true,
    "noAccident": true,
    "origin": "Polska",
+   "originFrom": "ogłoszenie",
    "hasVin": true
   },
   "out": null,
@@ -12282,7 +12602,7 @@
    "reject": "Klimatyzacja manualna"
   },
   "detailedAt": "2026-11-10",
-  "rulesVersion": 2
+  "rulesVersion": 3
  },
  {
   "id": "otomoto:6151482976",
@@ -12320,6 +12640,7 @@
    "aso": false,
    "noAccident": false,
    "origin": "Francja",
+   "originFrom": "ogłoszenie",
    "hasVin": true
   },
   "out": null,
@@ -12350,7 +12671,7 @@
    "reject": "Klimatyzacja manualna"
   },
   "detailedAt": "2026-11-10",
-  "rulesVersion": 2
+  "rulesVersion": 3
  },
  {
   "id": "otomoto:6151293697",
@@ -12388,6 +12709,7 @@
    "aso": false,
    "noAccident": false,
    "origin": null,
+   "originFrom": null,
    "hasVin": true
   },
   "out": null,
@@ -12418,7 +12740,7 @@
    "reject": "Przebieg w opisie (159 900 km) wyższy niż w ogłoszeniu (119 900 km)"
   },
   "detailedAt": "2026-11-10",
-  "rulesVersion": 2
+  "rulesVersion": 3
  },
  {
   "id": "otomoto:6150924126",
@@ -12456,6 +12778,7 @@
    "aso": false,
    "noAccident": false,
    "origin": null,
+   "originFrom": null,
    "hasVin": true
   },
   "out": null,
@@ -12486,7 +12809,7 @@
    "reject": "Klimatyzacja manualna"
   },
   "detailedAt": "2026-11-10",
-  "rulesVersion": 2
+  "rulesVersion": 3
  },
  {
   "id": "otomoto:6151439031",
@@ -12524,6 +12847,7 @@
    "aso": false,
    "noAccident": true,
    "origin": "Belgia",
+   "originFrom": "ogłoszenie",
    "hasVin": true
   },
   "out": null,
@@ -12554,7 +12878,7 @@
    "reject": "Uszkodzone według opisu"
   },
   "detailedAt": "2026-11-10",
-  "rulesVersion": 2
+  "rulesVersion": 3
  },
  {
   "id": "otomoto:6150963243",
@@ -12592,6 +12916,7 @@
    "aso": true,
    "noAccident": false,
    "origin": null,
+   "originFrom": null,
    "hasVin": true
   },
   "out": null,
@@ -12622,7 +12947,7 @@
    "reject": "Klimatyzacja manualna"
   },
   "detailedAt": "2026-11-10",
-  "rulesVersion": 2
+  "rulesVersion": 3
  },
  {
   "id": "otomoto:6151452097",
@@ -12660,6 +12985,7 @@
    "aso": true,
    "noAccident": true,
    "origin": "Niemcy",
+   "originFrom": "ogłoszenie",
    "hasVin": true
   },
   "out": null,
@@ -12690,7 +13016,7 @@
    "reject": "Klimatyzacja manualna"
   },
   "detailedAt": "2026-11-10",
-  "rulesVersion": 2
+  "rulesVersion": 3
  },
  {
   "id": "otomoto:6149933976",
@@ -12728,6 +13054,7 @@
    "aso": false,
    "noAccident": false,
    "origin": null,
+   "originFrom": null,
    "hasVin": true
   },
   "out": null,
@@ -12758,7 +13085,7 @@
    "reject": "Klimatyzacja manualna"
   },
   "detailedAt": "2026-11-10",
-  "rulesVersion": 2
+  "rulesVersion": 3
  },
  {
   "id": "otomoto:6151191647",
@@ -12796,6 +13123,7 @@
    "aso": false,
    "noAccident": true,
    "origin": "Polska",
+   "originFrom": "ogłoszenie",
    "hasVin": true
   },
   "out": null,
@@ -12826,7 +13154,7 @@
    "reject": "Klimatyzacja manualna"
   },
   "detailedAt": "2026-11-10",
-  "rulesVersion": 2
+  "rulesVersion": 3
  },
  {
   "id": "otomoto:6151535114",
@@ -12864,6 +13192,7 @@
    "aso": false,
    "noAccident": false,
    "origin": null,
+   "originFrom": null,
    "hasVin": true
   },
   "out": null,
@@ -12894,7 +13223,7 @@
    "reject": "Brak klimy automatycznej w ogłoszeniu"
   },
   "detailedAt": "2026-11-10",
-  "rulesVersion": 2
+  "rulesVersion": 3
  },
  {
   "id": "otomoto:6151421510",
@@ -12932,6 +13261,7 @@
    "aso": true,
    "noAccident": false,
    "origin": "Polska",
+   "originFrom": "ogłoszenie",
    "hasVin": true
   },
   "out": null,
@@ -12962,7 +13292,7 @@
    "reject": "Klimatyzacja manualna"
   },
   "detailedAt": "2026-11-10",
-  "rulesVersion": 2
+  "rulesVersion": 3
  },
  {
   "id": "otomoto:6150538444",
@@ -13000,6 +13330,7 @@
    "aso": true,
    "noAccident": false,
    "origin": "Niemcy",
+   "originFrom": "ogłoszenie",
    "hasVin": true
   },
   "out": null,
@@ -13030,7 +13361,7 @@
    "reject": "Klimatyzacja manualna"
   },
   "detailedAt": "2026-11-10",
-  "rulesVersion": 2
+  "rulesVersion": 3
  },
  {
   "id": "otomoto:6151196222",
@@ -13068,6 +13399,7 @@
    "aso": true,
    "noAccident": false,
    "origin": null,
+   "originFrom": null,
    "hasVin": true
   },
   "out": null,
@@ -13098,7 +13430,7 @@
    "reject": "Klimatyzacja manualna"
   },
   "detailedAt": "2026-11-10",
-  "rulesVersion": 2
+  "rulesVersion": 3
  },
  {
   "id": "otomoto:6151075471",
@@ -13136,6 +13468,7 @@
    "aso": false,
    "noAccident": true,
    "origin": "Polska",
+   "originFrom": "ogłoszenie",
    "hasVin": true
   },
   "out": null,
@@ -13166,7 +13499,7 @@
    "reject": "Klimatyzacja manualna"
   },
   "detailedAt": "2026-11-10",
-  "rulesVersion": 2
+  "rulesVersion": 3
  },
  {
   "id": "otomoto:6150837168",
@@ -13204,6 +13537,7 @@
    "aso": false,
    "noAccident": false,
    "origin": "Niemcy",
+   "originFrom": "ogłoszenie",
    "hasVin": true
   },
   "out": null,
@@ -13234,7 +13568,7 @@
    "reject": "Klimatyzacja manualna"
   },
   "detailedAt": "2026-11-10",
-  "rulesVersion": 2
+  "rulesVersion": 3
  },
  {
   "id": "otomoto:6147585276",
@@ -13272,6 +13606,7 @@
    "aso": true,
    "noAccident": true,
    "origin": "Włochy",
+   "originFrom": "ogłoszenie",
    "hasVin": true
   },
   "out": "przebieg 124 000 km, ponad limit 120 000 km",
@@ -13302,7 +13637,7 @@
    "reject": "Klimatyzacja manualna"
   },
   "detailedAt": "2026-11-10",
-  "rulesVersion": 2
+  "rulesVersion": 3
  },
  {
   "id": "otomoto:6150595098",
@@ -13340,6 +13675,7 @@
    "aso": false,
    "noAccident": true,
    "origin": "Francja",
+   "originFrom": "ogłoszenie",
    "hasVin": true
   },
   "out": "przebieg 123 518 km, ponad limit 120 000 km",
@@ -13370,7 +13706,7 @@
    "reject": "Uszkodzone według opisu"
   },
   "detailedAt": "2026-11-10",
-  "rulesVersion": 2
+  "rulesVersion": 3
  },
  {
   "id": "otomoto:6151248164",
@@ -13408,6 +13744,7 @@
    "aso": false,
    "noAccident": true,
    "origin": "Niemcy",
+   "originFrom": "ogłoszenie",
    "hasVin": true
   },
   "out": "przebieg 150 911 km, ponad limit 120 000 km",
@@ -13438,7 +13775,7 @@
    "reject": "Uszkodzone według opisu"
   },
   "detailedAt": "2026-11-10",
-  "rulesVersion": 2
+  "rulesVersion": 3
  },
  {
   "id": "otomoto:6151372167",
@@ -13476,6 +13813,7 @@
    "aso": true,
    "noAccident": true,
    "origin": "Niemcy",
+   "originFrom": "ogłoszenie",
    "hasVin": true
   },
   "out": null,
@@ -13506,7 +13844,7 @@
    "reject": "Klimatyzacja manualna"
   },
   "detailedAt": "2026-11-10",
-  "rulesVersion": 2
+  "rulesVersion": 3
  },
  {
   "id": "otomoto:6151191361",
@@ -13544,6 +13882,7 @@
    "aso": false,
    "noAccident": false,
    "origin": "Polska",
+   "originFrom": "ogłoszenie",
    "hasVin": true
   },
   "out": null,
@@ -13574,7 +13913,7 @@
    "reject": "Klimatyzacja manualna"
   },
   "detailedAt": "2026-11-10",
-  "rulesVersion": 2
+  "rulesVersion": 3
  },
  {
   "id": "otomoto:6151284799",
@@ -13612,6 +13951,7 @@
    "aso": true,
    "noAccident": true,
    "origin": "Polska",
+   "originFrom": "ogłoszenie",
    "hasVin": true
   },
   "out": null,
@@ -13642,7 +13982,7 @@
    "reject": "Klimatyzacja manualna"
   },
   "detailedAt": "2026-11-10",
-  "rulesVersion": 2
+  "rulesVersion": 3
  },
  {
   "id": "otomoto:6151192168",
@@ -13680,6 +14020,7 @@
    "aso": true,
    "noAccident": false,
    "origin": "Polska",
+   "originFrom": "ogłoszenie",
    "hasVin": true
   },
   "out": null,
@@ -13710,7 +14051,7 @@
    "reject": "Klimatyzacja manualna"
   },
   "detailedAt": "2026-11-10",
-  "rulesVersion": 2
+  "rulesVersion": 3
  },
  {
   "id": "otomoto:6151397599",
@@ -13748,6 +14089,7 @@
    "aso": false,
    "noAccident": false,
    "origin": null,
+   "originFrom": null,
    "hasVin": true
   },
   "out": null,
@@ -13778,7 +14120,7 @@
    "reject": "Klimatyzacja manualna"
   },
   "detailedAt": "2026-11-10",
-  "rulesVersion": 2
+  "rulesVersion": 3
  },
  {
   "id": "otomoto:6151026950",
@@ -13816,6 +14158,7 @@
    "aso": true,
    "noAccident": true,
    "origin": "Szwajcaria",
+   "originFrom": "ogłoszenie",
    "hasVin": true
   },
   "out": "cena 30 900 zł, ponad budżet 30 000 zł, do negocjacji",
@@ -13846,7 +14189,7 @@
    "reject": "Klimatyzacja manualna"
   },
   "detailedAt": "2026-11-10",
-  "rulesVersion": 2
+  "rulesVersion": 3
  },
  {
   "id": "otomoto:6150832495",
@@ -13884,6 +14227,7 @@
    "aso": false,
    "noAccident": false,
    "origin": null,
+   "originFrom": null,
    "hasVin": true
   },
   "out": null,
@@ -13914,7 +14258,7 @@
    "reject": "Klimatyzacja manualna"
   },
   "detailedAt": "2026-11-10",
-  "rulesVersion": 2
+  "rulesVersion": 3
  },
  {
   "id": "otomoto:6151133437",
@@ -13952,6 +14296,7 @@
    "aso": false,
    "noAccident": false,
    "origin": "Polska",
+   "originFrom": "ogłoszenie",
    "hasVin": true
   },
   "out": null,
@@ -13982,7 +14327,7 @@
    "reject": "Klimatyzacja manualna"
   },
   "detailedAt": "2026-11-10",
-  "rulesVersion": 2
+  "rulesVersion": 3
  },
  {
   "id": "otomoto:6151377701",
@@ -14020,6 +14365,7 @@
    "aso": false,
    "noAccident": true,
    "origin": null,
+   "originFrom": null,
    "hasVin": true
   },
   "out": null,
@@ -14050,7 +14396,7 @@
    "reject": "Klimatyzacja manualna"
   },
   "detailedAt": "2026-11-10",
-  "rulesVersion": 2
+  "rulesVersion": 3
  },
  {
   "id": "otomoto:6151573820",
@@ -14088,6 +14434,7 @@
    "aso": false,
    "noAccident": false,
    "origin": "Polska",
+   "originFrom": "ogłoszenie",
    "hasVin": true
   },
   "out": "cena 30 900 zł, ponad budżet 30 000 zł, do negocjacji",
@@ -14118,7 +14465,7 @@
    "reject": "Brak klimy automatycznej w ogłoszeniu"
   },
   "detailedAt": "2026-11-10",
-  "rulesVersion": 2
+  "rulesVersion": 3
  },
  {
   "id": "otomoto:6151193320",
@@ -14156,6 +14503,7 @@
    "aso": false,
    "noAccident": false,
    "origin": "Francja",
+   "originFrom": "ogłoszenie",
    "hasVin": true
   },
   "out": null,
@@ -14186,7 +14534,7 @@
    "reject": "Klimatyzacja manualna"
   },
   "detailedAt": "2026-11-10",
-  "rulesVersion": 2
+  "rulesVersion": 3
  },
  {
   "id": "otomoto:6150605423",
@@ -14224,6 +14572,7 @@
    "aso": false,
    "noAccident": false,
    "origin": "Polska",
+   "originFrom": "ogłoszenie",
    "hasVin": true
   },
   "out": null,
@@ -14254,7 +14603,7 @@
    "reject": "Klimatyzacja manualna"
   },
   "detailedAt": "2026-11-10",
-  "rulesVersion": 2
+  "rulesVersion": 3
  },
  {
   "id": "otomoto:6149074173",
@@ -14292,6 +14641,7 @@
    "aso": false,
    "noAccident": false,
    "origin": null,
+   "originFrom": null,
    "hasVin": true
   },
   "out": null,
@@ -14322,7 +14672,7 @@
    "reject": "Uszkodzone według opisu"
   },
   "detailedAt": "2026-11-10",
-  "rulesVersion": 2
+  "rulesVersion": 3
  },
  {
   "id": "otomoto:6151216804",
@@ -14360,6 +14710,7 @@
    "aso": false,
    "noAccident": false,
    "origin": "Polska",
+   "originFrom": "ogłoszenie",
    "hasVin": false
   },
   "out": null,
@@ -14390,7 +14741,7 @@
    "reject": "Brak klimy automatycznej w ogłoszeniu"
   },
   "detailedAt": "2026-11-10",
-  "rulesVersion": 2
+  "rulesVersion": 3
  },
  {
   "id": "otomoto:6151184619",
@@ -14428,6 +14779,7 @@
    "aso": false,
    "noAccident": true,
    "origin": "Niemcy",
+   "originFrom": "ogłoszenie",
    "hasVin": true
   },
   "out": null,
@@ -14458,7 +14810,7 @@
    "reject": "Klimatyzacja manualna"
   },
   "detailedAt": "2026-11-10",
-  "rulesVersion": 2
+  "rulesVersion": 3
  },
  {
   "id": "otomoto:6151589658",
@@ -14496,6 +14848,7 @@
    "aso": false,
    "noAccident": true,
    "origin": "Polska",
+   "originFrom": "ogłoszenie",
    "hasVin": true
   },
   "out": "cena 30 900 zł, ponad budżet 30 000 zł, do negocjacji",
@@ -14526,7 +14879,7 @@
    "reject": "Klimatyzacja manualna"
   },
   "detailedAt": "2026-11-10",
-  "rulesVersion": 2
+  "rulesVersion": 3
  },
  {
   "id": "otomoto:6151332255",
@@ -14564,6 +14917,7 @@
    "aso": true,
    "noAccident": true,
    "origin": "Niemcy",
+   "originFrom": "ogłoszenie",
    "hasVin": true
   },
   "out": "cena 30 900 zł, ponad budżet 30 000 zł, do negocjacji",
@@ -14594,7 +14948,7 @@
    "reject": "Klimatyzacja manualna"
   },
   "detailedAt": "2026-11-10",
-  "rulesVersion": 2
+  "rulesVersion": 3
  },
  {
   "id": "otomoto:6150075512",
@@ -14632,6 +14986,7 @@
    "aso": false,
    "noAccident": true,
    "origin": "Polska",
+   "originFrom": "ogłoszenie",
    "hasVin": true
   },
   "out": "przebieg 120 500 km, ponad limit 120 000 km",
@@ -14662,7 +15017,7 @@
    "reject": "Brak klimy automatycznej w ogłoszeniu"
   },
   "detailedAt": "2026-11-10",
-  "rulesVersion": 2
+  "rulesVersion": 3
  },
  {
   "id": "otomoto:6151364352",
@@ -14700,6 +15055,7 @@
    "aso": true,
    "noAccident": true,
    "origin": "Niemcy",
+   "originFrom": "ogłoszenie",
    "hasVin": true
   },
   "out": null,
@@ -14730,7 +15086,7 @@
    "reject": "Klimatyzacja manualna"
   },
   "detailedAt": "2026-11-10",
-  "rulesVersion": 2
+  "rulesVersion": 3
  },
  {
   "id": "otomoto:6151454670",
@@ -14768,6 +15124,7 @@
    "aso": false,
    "noAccident": false,
    "origin": null,
+   "originFrom": null,
    "hasVin": true
   },
   "out": null,
@@ -14798,7 +15155,7 @@
    "reject": "Klimatyzacja manualna"
   },
   "detailedAt": "2026-11-10",
-  "rulesVersion": 2
+  "rulesVersion": 3
  },
  {
   "id": "otomoto:6151123819",
@@ -14836,6 +15193,7 @@
    "aso": false,
    "noAccident": false,
    "origin": "Polska",
+   "originFrom": "ogłoszenie",
    "hasVin": true
   },
   "out": null,
@@ -14866,7 +15224,7 @@
    "reject": "Brak klimy automatycznej w ogłoszeniu"
   },
   "detailedAt": "2026-11-10",
-  "rulesVersion": 2
+  "rulesVersion": 3
  },
  {
   "id": "otomoto:6150817723",
@@ -14904,6 +15262,7 @@
    "aso": false,
    "noAccident": false,
    "origin": "Polska",
+   "originFrom": "ogłoszenie",
    "hasVin": true
   },
   "out": null,
@@ -14934,7 +15293,7 @@
    "reject": "Klimatyzacja manualna"
   },
   "detailedAt": "2026-11-10",
-  "rulesVersion": 2
+  "rulesVersion": 3
  },
  {
   "id": "otomoto:6150069607",
@@ -14972,6 +15331,7 @@
    "aso": true,
    "noAccident": true,
    "origin": "Niemcy",
+   "originFrom": "ogłoszenie",
    "hasVin": true
   },
   "out": null,
@@ -15002,7 +15362,7 @@
    "reject": "Klimatyzacja manualna"
   },
   "detailedAt": "2026-11-10",
-  "rulesVersion": 2
+  "rulesVersion": 3
  },
  {
   "id": "otomoto:6121790437",
@@ -15040,6 +15400,7 @@
    "aso": true,
    "noAccident": true,
    "origin": null,
+   "originFrom": null,
    "hasVin": true
   },
   "out": "cena 30 900 zł, ponad budżet 30 000 zł, do negocjacji",
@@ -15070,7 +15431,7 @@
    "reject": "Klimatyzacja manualna"
   },
   "detailedAt": "2026-11-10",
-  "rulesVersion": 2
+  "rulesVersion": 3
  },
  {
   "id": "otomoto:6149475549",
@@ -15108,6 +15469,7 @@
    "aso": false,
    "noAccident": false,
    "origin": "Polska",
+   "originFrom": "ogłoszenie",
    "hasVin": false
   },
   "out": null,
@@ -15174,6 +15536,7 @@
    "aso": false,
    "noAccident": false,
    "origin": null,
+   "originFrom": null,
    "hasVin": false
   },
   "out": null,
@@ -15204,7 +15567,7 @@
    "reject": "Brak klimy automatycznej w ogłoszeniu"
   },
   "detailedAt": "2026-11-10",
-  "rulesVersion": 2
+  "rulesVersion": 3
  },
  {
   "id": "otomoto:6151553536",
@@ -16330,6 +16693,7 @@
    "aso": false,
    "noAccident": false,
    "origin": "Polska",
+   "originFrom": "ogłoszenie",
    "hasVin": false
   },
   "out": null,
@@ -16668,6 +17032,7 @@
    "aso": false,
    "noAccident": false,
    "origin": "Belgia",
+   "originFrom": "ogłoszenie",
    "hasVin": false
   },
   "out": null,
@@ -16938,6 +17303,7 @@
    "aso": false,
    "noAccident": false,
    "origin": "Francja",
+   "originFrom": "ogłoszenie",
    "hasVin": false
   },
   "out": null,
@@ -17208,6 +17574,7 @@
    "aso": false,
    "noAccident": false,
    "origin": null,
+   "originFrom": null,
    "hasVin": false
   },
   "out": null,
@@ -17410,6 +17777,7 @@
    "aso": false,
    "noAccident": false,
    "origin": "Polska",
+   "originFrom": "ogłoszenie",
    "hasVin": false
   },
   "out": null,
@@ -17476,6 +17844,7 @@
    "aso": false,
    "noAccident": false,
    "origin": "Polska",
+   "originFrom": "ogłoszenie",
    "hasVin": false
   },
   "out": null,
@@ -17950,6 +18319,7 @@
    "aso": false,
    "noAccident": false,
    "origin": "Polska",
+   "originFrom": "ogłoszenie",
    "hasVin": false
   },
   "out": null,
@@ -18152,6 +18522,7 @@
    "aso": false,
    "noAccident": false,
    "origin": "Polska",
+   "originFrom": "ogłoszenie",
    "hasVin": false
   },
   "out": null,
@@ -18762,6 +19133,7 @@
    "aso": false,
    "noAccident": false,
    "origin": "Polska",
+   "originFrom": "ogłoszenie",
    "hasVin": false
   },
   "out": null,
@@ -18828,6 +19200,7 @@
    "aso": false,
    "noAccident": false,
    "origin": "Holandia",
+   "originFrom": "ogłoszenie",
    "hasVin": false
   },
   "out": null,
@@ -18894,6 +19267,7 @@
    "aso": false,
    "noAccident": false,
    "origin": null,
+   "originFrom": null,
    "hasVin": false
   },
   "out": null,
@@ -19164,6 +19538,7 @@
    "aso": false,
    "noAccident": false,
    "origin": "Dania",
+   "originFrom": "ogłoszenie",
    "hasVin": false
   },
   "out": null,
@@ -19230,6 +19605,7 @@
    "aso": false,
    "noAccident": false,
    "origin": null,
+   "originFrom": null,
    "hasVin": false
   },
   "out": null,
@@ -19296,6 +19672,7 @@
    "aso": false,
    "noAccident": false,
    "origin": "Francja",
+   "originFrom": "ogłoszenie",
    "hasVin": false
   },
   "out": null,
@@ -19362,6 +19739,7 @@
    "aso": false,
    "noAccident": false,
    "origin": "Austria",
+   "originFrom": "ogłoszenie",
    "hasVin": false
   },
   "out": null,
@@ -19428,6 +19806,7 @@
    "aso": false,
    "noAccident": false,
    "origin": "Francja",
+   "originFrom": "ogłoszenie",
    "hasVin": false
   },
   "out": null,
@@ -19494,6 +19873,7 @@
    "aso": false,
    "noAccident": false,
    "origin": "Polska",
+   "originFrom": "ogłoszenie",
    "hasVin": false
   },
   "out": null,
@@ -19560,6 +19940,7 @@
    "aso": false,
    "noAccident": false,
    "origin": "Polska",
+   "originFrom": "ogłoszenie",
    "hasVin": false
   },
   "out": null,
@@ -19626,6 +20007,7 @@
    "aso": false,
    "noAccident": false,
    "origin": "Niemcy",
+   "originFrom": "ogłoszenie",
    "hasVin": false
   },
   "out": null,
@@ -19828,6 +20210,7 @@
    "aso": false,
    "noAccident": false,
    "origin": "Włochy",
+   "originFrom": "ogłoszenie",
    "hasVin": false
   },
   "out": null,
@@ -20098,6 +20481,7 @@
    "aso": false,
    "noAccident": false,
    "origin": null,
+   "originFrom": null,
    "hasVin": false
   },
   "out": null,
@@ -20164,6 +20548,7 @@
    "aso": false,
    "noAccident": false,
    "origin": null,
+   "originFrom": null,
    "hasVin": false
   },
   "out": null,
@@ -20230,6 +20615,7 @@
    "aso": false,
    "noAccident": false,
    "origin": "Niemcy",
+   "originFrom": "ogłoszenie",
    "hasVin": false
   },
   "out": null,
@@ -21044,6 +21430,7 @@
    "aso": false,
    "noAccident": false,
    "origin": "Niemcy",
+   "originFrom": "ogłoszenie",
    "hasVin": false
   },
   "out": null,
@@ -21110,6 +21497,7 @@
    "aso": false,
    "noAccident": false,
    "origin": null,
+   "originFrom": null,
    "hasVin": false
   },
   "out": null,
@@ -21516,6 +21904,7 @@
    "aso": false,
    "noAccident": false,
    "origin": null,
+   "originFrom": null,
    "hasVin": false
   },
   "out": null,
@@ -21582,6 +21971,7 @@
    "aso": false,
    "noAccident": false,
    "origin": null,
+   "originFrom": null,
    "hasVin": false
   },
   "out": null,
@@ -21648,6 +22038,7 @@
    "aso": false,
    "noAccident": false,
    "origin": null,
+   "originFrom": null,
    "hasVin": false
   },
   "out": null,
@@ -21714,6 +22105,7 @@
    "aso": false,
    "noAccident": false,
    "origin": null,
+   "originFrom": null,
    "hasVin": false
   },
   "out": null,
@@ -21780,6 +22172,7 @@
    "aso": false,
    "noAccident": false,
    "origin": "Włochy",
+   "originFrom": "ogłoszenie",
    "hasVin": false
   },
   "out": null,
@@ -21846,6 +22239,7 @@
    "aso": false,
    "noAccident": false,
    "origin": null,
+   "originFrom": null,
    "hasVin": false
   },
   "out": null,
@@ -22184,6 +22578,7 @@
    "aso": false,
    "noAccident": false,
    "origin": null,
+   "originFrom": null,
    "hasVin": false
   },
   "out": null,
@@ -22250,6 +22645,7 @@
    "aso": false,
    "noAccident": false,
    "origin": null,
+   "originFrom": null,
    "hasVin": false
   },
   "out": null,
@@ -22316,6 +22712,7 @@
    "aso": false,
    "noAccident": false,
    "origin": null,
+   "originFrom": null,
    "hasVin": false
   },
   "out": null,
@@ -22344,72 +22741,6 @@
    "plus": null,
    "watch": null,
    "reject": "Podejrzanie mały przebieg (278 km)"
-  }
- },
- {
-  "id": "otomoto:6151079795",
-  "links": {
-   "otomoto": "https://www.otomoto.pl/osobowe/oferta/nissan-murano-OLX_ID6IhiQr.html",
-   "olx": null
-  },
-  "name": "Nissan Murano",
-  "version": null,
-  "engine": "3.5, 256 KM",
-  "fuel": "lpg",
-  "gear": "automat",
-  "body": null,
-  "year": 2011,
-  "km": 260,
-  "hp": 256,
-  "cc": 3500,
-  "price": 27000,
-  "city": "Andrychów",
-  "region": "Małopolskie",
-  "seller": "komis",
-  "make": "nissan",
-  "model": "murano",
-  "title": "Nissan Murano",
-  "origin": "Niemcy",
-  "equipment": {
-   "ac": 2,
-   "cam": 2,
-   "pdc": 2,
-   "cp": 2
-  },
-  "facts": {
-   "salonPL": false,
-   "firstOwner": false,
-   "aso": false,
-   "noAccident": false,
-   "origin": "Niemcy",
-   "hasVin": false
-  },
-  "out": null,
-  "plus": null,
-  "watch": "Auto sprowadzone (kraj pochodzenia: Niemcy). Poproś o raport historii z zagranicy, np. z Carvertical.",
-  "why": null,
-  "score": -1,
-  "top": null,
-  "reject": "Podejrzanie mały przebieg (260 km)",
-  "pending": true,
-  "detailed": false,
-  "inAc": false,
-  "manual": false,
-  "byKamil": [],
-  "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
-  "status": "active",
-  "goneSince": null,
-  "auto": {
-   "equipment": {
-    "ac": 2,
-    "cam": 2,
-    "pdc": 2,
-    "cp": 2
-   },
-   "plus": null,
-   "watch": "Auto sprowadzone (kraj pochodzenia: Niemcy). Poproś o raport historii z zagranicy, np. z Carvertical.",
-   "reject": "Podejrzanie mały przebieg (260 km)"
   }
  },
  {
@@ -22448,6 +22779,7 @@
    "aso": false,
    "noAccident": false,
    "origin": null,
+   "originFrom": null,
    "hasVin": false
   },
   "out": null,
@@ -22514,6 +22846,7 @@
    "aso": false,
    "noAccident": false,
    "origin": null,
+   "originFrom": null,
    "hasVin": false
   },
   "out": "cena 30 900 zł, ponad budżet 30 000 zł, do negocjacji",
@@ -22878,6 +23211,72 @@
    "plus": null,
    "watch": null,
    "reject": null
+  }
+ },
+ {
+  "id": "otomoto:6151079795",
+  "links": {
+   "otomoto": "https://www.otomoto.pl/osobowe/oferta/nissan-murano-OLX_ID6IhiQr.html",
+   "olx": null
+  },
+  "name": "Nissan Murano",
+  "version": null,
+  "engine": "3.5, 256 KM",
+  "fuel": "lpg",
+  "gear": "automat",
+  "body": null,
+  "year": 2011,
+  "km": 260,
+  "hp": 256,
+  "cc": 3500,
+  "price": 27000,
+  "city": "Andrychów",
+  "region": "Małopolskie",
+  "seller": "komis",
+  "make": "nissan",
+  "model": "murano",
+  "title": "Nissan Murano",
+  "origin": "Niemcy",
+  "equipment": {
+   "ac": 2,
+   "cam": 2,
+   "pdc": 2,
+   "cp": 2
+  },
+  "facts": {
+   "salonPL": false,
+   "firstOwner": false,
+   "aso": false,
+   "noAccident": false,
+   "origin": "Niemcy",
+   "hasVin": false
+  },
+  "out": null,
+  "plus": null,
+  "watch": "Auto sprowadzone (kraj pochodzenia: Niemcy). Poproś o raport historii z zagranicy, np. z Carvertical.",
+  "why": null,
+  "score": -1,
+  "top": null,
+  "reject": "Podejrzanie mały przebieg (260 km)",
+  "pending": true,
+  "detailed": false,
+  "inAc": false,
+  "manual": false,
+  "byKamil": [],
+  "firstSeen": "2026-11-10",
+  "lastSeen": "2026-11-10",
+  "status": "gone",
+  "goneSince": "2026-11-10",
+  "auto": {
+   "equipment": {
+    "ac": 2,
+    "cam": 2,
+    "pdc": 2,
+    "cp": 2
+   },
+   "plus": null,
+   "watch": "Auto sprowadzone (kraj pochodzenia: Niemcy). Poproś o raport historii z zagranicy, np. z Carvertical.",
+   "reject": "Podejrzanie mały przebieg (260 km)"
   }
  }
 ]
