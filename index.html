@@ -417,8 +417,8 @@ h2.book { font-size: 1.95rem; line-height: 1.02; font-weight: 850; font-stretch:
   var FUEL = { on: 'diesel', lpg: 'benzyna z gazem', hev: 'hybryda', pb: 'benzyna' };
   var LIMIT = 30;
   var STALE_MS = 36 * 3600 * 1000;
-  var cars = [], byId = {}, meta = {}, runDay = '', stampDate = '', showAll = false, avg = {};
-  var AVG_MIN = 5, AVG_BAND = 0.05;
+  var cars = [], byId = {}, meta = {}, runDay = '', stampDate = '', showAll = false, avg = {}, byName = {}, modelAvg = {};
+  var AVG_MIN = 5, AVG_BAND = 0.05, AVG_YEARS = 2;
 
   var nb = function (n) { return n.toLocaleString('pl-PL').replace(/[\s ]/g, ' '); };
   var esc = function (s) { return String(s).replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }); };
@@ -448,17 +448,26 @@ h2.book { font-size: 1.95rem; line-height: 1.02; font-weight: 850; font-stretch:
     if (f.origin === 'Polska') return f.originFrom === 'opis' ? 'Polska, według opisu' : 'Polska od nowości';
     return 'sprowadzony: ' + f.origin;
   }
+  function meanPrice(g) { return Math.round(g.reduce(function (a, o) { return a + o.price; }, 0) / g.length / 100) * 100; }
   function averages() {
-    var groups = {};
-    cars.filter(visible).forEach(function (c) { (groups[c.name] = groups[c.name] || []).push(c.price); });
-    avg = {};
-    Object.keys(groups).forEach(function (k) {
-      var g = groups[k];
-      if (g.length >= AVG_MIN) avg[k] = { mean: Math.round(g.reduce(function (a, b) { return a + b; }, 0) / g.length / 100) * 100, n: g.length };
+    byName = {}; avg = {}; modelAvg = {};
+    cars.filter(function (c) { return visible(c) && c.price && c.year; })
+      .forEach(function (c) { (byName[c.name] = byName[c.name] || []).push(c); });
+    Object.keys(byName).forEach(function (k) {
+      var g = byName[k];
+      if (g.length >= AVG_MIN) modelAvg[k] = { mean: meanPrice(g), n: g.length };
     });
   }
+  // Same model, year within ±AVG_YEARS of this car, at least AVG_MIN offers.
+  function avgFor(c) {
+    if (c.id in avg) return avg[c.id];
+    var g = c.year ? (byName[c.name] || []).filter(function (o) { return Math.abs(o.year - c.year) <= AVG_YEARS; }) : [];
+    var ys = g.map(function (o) { return o.year; });
+    return (avg[c.id] = g.length < AVG_MIN ? null
+      : { mean: meanPrice(g), n: g.length, from: Math.min.apply(null, ys), to: Math.max.apply(null, ys) });
+  }
   function gauge(c) {
-    var a = avg[c.name];
+    var a = avgFor(c);
     if (!a) return '';
     var R = 34, CX = 46, CY = 44, MAX = 0.2;
     var pt = function (v, r) { var t = Math.PI * (1 - (v + MAX) / (2 * MAX)); return [CX + r * Math.cos(t), CY - r * Math.sin(t)]; };
@@ -474,12 +483,13 @@ h2.book { font-size: 1.95rem; line-height: 1.02; font-weight: 850; font-stretch:
       '<text class="g-read" x="' + CX + '" y="62" text-anchor="middle">' + read + '</text></svg>';
   }
   function priceNote(c) {
-    var a = avg[c.name];
+    var a = avgFor(c);
     if (!a) return '';
     var diff = Math.round((c.price - a.mean) / 100) * 100;
     var text = Math.abs(c.price - a.mean) <= a.mean * AVG_BAND ? 'W średniej cenie'
       : nb(Math.abs(diff)) + '&nbsp;zł ' + (diff < 0 ? 'poniżej' : 'powyżej') + ' średniej';
-    return '<p class="price-note">' + text + ' <span class="nw">(' + nb(a.mean) + '&nbsp;zł z ' + a.n + ' ofert)</span></p>';
+    var years = a.from === a.to ? 'z ' + a.from + '&nbsp;r.' : 'z lat ' + a.from + '–' + a.to;
+    return '<p class="price-note">' + text + ' <span class="nw">(' + nb(a.mean) + '&nbsp;zł z ' + a.n + ' ofert</span> <span class="nw">' + years + ')</span></p>';
   }
   function visible(c) { return c.status === 'active' && !c.reject && (c.detailed || c.inAc || c.manual); }
 
@@ -505,7 +515,7 @@ h2.book { font-size: 1.95rem; line-height: 1.02; font-weight: 850; font-stretch:
     var pending = !c.detailed && !c.manual;
     return '<article class="entry' + (ranked ? ' top' : '') + (picked ? ' picked' : '') + '" data-id="' + esc(c.id) + '">' +
       shot(c) +
-      '<div class="entry-h' + (avg[c.name] ? ' has-gauge' : '') + '">' + gauge(c) +
+      '<div class="entry-h' + (avgFor(c) ? ' has-gauge' : '') + '">' + gauge(c) +
         '<h3>' + (ranked ? '<span class="sr">Polecane numer ' + c.top + ': </span>' : '') + esc(c.name) + (picked ? '<span class="sr"> (na liście do telefonu)</span>' : '') + '</h3><p class="price">' + nb(c.price) + '&nbsp;zł</p>' + priceNote(c) + '</div>' +
       (c.fresh ? '<p class="new-entry">Nowa na liście</p>' : '') +
       (c.out ? '<p class="out">' + mark('m-ask') + '<span>Poza kryteriami: ' + esc(c.out) + '</span></p>' : '') +
@@ -573,9 +583,9 @@ h2.book { font-size: 1.95rem; line-height: 1.02; font-weight: 850; font-stretch:
     document.getElementById('count').textContent = !n ? '' : shown.length < n
       ? 'Pokazuję ' + shown.length + ' najlepszych. Wszystkich aut poza polecanymi: ' + n
       : n + ' ' + plural(n, 'auto', 'auta', 'aut') + ' poza trzema polecanymi';
-    var avgEl = document.getElementById('avg'), adam = avg['Opel Adam'];
+    var avgEl = document.getElementById('avg'), adam = modelAvg['Opel Adam'];
     avgEl.hidden = !(state.fuel === 'pb' && adam);
-    avgEl.textContent = adam ? 'Średnia cena Opla Adama: ' + nb(adam.mean) + ' zł (z ' + adam.n + ' ofert).' : '';
+    avgEl.textContent = adam ? 'Średnia cena Opla Adama: ' + nb(adam.mean) + ' zł z ' + adam.n + ' ofert. Przy każdym aucie liczymy ją z roczników ±' + AVG_YEARS + ' lata.' : '';
     moreEl.hidden = shown.length >= n;
     moreEl.textContent = 'Pokaż wszystkie (' + n + ')';
     tabs.forEach(function (b) { b.setAttribute('aria-pressed', String(b.dataset.fuel === state.fuel)); });
