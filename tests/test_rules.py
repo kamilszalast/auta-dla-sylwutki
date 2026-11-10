@@ -151,6 +151,28 @@ class PendingTest(unittest.TestCase):
         self.assertIn("mały przebieg", rules.classify(item(km=1, year=2019), None, True)["reject"])
 
 
+class BodyKindTest(unittest.TestCase):
+    def test_vans(self):
+        for name in ("Toyota ProAce", "Citroën Berlingo", "Volkswagen Caddy", "Fiat Doblo", "Ford Transit Connect",
+                     "Peugeot Partner", "Opel Combo", "Mercedes-Benz Citan", "Renault Kangoo"):
+            self.assertEqual(rules.body_kind({"name": name, "body": "minivan"}), "van", name)
+
+    def test_minivans(self):
+        for name in ("Opel Meriva", "Citroën C4 Picasso", "Fiat 500L", "Renault Scenic", "Ford B-MAX", "Mazda 5"):
+            self.assertEqual(rules.body_kind({"name": name, "body": "kompakt"}), "minivan", name)
+        self.assertEqual(rules.body_kind({"name": "BMW Seria 2", "body": "minivan"}), "minivan")
+
+    def test_small_and_other(self):
+        self.assertEqual(rules.body_kind({"name": "Opel Adam", "body": "auta małe"}), "small")
+        self.assertEqual(rules.body_kind({"name": "Citroën C3", "body": "auta miejskie"}), "small")
+        self.assertEqual(rules.body_kind({"name": "Opel Astra", "body": "kompakt"}), "other")
+        self.assertEqual(rules.body_kind({"name": "Mazda 3", "body": None}), "other")
+
+    def test_van_reject_reason(self):
+        self.assertEqual(rules.kind_reject({"name": "Toyota ProAce", "body": "minivan"}), "Dostawczak z szybami, nie dla Sylwii")
+        self.assertIsNone(rules.kind_reject({"name": "Opel Meriva", "body": "kompakt"}))
+
+
 class CriteriaTest(unittest.TestCase):
     def test_soft_out(self):
         self.assertIn("30 000", rules.soft_out(item(price=30900)))

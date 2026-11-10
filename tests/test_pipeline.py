@@ -91,7 +91,7 @@ class PipelineTest(unittest.TestCase):
         self.assertEqual(car["shownSince"], "2026-11-11")
         tops = [c for c in offers if c["top"]]
         self.assertEqual(sorted(c["top"] for c in tops), [1, 2, 3])
-        self.assertTrue(all(c["facts"]["origin"] == "Polska" and c["seller"] == "prywatnie" for c in tops))
+        self.assertEqual(len({c["name"] for c in tops}), 3)
 
     def test_skip_when_already_ran_today(self):
         (self.root / "data" / "meta.json").write_text(json.dumps({"lastRun": "2026-11-11T06:01:00+01:00"}))
@@ -180,6 +180,32 @@ def empty_list_html():
         inner["advertSearch"]["edges"] = []
         state["data"] = json.dumps(inner)
     return _replace_json(FIX / "otomoto_list.html", no_results)
+
+
+def van_list_html():
+    def first_is_van(d):
+        state = d["props"]["pageProps"]["urqlState"]["k1"]
+        inner = json.loads(state["data"])
+        inner["advertSearch"]["totalCount"] = len(inner["advertSearch"]["edges"])
+        for prm in inner["advertSearch"]["edges"][0]["node"]["parameters"]:
+            if prm["key"] == "make":
+                prm["displayValue"], prm["value"] = "Toyota", "toyota"
+            if prm["key"] == "model":
+                prm["displayValue"], prm["value"] = "ProAce", "proace"
+        state["data"] = json.dumps(inner)
+    return _replace_json(FIX / "otomoto_list.html", first_is_van)
+
+
+class VanTest(unittest.TestCase):
+    setUp, run_pipeline, read = PipelineTest.setUp, PipelineTest.run_pipeline, PipelineTest.read
+
+    def test_van_rejected_with_reason(self):
+        f = FakeFetcher()
+        f.lists = van_list_html()
+        self.run_pipeline(f)
+        van = next(c for c in self.read("offers.json") if c["name"] == "Toyota ProAce")
+        self.assertEqual(van["reject"], "Dostawczak z szybami, nie dla Sylwii")
+        self.assertIsNone(van["top"])
 
 
 class RobustnessTest(unittest.TestCase):

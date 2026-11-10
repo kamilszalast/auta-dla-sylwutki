@@ -9,7 +9,7 @@ PL = dict(NO_FACTS, salonPL=True, origin="Polska")
 
 
 def car(cid, fuel="on", km=60000, equipment=FULL, facts=PL, **kw):
-    c = dict(id=cid, fuel=fuel, year=2017, km=km, price=27000, seller="prywatnie", equipment=dict(equipment), facts=dict(facts),
+    c = dict(id=cid, name=cid, body="kompakt", fuel=fuel, year=2017, km=km, price=27000, seller="prywatnie", equipment=dict(equipment), facts=dict(facts),
              out=None, pending=False, reject=None, status="active", manual=False, top=None, why=None, byKamil=[])
     c.update(kw)
     c["score"] = ranking.score(c)
@@ -46,11 +46,30 @@ class PickTopTest(unittest.TestCase):
         ranking.pick_top(cars, {})
         self.assertEqual(sorted(tops(cars)), ["ok1", "ok2", "ok3"])
 
-    def test_only_polish_origin_private_cars_in_top(self):
-        cars = [car("de", km=1000, facts=dict(NO_FACTS, origin="Niemcy")), car("komis", km=1000, seller="komis"),
-                car("unknown", km=1000, facts=NO_FACTS), car("pl1"), car("pl2"), car("pl3")]
+    def test_polish_private_bonus(self):
+        self.assertGreater(car("pl")["score"], car("de", facts=dict(NO_FACTS, origin="Niemcy"))["score"] + 10)
+        self.assertGreater(car("priv")["score"], car("komis", seller="komis")["score"] + 5)
+
+    def test_imported_dealer_car_can_still_be_top(self):
+        cars = [car("de", km=1000, year=2021, seller="komis", facts=dict(NO_FACTS, origin="Niemcy")),
+                car("pl1", year=2012), car("pl2", year=2012), car("pl3", year=2012)]
         ranking.pick_top(cars, {})
-        self.assertEqual(sorted(tops(cars)), ["pl1", "pl2", "pl3"])
+        self.assertIn("de", tops(cars))
+
+    def test_small_body_bonus(self):
+        self.assertGreater(car("adam", name="Opel Adam", body="auta małe")["score"], car("astra", body="kompakt")["score"])
+
+    def test_vans_and_minivans_never_top(self):
+        cars = [car("van", km=1000, name="Toyota ProAce"), car("meriva", km=1000, name="Opel Meriva"),
+                car("a", name="Opel Astra"), car("b", name="Citroën C3"), car("c", name="Opel Adam")]
+        ranking.pick_top(cars, {})
+        self.assertEqual(sorted(tops(cars)), ["a", "b", "c"])
+
+    def test_no_duplicate_model_in_top(self):
+        cars = [car("astra1", km=10000, name="Opel Astra"), car("astra2", km=20000, name="Opel Astra"),
+                car("c3", km=50000, name="Citroën C3"), car("adam", km=60000, name="Opel Adam")]
+        ranking.pick_top(cars, {})
+        self.assertEqual(tops(cars), ["astra1", "c3", "adam"])
 
     def test_pin_may_override_origin_rule(self):
         cars = [car("komis", seller="komis"), car("pl1"), car("pl2")]

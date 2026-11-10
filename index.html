@@ -297,7 +297,7 @@ h2.book { font-size: 1.95rem; line-height: 1.02; font-weight: 850; font-stretch:
   <section aria-labelledby="top-h" id="polecane">
     <div class="page-h">
       <h2 class="book" id="top-h">Polecane</h2>
-      <p>Tylko auta z Polski od nowości, od prywatnych sprzedawców. Takie auto ma pełną historię w CEPiK.</p>
+      <p>Małe i kompaktowe auta z najlepszą oceną, bez minivanów. Pierwszeństwo mają auta z Polski od nowości i od prywatnych sprzedawców, bo mają pełną historię w CEPiK.</p>
     </div>
     <div class="entries" id="top"></div>
   </section>
@@ -536,7 +536,7 @@ h2.book { font-size: 1.95rem; line-height: 1.02; font-weight: 850; font-stretch:
   function renderTop(pressId) {
     var top = cars.filter(function (c) { return c.top && visible(c); }).sort(function (a, b) { return a.top - b.top; });
     document.getElementById('top').innerHTML = top.length ? top.map(function (c) { return entry(c, true, pressId); }).join('')
-      : '<p class="empty">Dziś żadne auto z Polski od prywatnego sprzedawcy nie spełnia wszystkich kryteriów. Zajrzyj na listę niżej i zaznacz „Tylko z Polski od nowości”.</p>';
+      : '<p class="empty">Dziś żadne auto nie spełnia wszystkich kryteriów. Zajrzyj na listę niżej.</p>';
   }
   function renderList(pressId) {
     var list = cars.filter(function (c) { return !c.top && visible(c); })

@@ -36,6 +36,28 @@ def _found(pattern, text):
     return None
 
 
+VAN = re.compile(r"proace|berlingo|partner|rifter|caddy|dobl[oò]|kangoo|combo|tourneo|transit|citan|dokker|nemo|"
+                 r"bipper|qubo|fiorino|vito|traveller|jumpy|expert|trafic|vivaro|townstar|multivan|transporter", re.I)
+MINIVAN = re.compile(r"meriva|picasso|spacetourer|zafira|touran|sharan|scenic|espace|b-max|c-max|s-max|galaxy|500l|"
+                     r"verso|carens|venga|ix20|\bnote\b|sportsvan|golf plus|alhambra|lodgy|mazda 5\b|active tourer|gran tourer", re.I)
+SMALL_BODIES = ("auta małe", "auta miejskie")
+VAN_REASON = "Dostawczak z szybami, nie dla Sylwii"
+
+
+def body_kind(car):
+    """van / minivan / small / other, from the model name first (Otomoto body types are unreliable)."""
+    name, body = car.get("name") or "", car.get("body") or ""
+    if VAN.search(name):
+        return "van"
+    if MINIVAN.search(name) or body == "minivan":
+        return "minivan"
+    return "small" if body in SMALL_BODIES else "other"
+
+
+def kind_reject(car):
+    return VAN_REASON if body_kind(car) == "van" else None
+
+
 def hard_ok(item):
     fuel, km, price, hp = item.get("fuel"), item.get("km"), item.get("price"), item.get("hp")
     if None in (km, price, hp, item.get("year")):

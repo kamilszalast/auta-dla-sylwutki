@@ -1,8 +1,8 @@
 """Score and "Polecane 3" (HANDOFF.md §8). Rules only, no LLM."""
-from . import config
+from . import config, rules
 
 EQUIP_POINTS = {"cam": 12, "pdc": 8, "cp": 12}
-FACT_POINTS = {"salonPL": 8, "firstOwner": 6, "aso": 6, "noAccident": 4}
+FACT_POINTS = {"salonPL": 15, "firstOwner": 6, "aso": 6, "noAccident": 4}
 DIVERSE = ("lpg", "hev", "pb")
 DIVERSITY_GAP = 6
 
@@ -14,6 +14,9 @@ def score(car):
     s += 5 if eq.get("ac") == 1 else 0
     s -= 4 * sum(1 for v in eq.values() if v == 2)
     s += sum(p for k, p in FACT_POINTS.items() if facts.get(k))
+    s += 8 if car.get("seller") == "prywatnie" else 0  # Kamil: Polish origin and private seller first
+    kind = rules.body_kind(car)
+    s += {"small": 6, "minivan": -6}.get(kind, 0)  # Sylwia wants a small car
     s += (car["year"] - config.YEAR_MIN) * 2
     s += (config.KM_SOFT - min(car["km"], config.KM_SOFT)) / 10000
     s -= 3 if car["price"] > 29000 else 0
@@ -22,10 +25,14 @@ def score(car):
 
 
 def _eligible(car):
-    # Kamil, 10.11: Polecane only from Poland since new (full CEPiK history) and from a private seller
+    # Polish origin and private seller are score bonuses (Kamil, 10.11); vans and minivans never get recommended
     return (car.get("status") == "active" and not car.get("reject") and not car.get("out")
             and not car.get("pending") and not car.get("manual")
-            and (car.get("facts") or {}).get("salonPL") and car.get("seller") == "prywatnie")
+            and rules.body_kind(car) not in ("van", "minivan"))
+
+
+def _model(car):
+    return (car.get("make"), car.get("model")) if car.get("model") else car.get("name")
 
 
 def why_text(car):
@@ -61,10 +68,18 @@ def pick_top(cars, pins):
     pinned = {c["id"] for c in slots.values()}
     pool = sorted((c for c in cars if _eligible(c) and c["id"] not in pinned), key=lambda c: -c["score"])
     free = [r for r in (1, 2, 3) if r not in slots]
-    auto = pool[:len(free)]
+    models = {_model(c) for c in slots.values()}
+    auto, rest = [], []
+    for c in pool:  # no two cars of the same model in the top three
+        if len(auto) < len(free) and _model(c) not in models:
+            auto.append(c)
+            models.add(_model(c))
+        else:
+            rest.append(c)
 
     if auto and not any(c["fuel"] in DIVERSE for c in list(slots.values()) + auto):
-        alt = next((c for c in pool[len(free):] if c["fuel"] in DIVERSE), None)
+        taken = {_model(c) for c in list(slots.values()) + auto[:-1]}
+        alt = next((c for c in rest if c["fuel"] in DIVERSE and _model(c) not in taken), None)
         if alt and len(auto) == len(free) and alt["score"] >= auto[-1]["score"] - DIVERSITY_GAP:
             auto[-1] = alt
 

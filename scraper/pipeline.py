@@ -118,6 +118,28 @@ def _details(cars, fetcher, today, limit, errors):
         errors.append("Nie udało się pobrać %d ogłoszeń. Spróbuję przy następnej aktualizacji." % failed)
 
 
+def finalize(cars, data, today, errors):
+    """Overrides, rules that need no listing page, score and Polecane. Runs every day without network."""
+    ov, ov_error = overrides.load(data / "overrides.json")
+    if ov_error:
+        errors.append(ov_error)
+    try:
+        cars = overrides.apply(cars, ov, today, errors)
+    except Exception as e:  # a section with the wrong type, e.g. "notes": []
+        errors.append("overrides.json ma błąd i został pominięty: %r" % e)
+        cars = overrides.apply([c for c in cars if not c.get("manual")], {}, today)
+    for car in cars:
+        car["reject"] = car.get("reject") or rules.kind_reject(car)
+        car["out"] = rules.soft_out(car)
+        car["score"] = ranking.score(car)
+    ranking.pick_top(cars, overrides.pins(cars, ov))
+    for car in cars:
+        if visible(car) and not car.get("shownSince"):
+            car["shownSince"] = today
+    cars.sort(key=lambda c: (c["status"] != "active", bool(c.get("reject")), c.get("top") or 9, -c["score"]))
+    return cars
+
+
 def run(root, fetcher, now, ran_by, detail_limit, force):
     data = Path(root) / "data"
     offers_path, meta_path = data / "offers.json", data / "meta.json"
@@ -140,22 +162,7 @@ def run(root, fetcher, now, ran_by, detail_limit, force):
     cars, _ = store.merge(store.load(offers_path, []), seen, today, complete)
     _details(cars, fetcher, today, detail_limit, errors)
 
-    ov, ov_error = overrides.load(data / "overrides.json")
-    if ov_error:
-        errors.append(ov_error)
-    try:
-        cars = overrides.apply(cars, ov, today, errors)
-    except Exception as e:  # a section with the wrong type, e.g. "notes": []
-        errors.append("overrides.json ma błąd i został pominięty: %r" % e)
-        cars = overrides.apply([c for c in cars if not c.get("manual")], {}, today)
-    for car in cars:
-        car["out"] = rules.soft_out(car)
-        car["score"] = ranking.score(car)
-    ranking.pick_top(cars, overrides.pins(cars, ov))
-    for car in cars:
-        if visible(car) and not car.get("shownSince"):
-            car["shownSince"] = today
-    cars.sort(key=lambda c: (c["status"] != "active", bool(c.get("reject")), c.get("top") or 9, -c["score"]))
+    cars = finalize(cars, data, today, errors)
 
     active = [c for c in cars if c["status"] == "active"]
     meta = {
