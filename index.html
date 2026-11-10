@@ -113,6 +113,17 @@ h2.book { font-size: 1.95rem; line-height: 1.02; font-weight: 850; font-stretch:
 .out svg { width: 20px; height: 20px; color: var(--stamp); }
 .new-entry { margin: 0 0 6px; color: var(--stamp); font-size: .875rem; font-weight: 700; }
 .price { font: 800 1.4rem/1.1 var(--f-book); font-stretch: 100%; font-variant-numeric: tabular-nums; }
+.nw { white-space: nowrap; }
+/* Pasted photo (first photo of the listing, linked from Otomoto) */
+.shot { position: relative; margin: 0; padding: 6px; background: #fff7fa; border-radius: 2px; box-shadow: 0 2px 6px -2px rgba(74, 14, 40, .35); }
+.shot img { display: block; width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: cover; background: #f0c4d5; }
+.shot .pc { position: absolute; width: 20px; height: 20px; background: #24121c; }
+.shot .pc-tl { top: 0; left: 0; clip-path: polygon(0 0, 100% 0, 0 100%); }
+.shot .pc-tr { top: 0; right: 0; clip-path: polygon(0 0, 100% 0, 100% 100%); }
+.shot .pc-bl { bottom: 0; left: 0; clip-path: polygon(0 0, 0 100%, 100% 100%); }
+.shot .pc-br { bottom: 0; right: 0; clip-path: polygon(100% 0, 100% 100%, 0 100%); }
+.entry.top .shot-wrap { position: relative; }
+.entry.top .shot-wrap .stamp-round { position: absolute; right: -6px; bottom: -22px; margin: 0; z-index: 1; }
 .price-note { grid-column: 1; font-size: .9rem; color: var(--ink-2); font-variant-numeric: tabular-nums; }
 .avg { font-weight: 650; font-variant-numeric: tabular-nums; padding-top: 4px; }
 .fields { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 16px; }
@@ -470,7 +481,7 @@ h2.book { font-size: 1.95rem; line-height: 1.02; font-weight: 850; font-stretch:
     var diff = Math.round((c.price - a.mean) / 100) * 100;
     var text = Math.abs(c.price - a.mean) <= a.mean * AVG_BAND ? 'W średniej cenie'
       : nb(Math.abs(diff)) + '&nbsp;zł ' + (diff < 0 ? 'poniżej' : 'powyżej') + ' średniej';
-    return '<p class="price-note">' + text + ' (' + nb(a.mean) + '&nbsp;zł z ' + a.n + ' ofert)</p>';
+    return '<p class="price-note">' + text + ' <span class="nw">(' + nb(a.mean) + '&nbsp;zł z ' + a.n + ' ofert)</span></p>';
   }
   function visible(c) { return c.status === 'active' && !c.reject && (c.detailed || c.inAc || c.manual); }
 
@@ -498,13 +509,21 @@ h2.book { font-size: 1.95rem; line-height: 1.02; font-weight: 850; font-stretch:
     if (c.olx) s += '<a class="go' + (c.oto ? ' alt' : '') + '" href="' + esc(c.olx) + '" target="_blank" rel="noopener"><span class="sr">Otwórz ogłoszenie na </span>OLX<span class="sr"> (nowa karta)</span></a>';
     return s;
   }
+  function shot(c) {
+    if (!c.photo || !/^https:\/\//.test(c.photo)) return '';
+    return '<figure class="shot"><img src="' + esc(c.photo) + '" alt="" width="640" height="480" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.closest(\'figure\').remove()">' +
+      '<i class="pc pc-tl"></i><i class="pc pc-tr"></i><i class="pc pc-bl"></i><i class="pc pc-br"></i></figure>';
+  }
   function entry(c, ranked, pressId) {
     var picked = calls.indexOf(c.id) > -1;
     var engine = /gaz|hybryd/.test(c.engine) ? c.engine : c.engine + ', ' + FUEL[c.fuel];
     var pending = !c.detailed && !c.manual;
     return '<article class="entry' + (ranked ? ' top' : '') + (picked ? ' picked' : '') + '" data-id="' + esc(c.id) + '">' +
       (ranked ? '<p class="ledger" aria-hidden="true"><span>Wpis ' + c.top + '</span><span>polecane</span><span>' + stampDate + '</span></p>' : '') +
-      '<div class="entry-h">' + (ranked ? roundStamp(c.top) : '') + (picked ? callStamp(pressId === c.id) : '') +
+      (ranked && c.photo ? '<div class="shot-wrap">' + shot(c) + roundStamp(c.top) + '</div>' : '') +
+      (!ranked ? shot(c) : '') +
+      '<div class="entry-h">' +
+        (ranked && !c.photo ? roundStamp(c.top) : '') + (picked ? callStamp(pressId === c.id) : '') +
         '<h3>' + (ranked ? '<span class="sr">Polecane numer ' + c.top + ': </span>' : '') + esc(c.name) + (picked ? '<span class="sr"> (na liście do telefonu)</span>' : '') + '</h3><p class="price">' + nb(c.price) + '&nbsp;zł</p>' + priceNote(c) + '</div>' +
       (c.fresh ? '<p class="new-entry">Nowa na liście</p>' : '') +
       (c.out ? '<p class="out">' + mark('m-ask') + '<span>Poza kryteriami: ' + esc(c.out) + '</span></p>' : '') +
