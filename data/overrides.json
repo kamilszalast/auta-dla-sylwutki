@@ -1,0 +1,189 @@
+{
+ "_instrukcja": [
+  "Ten plik edytuje tylko Kamil (np. w przeglądarce na GitHubie). Codzienny skrypt go czyta i nigdy nie zapisuje.",
+  "Klucz auta to link do ogłoszenia na Otomoto (albo id z data/offers.json, np. otomoto:6150771539).",
+  "exclude: [{\"key\": link, \"reason\": powód}] — auto trafia do Odrzuconych z dopiskiem Kamil.",
+  "notes: {link: {plus, watch, why, olx}} — tekst zastępuje automatyczny, olx dodaje drugi link.",
+  "pin: {link: 1..3} — miejsce w Polecanych. equipment: {link: {ac|cam|pdc|cp: 0/1/2}} — po rozmowie ze sprzedającym.",
+  "manual: auta spoza Otomoto, widoczne 14 dni od daty checked."
+ ],
+ "exclude": [],
+ "notes": {
+  "https://www.otomoto.pl/osobowe/oferta/opel-astra-ID6IisiI.html": {
+   "plus": "Serwis w ASO, bezwypadkowy, wentylowane fotele, reflektory LED Matrix.",
+   "why": "Najbogatszy egzemplarz na liście, z polskiego salonu i od pierwszego właściciela. Duży bagażnik.",
+   "olx": "https://www.olx.pl/d/oferta/opel-astra-opel-astra-k-2019-bogate-wyposazenie-pierwszy-wlasciciel-bezwpadkowy-CID5-ID1cYZox.html"
+  },
+  "https://www.otomoto.pl/osobowe/oferta/citroen-c3-ID6Ig0Y5.html": {
+   "plus": "Bezwypadkowy, jeden właściciel, serwisowany, nawigacja.",
+   "why": "Najmłodsze auto z pełnym wyposażeniem. Małe, zwrotne i tanie w utrzymaniu, dobre do miasta.",
+   "olx": "https://www.olx.pl/d/oferta/citroen-c3-serwisowany-bogate-wyposazenie-alufelgi-nawi-1-5-102km-kamera-asystent-CID5-ID1csROm.html"
+  },
+  "https://www.otomoto.pl/osobowe/oferta/opel-meriva-ID6IjlOu.html": {
+   "plus": "Polski salon, jeden właściciel, serwis w ASO, bezwypadkowa, czujniki z przodu i z tyłu, nowy akumulator.",
+   "why": "Najlepsza na krótkie trasy po mieście: gaz montowany w fabryce, wysoko się siedzi i wygodnie wsiada.",
+   "olx": "https://www.olx.pl/d/oferta/opel-meriva-salon-pl-i-wl-kamera-klima-auto-lpg-led-CID5-ID1dbo5m.html"
+  },
+  "https://www.otomoto.pl/osobowe/oferta/peugeot-2008-ID6Ii0xz.html": {
+   "plus": "Dwustrefowa klima, tylne czujniki. Sprzedający podaje wymianę rozrządu i oleju w skrzyni.",
+   "watch": "Zapytaj o dokumenty instalacji LPG i termin ważności butli."
+  },
+  "https://www.otomoto.pl/osobowe/oferta/opel-astra-ID6IiZ4n.html": {
+   "plus": "Polski salon, pierwszy właściciel i serwis w ASO według ogłoszenia. Czujniki z przodu i z tyłu."
+  },
+  "https://www.otomoto.pl/osobowe/oferta/renault-megane-ID6Ijhh6.html": {
+   "plus": "Automatyczna klima i tempomat. Cena zostawia 10 100 zł z budżetu.",
+   "watch": "Zapytaj, kiedy wymieniono rozrząd."
+  },
+  "https://www.otomoto.pl/osobowe/oferta/peugeot-2008-ID6Ig0Ez.html": {
+   "plus": "Dwustrefowa klima i tylne czujniki.",
+   "watch": "Sprowadzony z Francji. Poproś o historię serwisową."
+  },
+  "https://www.otomoto.pl/osobowe/oferta/peugeot-308-ID6IavwA.html": {
+   "plus": "Bezwypadkowy, serwisowany, dwustrefowa klima, ekran dotykowy.",
+   "watch": "Sprowadzony. Zapytaj o historię serwisu i naprawy układu AdBlue.",
+   "olx": "https://www.olx.pl/d/oferta/peugeot-308-niski-przebieg-ladny-CID5-ID1byQYw.html"
+  },
+  "https://www.otomoto.pl/osobowe/oferta/peugeot-308-ID6IjfgK.html": {
+   "plus": "Bezwypadkowy, jeden właściciel, serwisowany, dach panoramiczny, czujniki z przodu i z tyłu.",
+   "olx": "https://www.olx.pl/d/oferta/peugeot-308-bezwypadkowy-serisowany-1-wlasciciel-navi-led-panorama-pdc-grz-fotele-CID5-ID1d7Uuh.html"
+  },
+  "https://www.otomoto.pl/osobowe/oferta/opel-astra-ID6HWyvU.html": {
+   "plus": "Przebieg potwierdzony w książce serwisowej, dwa oryginalne kluczyki.",
+   "watch": "Sprowadzony z Niemiec. Czujniki tylko z tyłu."
+  },
+  "https://www.otomoto.pl/osobowe/oferta/ford-focus-ID6IeV8Z.html": {
+   "plus": "Od pierwszego właściciela z Niemiec, oryginalny lakier, sprzedawca pokaże raport Carvertical."
+  },
+  "https://www.otomoto.pl/osobowe/oferta/citroen-c3-ID6Idi9t.html": {
+   "plus": "Bardzo mały przebieg jak na rocznik.",
+   "watch": "Przy tak niskim przebiegu sprawdź historię na historiapojazdu.gov.pl."
+  },
+  "https://www.otomoto.pl/osobowe/oferta/peugeot-2008-ID6IfUyz.html": {
+   "plus": "Wyżej się siedzi, asystent pasa ruchu, ostrzeganie przed kolizją.",
+   "watch": "W opisie przebieg „9 347 km” i sama „klimatyzacja”. Dopytaj o przebieg i czy klima jest automatyczna."
+  },
+  "https://www.otomoto.pl/osobowe/oferta/opel-astra-ID6IhGLE.html": {
+   "plus": "Bezwypadkowy, jeden właściciel, serwis w ASO.",
+   "watch": "W ogłoszeniu jest tylko Android Auto. Zapytaj, czy działa CarPlay.",
+   "olx": "https://www.olx.pl/d/oferta/opel-astra-118-000km-CID5-ID1cNw40.html"
+  },
+  "https://www.otomoto.pl/osobowe/oferta/opel-meriva-ID6IiJZa.html": {
+   "plus": "Bezwypadkowa, serwis w ASO, dwa komplety kół, opłacona.",
+   "watch": "Sprowadzona z Niemiec.",
+   "olx": "https://www.olx.pl/d/oferta/opel-meriva-1-6cdti-110km-6b-led-kamera-pdc-tempomat-grz-fotele-oplaty-gwarancja-CID5-ID1d1c3x.html"
+  },
+  "https://www.otomoto.pl/osobowe/oferta/nissan-juke-ID6IiFOz.html": {
+   "plus": "Od pierwszego właściciela z Niemiec, bezwypadkowy, serwis w ASO.",
+   "olx": "https://www.olx.pl/d/oferta/nissan-juke-kamera-cofania-klimatronic-alu-CID5-ID1d0rQ6.html"
+  },
+  "https://www.otomoto.pl/osobowe/oferta/opel-mokka-ID6Iiqyi.html": {
+   "plus": "Świeżo wymienione oleje, filtry, tarcze i klocki z przodu. Opony zimowe w komplecie.",
+   "watch": "Do naprawy czujnik ciśnienia w oponach, według sprzedającego ok. 400 zł.",
+   "olx": "https://www.olx.pl/d/oferta/opel-mokka-opel-mokka-2016-hak-niski-przebieg-1-6-136km-CID5-ID1cX7SE.html"
+  },
+  "https://www.otomoto.pl/osobowe/oferta/kia-ceed-ID6IiIc8.html": {
+   "plus": "Wersja po liftingu, bogate wyposażenie.",
+   "watch": "Sprowadzona, przebieg blisko limitu."
+  },
+  "https://www.otomoto.pl/osobowe/oferta/citroen-c4-picasso-ID6Iiu3M.html": {
+   "plus": "Cała historia serwisowa z fakturami. Wymieniony rozrząd, turbo i sprzęgło.",
+   "watch": "Silnik THP źle znosi zaniedbania. Pali więcej niż reszta, ok. 11–12 l gazu.",
+   "olx": "https://www.olx.pl/d/oferta/citroen-c4-picasso-1-6-thp-156-km-lpg-nowy-rozrzad-turbo-sprzeglo-hak-CID5-ID1cYaOh.html"
+  },
+  "https://www.otomoto.pl/osobowe/oferta/mazda-5-ID6If7Hj.html": {
+   "plus": "Bezwypadkowa, mały przebieg, dwa komplety opon, przesuwne tylne drzwi.",
+   "watch": "Najstarsza na liście, sprowadzona z Niemiec."
+  },
+  "https://www.otomoto.pl/osobowe/oferta/citroen-c-elysee-ID6IiuGw.html": {
+   "plus": "Polski salon, jeden właściciel, bezwypadkowy. Prosta i tania w naprawach konstrukcja."
+  },
+  "https://www.otomoto.pl/osobowe/oferta/honda-insight-ID6IjpoO.html": {
+   "plus": "Automatyczna klima, podgrzewane fotele, czujniki z tyłu.",
+   "watch": "Sprawdź baterię hybrydy.",
+   "olx": "https://www.olx.pl/d/oferta/honda-insight-CID5-ID1d9PEf.html"
+  },
+  "https://www.otomoto.pl/osobowe/oferta/honda-jazz-ID6IbyDV.html": {
+   "plus": "Bardzo pakowne małe auto, dach panoramiczny.",
+   "watch": "Sprowadzona ze Szwajcarii, bez kamery i czujników. Sprawdź baterię hybrydy.",
+   "olx": "https://www.olx.pl/d/oferta/honda-jazz-automat-hybryda-niski-przebieg-szwajcaria-CID5-ID1bJ0TY.html"
+  },
+  "https://www.otomoto.pl/osobowe/oferta/toyota-auris-ID6IiPyz.html": {
+   "plus": "Jeden właściciel, serwis w ASO, bezwypadkowa. Napęd hybrydowy Toyoty dobrze znosi duże przebiegi.",
+   "watch": "Bez kamery i czujników."
+  }
+ },
+ "pin": {},
+ "equipment": {},
+ "manual": [
+  {
+   "id": "olx:clio-17",
+   "name": "Renault Clio IV",
+   "engine": "1.5 dCi, 110 KM",
+   "fuel": "on",
+   "gear": "manualna",
+   "body": "hatchback",
+   "year": 2017,
+   "km": 75563,
+   "price": 28900,
+   "city": "Oświęcim",
+   "seller": "komis",
+   "equipment": {
+    "ac": 1,
+    "cam": 1,
+    "pdc": 1,
+    "cp": 0
+   },
+   "plus": "Mały przebieg, nawigacja, światła LED. Jeden z najoszczędniejszych silników na liście.",
+   "watch": "Ogłoszenie jest tylko na OLX.",
+   "olx": "https://www.olx.pl/d/oferta/renault-clio-iv-1-5-1-5dci-110km-climatronic-navi-kamera-full-led-CID5-ID1cuRnS.html",
+   "checked": "2026-11-10"
+  },
+  {
+   "id": "olx:meriva-lpg-16",
+   "name": "Opel Meriva",
+   "engine": "1.4 Turbo, 120 KM, gaz",
+   "fuel": "lpg",
+   "gear": "manualna",
+   "body": "minivan",
+   "year": 2016,
+   "km": 94000,
+   "price": 23900,
+   "city": "Sosnowiec",
+   "seller": "prywatnie",
+   "equipment": {
+    "ac": 1,
+    "cam": 1,
+    "pdc": 2,
+    "cp": 0
+   },
+   "plus": "Bogata wersja Cosmo, dwustrefowa klima, koła zimowe, hak.",
+   "watch": "Sprowadzona. Sprzedający podaje, że prawy tylny błotnik wymaga lakierowania. Zapytaj o przyczynę i czujniki.",
+   "olx": "https://www.olx.pl/d/oferta/opel-meriva-opel-meriva-2016-lpg-wersja-cosmo-bogate-wyposazenie-CID5-ID1cYKbl.html",
+   "checked": "2026-11-10"
+  },
+  {
+   "id": "olx:insight-11",
+   "name": "Honda Insight",
+   "engine": "1.3 hybryda, 100 KM",
+   "fuel": "hev",
+   "gear": "automat",
+   "body": "hatchback",
+   "year": 2011,
+   "km": 70000,
+   "price": 24500,
+   "city": "Kraków",
+   "seller": "prywatnie",
+   "equipment": {
+    "ac": 2,
+    "cam": 1,
+    "pdc": 0,
+    "cp": 2
+   },
+   "plus": "Najlepsza hybryda w budżecie: mały przebieg, kamera cofania, skórzana tapicerka, bez korozji.",
+   "watch": "W opisie „klima” i radio z Androidem. Dopytaj, czy klima jest automatyczna i czy radio obsługuje CarPlay. Sprawdź baterię hybrydy.",
+   "olx": "https://www.olx.pl/d/oferta/honda-insight-hybryda-2011r-tylko-70tys-przebiegu-kamera-cofania-nowa-cena-na-weekend-CID5-ID1cjTqU.html",
+   "checked": "2026-11-10"
+  }
+ ]
+}
