@@ -59,19 +59,23 @@ a { color: inherit; text-underline-offset: 3px; text-decoration-thickness: 1px; 
 h1 { font-size: clamp(2.15rem, 9.4vw, 3.3rem); line-height: .9; font-weight: 900; font-stretch: 125%; letter-spacing: -0.025em; }
 .masthead h1 { white-space: nowrap; }
 .masthead { display: grid; grid-template-columns: auto minmax(0, 1fr); align-items: end; column-gap: 10px; }
-.car { display: block; width: 100%; max-width: 230px; height: auto; justify-self: end; margin-bottom: -2px; overflow: visible; }
-.car path, .car rect, .car circle { stroke: var(--on-cover); stroke-width: 2.4; stroke-linecap: round; stroke-linejoin: round; }
+.car { display: block; width: 100%; max-width: 240px; height: auto; justify-self: end; margin-bottom: -2px; overflow: visible; }
+.car path, .car rect, .car circle, .car ellipse { stroke: var(--on-cover); stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; }
 .car .car-body { fill: var(--label); }
-.car .car-pillar { stroke: var(--label); stroke-width: 4.5; }
-.car .car-glass, .car .car-spoiler, .car .car-mirror, .car .car-tail, .car .tyre, .car .hub { fill: var(--on-cover); }
-.car .car-line, .car .car-speed path, .car .car-shadow { fill: none; }
-.car .car-stripe { fill: none; stroke-width: 4.5; }
-.car .car-stripe.thin { stroke-width: 1.8; }
+.car .car-glass, .car .car-tail, .car .tyre { fill: var(--on-cover); }
+.car .car-line, .car .car-speed path, .car .car-shadow, .car .car-antenna, .car .car-spoiler, .car .car-spoiler-accent, .car .car-hatch { fill: none; }
+.car .car-pillar { stroke: var(--label); stroke-width: 6; }
+.car .car-spoiler { stroke-width: 5.5; }
+.car .car-spoiler-accent { stroke: var(--cover); stroke-width: 2; }
+.car .car-antenna { stroke-width: 1.6; }
+.car .car-accent, .car .car-mirror, .car .hub { fill: var(--cover); stroke-width: 1.4; }
+.car .car-hatch { stroke: var(--cover); stroke-width: 2.4; }
+.car .car-tail { fill: var(--cover); stroke-width: 1.6; }
 .car .car-speed path { opacity: .55; stroke-width: 2.6; }
 .car .car-shadow { opacity: .3; stroke-width: 3; }
-.car .car-lamp { fill: #fff; }
-.car .rim { fill: var(--cover); stroke-width: 2; }
-.car .spoke { fill: none; stroke-width: 2.2; }
+.car .car-lamp { fill: #fff; stroke-width: 1.8; }
+.car .rim { fill: #fff; stroke-width: 1.8; }
+.car .spoke { fill: none; stroke-width: 1.5; }
 .deck { font: 600 1.05rem/1.3 var(--f-book); font-stretch: 105%; }
 .when { font-size: .97rem; max-width: 34ch; }
 .toc { display: flex; flex-wrap: wrap; gap: 0 14px; font-weight: 650; font-size: .95rem; margin-block: -8px; }
@@ -242,22 +246,26 @@ h2.book { font-size: 1.95rem; line-height: 1.02; font-weight: 850; font-stretch:
   <div class="in">
     <div class="masthead">
       <h1>Auta dla<br> Sylwutki</h1>
-      <svg class="car" viewBox="0 0 240 120" aria-hidden="true" focusable="false">
-        <g class="car-speed"><path d="M2 48h15M7 60h13M0 72h15"/></g>
-        <path class="car-shadow" d="M40 108h162"/>
-        <path class="car-body" d="M30 92c-5-2-7-7-7-14v-12c0-8 3-14 7-18c6-18 28-28 62-29c28-1 46 5 58 27c22 2 42 8 52 16c8 6 9 18 5 26l-3 4h-8a24 24 0 1 0-48 0h-58a24 24 0 1 0-48 0z"/>
-        <path class="car-glass" d="M37 50c6-15 25-23 55-24c24-1 39 5 49 23z"/>
-        <path class="car-pillar" d="M100 25v26M58 31v20"/>
-        <path class="car-spoiler" d="M47 30l-17 6l2 5l15-3z"/>
-        <path class="car-line" d="M29 55c40-2 80-3 121-4M104 55v34M146 53c3 11 3 23 0 35M110 61h10M197 81c5 0 9-1 12-3M22 81h8"/>
-        <path class="car-stripe" d="M90 78h58"/>
-        <path class="car-stripe thin" d="M90 84h58"/>
-        <path class="car-mirror" d="M143 44l10-2l1 6l-8 1z"/>
-        <rect class="car-tail" x="22" y="60" width="5" height="12" rx="2"/>
-        <circle class="car-lamp" cx="200" cy="66" r="6.5"/>
-        <path class="car-line" d="M17 96h12"/>
-        <g class="car-wheel" transform="translate(66 92)"><circle class="tyre" r="18"/><circle class="rim" r="11"/><path class="spoke" d="M0 0V-9.5M0 0L9-2.9M0 0L5.6 7.7M0 0L-5.6 7.7M0 0L-9-2.9"/><circle class="hub" r="2.7"/></g>
-        <g class="car-wheel" transform="translate(172 92)"><circle class="tyre" r="18"/><circle class="rim" r="11"/><path class="spoke" d="M0 0V-9.5M0 0L9-2.9M0 0L5.6 7.7M0 0L-5.6 7.7M0 0L-9-2.9"/><circle class="hub" r="2.7"/></g>
+      <svg class="car" viewBox="-16 -6 266 121" aria-hidden="true" focusable="false">
+        <g class="car-speed"><path d="M-14 44h16M-10 58h14M-15 72h16"/></g>
+        <path class="car-shadow" d="M30 112h196"/>
+        <path class="car-antenna" d="M71 15L60 -3"/>
+        <path class="car-body" d="M22 99c-5-2-7-6-7-13v-20c0-10 2-16 6-20c5-14 15-22 25-25c24-7 49-9 70-8c16 1 30 4 37 8c12 7 23 17 32 24c15 3 29 6 37 10c12 5 20 13 21 23v14c0 5-2 8-6 8h-16a24 24 0 1 0-44 0h-105a24 24 0 1 0-44 0z"/>
+        <path class="car-glass" d="M56 44c4-13 16-21 36-24c20-2 40-1 54 2c8 6 14 14 19 22z"/>
+        <path class="car-pillar" d="M98 18v28"/>
+        <path class="car-spoiler" d="M36 21c12-4 26-6 40-7"/>
+        <path class="car-spoiler-accent" d="M44 17c9-2 18-3 27-4"/>
+        <path class="car-line" d="M18 47c50-2 100-3 149-2M96 47c-1 17 0 34 2 51M166 46c3 15 4 30 3 46M104 56h10M222 92h20M15 84h11"/>
+        <path class="car-accent" d="M114 77h62v4.5h-62z"/>
+        <path class="car-hatch" d="M72 81.5l3 -4.5M77 81.5l3 -4.5M82 81.5l3 -4.5M87 81.5l3 -4.5M92 81.5l3 -4.5M97 81.5l3 -4.5M102 81.5l3 -4.5M107 81.5l3 -4.5M112 81.5l3 -4.5"/>
+        <path class="car-mirror" d="M157 40l10-2l2 7l-10 2z"/>
+        <ellipse class="car-tail" cx="21" cy="58" rx="3.5" ry="7.5"/>
+        <circle class="car-line" cx="39" cy="57" r="3"/>
+        <ellipse class="car-lamp" cx="226" cy="60" rx="7.5" ry="5.5"/>
+        <circle class="car-lamp" cx="236" cy="85" r="2.6"/>
+        <path class="car-line" d="M8 99h12"/>
+        <g class="car-wheel" transform="translate(48 91)"><circle class="tyre" r="19"/><circle class="rim" r="13"/><path class="spoke" d="M4.5 0.0L12.0 0.0 M3.6 2.6L9.7 7.1 M1.4 4.3L3.7 11.4 M-1.4 4.3L-3.7 11.4 M-3.6 2.6L-9.7 7.1 M-4.5 0.0L-12.0 0.0 M-3.6 -2.6L-9.7 -7.1 M-1.4 -4.3L-3.7 -11.4 M1.4 -4.3L3.7 -11.4 M3.6 -2.6L9.7 -7.1"/><circle class="hub" r="3.6"/></g>
+        <g class="car-wheel" transform="translate(197 91)"><circle class="tyre" r="19"/><circle class="rim" r="13"/><path class="spoke" d="M4.5 0.0L12.0 0.0 M3.6 2.6L9.7 7.1 M1.4 4.3L3.7 11.4 M-1.4 4.3L-3.7 11.4 M-3.6 2.6L-9.7 7.1 M-4.5 0.0L-12.0 0.0 M-3.6 -2.6L-9.7 -7.1 M-1.4 -4.3L-3.7 -11.4 M1.4 -4.3L3.7 -11.4 M3.6 -2.6L9.7 -7.1"/><circle class="hub" r="3.6"/></g>
       </svg>
     </div>
     <p class="deck">Książka poszukiwań auta</p>
