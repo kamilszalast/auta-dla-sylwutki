@@ -1,5 +1,7 @@
 """One daily run: search lists, fetch new listings, apply rules and overrides, write data/."""
 import math
+import os
+import time
 from datetime import datetime
 from pathlib import Path
 
@@ -9,6 +11,7 @@ from .http import Blocked, FetchError, NotFound
 LABELS = {"on": "diesel", "lpg": "gaz", "hev": "hybryda", "pb": "Opel Adam"}
 OLX_STATUS = "zablokowane dla automatu (403), sprawdzaj ręcznie"
 MAX_PAGES = 20
+clock = time.monotonic
 
 
 def visible(car):
@@ -33,12 +36,18 @@ def _search(fetcher, errors):
                 except Blocked as e:
                     errors.append("Otomoto zablokowało wyszukiwanie (%s): %s" % (label, e))
                     return seen, False, any_ok
-                except (FetchError, ValueError) as e:
+                except Exception as e:  # one broken query must not stop the others
                     errors.append("Otomoto, %s, strona %d: %s" % (label, page, e))
                     complete = False
                     break
                 any_ok = True
+                if total == 0:
+                    complete = False  # an empty search is more likely a changed filter than no cars at all
                 pages = min(MAX_PAGES, math.ceil(total / config.PAGE_SIZE))
+                if total > MAX_PAGES * config.PAGE_SIZE:
+                    if page == 1:
+                        errors.append("Otomoto, %s: %d wyników, pobieram tylko %d stron" % (label, total, MAX_PAGES))
+                    complete = False
                 for item in items:
                     if rules.hard_ok(item):
                         cid = "otomoto:" + item["otoId"]
@@ -59,34 +68,52 @@ def _store_classification(car, result):
 
 
 def _details(cars, fetcher, today, limit, errors):
-    queue = []
+    """Fetch listing pages: new cars first, then cars checked with older rules."""
+    new, outdated = [], []
     for car in cars:
-        if car["status"] != "active" or car.get("detailed") or car.get("manual"):
+        if car["status"] != "active" or car.get("manual"):
+            continue
+        if car.get("detailed"):
+            if car.get("rulesVersion", 1) < rules.RULES_VERSION:
+                outdated.append(car)
             continue
         _store_classification(car, rules.classify(car, None, car.get("inAc")))
         if not car["auto"]["reject"]:
-            queue.append(car)
-    queue.sort(key=lambda c: (not c.get("inAc"), -c["year"], c["km"]))
-    failed = 0
-    for car in queue[:limit]:
+            new.append(car)
+    new.sort(key=lambda c: (not c.get("inAc"), -c["year"], c["km"]))
+    outdated.sort(key=lambda c: not (c.get("auto") or {}).get("reject"))
+    failed = in_row = 0
+    start = clock()
+    for car in (new + outdated)[:limit]:
+        if clock() - start > config.DETAIL_BUDGET_S:
+            errors.append("Pobieranie ogłoszeń przerwane po %d minutach. Reszta przy następnej aktualizacji."
+                          % (config.DETAIL_BUDGET_S // 60))
+            break
+        if in_row >= config.MAX_FAILURES_IN_ROW:
+            errors.append("Pobieranie ogłoszeń przerwane po %d błędach z rzędu. Reszta przy następnej aktualizacji."
+                          % in_row)
+            break
         try:
             ad = otomoto.parse_ad(fetcher.get(car["links"]["otomoto"]))
         except NotFound:
             car.update(status="gone", goneSince=today)
+            in_row = 0
             continue
         except Blocked as e:
             errors.append("Otomoto zablokowało pobieranie ogłoszeń (%s). Reszta przy następnej aktualizacji." % e)
             break
-        except (FetchError, ValueError):
+        except Exception:  # FetchError, a changed page layout or anything unexpected: skip this car
             failed += 1
+            in_row += 1
             continue
+        in_row = 0
         if ad["status"] != "ACTIVE":
             car.update(status="gone", goneSince=today)
             continue
         if ad["price"]:
             car["price"] = ad["price"]
         _store_classification(car, rules.classify(car, ad, car.get("inAc")))
-        car.update(detailed=True, detailedAt=today)
+        car.update(detailed=True, detailedAt=today, rulesVersion=rules.RULES_VERSION)
     if failed:
         errors.append("Nie udało się pobrać %d ogłoszeń. Spróbuję przy następnej aktualizacji." % failed)
 
@@ -116,7 +143,11 @@ def run(root, fetcher, now, ran_by, detail_limit, force):
     ov, ov_error = overrides.load(data / "overrides.json")
     if ov_error:
         errors.append(ov_error)
-    cars = overrides.apply(cars, ov, today)
+    try:
+        cars = overrides.apply(cars, ov, today, errors)
+    except Exception as e:  # a section with the wrong type, e.g. "notes": []
+        errors.append("overrides.json ma błąd i został pominięty: %r" % e)
+        cars = overrides.apply([c for c in cars if not c.get("manual")], {}, today)
     for car in cars:
         car["out"] = rules.soft_out(car)
         car["score"] = ranking.score(car)
@@ -140,6 +171,7 @@ def run(root, fetcher, now, ran_by, detail_limit, force):
     store.save_json(meta_path, meta)
     print("Aktualizacja %s: %d aut na stronie, nowe: %d, odrzucone: %d, czeka na szczegóły: %d."
           % (stamp, meta["activeCount"], meta["newCount"], meta["rejectedCount"], meta["pendingDetails"]))
+    prefix = "::warning::" if os.environ.get("GITHUB_ACTIONS") else "Uwaga: "
     for e in errors:
-        print("Uwaga: " + e)
+        print(prefix + e)
     return 0

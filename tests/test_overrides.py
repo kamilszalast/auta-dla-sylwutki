@@ -58,6 +58,23 @@ class ApplyTest(unittest.TestCase):
                          ("olx:clio-17", "active", True, MANUAL["olx"]))
         self.assertIn("10.11.2026", m["watch"])
 
+    def test_manual_entry_shown_since_checked(self):
+        self.assertEqual(overrides.apply([], {"manual": [MANUAL]}, "2026-11-20")[0]["shownSince"], "2026-11-10")
+
+    def test_bad_entries_skipped_with_errors(self):
+        bad_date = dict(MANUAL, id="olx:a", checked="10.11.2026")
+        no_name = {k: v for k, v in MANUAL.items() if k != "name"}
+        ov = {"manual": [bad_date, no_name, MANUAL, "tekst"],
+              "notes": {URL: "to nie obiekt"}, "exclude": ["zły wpis"], "equipment": {URL: {"cp": 7}},
+              "pin": {URL: "pierwsze"}}
+        errors = []
+        out = overrides.apply([detailed_car()], ov, "2026-11-20", errors)
+        self.assertEqual([c["id"] for c in out], ["otomoto:1", "olx:clio-17"])
+        self.assertEqual(out[0]["equipment"]["cp"], 0)
+        self.assertEqual(len(errors), 5)
+        self.assertTrue(all("overrides.json" in e for e in errors))
+        self.assertEqual(overrides.pins(out, ov), {})
+
     def test_manual_hidden_after_14_days(self):
         m = overrides.apply([], {"manual": [MANUAL]}, "2026-11-25")[0]
         self.assertEqual((m["status"], m["goneSince"]), ("gone", "2026-11-24"))

@@ -30,14 +30,27 @@ def _int(value):
     return int(digits) if digits else None
 
 
+def _page_props(page):
+    try:
+        return _next_data(page)["props"]["pageProps"] or {}
+    except (KeyError, TypeError) as e:
+        raise ValueError("nieoczekiwany układ strony: %r" % e)
+
+
 def parse_list(page):
-    state = _next_data(page)["props"]["pageProps"].get("urqlState") or {}
+    state = _page_props(page).get("urqlState") or {}
     for value in state.values():
-        data = value.get("data")
+        data = (value or {}).get("data")
         data = json.loads(data) if isinstance(data, str) else data
         if data and "advertSearch" in data:
             search = data["advertSearch"]
-            return search["totalCount"], [_item(e["node"]) for e in search["edges"]]
+            items = []
+            for edge in search.get("edges") or []:
+                try:
+                    items.append(_item(edge["node"]))
+                except (KeyError, TypeError, AttributeError):
+                    continue  # one broken result must not stop the whole list
+            return int(search["totalCount"]), items
     raise ValueError("brak wyników wyszukiwania na stronie")
 
 
@@ -80,7 +93,7 @@ def _text(fragment):
 
 
 def parse_ad(page):
-    advert = _next_data(page)["props"]["pageProps"].get("advert")
+    advert = _page_props(page).get("advert")
     if not advert:
         raise ValueError("brak danych ogłoszenia na stronie")
     keys, ac_label = set(), None

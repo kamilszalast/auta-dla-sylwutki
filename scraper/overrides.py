@@ -61,39 +61,61 @@ def _manual(entry, today):
         "out": None, "plus": entry.get("plus"), "watch": watch, "why": None, "score": 0, "top": None,
         "reject": None, "pending": False, "detailed": True, "inAc": False, "manual": True,
         "byKamil": [f for f in ("plus", "watch") if entry.get(f)],
-        "firstSeen": checked, "lastSeen": checked,
+        "firstSeen": checked, "lastSeen": checked, "shownSince": checked,
         "status": "gone" if gone else "active", "goneSince": expires.isoformat() if gone else None,
     }
     return car
 
 
-def apply(cars, ov, today):
+MANUAL_KEYS = ("id", "name", "engine", "fuel", "gear", "year", "km", "price", "city", "seller", "equipment", "checked")
+
+
+def _bad(errors, what, value):
+    errors.append("overrides.json: pominięto %s: %s" % (what, json.dumps(value, ensure_ascii=False)[:120]))
+
+
+def apply(cars, ov, today, errors=None):
+    errors = [] if errors is None else errors
     for c in cars:
         _reset(c)
     idx = _index(cars)
     for rule in ov.get("exclude") or []:
-        car = idx.get(rule.get("key"))
+        if not isinstance(rule, dict) or not rule.get("key"):
+            _bad(errors, "wpis w exclude", rule)
+            continue
+        car = idx.get(rule["key"])
         if car:
-            car["reject"] = "Kamil: " + (rule.get("reason") or "wykluczone ręcznie")
+            car["reject"] = "Kamil: " + str(rule.get("reason") or "wykluczone ręcznie")
             _mark(car, "reject")
     for key, note in (ov.get("notes") or {}).items():
+        if not isinstance(note, dict):
+            _bad(errors, "wpis w notes", {key: note})
+            continue
         car = idx.get(key)
         if not car:
             continue
         for field in NOTE_FIELDS:
             if note.get(field):
-                car[field] = note[field]
+                car[field] = str(note[field])
                 _mark(car, field)
-        if note.get("olx"):
+        if str(note.get("olx") or "").startswith("https://"):
             car["links"]["olx"] = note["olx"]
     for key, values in (ov.get("equipment") or {}).items():
         car = idx.get(key)
-        if car:
+        if car and isinstance(values, dict):
             car["equipment"].update({k: v for k, v in values.items() if k in car["equipment"] and v in (0, 1, 2)})
             _mark(car, "equipment")
-    return cars + [_manual(e, today) for e in ov.get("manual") or []]
+    manual = []
+    for entry in ov.get("manual") or []:
+        try:
+            if not isinstance(entry, dict) or any(k not in entry for k in MANUAL_KEYS):
+                raise ValueError("brakuje pól")
+            manual.append(_manual(entry, today))
+        except (ValueError, TypeError, AttributeError):
+            _bad(errors, "wpis w manual (wymagane pola: %s, data RRRR-MM-DD)" % ", ".join(MANUAL_KEYS), entry)
+    return cars + manual
 
 
 def pins(cars, ov):
     idx = _index(cars)
-    return {idx[k]["id"]: rank for k, rank in (ov.get("pin") or {}).items() if k in idx}
+    return {idx[k]["id"]: rank for k, rank in (ov.get("pin") or {}).items() if k in idx and rank in (1, 2, 3)}

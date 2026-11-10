@@ -7,13 +7,17 @@ AUTO_AC = re.compile(r"klimatroni|climatroni|clima?tronic|klimatyzacja automat|a
                      r"klimatyzacja (dwu|2)[- ]?strefow|dwustrefow|2[- ]strefow|climate control|klima auto", re.I)
 ANY_AC = re.compile(r"klim", re.I)
 CAMERA = re.compile(r"kamer", re.I)
-SENSORS = re.compile(r"czujnik\w*\s+(parkowania|cofania|odległości|park)|parktroni|\bpdc\b|park ?distance|park ?assist", re.I)
+SENSORS = re.compile(r"czujnik\w*\s+(parkowania|cofania|odległości|park|przód|przod|tył|tyl|z przodu|z tyłu)|parktroni|\bpdc\b|park ?distance|park ?assist", re.I)
 CARPLAY = re.compile(r"car ?play", re.I)
 ANDROID_AUTO = re.compile(r"android ?auto", re.I)
 CESJA = re.compile(r"cesj|odstępne|odstepne", re.I)
 DAMAGE = re.compile(r"uszkodz|powypadk|poobijan", re.I)
 REPAIR = re.compile(r"do naprawy", re.I)
-NEGATION = re.compile(r"(\bnie\s*$|\bnie\b|\bnic\b|\bbez\b|\bbrak\w*|\bżadn\w*)", re.I)
+NEGATION = re.compile(r"(\bnie\b|\bnic\b|\bbez\b|\bbrak\w*|\bżadn\w*|\bzero\b|\bwoln\w* od\b)", re.I)
+SENTENCE_END = re.compile(r"[.!?\n]")
+SERVICE_CONTEXT = re.compile(r"\b(przy|do|co|od|po|na)\s+$", re.I)
+NEGATION_WINDOW = 60
+RULES_VERSION = 2
 MILEAGE = re.compile(r"przebieg\w*[^0-9\n]{0,25}?(\d{1,3}(?:[  .]\d{3})+|\d+)\s*(tys|km|kilometr)", re.I)
 
 
@@ -24,7 +28,9 @@ def nb(n):
 def _found(pattern, text):
     """First match of pattern that is not negated by the words just before it."""
     for m in pattern.finditer(text):
-        if not NEGATION.search(text[max(0, m.start() - 14):m.start()]):
+        before = text[max(0, m.start() - NEGATION_WINDOW):m.start()]
+        before = SENTENCE_END.split(before)[-1]
+        if not NEGATION.search(before):
             return m
     return None
 
@@ -68,7 +74,9 @@ def _common_flags(item, text):
 
 
 def _mileage_check(item, text, watch):
-    m = MILEAGE.search(text)
+    """Compares the car's mileage stated in the description ("przebieg 93 500 km"),
+    skipping service intervals such as "przy przebiegu 150 000 km"."""
+    m = next((m for m in MILEAGE.finditer(text) if not SERVICE_CONTEXT.search(text[max(0, m.start() - 8):m.start()])), None)
     if not m:
         return None
     value = int(re.sub(r"\D", "", m.group(1)))

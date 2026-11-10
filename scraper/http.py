@@ -1,4 +1,5 @@
 """Polite HTTP client: one request at a time, pauses, no retries on 403."""
+import http.client
 import random
 import time
 import urllib.error
@@ -47,8 +48,8 @@ class Fetcher:
                 if e.code != 429 and e.code < 500:
                     raise FetchError("%s: HTTP %d" % (url, e.code))
                 error = "HTTP %d" % e.code
-            except (urllib.error.URLError, TimeoutError, ConnectionError) as e:
-                error = str(e)
+            except (http.client.HTTPException, OSError) as e:  # URLError, timeouts, broken reads
+                error = "%s: %s" % (type(e).__name__, e)
             if attempt < len(BACKOFF):
                 self.sleep(BACKOFF[attempt])
         raise FetchError("%s: %s" % (url, error))

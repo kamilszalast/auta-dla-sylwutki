@@ -17,6 +17,8 @@ LOW_KM = 15000             # below this with year <= LOW_KM_YEAR: suspicious
 LOW_KM_YEAR = 2020
 
 DETAIL_LIMIT = 100
+DETAIL_BUDGET_S = 20 * 60   # stop fetching listings after this, publish what we have
+MAX_FAILURES_IN_ROW = 3
 DELAY = (3, 6)
 TIMEZONE = "Europe/Warsaw"
 GONE_DROP_DAYS = 30

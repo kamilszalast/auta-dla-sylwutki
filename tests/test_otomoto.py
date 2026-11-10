@@ -29,6 +29,27 @@ class ParseListTest(unittest.TestCase):
         self.assertEqual((first["price"], first["city"], first["region"]), (28900, "Tomnice", "Wielkopolskie"))
         self.assertEqual(first["origin"], "Francja")
 
+    def test_parse_list_skips_broken_nodes(self):
+        import json, re
+        html = (FIX / "otomoto_list.html").read_text()
+        m = re.search(r'(<script id="__NEXT_DATA__"[^>]*>)(.*?)(</script>)', html, re.S)
+        data = json.loads(m.group(2))
+        inner = json.loads(data["props"]["pageProps"]["urqlState"]["k1"]["data"])
+        edges = inner["advertSearch"]["edges"]
+        del edges[1]["node"]["id"]
+        edges[2] = None
+        edges[3] = {"node": None}
+        data["props"]["pageProps"]["urqlState"]["k1"]["data"] = json.dumps(inner)
+        total, items = otomoto.parse_list(html[:m.start(2)] + json.dumps(data) + html[m.end(2):])
+        self.assertEqual((total, len(items)), (115, 29))
+
+    def test_parse_without_page_props_raises_value_error(self):
+        page = '<script id="__NEXT_DATA__" type="application/json">{"props": {}}</script>'
+        with self.assertRaises(ValueError):
+            otomoto.parse_list(page)
+        with self.assertRaises(ValueError):
+            otomoto.parse_ad(page)
+
     def test_parse_list_without_next_data_raises(self):
         with self.assertRaises(ValueError):
             otomoto.parse_list("<html>captcha</html>")
@@ -134,6 +155,18 @@ class FetcherTest(unittest.TestCase):
         f = Fetcher(delay=(0, 0), sleep=waits.append, opener=opener)
         self.assertEqual(f.get("https://www.otomoto.pl/x"), "ok")
         self.assertEqual(waits[:2], [10, 30])
+
+    def test_read_errors_are_retried(self):
+        import http.client
+        import socket
+        answers = [http.client.IncompleteRead(b""), socket.timeout("timed out"), http.client.BadStatusLine("x")]
+
+        def opener(req, timeout):
+            if answers:
+                raise answers.pop(0)
+            return FakeResponse("ok")
+
+        self.assertEqual(Fetcher(delay=(0, 0), sleep=lambda s: None, opener=opener).get("https://www.otomoto.pl/x"), "ok")
 
     def test_gives_up_after_three_retries(self):
         def opener(req, timeout):

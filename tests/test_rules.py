@@ -45,8 +45,14 @@ class RedFlagsTest(unittest.TestCase):
         self.assertEqual(run("Auto uszkodzone z przodu.")["reject"], "Uszkodzone według opisu")
 
     def test_negated_damage_ok(self):
-        for text in ("Auto nieuszkodzony, bezwypadkowy.", "Stan idealny, bez uszkodzeń.", "Brak uszkodzeń blacharskich."):
+        for text in ("Auto nieuszkodzony, bezwypadkowy.", "Stan idealny, bez uszkodzeń.", "Brak uszkodzeń blacharskich.",
+                     "Brak jakichkolwiek uszkodzeń.", "Auto bez jakichkolwiek uszkodzeń.", "Brak wszelkich uszkodzeń.",
+                     "Nie posiada najmniejszych uszkodzeń.", "Auto wolne od uszkodzeń.", "Zero uszkodzeń, zero rdzy.",
+                     "Brak wgnieceń, rys i uszkodzeń."):
             self.assertIsNone(run(text)["reject"], text)
+
+    def test_negation_does_not_cross_sentences(self):
+        self.assertEqual(run("Brak rdzy. Uszkodzony zderzak z przodu.")["reject"], "Uszkodzone według opisu")
 
     def test_do_naprawy_is_watch_not_reject(self):
         r = run("Do naprawy czujnik ciśnienia w oponach.")
@@ -73,6 +79,12 @@ class MileageTest(unittest.TestCase):
     def test_mileage_in_thousands(self):
         self.assertIsNone(run("Przebieg 100 tys. km udokumentowany.", km=100500)["reject"])
 
+    def test_service_mileage_ignored(self):
+        for text in ("Rozrząd do wymiany przy przebiegu 150 000 km.", "Następny przegląd przy przebiegu 120 tys km."):
+            r = run(text, km=110000)
+            self.assertIsNone(r["reject"], text)
+            self.assertEqual(r["watch"], [], text)
+
     def test_unrelated_km_ignored(self):
         r = run("Rozrząd wymieniony przy 90 000 km.", km=100000)
         self.assertIsNone(r["reject"])
@@ -87,6 +99,9 @@ class EquipmentTest(unittest.TestCase):
     def test_equipment_from_description(self):
         r = run("Kamera cofania, czujniki parkowania przód i tył, Apple CarPlay.")
         self.assertEqual(r["equipment"], {"ac": 1, "cam": 1, "pdc": 1, "cp": 1})
+
+    def test_sensors_front_and_rear(self):
+        self.assertEqual(run("Czujniki przód i tył, tempomat.")["equipment"]["pdc"], 1)
 
     def test_rain_sensor_is_not_parking_sensor(self):
         self.assertEqual(run("Czujnik deszczu i zmierzchu.")["equipment"]["pdc"], 0)

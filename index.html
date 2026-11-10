@@ -449,9 +449,11 @@ h2.book { font-size: 1.95rem; line-height: 1.02; font-weight: 850; font-stretch:
 
   function renderCalls() {
     var el = document.getElementById('calls');
-    document.getElementById('telefon').classList.toggle('is-empty', !calls.length);
-    if (!calls.length) { el.innerHTML = '<p class="empty-call">Stuknij „Do telefonu” przy aucie, a trafi tutaj.</p>'; return; }
-    el.innerHTML = '<ul class="calls">' + calls.map(function (id) {
+    // ids missing from today's data stay saved (e.g. a broken overrides.json day), just hidden
+    var known = calls.filter(function (id) { return byId[id]; });
+    document.getElementById('telefon').classList.toggle('is-empty', !known.length);
+    if (!known.length) { el.innerHTML = '<p class="empty-call">Stuknij „Do telefonu” przy aucie, a trafi tutaj.</p>'; return; }
+    el.innerHTML = '<ul class="calls">' + known.map(function (id) {
       var c = byId[id], href = c.oto || c.olx, gone = c.status !== 'active';
       return '<li><b>' + esc(c.name) + ', ' + c.year + '</b><small class="num">' + nb(c.price) + ' zł, ' + esc(c.city) +
         (gone ? ' · <span class="gone">Ogłoszenie nieaktywne</span>' : '') + '</small>' +
@@ -537,8 +539,6 @@ h2.book { font-size: 1.95rem; line-height: 1.02; font-weight: 850; font-stretch:
     stampDate = runDay ? fmtDay(runDay) : '';
     byId = {};
     cars.forEach(function (c) { byId[c.id] = view(c); });
-    calls = calls.filter(function (id) { return byId[id]; });
-    save('sylwia-telefon', calls);
     renderCover(); renderCalls(); renderTop(); renderList(); renderVoid();
   }
   function fail() {
@@ -567,7 +567,8 @@ h2.book { font-size: 1.95rem; line-height: 1.02; font-weight: 850; font-stretch:
   });
   Promise.all([fetch('data/offers.json', { cache: 'no-store' }), fetch('data/meta.json', { cache: 'no-store' })])
     .then(function (r) { if (!r[0].ok || !r[1].ok) throw new Error('HTTP'); return Promise.all([r[0].json(), r[1].json()]); })
-    .then(init, fail);
+    .then(init)
+    .catch(fail);
 
   var checks = [
     ['Sprawdź historię auta', 'Na historiapojazdu.gov.pl wpisz VIN, numer rejestracyjny i datę pierwszej rejestracji. Zobaczysz przebiegi z przeglądów i szkody. Poproś sprzedającego o te dane przez telefon.'],

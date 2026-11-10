@@ -164,3 +164,76 @@ class DetailQueueTest(unittest.TestCase):
         pipeline._details([cesja, ok], f, "2026-11-11", 100, [])
         self.assertEqual(f.ads(), ["https://www.otomoto.pl/osobowe/oferta/b-ID2.html"])
         self.assertIn("Cesja", cesja["auto"]["reject"])
+
+
+def empty_list_html():
+    def no_results(d):
+        state = d["props"]["pageProps"]["urqlState"]["k1"]
+        inner = json.loads(state["data"])
+        inner["advertSearch"]["totalCount"] = 0
+        inner["advertSearch"]["edges"] = []
+        state["data"] = json.dumps(inner)
+    return _replace_json(FIX / "otomoto_list.html", no_results)
+
+
+class RobustnessTest(unittest.TestCase):
+    setUp, run_pipeline, read = PipelineTest.setUp, PipelineTest.run_pipeline, PipelineTest.read
+
+    def test_detail_storm_stops_after_three_failures(self):
+        f = FakeFetcher(fail=lambda u: FetchError("HTTP 503") if "/oferta/" in u else None)
+        self.assertEqual(self.run_pipeline(f), 0)
+        self.assertEqual(len(f.ads()), 3)
+        self.assertTrue(any("przerwane" in e for e in self.read("meta.json")["errors"]))
+
+    def test_unexpected_exception_does_not_stop_run(self):
+        f = FakeFetcher(fail=lambda u: RuntimeError("boom") if u == PEUGEOT or "hybrid" in u else None)
+        self.assertEqual(self.run_pipeline(f), 0)
+        self.assertGreater(self.read("meta.json")["activeCount"], 20)
+
+    def test_detail_time_budget(self):
+        ticks = iter(range(0, 100000, 400))
+        orig = pipeline.clock
+        pipeline.clock = lambda: next(ticks)
+        self.addCleanup(setattr, pipeline, "clock", orig)
+        f = FakeFetcher()
+        self.run_pipeline(f)
+        self.assertLess(len(f.ads()), 5)
+
+    def test_empty_query_keeps_cars(self):
+        self.run_pipeline(FakeFetcher())
+        before = {c["id"] for c in self.read("offers.json") if c["status"] == "active"}
+        f = FakeFetcher()
+        f.lists = empty_list_html()  # e.g. Otomoto renamed a filter: every query comes back empty
+        self.run_pipeline(f, now=NOW + timedelta(days=1))
+        after = {c["id"] for c in self.read("offers.json") if c["status"] == "active"}
+        self.assertEqual(before, after)
+
+    def test_page_cap_counts_as_incomplete(self):
+        seen, complete, ok = pipeline._search(FakeFetcher(), [])
+        self.assertTrue(complete)
+        orig = pipeline.MAX_PAGES
+        pipeline.MAX_PAGES = 0
+        self.addCleanup(setattr, pipeline, "MAX_PAGES", orig)
+        seen, complete, ok = pipeline._search(FakeFetcher(), [])
+        self.assertFalse(complete)
+
+    def test_outdated_rules_rechecked(self):
+        self.run_pipeline(FakeFetcher())
+        offers = self.read("offers.json")
+        for c in offers:
+            c["rulesVersion"] = 1
+        (self.root / "data" / "offers.json").write_text(json.dumps(offers))
+        f = FakeFetcher()
+        self.run_pipeline(f, now=NOW + timedelta(days=1), detail_limit=4)
+        self.assertEqual(len(f.ads()), 4)
+
+    def test_warnings_marked_for_actions(self):
+        import io, os
+        from contextlib import redirect_stdout
+        (self.root / "data" / "overrides.json").write_text('{"manual": [{"id": "x"}]}')
+        os.environ["GITHUB_ACTIONS"] = "true"
+        self.addCleanup(os.environ.pop, "GITHUB_ACTIONS")
+        out = io.StringIO()
+        with redirect_stdout(out):
+            self.run_pipeline(FakeFetcher())
+        self.assertIn("::warning::overrides.json", out.getvalue())
