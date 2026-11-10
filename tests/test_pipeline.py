@@ -226,12 +226,18 @@ class RobustnessTest(unittest.TestCase):
     def test_outdated_rules_rechecked(self):
         self.run_pipeline(FakeFetcher())
         offers = self.read("offers.json")
-        for c in offers:
+        detailed = [c for c in offers if c.get("detailed")]
+        for i, c in enumerate(detailed):
             c["rulesVersion"] = 1
+            if i % 2 == 0:
+                c["auto"]["reject"] = c["reject"] = "Klimatyzacja manualna"
         (self.root / "data" / "offers.json").write_text(json.dumps(offers))
+        rejected = {c["links"]["otomoto"] for c in offers if c.get("reject")}
         f = FakeFetcher()
         self.run_pipeline(f, now=NOW + timedelta(days=1), detail_limit=4)
         self.assertEqual(len(f.ads()), 4)
+        self.assertTrue(rejected)
+        self.assertFalse(set(f.ads()) & rejected)  # cars Sylwia sees are rechecked before rejected ones
 
     def test_warnings_marked_for_actions(self):
         import io, os

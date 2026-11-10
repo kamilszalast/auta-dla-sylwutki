@@ -81,7 +81,7 @@ def _details(cars, fetcher, today, limit, errors):
         if not car["auto"]["reject"]:
             new.append(car)
     new.sort(key=lambda c: (not c.get("inAc"), -c["year"], c["km"]))
-    outdated.sort(key=lambda c: not (c.get("auto") or {}).get("reject"))
+    outdated.sort(key=lambda c: bool((c.get("auto") or {}).get("reject")))  # cars Sylwia sees first
     failed = in_row = 0
     start = clock()
     for car in (new + outdated)[:limit]:

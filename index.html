@@ -242,6 +242,7 @@ h2.book { font-size: 1.95rem; line-height: 1.02; font-weight: 850; font-stretch:
   <section aria-labelledby="top-h" id="polecane">
     <div class="page-h">
       <h2 class="book" id="top-h">Polecane</h2>
+      <p>Tylko auta z Polski od nowości, od prywatnych sprzedawców. Takie auto ma pełną historię w CEPiK.</p>
     </div>
     <div class="entries" id="top"></div>
   </section>
@@ -265,6 +266,7 @@ h2.book { font-size: 1.95rem; line-height: 1.02; font-weight: 850; font-stretch:
         <button type="button" id="t-pb" data-fuel="pb" aria-pressed="false" aria-label="Opel Adam">Adam</button>
       </div>
       <div class="opts">
+        <label for="o-pl" class="full-row"><input type="checkbox" id="o-pl">Tylko z Polski od nowości</label>
         <label for="o-full" class="full-row"><input type="checkbox" id="o-full">Tylko z kamerą i CarPlay</label>
         <label for="o-seller"><span class="sr">Sprzedawca</span>
           <select id="o-seller">
@@ -391,6 +393,12 @@ h2.book { font-size: 1.95rem; line-height: 1.02; font-weight: 850; font-stretch:
     c.fresh = c.shownSince === runDay;
     return c;
   }
+  function origin(c) {
+    var f = c.facts || {};
+    if (!f.origin) return 'nie podano';
+    if (f.origin === 'Polska') return f.originFrom === 'opis' ? 'Polska, według opisu' : 'Polska od nowości';
+    return 'sprowadzony: ' + f.origin;
+  }
   function visible(c) { return c.status === 'active' && !c.reject && (c.detailed || c.inAc || c.manual); }
 
   function equip(label, v) {
@@ -434,6 +442,7 @@ h2.book { font-size: 1.95rem; line-height: 1.02; font-weight: 850; font-stretch:
         '<div' + (c.body ? '' : ' class="wide"') + '><dt>Skrzynia</dt><dd>' + esc(c.gear) + '</dd></div>' +
         (c.body ? '<div><dt>Nadwozie</dt><dd>' + esc(c.body) + '</dd></div>' : '') +
         '<div class="wide"><dt>Gdzie</dt><dd>' + esc(c.city) + ', ' + esc(c.seller) + '</dd></div>' +
+        '<div class="wide"><dt>Pochodzenie</dt><dd>' + esc(origin(c)) + '</dd></div>' +
       '</dl>' +
       '<ul class="equip" aria-label="Wyposażenie">' + equip('Klima auto', c.ac) + equip('Kamera', c.cam) + equip('Czujniki', c.pdc) + equip('CarPlay', c.cp) + '</ul>' +
       (ranked && c.why ? '<p class="why">' + kamil(c, 'why') + esc(c.why) + '</p>' : '') +
@@ -462,29 +471,31 @@ h2.book { font-size: 1.95rem; line-height: 1.02; font-weight: 850; font-stretch:
     }).join('') + '</ul>';
   }
 
-  var state = Object.assign({ fuel: 'all', full: false, sort: 'rec', seller: 'all' }, load('sylwia-filtry', {}));
+  var state = Object.assign({ fuel: 'all', full: false, pl: false, sort: 'rec', seller: 'all' }, load('sylwia-filtry', {}));
   var sellerEl = document.getElementById('o-seller');
   var tabs = document.querySelectorAll('.tabs button');
   var fullEl = document.getElementById('o-full');
+  var plEl = document.getElementById('o-pl');
   var sortEl = document.getElementById('o-sort');
   var moreEl = document.getElementById('show-all');
 
   function renderTop(pressId) {
     var top = cars.filter(function (c) { return c.top && visible(c); }).sort(function (a, b) { return a.top - b.top; });
     document.getElementById('top').innerHTML = top.length ? top.map(function (c) { return entry(c, true, pressId); }).join('')
-      : '<p class="empty">Polecane pojawią się, gdy automat sprawdzi szczegóły ogłoszeń.</p>';
+      : '<p class="empty">Dziś żadne auto z Polski od prywatnego sprzedawcy nie spełnia wszystkich kryteriów. Zajrzyj na listę niżej i zaznacz „Tylko z Polski od nowości”.</p>';
   }
   function renderList(pressId) {
     var list = cars.filter(function (c) { return !c.top && visible(c); })
       .filter(function (c) { return state.fuel === 'all' || c.fuel === state.fuel; })
       .filter(function (c) { return state.seller === 'all' || c.seller === state.seller; })
-      .filter(function (c) { return !state.full || (c.cam === 1 && c.cp === 1); });
+      .filter(function (c) { return !state.full || (c.cam === 1 && c.cp === 1); })
+      .filter(function (c) { return !state.pl || (c.facts && c.facts.origin === 'Polska'); });
     if (state.sort === 'price') list.sort(function (a, b) { return a.price - b.price; });
     if (state.sort === 'km') list.sort(function (a, b) { return a.km - b.km; });
     if (state.sort === 'year') list.sort(function (a, b) { return b.year - a.year || a.km - b.km; });
     var n = list.length, shown = showAll ? list : list.slice(0, LIMIT);
     document.getElementById('list').innerHTML = n ? shown.map(function (c) { return entry(c, false, pressId); }).join('')
-      : '<p class="empty">Żadne auto nie pasuje do tych filtrów. Wybierz inny napęd albo sprzedawcę, albo odznacz „Tylko z kamerą i CarPlay”.</p>';
+      : '<p class="empty">Żadne auto nie pasuje do tych filtrów. Wybierz inny napęd albo sprzedawcę, albo odznacz „Tylko z Polski od nowości” i „Tylko z kamerą i CarPlay”.</p>';
     document.getElementById('count').textContent = !n ? '' : shown.length < n
       ? 'Pokazuję ' + shown.length + ' najlepszych. Wszystkich aut poza polecanymi: ' + n
       : n + ' ' + plural(n, 'auto', 'auta', 'aut') + ' poza trzema polecanymi';
@@ -492,6 +503,7 @@ h2.book { font-size: 1.95rem; line-height: 1.02; font-weight: 850; font-stretch:
     moreEl.textContent = 'Pokaż wszystkie (' + n + ')';
     tabs.forEach(function (b) { b.setAttribute('aria-pressed', String(b.dataset.fuel === state.fuel)); });
     fullEl.checked = state.full;
+    plEl.checked = state.pl;
     sortEl.value = state.sort;
     sellerEl.value = state.seller;
     save('sylwia-filtry', state);
@@ -558,6 +570,7 @@ h2.book { font-size: 1.95rem; line-height: 1.02; font-weight: 850; font-stretch:
   });
   tabs.forEach(function (b) { b.addEventListener('click', function () { state.fuel = b.dataset.fuel; refilter(); }); });
   fullEl.addEventListener('change', function () { state.full = fullEl.checked; refilter(); });
+  plEl.addEventListener('change', function () { state.pl = plEl.checked; refilter(); });
   sortEl.addEventListener('change', function () { state.sort = sortEl.value; refilter(); });
   sellerEl.addEventListener('change', function () { state.seller = sellerEl.value; refilter(); });
   moreEl.addEventListener('click', function () {
