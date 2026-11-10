@@ -50,11 +50,17 @@ class PickTopTest(unittest.TestCase):
         self.assertGreater(car("pl")["score"], car("de", facts=dict(NO_FACTS, origin="Niemcy"))["score"] + 10)
         self.assertGreater(car("priv")["score"], car("komis", seller="komis")["score"] + 5)
 
-    def test_imported_dealer_car_can_still_be_top(self):
-        cars = [car("de", km=1000, year=2021, seller="komis", facts=dict(NO_FACTS, origin="Niemcy")),
+    def test_imported_private_car_can_still_be_top(self):
+        cars = [car("de", km=1000, year=2021, facts=dict(NO_FACTS, origin="Niemcy")),
                 car("pl1", year=2012), car("pl2", year=2012), car("pl3", year=2012)]
         ranking.pick_top(cars, {})
         self.assertIn("de", tops(cars))
+
+    def test_dealer_cars_never_top(self):
+        cars = [car("komis", km=1000, year=2021, seller="komis"), car("a", name="Opel Astra", year=2012),
+                car("b", name="Citroën C3", year=2012), car("c", name="Opel Adam", year=2012)]
+        ranking.pick_top(cars, {})
+        self.assertEqual(sorted(tops(cars)), ["a", "b", "c"])
 
     def test_small_body_bonus(self):
         self.assertGreater(car("adam", name="Opel Adam", body="auta małe")["score"], car("astra", body="kompakt")["score"])

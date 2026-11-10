@@ -25,9 +25,9 @@ def score(car):
 
 
 def _eligible(car):
-    # Polish origin and private seller are score bonuses (Kamil, 10.11); vans and minivans never get recommended
+    # Kamil, 10.11: private sellers only; Polish origin is a score bonus; vans and minivans never get recommended
     return (car.get("status") == "active" and not car.get("reject") and not car.get("out")
-            and not car.get("pending") and not car.get("manual")
+            and not car.get("pending") and not car.get("manual") and car.get("seller") == "prywatnie"
             and rules.body_kind(car) not in ("van", "minivan"))
 
 

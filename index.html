@@ -128,7 +128,6 @@ h2.book { font-size: 1.95rem; line-height: 1.02; font-weight: 850; font-stretch:
 .gauge { grid-column: 2; grid-row: 1 / span 3; width: 92px; height: 66px; align-self: center; overflow: visible; }
 .gauge .g-track { fill: none; stroke: var(--rule); stroke-width: 7; stroke-linecap: round; }
 .gauge .g-band { fill: none; stroke: var(--cover); stroke-width: 7; }
-.gauge .g-tick { stroke: var(--ink-2); stroke-width: 1.4; stroke-linecap: round; }
 .gauge .g-needle { stroke: var(--ink); stroke-width: 2.4; stroke-linecap: round; }
 .gauge .g-hub { fill: var(--ink); }
 .gauge text { font: 700 9px var(--f-book); fill: var(--ink-2); }
@@ -320,7 +319,7 @@ h2.book { font-size: 1.95rem; line-height: 1.02; font-weight: 850; font-stretch:
   <section aria-labelledby="top-h" id="polecane">
     <div class="page-h">
       <h2 class="book" id="top-h">Polecane</h2>
-      <p>Małe i kompaktowe auta z najlepszą oceną, bez minivanów. Pierwszeństwo mają auta z Polski od nowości i od prywatnych sprzedawców, bo mają pełną historię w CEPiK.</p>
+      <p>Małe i kompaktowe auta od prywatnych sprzedawców, z najlepszą oceną. Pierwszeństwo mają auta z Polski od nowości, bo mają pełną historię w CEPiK.</p>
     </div>
     <div class="entries" id="top"></div>
   </section>
@@ -493,13 +492,9 @@ h2.book { font-size: 1.95rem; line-height: 1.02; font-weight: 850; font-stretch:
     var arc = function (v1, v2) { var p1 = pt(v1, R), p2 = pt(v2, R); return 'M' + p1[0].toFixed(1) + ' ' + p1[1].toFixed(1) + 'A' + R + ' ' + R + ' 0 0 1 ' + p2[0].toFixed(1) + ' ' + p2[1].toFixed(1); };
     var raw = (c.price - a.mean) / a.mean, v = Math.max(-MAX, Math.min(MAX, raw));
     var pct = Math.round(raw * 100), read = Math.abs(raw) <= AVG_BAND ? 'średnia' : (pct > 0 ? '+' : '−') + Math.abs(pct) + '%';
-    var tip = pt(v, R - 7), ticks = '';
-    [-0.2, -0.1, -AVG_BAND, 0, AVG_BAND, 0.1, 0.2].forEach(function (x) {
-      var o = pt(x, R + 6), i = pt(x, R + (x === 0 ? 1 : 3));
-      ticks += '<line class="g-tick" x1="' + o[0].toFixed(1) + '" y1="' + o[1].toFixed(1) + '" x2="' + i[0].toFixed(1) + '" y2="' + i[1].toFixed(1) + '"/>';
-    });
+    var tip = pt(v, R - 7);
     return '<svg class="gauge" viewBox="0 0 92 66" aria-hidden="true">' +
-      '<path class="g-track" d="' + arc(-MAX, MAX) + '"/><path class="g-band" d="' + arc(-AVG_BAND, AVG_BAND) + '"/>' + ticks +
+      '<path class="g-track" d="' + arc(-MAX, MAX) + '"/><path class="g-band" d="' + arc(-AVG_BAND, AVG_BAND) + '"/>' +
       '<text x="5" y="54">−</text><text x="81" y="54">+</text>' +
       '<line class="g-needle" x1="' + CX + '" y1="' + CY + '" x2="' + tip[0].toFixed(1) + '" y2="' + tip[1].toFixed(1) + '"/>' +
       '<circle class="g-hub" cx="' + CX + '" cy="' + CY + '" r="3.6"/>' +
