@@ -81,7 +81,7 @@ class SearchUrlTest(unittest.TestCase):
         self.assertEqual(p["search[filter_float_engine_capacity:to]"], "1600")
         self.assertEqual(p["search[filter_enum_damaged]"], "0")
         self.assertEqual(p["search[filter_float_price:to]"], "31000")
-        self.assertEqual(p["search[filter_float_engine_power:from]"], "91")
+        self.assertEqual(p["search[filter_float_engine_power:from]"], "85")
         self.assertNotIn("search[filter_enum_air_conditioning_type][0]", p)
         self.assertNotIn("page", p)
 

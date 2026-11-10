@@ -10,7 +10,7 @@ KM_MAX = 125000            # hard limit for search
 KM_MAX_HYBRID = 160000
 KM_SOFT = 120000           # above this: "Poza kryteriami"
 YEAR_MIN = 2011
-HP_MIN = 91
+HP_MIN = 85                 # Kamil 10.11: 85 KM for every car
 HP_MIN_ADAM = 85            # Kamil 10.11: 1.4 87 KM is fine, 1.2 70 KM is not
 DIESEL_CC_MAX = 1600
 LOW_KM = 15000             # below this with year <= LOW_KM_YEAR: suspicious

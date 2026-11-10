@@ -211,7 +211,9 @@ class CriteriaTest(unittest.TestCase):
 
     def test_hard_ok_limits(self):
         self.assertFalse(rules.hard_ok(item(year=2010)))
-        self.assertFalse(rules.hard_ok(item(hp=90)))
+        self.assertFalse(rules.hard_ok(item(hp=84)))
+        self.assertTrue(rules.hard_ok(item(hp=85)))
+        self.assertTrue(rules.hard_ok(item(hp=90)))
         self.assertFalse(rules.hard_ok(item(price=31001)))
         self.assertFalse(rules.hard_ok(item(km=126000)))
         self.assertTrue(rules.hard_ok(item(fuel="hev", km=159000)))

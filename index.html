@@ -664,8 +664,8 @@ h2.book { font-size: 1.95rem; line-height: 1.02; font-weight: 850; font-stretch:
   checkEl.addEventListener('change', function (e) { done[e.target.id.slice(2)] = e.target.checked; save('sylwia-lista', done); });
 
   var q = function (pairs) { return pairs.map(function (x) { return encodeURIComponent(x[0]) + '=' + encodeURIComponent(x[1]); }).join('&'); };
-  var otoBase = [['search[filter_float_price:to]', '30000'], ['search[filter_float_mileage:to]', '120000'], ['search[filter_float_engine_power:from]', '91'], ['search[filter_enum_damaged]', '0']];
-  var olxBase = [['search[filter_float_price:to]', '30000'], ['search[filter_float_year:from]', '2011'], ['search[filter_float_milage:to]', '120000'], ['search[filter_float_enginepower:from]', '91'], ['search[filter_enum_condition][0]', 'notdamaged']];
+  var otoBase = [['search[filter_float_price:to]', '30000'], ['search[filter_float_mileage:to]', '120000'], ['search[filter_float_engine_power:from]', '85'], ['search[filter_enum_damaged]', '0']];
+  var olxBase = [['search[filter_float_price:to]', '30000'], ['search[filter_float_year:from]', '2011'], ['search[filter_float_milage:to]', '120000'], ['search[filter_float_enginepower:from]', '85'], ['search[filter_enum_condition][0]', 'notdamaged']];
   var oto = function (extra) { return 'https://www.otomoto.pl/osobowe/od-2011?' + q(otoBase.concat(extra)); };
   var olx = function (extra) { return 'https://www.olx.pl/motoryzacja/samochody/?' + q(olxBase.concat(extra)); };
   var more = [
