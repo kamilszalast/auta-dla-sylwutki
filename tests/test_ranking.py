@@ -5,10 +5,11 @@ from scraper import ranking
 FULL = {"ac": 1, "cam": 1, "pdc": 1, "cp": 1}
 BARE = {"ac": 1, "cam": 0, "pdc": 0, "cp": 0}
 NO_FACTS = {"salonPL": False, "firstOwner": False, "aso": False, "noAccident": False, "origin": None, "hasVin": False}
+PL = dict(NO_FACTS, salonPL=True, origin="Polska")
 
 
-def car(cid, fuel="on", km=60000, equipment=FULL, facts=NO_FACTS, **kw):
-    c = dict(id=cid, fuel=fuel, year=2017, km=km, price=27000, equipment=dict(equipment), facts=dict(facts),
+def car(cid, fuel="on", km=60000, equipment=FULL, facts=PL, **kw):
+    c = dict(id=cid, fuel=fuel, year=2017, km=km, price=27000, seller="prywatnie", equipment=dict(equipment), facts=dict(facts),
              out=None, pending=False, reject=None, status="active", manual=False, top=None, why=None, byKamil=[])
     c.update(kw)
     c["score"] = ranking.score(c)
@@ -45,6 +46,17 @@ class PickTopTest(unittest.TestCase):
         ranking.pick_top(cars, {})
         self.assertEqual(sorted(tops(cars)), ["ok1", "ok2", "ok3"])
 
+    def test_only_polish_origin_private_cars_in_top(self):
+        cars = [car("de", km=1000, facts=dict(NO_FACTS, origin="Niemcy")), car("komis", km=1000, seller="komis"),
+                car("unknown", km=1000, facts=NO_FACTS), car("pl1"), car("pl2"), car("pl3")]
+        ranking.pick_top(cars, {})
+        self.assertEqual(sorted(tops(cars)), ["pl1", "pl2", "pl3"])
+
+    def test_pin_may_override_origin_rule(self):
+        cars = [car("komis", seller="komis"), car("pl1"), car("pl2")]
+        ranking.pick_top(cars, {"komis": 1})
+        self.assertEqual(tops(cars), ["komis", "pl1", "pl2"])
+
     def test_diversity_swaps_in_lpg_when_close(self):
         cars = [car("d1", km=20000), car("d2", km=40000), car("d3", km=60000), car("lpg", fuel="lpg", km=100000)]
         ranking.pick_top(cars, {})
@@ -67,7 +79,7 @@ class PickTopTest(unittest.TestCase):
         self.assertIsNone(cars[0]["why"])
 
     def test_why_does_not_repeat_plus_facts(self):
-        facts = dict(NO_FACTS, salonPL=True, firstOwner=True)
+        facts = dict(PL, firstOwner=True)
         cars = [car("a", facts=facts, fuel="lpg", year=2019), car("b"), car("c")]
         ranking.pick_top(cars, {})
         why = cars[0]["why"]

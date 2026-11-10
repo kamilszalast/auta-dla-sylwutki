@@ -116,10 +116,22 @@ class EquipmentTest(unittest.TestCase):
                    "no_accident": "Tak", "vin": "", "body_type": "Kombi"}
         r = run(details=details)
         self.assertEqual(r["facts"], {"salonPL": True, "firstOwner": True, "aso": True, "noAccident": True,
-                                      "origin": "Polska", "hasVin": True})
+                                      "origin": "Polska", "originFrom": "ogłoszenie", "hasVin": True})
         self.assertEqual(r["body"], "kombi")
         self.assertEqual(r["plus"][:4], ["polski salon", "pierwszy właściciel", "serwis w ASO", "bezwypadkowy"])
         self.assertIn("klima dwustrefowa", r["plus"])
+
+    def test_salon_pl_from_description_when_param_missing(self):
+        for text in ("Salon Polska, pierwszy właściciel.", "Auto z polskiego salonu.", "Polski salon, serwis ASO.", "SALON PL"):
+            facts = run(text)["facts"]
+            self.assertEqual((facts["salonPL"], facts["origin"], facts["originFrom"]), (True, "Polska", "opis"), text)
+
+    def test_param_origin_wins_over_description(self):
+        facts = run("Salon Polska.", details={"country_origin": "Niemcy"})["facts"]
+        self.assertEqual((facts["salonPL"], facts["origin"], facts["originFrom"]), (False, "Niemcy", "ogłoszenie"))
+
+    def test_negated_salon_pl_ignored(self):
+        self.assertFalse(run("Auto nie z polskiego salonu, sprowadzone.")["facts"]["salonPL"])
 
     def test_imported_watch(self):
         r = run(details={"country_origin": "Francja"})

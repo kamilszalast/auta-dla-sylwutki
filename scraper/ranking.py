@@ -22,8 +22,10 @@ def score(car):
 
 
 def _eligible(car):
+    # Kamil, 10.11: Polecane only from Poland since new (full CEPiK history) and from a private seller
     return (car.get("status") == "active" and not car.get("reject") and not car.get("out")
-            and not car.get("pending") and not car.get("manual"))
+            and not car.get("pending") and not car.get("manual")
+            and (car.get("facts") or {}).get("salonPL") and car.get("seller") == "prywatnie")
 
 
 def why_text(car):

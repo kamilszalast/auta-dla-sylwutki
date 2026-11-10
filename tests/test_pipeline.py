@@ -32,9 +32,13 @@ def list_html():
     return _replace_json(FIX / "otomoto_list.html", one_page)
 
 
-def ad_html(description):
+def ad_html(description, origin="Francja"):
     def set_desc(d):
-        d["props"]["pageProps"]["advert"]["description"] = description
+        advert = d["props"]["pageProps"]["advert"]
+        advert["description"] = description
+        for detail in advert["details"]:
+            if detail["key"] == "country_origin":
+                detail["value"] = origin
     return _replace_json(FIX / "otomoto_ad.html", set_desc)
 
 
@@ -44,7 +48,7 @@ class FakeFetcher:
         self.urls = []
         self.lists = list_html()
         self.peugeot = (FIX / "otomoto_ad.html").read_text()
-        self.other = ad_html("<p>Automatyczna klimatyzacja, kamera cofania.</p>")
+        self.other = ad_html("<p>Automatyczna klimatyzacja, kamera cofania.</p>", origin="Polska")
 
     def get(self, url):
         self.urls.append(url)
@@ -85,7 +89,9 @@ class PipelineTest(unittest.TestCase):
         self.assertTrue(car["detailed"])
         self.assertEqual((car["equipment"]["ac"], car["equipment"]["pdc"]), (1, 1))
         self.assertEqual(car["shownSince"], "2026-11-11")
-        self.assertEqual(sorted(c["top"] for c in offers if c["top"]), [1, 2, 3])
+        tops = [c for c in offers if c["top"]]
+        self.assertEqual(sorted(c["top"] for c in tops), [1, 2, 3])
+        self.assertTrue(all(c["facts"]["origin"] == "Polska" and c["seller"] == "prywatnie" for c in tops))
 
     def test_skip_when_already_ran_today(self):
         (self.root / "data" / "meta.json").write_text(json.dumps({"lastRun": "2026-11-11T06:01:00+01:00"}))

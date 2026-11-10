@@ -17,7 +17,8 @@ NEGATION = re.compile(r"(\bnie\b|\bnic\b|\bbez\b|\bbrak\w*|\bżadn\w*|\bzero\b|\
 SENTENCE_END = re.compile(r"[.!?\n]")
 SERVICE_CONTEXT = re.compile(r"\b(przy|do|co|od|po|na)\s+$", re.I)
 NEGATION_WINDOW = 60
-RULES_VERSION = 2
+RULES_VERSION = 3
+SALON_PL = re.compile(r"salon\w*[\s:,-]*(pl\b|polsk)|polsk\w*\s+salon", re.I)
 MILEAGE = re.compile(r"przebieg\w*[^0-9\n]{0,25}?(\d{1,3}(?:[  .]\d{3})+|\d+)\s*(tys|km|kilometr)", re.I)
 
 
@@ -90,14 +91,17 @@ def _mileage_check(item, text, watch):
     return None
 
 
-def _facts(item, details):
-    origin = details.get("country_origin") or item.get("origin")
+def _facts(item, details, text=""):
+    origin, source = details.get("country_origin") or item.get("origin"), "ogłoszenie"
+    if not origin:
+        origin, source = ("Polska", "opis") if _found(SALON_PL, text) else (None, None)
     return {
         "salonPL": origin == "Polska",
         "firstOwner": details.get("original_owner") == "Tak",
         "aso": details.get("service_record") == "Tak",
         "noAccident": details.get("no_accident") == "Tak",
         "origin": origin,
+        "originFrom": source,
         "hasVin": "vin" in details,
     }
 
@@ -110,7 +114,7 @@ def _imported(facts, watch):
 def classify(item, ad, in_ac_filter):
     watch = []
     if ad is None:
-        facts = _facts(item, {})
+        facts = _facts(item, {}, item.get("title") or "")
         _imported(facts, watch)
         return {"equipment": {"ac": 1 if in_ac_filter else 2, "cam": 2, "pdc": 2, "cp": 2}, "facts": facts,
                 "body": None, "reject": _common_flags(item, item.get("title") or ""), "watch": watch,
@@ -153,7 +157,7 @@ def classify(item, ad, in_ac_filter):
     reject = reject or _mileage_check(item, text, watch)
 
     details = ad.get("details") or {}
-    facts = _facts(item, details)
+    facts = _facts(item, details, text)
     _imported(facts, watch)
     plus = [name for flag, name in (("salonPL", "polski salon"), ("firstOwner", "pierwszy właściciel"),
                                      ("aso", "serwis w ASO"), ("noAccident", "bezwypadkowy")) if facts[flag]]
