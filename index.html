@@ -115,6 +115,7 @@ h2.book { font-size: 1.95rem; line-height: 1.02; font-weight: 850; font-stretch:
 .nw { white-space: nowrap; }
 /* First photo of the listing, linked from Otomoto */
 .shot { position: relative; margin: 0; }
+.shot a { display: block; border-radius: 16px; }
 .shot img { display: block; width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: cover; background: var(--rule); border-radius: 16px; }
 /* Price gauge: offer price against the model average, -20%..+20%, average band ±5% */
 .gauge { grid-column: 2; grid-row: 1 / span 3; width: 92px; height: 66px; align-self: center; overflow: visible; }
@@ -217,9 +218,10 @@ h2.book { font-size: 1.95rem; line-height: 1.02; font-weight: 850; font-stretch:
 .update-ledger div { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; padding-block: 8px 7px; border-bottom: 1px solid rgba(42, 15, 28, .3); }
 .update-ledger dt { font: 600 .85rem/1.2 var(--f-book); font-stretch: 95%; }
 .update-ledger dd { font: 800 1.12rem/1.15 var(--f-book); font-stretch: 105%; font-variant-numeric: tabular-nums; text-align: right; }
+.update-ledger dd a { display: inline-block; padding: 10px 0 10px 40px; margin: -10px 0; color: inherit; text-decoration-thickness: 2px; text-underline-offset: 4px; }
 .update-ledger dd.none { font: 600 .95rem/1.3 var(--f-read); }
 .update-note { display: grid; grid-template-columns: 20px 1fr; gap: 8px; font-size: .95rem; font-weight: 700; padding-top: 10px; }
-.update-note[hidden] { display: none; }
+.update-note[hidden], .opts label[hidden] { display: none; }
 .update-note svg { width: 20px; height: 20px; }
 
 /* Back cover */
@@ -317,6 +319,7 @@ h2.book { font-size: 1.95rem; line-height: 1.02; font-weight: 850; font-stretch:
       </div>
       <div class="opts">
         <label for="o-pl" class="full-row"><input type="checkbox" id="o-pl">Tylko z Polski od nowości</label>
+        <label for="o-new" class="full-row" id="o-new-l" hidden><input type="checkbox" id="o-new"><span id="o-new-t">Tylko nowe z dzisiaj</span></label>
         <label for="o-seller"><span class="sr">Sprzedawca</span>
           <select id="o-seller">
             <option value="all">Wszyscy sprzedawcy</option>
@@ -506,8 +509,10 @@ h2.book { font-size: 1.95rem; line-height: 1.02; font-weight: 850; font-stretch:
   }
   function shot(c) {
     if (!c.photo || !/^https:\/\//.test(c.photo)) return '';
-    return '<figure class="shot"><img src="' + esc(c.photo) + '" alt="" width="640" height="480" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.closest(\'figure\').remove()">' +
-      '</figure>';
+    var img = '<img src="' + esc(c.photo) + '" alt="" width="640" height="480" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.closest(\'figure\').remove()">';
+    var href = c.oto || c.olx;
+    // Same address as the listing button below, so keyboard and screen readers skip this duplicate.
+    return '<figure class="shot">' + (href ? '<a href="' + esc(href) + '" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">' + img + '</a>' : img) + '</figure>';
   }
   function entry(c, ranked, pressId) {
     var picked = calls.indexOf(c.id) > -1;
@@ -561,6 +566,9 @@ h2.book { font-size: 1.95rem; line-height: 1.02; font-weight: 850; font-stretch:
   var sellerEl = document.getElementById('o-seller');
   var tabs = document.querySelectorAll('.tabs button');
   var plEl = document.getElementById('o-pl');
+  var freshEl = document.getElementById('o-new'), onlyNew = false, freshCount = 0;
+  function todayStr() { return new Date().toLocaleDateString('sv-SE', { timeZone: 'Europe/Warsaw' }); }
+  function freshWhen() { return runDay === todayStr() ? 'z dzisiaj' : 'z ostatniej aktualizacji'; }
   var sortEl = document.getElementById('o-sort');
   var moreEl = document.getElementById('show-all');
 
@@ -570,7 +578,8 @@ h2.book { font-size: 1.95rem; line-height: 1.02; font-weight: 850; font-stretch:
       : '<p class="empty">Dziś żadne auto nie spełnia wszystkich kryteriów. Zajrzyj na listę niżej.</p>';
   }
   function renderList(pressId) {
-    var list = cars.filter(function (c) { return !c.top && visible(c); })
+    // "Only new" shows every new car, recommended ones included, so the count matches the cover.
+    var list = cars.filter(function (c) { return visible(c) && (onlyNew ? c.fresh : !c.top); })
       .filter(function (c) { return state.fuel === 'all' || c.fuel === state.fuel; })
       .filter(function (c) { return state.seller === 'all' || c.seller === state.seller; })
       .filter(function (c) { return !state.pl || (c.facts && c.facts.origin === 'Polska'); });
@@ -579,8 +588,10 @@ h2.book { font-size: 1.95rem; line-height: 1.02; font-weight: 850; font-stretch:
     if (state.sort === 'year') list.sort(function (a, b) { return b.year - a.year || a.km - b.km; });
     var n = list.length, shown = showAll ? list : list.slice(0, LIMIT);
     document.getElementById('list').innerHTML = n ? shown.map(function (c) { return entry(c, false, pressId); }).join('')
-      : '<p class="empty">Żadne auto nie pasuje do tych filtrów. Wybierz inny napęd albo sprzedawcę, albo odznacz „Tylko z Polski od nowości”.</p>';
-    document.getElementById('count').textContent = !n ? '' : shown.length < n
+      : '<p class="empty">Żadne auto nie pasuje do tych filtrów. Wybierz inny napęd albo sprzedawcę' + emptyHint() + '.</p>';
+    document.getElementById('count').textContent = !n ? '' : onlyNew
+      ? (shown.length < n ? 'Pokazuję ' + shown.length + ' najlepszych z ' + n + ' nowych aut ' : n + ' ' + plural(n, 'nowe auto', 'nowe auta', 'nowych aut') + ' ') + freshWhen()
+      : shown.length < n
       ? 'Pokazuję ' + shown.length + ' najlepszych. Wszystkich aut poza polecanymi: ' + n
       : n + ' ' + plural(n, 'auto', 'auta', 'aut') + ' poza trzema polecanymi';
     var avgEl = document.getElementById('avg'), adam = modelAvg['Opel Adam'];
@@ -590,9 +601,18 @@ h2.book { font-size: 1.95rem; line-height: 1.02; font-weight: 850; font-stretch:
     moreEl.textContent = 'Pokaż wszystkie (' + n + ')';
     tabs.forEach(function (b) { b.setAttribute('aria-pressed', String(b.dataset.fuel === state.fuel)); });
     plEl.checked = state.pl;
+    freshEl.checked = onlyNew;
+    document.getElementById('o-new-l').hidden = !freshCount && !onlyNew;
+    document.getElementById('o-new-t').textContent = 'Tylko nowe ' + freshWhen() + ' (' + freshCount + ')';
     sortEl.value = state.sort;
     sellerEl.value = state.seller;
     save('sylwia-filtry', state);
+  }
+  function emptyHint() {
+    var boxes = [];
+    if (state.pl) boxes.push('„Tylko z Polski od nowości”');
+    if (onlyNew) boxes.push('„Tylko nowe ' + freshWhen() + '”');
+    return boxes.length ? ', albo odznacz ' + boxes.join(' i ') : '';
   }
   function renderVoid() {
     var groups = {};
@@ -611,13 +631,12 @@ h2.book { font-size: 1.95rem; line-height: 1.02; font-weight: 850; font-stretch:
   }
   function renderCover() {
     var n = cars.filter(visible).length;
-    var today = new Date().toLocaleDateString('sv-SE', { timeZone: 'Europe/Warsaw' });
-    var label = runDay === today ? 'Nowe dziś' : 'Nowe w ostatniej aktualizacji';
+    var label = runDay === todayStr() ? 'Nowe dziś' : 'Nowe w ostatniej aktualizacji';
     var when = document.getElementById('when'), newEl = document.getElementById('u-new');
     when.textContent = fmtStamp(meta.lastRun);
     newEl.previousElementSibling.textContent = label;
-    newEl.className = meta.newCount ? '' : 'none';
-    newEl.textContent = meta.newCount ? meta.newCount : 'brak nowych';
+    newEl.className = freshCount ? '' : 'none';
+    newEl.innerHTML = freshCount ? '<a href="#wszystkie" id="u-new-a">' + freshCount + '<span class="sr"> – pokaż je na liście</span></a>' : 'brak nowych';
     document.getElementById('u-all').textContent = n + ' ' + plural(n, 'auto', 'auta', 'aut');
     var stale = document.getElementById('stale');
     stale.hidden = Date.now() - Date.parse(meta.lastRun) <= STALE_MS;
@@ -641,6 +660,7 @@ h2.book { font-size: 1.95rem; line-height: 1.02; font-weight: 850; font-stretch:
     byId = {};
     cars.forEach(function (c) { byId[c.id] = view(c); });
     averages();
+    freshCount = cars.filter(function (c) { return c.fresh && visible(c); }).length;
     renderCover(); renderCalls(); renderTop(); renderList(); renderVoid();
   }
   function fail() {
@@ -663,6 +683,18 @@ h2.book { font-size: 1.95rem; line-height: 1.02; font-weight: 850; font-stretch:
   });
   tabs.forEach(function (b) { b.addEventListener('click', function () { state.fuel = b.dataset.fuel; refilter(); }); });
   plEl.addEventListener('change', function () { state.pl = plEl.checked; refilter(); });
+  freshEl.addEventListener('change', function () { onlyNew = freshEl.checked; refilter(); });
+  // Cover number: show all of today's new cars, whatever filters were saved.
+  document.getElementById('u-new').addEventListener('click', function (e) {
+    if (!e.target.closest('#u-new-a')) return;
+    e.preventDefault();
+    onlyNew = true; state.fuel = 'all'; state.pl = false; state.seller = 'all';
+    refilter();
+    var h = document.getElementById('all-h');
+    h.setAttribute('tabindex', '-1');
+    h.focus({ preventScroll: true });
+    document.getElementById('wszystkie').scrollIntoView({ block: 'start' });
+  });
   sortEl.addEventListener('change', function () { state.sort = sortEl.value; refilter(); });
   sellerEl.addEventListener('change', function () { state.seller = sellerEl.value; refilter(); });
   moreEl.addEventListener('click', function () {
