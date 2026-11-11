@@ -1,0 +1,13 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "crons": [
+    { "path": "/api/trigger", "schedule": "0 5 * * *" },
+    { "path": "/api/trigger", "schedule": "0 7 * * *" }
+  ],
+  "functions": {
+    "api/trigger.py": {
+      "maxDuration": 30,
+      "excludeFiles": "{data/**,scraper/**,tests/**,index.html,.github/**}"
+    }
+  }
+}
