@@ -6,7 +6,6 @@ on:
     # z harmonogramu (11.11.2026 nie wystartował żaden), więc kolejne godziny są zapasem.
     # Bramka niżej przepuszcza godziny 6–11 w Polsce, a skrypt kończy bez zmian, jeśli dzisiejsze dane już są.
     - cron: '7 4-9 * * *'
-    - cron: '35 10 * * *'  # test 11.11.2026: start o 11:35 w Polsce
   workflow_dispatch:
     inputs:
       force:
