@@ -43,7 +43,7 @@ class RunTurnTest(unittest.TestCase):
         self.assertEqual(code, 200)
         self.assertIn("338 aut", text)
         call = self.calls[0]
-        self.assertEqual((call["ran_by"], call["force"], call["continue_details"]), ("vercel", False, True))
+        self.assertEqual((call["ran_by"], call["force"], call["search_every_h"]), ("vercel", False, 4.5))
         self.assertLessEqual(call["budget_s"], 240)  # Vercel stops the function after 300 s
         self.assertIsInstance(call["storage"], storage.Blob)
 

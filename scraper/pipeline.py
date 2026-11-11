@@ -150,18 +150,32 @@ def finalize(cars, data, today, errors):
     return cars
 
 
-def run(root, fetcher, now, ran_by, detail_limit, force, storage=None, budget_s=None, continue_details=False):
-    """One update. budget_s caps the whole turn (Vercel functions stop after 5 minutes);
-    continue_details lets a later turn on the same day fetch the listing pages the earlier turn left."""
+def _search_due(meta, now, today, every_h):
+    """CLI (every_h None): one run per day. Vercel: search again once the last search is every_h hours old."""
+    if every_h is None:
+        return (meta.get("lastRun") or "")[:10] != today
+    last = meta.get("lastSearch") or meta.get("lastRun")  # meta written before lastSearch existed
+    if not last:
+        return True
+    try:
+        return (now - datetime.fromisoformat(last)).total_seconds() >= every_h * 3600
+    except (TypeError, ValueError):
+        return True
+
+
+def run(root, fetcher, now, ran_by, detail_limit, force, storage=None, budget_s=None, search_every_h=None):
+    """One update. budget_s caps the whole turn (Vercel functions stop after 5 minutes).
+    search_every_h (Vercel): a turn searches the lists again when the last search is at least that old;
+    a sooner turn only fetches the listing pages still pending. Without it (CLI): one run per day."""
     data = Path(root) / "data"
     storage = storage or storage_mod.Local(data)
     deadline = clock() + budget_s if budget_s else None
     meta = storage.read("meta.json", {})
     today = now.date().isoformat()
     stamp = now.isoformat(timespec="seconds")
-    if not force and (meta.get("lastRun") or "")[:10] == today:
+    if not force and not _search_due(meta, now, today, search_every_h):
         cars = storage.read("offers.json", [])
-        if not continue_details or not _detail_queue(cars):
+        if search_every_h is None or not _detail_queue(cars):
             print("Dzisiejsze dane już są (%s, %s). Koniec bez zmian." % (meta["lastRun"], meta.get("ranBy")))
             return 0
         # Keep today's search problems. Drop notes about leftover or failed listings (this turn retries them)
@@ -169,7 +183,8 @@ def run(root, fetcher, now, ran_by, detail_limit, force, storage=None, budget_s=
         errors = [e for e in meta.get("errors") or []
                   if not any(m in e for m in ("Reszta przy następnej", "Spróbuję przy następnej", "overrides.json"))]
         _details(cars, fetcher, today, detail_limit, errors, deadline)
-        return _publish(storage, finalize(cars, data, today, errors), today, stamp, ran_by, errors)
+        return _publish(storage, finalize(cars, data, today, errors), today, stamp, ran_by, errors,
+                        meta.get("lastSearch") or meta.get("lastRun"))
 
     errors = []
     seen, complete, any_ok = _search(fetcher, errors, deadline)
@@ -182,15 +197,15 @@ def run(root, fetcher, now, ran_by, detail_limit, force, storage=None, budget_s=
 
     cars, _ = store.merge(storage.read("offers.json", []), seen, today, complete)
     _details(cars, fetcher, today, detail_limit, errors, deadline)
-    return _publish(storage, finalize(cars, data, today, errors), today, stamp, ran_by, errors)
+    return _publish(storage, finalize(cars, data, today, errors), today, stamp, ran_by, errors, stamp)
 
 
-def _publish(storage, cars, today, stamp, ran_by, errors):
+def _publish(storage, cars, today, stamp, ran_by, errors, last_search):
     """Write offers.json and meta.json for the page."""
     errors = list(dict.fromkeys(errors))
     active = [c for c in cars if c["status"] == "active"]
     meta = {
-        "lastRun": stamp, "lastAttempt": stamp, "ranBy": ran_by,
+        "lastRun": stamp, "lastAttempt": stamp, "lastSearch": last_search, "ranBy": ran_by,
         "newCount": sum(1 for c in active if visible(c) and c.get("shownSince") == today),
         "activeCount": sum(1 for c in active if visible(c)),
         "rejectedCount": sum(1 for c in active if c.get("reject")),

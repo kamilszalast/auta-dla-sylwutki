@@ -16,6 +16,9 @@ from .http import Fetcher
 from .storage import Blob, Local, StorageError
 
 TURN_BUDGET_S = 210  # Vercel stops a function after 300 s; leave time for one slow fetch, scoring and saving
+# Crons at 6:00, 12:00 and 18:00 fire anywhere in their hour on Hobby, so real gaps are 5 h 01 min or more.
+# lastSearch is the turn's start time, so 4.5 h leaves a margin; a manual call sooner only fetches pending pages.
+SEARCH_EVERY_H = 4.5
 DATA_NAMES = ("offers", "meta")
 
 
@@ -51,7 +54,7 @@ def run_turn(secret, auth_header, blob, root, now, fetcher=None, run=pipeline.ru
     try:
         with contextlib.redirect_stdout(log):
             code = run(root, fetcher, now, "vercel", config.DETAIL_LIMIT, False,
-                       storage=storage, budget_s=TURN_BUDGET_S, continue_details=True)
+                       storage=storage, budget_s=TURN_BUDGET_S, search_every_h=SEARCH_EVERY_H)
     except StorageError as e:
         print(log.getvalue() + str(e))
         return 502, (log.getvalue() + str(e)).strip()

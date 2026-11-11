@@ -125,6 +125,7 @@ class PipelineTest(unittest.TestCase):
         self.assertEqual((self.root / "data" / "offers.json").read_text(), offers_before)
         meta = self.read("meta.json")
         self.assertEqual(meta["lastRun"], meta_before["lastRun"])
+        self.assertEqual(meta["lastSearch"], meta_before["lastSearch"])  # the next turn searches again
         self.assertTrue(meta["errors"])
         self.assertEqual(len(f.urls), 1)
 
@@ -228,7 +229,7 @@ class RobustnessTest(unittest.TestCase):
         pending = self.read("meta.json")["pendingDetails"]
         self.assertGreater(pending, 0)
         later = FakeFetcher()
-        self.assertEqual(self.run_pipeline(later, now=NOW + timedelta(hours=2), continue_details=True), 0)
+        self.assertEqual(self.run_pipeline(later, now=NOW + timedelta(hours=2), search_every_h=5), 0)
         self.assertEqual(later.urls, later.ads())  # no list pages again, only listing pages
         self.assertEqual(len(later.ads()), pending)
         meta = self.read("meta.json")
@@ -241,16 +242,41 @@ class RobustnessTest(unittest.TestCase):
         first = FakeFetcher(fail=lambda u: FetchError("HTTP 503") if "/oferta/" in u else None)
         self.run_pipeline(first, detail_limit=2)  # two failed listing pages, below the 3-in-a-row stop
         self.assertTrue(any("Nie udało się pobrać" in e for e in self.read("meta.json")["errors"]))
-        self.run_pipeline(FakeFetcher(), now=NOW + timedelta(hours=2), continue_details=True)
+        self.run_pipeline(FakeFetcher(), now=NOW + timedelta(hours=2), search_every_h=5)
         errors = self.read("meta.json")["errors"]
         self.assertFalse(any("Nie udało się pobrać" in e for e in errors))
         self.assertEqual(sum("overrides.json" in e for e in errors), 1)
+
+    def test_turn_after_the_gap_searches_again(self):
+        self.run_pipeline(FakeFetcher(), search_every_h=5)
+        noon = FakeFetcher()
+        self.assertEqual(self.run_pipeline(noon, now=NOW + timedelta(hours=6), search_every_h=5), 0)
+        self.assertGreater(len(noon.urls), len(noon.ads()))  # list pages fetched again
+        meta = self.read("meta.json")
+        self.assertTrue(meta["lastSearch"].startswith("2026-11-11T12:04"))
+        self.assertTrue(meta["lastRun"].startswith("2026-11-11T12:04"))
+
+    def test_turn_within_the_gap_keeps_the_last_search_time(self):
+        self.run_pipeline(FakeFetcher(), detail_limit=5, search_every_h=5)
+        self.run_pipeline(FakeFetcher(), now=NOW + timedelta(hours=2), search_every_h=5)
+        meta = self.read("meta.json")
+        self.assertTrue(meta["lastSearch"].startswith("2026-11-11T06:04"))
+        self.assertTrue(meta["lastRun"].startswith("2026-11-11T08:04"))
+
+    def test_meta_without_last_search_uses_last_run(self):
+        self.run_pipeline(FakeFetcher())
+        meta = self.read("meta.json")
+        meta.pop("lastSearch", None)
+        (self.root / "data" / "meta.json").write_text(json.dumps(meta))
+        f = FakeFetcher()
+        self.run_pipeline(f, now=NOW + timedelta(hours=2), search_every_h=5)
+        self.assertEqual(f.urls, f.ads())  # 2 h after a full run: no new search
 
     def test_later_turn_without_pending_work_does_nothing(self):
         self.run_pipeline(FakeFetcher())
         meta_before = self.read("meta.json")
         later = FakeFetcher()
-        self.assertEqual(self.run_pipeline(later, now=NOW + timedelta(hours=2), continue_details=True), 0)
+        self.assertEqual(self.run_pipeline(later, now=NOW + timedelta(hours=2), search_every_h=5), 0)
         self.assertEqual(later.urls, [])
         self.assertEqual(self.read("meta.json"), meta_before)
 
