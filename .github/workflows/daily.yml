@@ -2,10 +2,11 @@ name: Codzienna aktualizacja ofert
 
 on:
   schedule:
-    # 6:00 w Polsce: 4:07 UTC latem, 5:07 UTC zimą. Bramka niżej przepuszcza tylko godziny 6–9 w Polsce,
-    # a skrypt kończy bez zmian, jeśli dzisiejsze dane już są.
-    - cron: '7 4 * * *'
-    - cron: '7 5 * * *'
+    # Próba co godzinę od 4:07 do 9:07 UTC (od 6:00 w Polsce). GitHub potrafi zgubić pojedynczy start
+    # z harmonogramu (11.11.2026 nie wystartował żaden), więc kolejne godziny są zapasem.
+    # Bramka niżej przepuszcza godziny 6–11 w Polsce, a skrypt kończy bez zmian, jeśli dzisiejsze dane już są.
+    - cron: '7 4-9 * * *'
+    - cron: '35 10 * * *'  # test 11.11.2026: start o 11:35 w Polsce
   workflow_dispatch:
     inputs:
       force:
@@ -33,7 +34,7 @@ jobs:
         id: gate
         run: |
           h=$(TZ=Europe/Warsaw date +%H)
-          if [ "${{ github.event_name }}" = "schedule" ] && { [ "$h" -lt 6 ] || [ "$h" -gt 9 ]; }; then
+          if [ "${{ github.event_name }}" = "schedule" ] && { [ "$h" -lt 6 ] || [ "$h" -gt 11 ]; }; then
             echo "Godzina $h w Polsce, pomijam."
             echo "run=false" >> "$GITHUB_OUTPUT"
           else
