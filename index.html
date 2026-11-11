@@ -2,6 +2,18 @@
 <html lang="pl">
 <head>
 <meta charset="utf-8">
+<script>
+  // Since 11.11.2026 the page lives on Vercel. Old GitHub Pages links lead there and take Sylwia's saved lists along.
+  (function () {
+    if (!/\.github\.io$/.test(location.hostname)) return;
+    var carry = {};
+    try {
+      ['sylwia-telefon', 'sylwia-filtry', 'sylwia-lista'].forEach(function (k) { var v = localStorage.getItem(k); if (v) carry[k] = v; });
+    } catch (e) {}
+    var hash = Object.keys(carry).length ? '#przenies=' + encodeURIComponent(JSON.stringify(carry)) : '';
+    location.replace('https://auta-dla-sylwutki.vercel.app/' + hash);
+  })();
+</script>
 <title>Auta dla Sylwutki</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="description" content="Krótka lista używanych aut z Otomoto i OLX do sprawdzenia i zapisania przed telefonem do sprzedającego.">
@@ -330,6 +342,7 @@ h2.book { font-size: 1.95rem; line-height: 1.02; font-weight: 850; font-stretch:
         <label for="o-sort"><span class="sr">Kolejność</span>
           <select id="o-sort">
             <option value="rec">Polecana kolejność</option>
+            <option value="new">Od ostatnio dodanych</option>
             <option value="price">Od najtańszych</option>
             <option value="km">Od najmniejszego przebiegu</option>
             <option value="year">Od najmłodszych</option>
@@ -430,6 +443,18 @@ h2.book { font-size: 1.95rem; line-height: 1.02; font-weight: 850; font-stretch:
   var save = function (k, v) { try { localStorage.setItem(k, JSON.stringify(v)); } catch (e) {} };
   var mark = function (id) { return '<svg aria-hidden="true"><use href="#' + id + '"/></svg>'; };
 
+  // Lists carried over from the old GitHub Pages address (see the redirect in <head>). What is already saved here wins.
+  (function () {
+    var m = /^#przenies=(.+)$/.exec(location.hash);
+    if (!m) return;
+    try {
+      var carry = JSON.parse(decodeURIComponent(m[1]));
+      Object.keys(carry).forEach(function (k) {
+        if (/^sylwia-(telefon|filtry|lista)$/.test(k) && localStorage.getItem(k) == null) localStorage.setItem(k, String(carry[k]));
+      });
+    } catch (e) {}
+    history.replaceState(null, '', location.pathname + location.search);
+  })();
   var calls = load('sylwia-telefon', []);
 
   function fmtDay(iso) { var d = iso.split('-'); return d[2] + '.' + d[1] + '.' + d[0]; }
@@ -583,6 +608,8 @@ h2.book { font-size: 1.95rem; line-height: 1.02; font-weight: 850; font-stretch:
       .filter(function (c) { return state.fuel === 'all' || c.fuel === state.fuel; })
       .filter(function (c) { return state.seller === 'all' || c.seller === state.seller; })
       .filter(function (c) { return !state.pl || (c.facts && c.facts.origin === 'Polska'); });
+    // Newest on the list first; on the same day the recommended order stays (Array.sort is stable)
+    if (state.sort === 'new') list.sort(function (a, b) { return (b.shownSince || '').localeCompare(a.shownSince || ''); });
     if (state.sort === 'price') list.sort(function (a, b) { return a.price - b.price; });
     if (state.sort === 'km') list.sort(function (a, b) { return a.km - b.km; });
     if (state.sort === 'year') list.sort(function (a, b) { return b.year - a.year || a.km - b.km; });
