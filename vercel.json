@@ -6,15 +6,15 @@
   ],
   "crons": [
     {
-      "path": "/api/run",
+      "path": "/api/run?turn=1",
       "schedule": "0 4 * * *"
     },
     {
-      "path": "/api/run",
+      "path": "/api/run?turn=2",
       "schedule": "0 6 * * *"
     },
     {
-      "path": "/api/run",
+      "path": "/api/run?turn=3",
       "schedule": "0 8 * * *"
     }
   ],
