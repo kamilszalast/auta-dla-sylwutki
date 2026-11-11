@@ -51,7 +51,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -122,7 +122,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -193,7 +193,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -267,7 +267,7 @@
    "why"
   ],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -285,80 +285,6 @@
   "shownSince": "2026-11-10",
   "rulesVersion": 3,
   "photo": "https://ireland.apollo.olxcdn.com/v1/files/616achygrb5g1-OTOMOTOPL/image;s=640x480"
- },
- {
-  "id": "otomoto:6150123819",
-  "links": {
-   "otomoto": "https://www.otomoto.pl/osobowe/oferta/citroen-c3-ID6Idi9t.html",
-   "olx": null
-  },
-  "name": "Citroën C3",
-  "version": "BlueHDi 100 S&S ORIGINS",
-  "engine": "1.5, 102 KM",
-  "fuel": "on",
-  "gear": "manualna",
-  "body": "auta małe",
-  "year": 2019,
-  "km": 37000,
-  "hp": 102,
-  "cc": 1499,
-  "price": 31000,
-  "city": "Nowa Sól",
-  "region": "Lubuskie",
-  "seller": "prywatnie",
-  "make": "citroen",
-  "model": "c3",
-  "title": "Citroën C3 BlueHDi 100 S&S ORIGINS",
-  "origin": null,
-  "equipment": {
-   "ac": 1,
-   "cam": 1,
-   "pdc": 1,
-   "cp": 1
-  },
-  "facts": {
-   "salonPL": false,
-   "firstOwner": false,
-   "aso": false,
-   "noAccident": false,
-   "origin": null,
-   "originFrom": null,
-   "hasVin": true
-  },
-  "out": "cena 31 000 zł, ponad budżet 30 000 zł, do negocjacji",
-  "plus": "Bardzo mały przebieg jak na rocznik.",
-  "watch": "Przy tak niskim przebiegu sprawdź historię na historiapojazdu.gov.pl.",
-  "why": null,
-  "score": 72,
-  "top": null,
-  "reject": null,
-  "pending": false,
-  "detailed": true,
-  "inAc": true,
-  "manual": false,
-  "byKamil": [
-   "plus",
-   "watch"
-  ],
-  "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
-  "status": "active",
-  "goneSince": null,
-  "auto": {
-   "equipment": {
-    "ac": 1,
-    "cam": 1,
-    "pdc": 1,
-    "cp": 1
-   },
-   "plus": "Klima automatyczna.",
-   "watch": null,
-   "reject": null
-  },
-  "detailedAt": "2026-11-10",
-  "shownSince": "2026-11-10",
-  "rulesVersion": 3,
-  "photo": "https://ireland.apollo.olxcdn.com/v1/files/xn24eho9ymkt1-OTOMOTOPL/image;s=640x480"
  },
  {
   "id": "otomoto:6151567862",
@@ -415,7 +341,7 @@
    "why"
   ],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -488,7 +414,7 @@
    "plus"
   ],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -559,7 +485,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -633,7 +559,7 @@
    "watch"
   ],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -704,7 +630,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -778,7 +704,7 @@
    "watch"
   ],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -849,7 +775,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -920,7 +846,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -994,7 +920,7 @@
    "watch"
   ],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -1065,7 +991,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -1136,7 +1062,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -1207,7 +1133,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -1278,7 +1204,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -1296,6 +1222,77 @@
   "rulesVersion": 3,
   "shownSince": "2026-11-10",
   "photo": "https://ireland.apollo.olxcdn.com/v1/files/9fwy6dmk5ud53-OTOMOTOPL/image;s=640x480"
+ },
+ {
+  "id": "otomoto:6151501900",
+  "links": {
+   "otomoto": "https://www.otomoto.pl/osobowe/oferta/hyundai-tucson-ID6Ij4EA.html",
+   "olx": null
+  },
+  "name": "Hyundai Tucson",
+  "version": "1.6 T-GDi HEV Executive 4WD",
+  "engine": "1.6, 239 KM",
+  "fuel": "hev",
+  "gear": "automat",
+  "body": "suv",
+  "year": 2023,
+  "km": 75007,
+  "hp": 239,
+  "cc": 1598,
+  "price": 18565,
+  "city": "Kraków",
+  "region": "Małopolskie",
+  "seller": "prywatnie",
+  "make": "hyundai",
+  "model": "tucson",
+  "title": "Hyundai Tucson 1.6 T-GDi HEV Executive 4WD",
+  "origin": null,
+  "photo": "https://ireland.apollo.olxcdn.com/v1/files/50mkfw8eynsg2-OTOMOTOPL/image;s=640x480",
+  "equipment": {
+   "ac": 1,
+   "cam": 0,
+   "pdc": 0,
+   "cp": 0
+  },
+  "facts": {
+   "salonPL": false,
+   "firstOwner": true,
+   "aso": true,
+   "noAccident": true,
+   "origin": null,
+   "originFrom": null,
+   "hasVin": true
+  },
+  "out": null,
+  "plus": "Pierwszy właściciel, serwis w ASO, bezwypadkowy, klima dwustrefowa.",
+  "watch": null,
+  "why": null,
+  "score": 57,
+  "top": null,
+  "reject": null,
+  "pending": false,
+  "detailed": true,
+  "inAc": true,
+  "manual": false,
+  "byKamil": [],
+  "firstSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
+  "status": "active",
+  "goneSince": null,
+  "auto": {
+   "equipment": {
+    "ac": 1,
+    "cam": 0,
+    "pdc": 0,
+    "cp": 0
+   },
+   "plus": "Pierwszy właściciel, serwis w ASO, bezwypadkowy, klima dwustrefowa.",
+   "watch": null,
+   "reject": null
+  },
+  "shownSince": "2026-11-10",
+  "detailedAt": "2026-11-11",
+  "rulesVersion": 3
  },
  {
   "id": "otomoto:6150526923",
@@ -1349,7 +1346,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -1422,7 +1419,7 @@
    "plus"
   ],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -1493,7 +1490,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -1564,7 +1561,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -1635,7 +1632,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -1706,7 +1703,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -1777,7 +1774,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -1848,7 +1845,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -1919,7 +1916,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -1990,7 +1987,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -2061,7 +2058,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -2134,7 +2131,7 @@
    "plus"
   ],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -2205,7 +2202,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -2276,7 +2273,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -2347,7 +2344,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -2418,7 +2415,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -2489,7 +2486,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -2560,7 +2557,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -2631,7 +2628,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -2702,7 +2699,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -2773,7 +2770,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -2791,77 +2788,6 @@
   "rulesVersion": 3,
   "shownSince": "2026-11-10",
   "photo": "https://ireland.apollo.olxcdn.com/v1/files/ew3vw9x01ttg1-OTOMOTOPL/image;s=640x480"
- },
- {
-  "id": "otomoto:6151439476",
-  "links": {
-   "otomoto": "https://www.otomoto.pl/osobowe/oferta/citroen-c4-cactus-ID6IiOpK.html",
-   "olx": null
-  },
-  "name": "Citroën C4 Cactus",
-  "version": "BlueHDi 100 Stop&Start Origins",
-  "engine": "1.5, 102 KM",
-  "fuel": "on",
-  "gear": "manualna",
-  "body": "kompakt",
-  "year": 2018,
-  "km": 101200,
-  "hp": 102,
-  "cc": 1499,
-  "price": 29000,
-  "city": "Strzelce Krajeńskie",
-  "region": "Lubuskie",
-  "seller": "prywatnie",
-  "make": "citroen",
-  "model": "c4-cactus",
-  "title": "Citroën C4 Cactus BlueHDi 100 Stop&Start Origins",
-  "origin": null,
-  "equipment": {
-   "ac": 1,
-   "cam": 0,
-   "pdc": 1,
-   "cp": 1
-  },
-  "facts": {
-   "salonPL": false,
-   "firstOwner": false,
-   "aso": false,
-   "noAccident": false,
-   "origin": null,
-   "originFrom": null,
-   "hasVin": true
-  },
-  "out": null,
-  "plus": "Klima automatyczna.",
-  "watch": null,
-  "why": null,
-  "score": 49,
-  "top": null,
-  "reject": null,
-  "pending": false,
-  "detailed": true,
-  "inAc": true,
-  "manual": false,
-  "byKamil": [],
-  "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
-  "status": "active",
-  "goneSince": null,
-  "auto": {
-   "equipment": {
-    "ac": 1,
-    "cam": 0,
-    "pdc": 1,
-    "cp": 1
-   },
-   "plus": "Klima automatyczna.",
-   "watch": null,
-   "reject": null
-  },
-  "detailedAt": "2026-11-10",
-  "shownSince": "2026-11-10",
-  "rulesVersion": 3,
-  "photo": "https://ireland.apollo.olxcdn.com/v1/files/q5rck76ojb4p-OTOMOTOPL/image;s=640x480"
  },
  {
   "id": "otomoto:6149852293",
@@ -2915,7 +2841,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -2986,7 +2912,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -3004,6 +2930,77 @@
   "rulesVersion": 3,
   "shownSince": "2026-11-10",
   "photo": "https://ireland.apollo.olxcdn.com/v1/files/tzzsl98j5g2w2-OTOMOTOPL/image;s=640x480"
+ },
+ {
+  "id": "otomoto:6151632807",
+  "links": {
+   "otomoto": "https://www.otomoto.pl/osobowe/oferta/peugeot-208-ID6IjCHZ.html",
+   "olx": null
+  },
+  "name": "Peugeot 208",
+  "version": "1.6 BlueHDi Allure S&S",
+  "engine": "1.6, 100 KM",
+  "fuel": "on",
+  "gear": "manualna",
+  "body": "auta miejskie",
+  "year": 2017,
+  "km": 114232,
+  "hp": 100,
+  "cc": 1560,
+  "price": 23800,
+  "city": "Gniezno",
+  "region": "Wielkopolskie",
+  "seller": "prywatnie",
+  "make": "peugeot",
+  "model": "208",
+  "title": "Peugeot 208 1.6 BlueHDi Allure S&S",
+  "origin": null,
+  "photo": "https://ireland.apollo.olxcdn.com/v1/files/ijtfnf8ocths1-OTOMOTOPL/image;s=640x480",
+  "equipment": {
+   "ac": 1,
+   "cam": 1,
+   "pdc": 1,
+   "cp": 0
+  },
+  "facts": {
+   "salonPL": false,
+   "firstOwner": false,
+   "aso": false,
+   "noAccident": false,
+   "origin": null,
+   "originFrom": null,
+   "hasVin": true
+  },
+  "out": null,
+  "plus": "Klima dwustrefowa.",
+  "watch": null,
+  "why": null,
+  "score": 49,
+  "top": null,
+  "reject": null,
+  "pending": false,
+  "detailed": true,
+  "inAc": true,
+  "manual": false,
+  "byKamil": [],
+  "firstSeen": "2026-11-11",
+  "lastSeen": "2026-11-11",
+  "status": "active",
+  "goneSince": null,
+  "auto": {
+   "equipment": {
+    "ac": 1,
+    "cam": 1,
+    "pdc": 1,
+    "cp": 0
+   },
+   "plus": "Klima dwustrefowa.",
+   "watch": null,
+   "reject": null
+  },
+  "detailedAt": "2026-11-11",
+  "rulesVersion": 3,
+  "shownSince": "2026-11-11"
  },
  {
   "id": "otomoto:6145938109",
@@ -3057,7 +3054,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -3128,7 +3125,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -3199,7 +3196,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -3270,7 +3267,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -3341,7 +3338,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -3359,77 +3356,6 @@
   "rulesVersion": 3,
   "shownSince": "2026-11-10",
   "photo": "https://ireland.apollo.olxcdn.com/v1/files/zhpi2loxmcuz1-OTOMOTOPL/image;s=640x480"
- },
- {
-  "id": "otomoto:6151268868",
-  "links": {
-   "otomoto": "https://www.otomoto.pl/osobowe/oferta/renault-clio-ID6Ii620.html",
-   "olx": null
-  },
-  "name": "Renault Clio",
-  "version": null,
-  "engine": "1.5, 90 KM",
-  "fuel": "on",
-  "gear": "manualna",
-  "body": "auta miejskie",
-  "year": 2016,
-  "km": 81702,
-  "hp": 90,
-  "cc": 1461,
-  "price": 26999,
-  "city": "Lesznowola",
-  "region": "Mazowieckie",
-  "seller": "prywatnie",
-  "make": "renault",
-  "model": "clio",
-  "title": "Renault Clio",
-  "origin": "Polska",
-  "equipment": {
-   "ac": 3,
-   "cam": 0,
-   "pdc": 0,
-   "cp": 0
-  },
-  "facts": {
-   "salonPL": true,
-   "firstOwner": false,
-   "aso": false,
-   "noAccident": true,
-   "origin": "Polska",
-   "originFrom": "ogłoszenie",
-   "hasVin": true
-  },
-  "out": null,
-  "plus": "Polski salon, bezwypadkowy.",
-  "watch": null,
-  "why": null,
-  "score": 47,
-  "top": null,
-  "reject": null,
-  "pending": false,
-  "detailed": true,
-  "inAc": false,
-  "manual": false,
-  "byKamil": [],
-  "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
-  "status": "active",
-  "goneSince": null,
-  "auto": {
-   "equipment": {
-    "ac": 3,
-    "cam": 0,
-    "pdc": 0,
-    "cp": 0
-   },
-   "plus": "Polski salon, bezwypadkowy.",
-   "watch": null,
-   "reject": null
-  },
-  "detailedAt": "2026-11-10",
-  "rulesVersion": 3,
-  "shownSince": "2026-11-10",
-  "photo": "https://ireland.apollo.olxcdn.com/v1/files/shj5o43pd3ol2-OTOMOTOPL/image;s=640x480"
  },
  {
   "id": "otomoto:6149895769",
@@ -3483,7 +3409,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -3557,7 +3483,7 @@
    "watch"
   ],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -3630,7 +3556,7 @@
    "plus"
   ],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -3701,7 +3627,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -3772,7 +3698,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -3790,77 +3716,6 @@
   "shownSince": "2026-11-10",
   "rulesVersion": 3,
   "photo": "https://ireland.apollo.olxcdn.com/v1/files/nuhzjt94j27w2-OTOMOTOPL/image;s=640x480"
- },
- {
-  "id": "otomoto:6151624124",
-  "links": {
-   "otomoto": "https://www.otomoto.pl/osobowe/oferta/opel-adam-ID6IjArV.html",
-   "olx": null
-  },
-  "name": "Opel Adam",
-  "version": "1.4 Jam",
-  "engine": "1.4, 87 KM",
-  "fuel": "pb",
-  "gear": "manualna",
-  "body": "auta miejskie",
-  "year": 2015,
-  "km": 103506,
-  "hp": 87,
-  "cc": 1398,
-  "price": 23900,
-  "city": "Tarnobrzeg",
-  "region": "Podkarpackie",
-  "seller": "prywatnie",
-  "make": "opel",
-  "model": "adam",
-  "title": "Opel Adam 1.4 Jam",
-  "origin": "Niemcy",
-  "equipment": {
-   "ac": 3,
-   "cam": 0,
-   "pdc": 0,
-   "cp": 1
-  },
-  "facts": {
-   "salonPL": false,
-   "firstOwner": false,
-   "aso": true,
-   "noAccident": true,
-   "origin": "Niemcy",
-   "originFrom": "ogłoszenie",
-   "hasVin": true
-  },
-  "out": null,
-  "plus": "Serwis w ASO, bezwypadkowy, klima manualna.",
-  "watch": "Auto sprowadzone (kraj pochodzenia: Niemcy). Poproś o raport historii z zagranicy, np. z Carvertical.",
-  "why": null,
-  "score": 46,
-  "top": null,
-  "reject": null,
-  "pending": false,
-  "detailed": true,
-  "inAc": false,
-  "manual": false,
-  "byKamil": [],
-  "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
-  "status": "active",
-  "goneSince": null,
-  "auto": {
-   "equipment": {
-    "ac": 3,
-    "cam": 0,
-    "pdc": 0,
-    "cp": 1
-   },
-   "plus": "Serwis w ASO, bezwypadkowy, klima manualna.",
-   "watch": "Auto sprowadzone (kraj pochodzenia: Niemcy). Poproś o raport historii z zagranicy, np. z Carvertical.",
-   "reject": null
-  },
-  "detailedAt": "2026-11-10",
-  "rulesVersion": 3,
-  "shownSince": "2026-11-10",
-  "photo": "https://ireland.apollo.olxcdn.com/v1/files/kg1wodzdc8v-OTOMOTOPL/image;s=640x480"
  },
  {
   "id": "otomoto:6151461417",
@@ -3914,7 +3769,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -3985,7 +3840,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -4056,7 +3911,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -4127,7 +3982,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -4198,7 +4053,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -4269,7 +4124,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -4340,7 +4195,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -4411,7 +4266,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -4482,7 +4337,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -4553,7 +4408,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -4624,7 +4479,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -4695,7 +4550,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -4766,7 +4621,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -4837,7 +4692,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -4908,7 +4763,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -4979,7 +4834,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -5050,7 +4905,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -5124,7 +4979,7 @@
    "watch"
   ],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -5195,7 +5050,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -5266,7 +5121,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -5337,7 +5192,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -5408,7 +5263,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -5479,7 +5334,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -5497,6 +5352,77 @@
   "rulesVersion": 3,
   "shownSince": "2026-11-10",
   "photo": "https://ireland.apollo.olxcdn.com/v1/files/bnwy0s0cdn04-OTOMOTOPL/image;s=640x480"
+ },
+ {
+  "id": "otomoto:6151634760",
+  "links": {
+   "otomoto": "https://www.otomoto.pl/osobowe/oferta/ford-fiesta-ID6IjDdu.html",
+   "olx": null
+  },
+  "name": "Ford Fiesta",
+  "version": "1.6 TDCi Trend",
+  "engine": "1.6, 95 KM",
+  "fuel": "on",
+  "gear": "manualna",
+  "body": "auta miejskie",
+  "year": 2013,
+  "km": 77000,
+  "hp": 95,
+  "cc": 1560,
+  "price": 18900,
+  "city": "Nowa Sól",
+  "region": "Lubuskie",
+  "seller": "prywatnie",
+  "make": "ford",
+  "model": "fiesta",
+  "title": "Ford Fiesta 1.6 TDCi Trend",
+  "origin": "Niemcy",
+  "photo": "https://ireland.apollo.olxcdn.com/v1/files/xqz1j30rfwy01-OTOMOTOPL/image;s=640x480",
+  "equipment": {
+   "ac": 3,
+   "cam": 0,
+   "pdc": 1,
+   "cp": 0
+  },
+  "facts": {
+   "salonPL": false,
+   "firstOwner": true,
+   "aso": true,
+   "noAccident": false,
+   "origin": "Niemcy",
+   "originFrom": "ogłoszenie",
+   "hasVin": true
+  },
+  "out": null,
+  "plus": "Pierwszy właściciel, serwis w ASO, klima manualna.",
+  "watch": "Auto sprowadzone (kraj pochodzenia: Niemcy). Poproś o raport historii z zagranicy, np. z Carvertical.",
+  "why": null,
+  "score": 42,
+  "top": null,
+  "reject": null,
+  "pending": false,
+  "detailed": true,
+  "inAc": false,
+  "manual": false,
+  "byKamil": [],
+  "firstSeen": "2026-11-11",
+  "lastSeen": "2026-11-11",
+  "status": "active",
+  "goneSince": null,
+  "auto": {
+   "equipment": {
+    "ac": 3,
+    "cam": 0,
+    "pdc": 1,
+    "cp": 0
+   },
+   "plus": "Pierwszy właściciel, serwis w ASO, klima manualna.",
+   "watch": "Auto sprowadzone (kraj pochodzenia: Niemcy). Poproś o raport historii z zagranicy, np. z Carvertical.",
+   "reject": null
+  },
+  "detailedAt": "2026-11-11",
+  "rulesVersion": 3,
+  "shownSince": "2026-11-11"
  },
  {
   "id": "otomoto:6151157145",
@@ -5550,7 +5476,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -5621,7 +5547,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -5692,7 +5618,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -5763,7 +5689,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -5781,6 +5707,77 @@
   "rulesVersion": 3,
   "shownSince": "2026-11-10",
   "photo": "https://ireland.apollo.olxcdn.com/v1/files/c7kgfwjdk5852-OTOMOTOPL/image;s=640x480"
+ },
+ {
+  "id": "otomoto:6150843906",
+  "links": {
+   "otomoto": "https://www.otomoto.pl/osobowe/oferta/renault-kadjar-ID6IgjtM.html",
+   "olx": null
+  },
+  "name": "Renault Kadjar",
+  "version": "1.5 dCi Energy Intens",
+  "engine": "1.5, 110 KM",
+  "fuel": "on",
+  "gear": "manualna",
+  "body": "suv",
+  "year": 2016,
+  "km": 114831,
+  "hp": 110,
+  "cc": 1461,
+  "price": 29900,
+  "city": "Łońsko",
+  "region": "Wielkopolskie",
+  "seller": "prywatnie",
+  "make": "renault",
+  "model": "kadjar",
+  "title": "Renault Kadjar 1.5 dCi Energy Intens",
+  "origin": null,
+  "photo": "https://ireland.apollo.olxcdn.com/v1/files/bx09diqbk85q-OTOMOTOPL/image;s=640x480",
+  "equipment": {
+   "ac": 1,
+   "cam": 0,
+   "pdc": 1,
+   "cp": 0
+  },
+  "facts": {
+   "salonPL": true,
+   "firstOwner": false,
+   "aso": false,
+   "noAccident": false,
+   "origin": "Polska",
+   "originFrom": "opis",
+   "hasVin": true
+  },
+  "out": null,
+  "plus": "Polski salon, klima dwustrefowa.",
+  "watch": null,
+  "why": null,
+  "score": 41,
+  "top": null,
+  "reject": null,
+  "pending": false,
+  "detailed": true,
+  "inAc": true,
+  "manual": false,
+  "byKamil": [],
+  "firstSeen": "2026-11-11",
+  "lastSeen": "2026-11-11",
+  "status": "active",
+  "goneSince": null,
+  "auto": {
+   "equipment": {
+    "ac": 1,
+    "cam": 0,
+    "pdc": 1,
+    "cp": 0
+   },
+   "plus": "Polski salon, klima dwustrefowa.",
+   "watch": null,
+   "reject": null
+  },
+  "detailedAt": "2026-11-11",
+  "rulesVersion": 3,
+  "shownSince": "2026-11-11"
  },
  {
   "id": "olx:clio-17",
@@ -5889,7 +5886,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -5960,7 +5957,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -6034,7 +6031,7 @@
    "watch"
   ],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -6105,7 +6102,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -6123,77 +6120,6 @@
   "shownSince": "2026-11-10",
   "rulesVersion": 3,
   "photo": "https://ireland.apollo.olxcdn.com/v1/files/b530hqkplvbn3-OTOMOTOPL/image;s=640x480"
- },
- {
-  "id": "otomoto:6148775523",
-  "links": {
-   "otomoto": "https://www.otomoto.pl/osobowe/oferta/mini-one-ID6I7DoL.html",
-   "olx": null
-  },
-  "name": "MINI ONE",
-  "version": "D Blackyard",
-  "engine": "1.5, 95 KM",
-  "fuel": "on",
-  "gear": "manualna",
-  "body": "auta miejskie",
-  "year": 2016,
-  "km": 90700,
-  "hp": 95,
-  "cc": 1496,
-  "price": 24000,
-  "city": "Lublin",
-  "region": "Lubelskie",
-  "seller": "prywatnie",
-  "make": "mini",
-  "model": "one",
-  "title": "MINI ONE D Blackyard",
-  "origin": "Francja",
-  "equipment": {
-   "ac": 1,
-   "cam": 0,
-   "pdc": 1,
-   "cp": 0
-  },
-  "facts": {
-   "salonPL": false,
-   "firstOwner": false,
-   "aso": false,
-   "noAccident": false,
-   "origin": "Francja",
-   "originFrom": "ogłoszenie",
-   "hasVin": true
-  },
-  "out": null,
-  "plus": "Klima dwustrefowa.",
-  "watch": "Auto sprowadzone (kraj pochodzenia: Francja). Poproś o raport historii z zagranicy, np. z Carvertical.",
-  "why": null,
-  "score": 40,
-  "top": null,
-  "reject": null,
-  "pending": false,
-  "detailed": true,
-  "inAc": true,
-  "manual": false,
-  "byKamil": [],
-  "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
-  "status": "active",
-  "goneSince": null,
-  "auto": {
-   "equipment": {
-    "ac": 1,
-    "cam": 0,
-    "pdc": 1,
-    "cp": 0
-   },
-   "plus": "Klima dwustrefowa.",
-   "watch": "Auto sprowadzone (kraj pochodzenia: Francja). Poproś o raport historii z zagranicy, np. z Carvertical.",
-   "reject": null
-  },
-  "detailedAt": "2026-11-10",
-  "shownSince": "2026-11-10",
-  "rulesVersion": 3,
-  "photo": "https://ireland.apollo.olxcdn.com/v1/files/2ynqlx9i1pi4-OTOMOTOPL/image;s=640x480"
  },
  {
   "id": "otomoto:6151314757",
@@ -6247,7 +6173,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -6318,7 +6244,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -6391,7 +6317,7 @@
    "plus"
   ],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -6462,7 +6388,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -6533,7 +6459,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -6604,7 +6530,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -6675,7 +6601,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -6746,7 +6672,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -6817,7 +6743,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -6888,7 +6814,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -6959,7 +6885,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -7030,7 +6956,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -7101,7 +7027,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -7172,7 +7098,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -7189,7 +7115,7 @@
   "detailedAt": "2026-11-10",
   "shownSince": "2026-11-10",
   "rulesVersion": 3,
-  "photo": "https://ireland.apollo.olxcdn.com/v1/files/9vl97mcz6ze9-OTOMOTOPL/image;s=640x480"
+  "photo": "https://ireland.apollo.olxcdn.com/v1/files/fdove9othejn2-OTOMOTOPL/image;s=640x480"
  },
  {
   "id": "otomoto:6150394918",
@@ -7243,7 +7169,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -7314,7 +7240,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -7385,7 +7311,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -7459,7 +7385,7 @@
    "watch"
   ],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -7530,7 +7456,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -7601,7 +7527,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -7672,7 +7598,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -7743,7 +7669,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -7814,7 +7740,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -7885,7 +7811,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -7956,7 +7882,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -8027,7 +7953,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -8101,7 +8027,7 @@
    "watch"
   ],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -8172,7 +8098,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -8243,7 +8169,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -8314,7 +8240,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -8385,7 +8311,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -8456,7 +8382,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -8527,7 +8453,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -8598,7 +8524,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -8669,7 +8595,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -8740,7 +8666,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -8811,7 +8737,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -8846,7 +8772,7 @@
   "km": 72200,
   "hp": 102,
   "cc": 1499,
-  "price": 28700,
+  "price": 28900,
   "city": "Topola Mała",
   "region": "Wielkopolskie",
   "seller": "prywatnie",
@@ -8882,7 +8808,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -8953,7 +8879,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -9024,7 +8950,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -9095,7 +9021,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -9166,7 +9092,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -9237,7 +9163,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -9308,7 +9234,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -9379,7 +9305,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -9450,7 +9376,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -9521,7 +9447,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -9556,7 +9482,7 @@
   "km": 97190,
   "hp": 156,
   "cc": 1598,
-  "price": 29000,
+  "price": 27900,
   "city": "Chorzów",
   "region": "Śląskie",
   "seller": "prywatnie",
@@ -9595,7 +9521,7 @@
    "watch"
   ],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -9630,7 +9556,7 @@
   "km": 111000,
   "hp": 150,
   "cc": 1995,
-  "price": 25990,
+  "price": 25900,
   "city": "Mińsk Mazowiecki",
   "region": "Mazowieckie",
   "seller": "prywatnie",
@@ -9666,7 +9592,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -9683,7 +9609,7 @@
   "detailedAt": "2026-11-10",
   "shownSince": "2026-11-10",
   "rulesVersion": 3,
-  "photo": "https://ireland.apollo.olxcdn.com/v1/files/2q3pekou6y8e-OTOMOTOPL/image;s=640x480"
+  "photo": "https://ireland.apollo.olxcdn.com/v1/files/kxdz94msfs7d3-OTOMOTOPL/image;s=640x480"
  },
  {
   "id": "otomoto:6149932625",
@@ -9737,7 +9663,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -9755,77 +9681,6 @@
   "shownSince": "2026-11-10",
   "rulesVersion": 3,
   "photo": "https://ireland.apollo.olxcdn.com/v1/files/hipngzlaf6b63-OTOMOTOPL/image;s=640x480"
- },
- {
-  "id": "otomoto:6151517249",
-  "links": {
-   "otomoto": "https://www.otomoto.pl/osobowe/oferta/renault-clio-ID6Ij8E9.html",
-   "olx": null
-  },
-  "name": "Renault Clio",
-  "version": null,
-  "engine": "1.5, 90 KM",
-  "fuel": "on",
-  "gear": "manualna",
-  "body": "auta miejskie",
-  "year": 2017,
-  "km": 100829,
-  "hp": 90,
-  "cc": 1461,
-  "price": 26900,
-  "city": "Twardogóra",
-  "region": "Dolnośląskie",
-  "seller": "prywatnie",
-  "make": "renault",
-  "model": "clio",
-  "title": "Renault Clio",
-  "origin": "Niemcy",
-  "equipment": {
-   "ac": 1,
-   "cam": 0,
-   "pdc": 0,
-   "cp": 0
-  },
-  "facts": {
-   "salonPL": false,
-   "firstOwner": false,
-   "aso": false,
-   "noAccident": false,
-   "origin": "Niemcy",
-   "originFrom": "ogłoszenie",
-   "hasVin": true
-  },
-  "out": null,
-  "plus": "Klima automatyczna.",
-  "watch": "Auto sprowadzone (kraj pochodzenia: Niemcy). Poproś o raport historii z zagranicy, np. z Carvertical.",
-  "why": null,
-  "score": 33,
-  "top": null,
-  "reject": null,
-  "pending": false,
-  "detailed": true,
-  "inAc": true,
-  "manual": false,
-  "byKamil": [],
-  "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
-  "status": "active",
-  "goneSince": null,
-  "auto": {
-   "equipment": {
-    "ac": 1,
-    "cam": 0,
-    "pdc": 0,
-    "cp": 0
-   },
-   "plus": "Klima automatyczna.",
-   "watch": "Auto sprowadzone (kraj pochodzenia: Niemcy). Poproś o raport historii z zagranicy, np. z Carvertical.",
-   "reject": null
-  },
-  "detailedAt": "2026-11-10",
-  "rulesVersion": 3,
-  "shownSince": "2026-11-10",
-  "photo": "https://ireland.apollo.olxcdn.com/v1/files/5osu1tcdsub31-OTOMOTOPL/image;s=640x480"
  },
  {
   "id": "otomoto:6151549310",
@@ -9879,7 +9734,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -9950,7 +9805,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -10021,7 +9876,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -10092,7 +9947,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -10163,7 +10018,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -10234,7 +10089,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -10305,7 +10160,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -10376,7 +10231,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -10447,7 +10302,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -10518,7 +10373,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -10536,75 +10391,6 @@
   "rulesVersion": 3,
   "shownSince": "2026-11-10",
   "photo": "https://ireland.apollo.olxcdn.com/v1/files/9vsxct2njuwa2-OTOMOTOPL/image;s=640x480"
- },
- {
-  "id": "otomoto:6151501900",
-  "links": {
-   "otomoto": "https://www.otomoto.pl/osobowe/oferta/hyundai-tucson-ID6Ij4EA.html",
-   "olx": null
-  },
-  "name": "Hyundai Tucson",
-  "version": "1.6 T-GDi HEV Executive 4WD",
-  "engine": "1.6, 239 KM",
-  "fuel": "hev",
-  "gear": "automat",
-  "body": null,
-  "year": 2023,
-  "km": 75007,
-  "hp": 239,
-  "cc": 1598,
-  "price": 18565,
-  "city": "Kraków",
-  "region": "Małopolskie",
-  "seller": "prywatnie",
-  "make": "hyundai",
-  "model": "tucson",
-  "title": "Hyundai Tucson 1.6 T-GDi HEV Executive 4WD",
-  "origin": null,
-  "photo": "https://ireland.apollo.olxcdn.com/v1/files/50mkfw8eynsg2-OTOMOTOPL/image;s=640x480",
-  "equipment": {
-   "ac": 1,
-   "cam": 2,
-   "pdc": 2,
-   "cp": 2
-  },
-  "facts": {
-   "salonPL": false,
-   "firstOwner": false,
-   "aso": false,
-   "noAccident": false,
-   "origin": null,
-   "originFrom": null,
-   "hasVin": false
-  },
-  "out": null,
-  "plus": null,
-  "watch": null,
-  "why": null,
-  "score": 32,
-  "top": null,
-  "reject": null,
-  "pending": true,
-  "detailed": false,
-  "inAc": true,
-  "manual": false,
-  "byKamil": [],
-  "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
-  "status": "active",
-  "goneSince": null,
-  "auto": {
-   "equipment": {
-    "ac": 1,
-    "cam": 2,
-    "pdc": 2,
-    "cp": 2
-   },
-   "plus": null,
-   "watch": null,
-   "reject": null
-  },
-  "shownSince": "2026-11-10"
  },
  {
   "id": "otomoto:6151597890",
@@ -10658,7 +10444,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -10729,7 +10515,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -10800,7 +10586,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -10871,7 +10657,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -10942,7 +10728,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -11013,7 +10799,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -11084,7 +10870,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -11155,7 +10941,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -11226,7 +11012,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -11297,7 +11083,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -11315,6 +11101,77 @@
   "rulesVersion": 3,
   "shownSince": "2026-11-10",
   "photo": "https://ireland.apollo.olxcdn.com/v1/files/1fm581pqw2ib3-OTOMOTOPL/image;s=640x480"
+ },
+ {
+  "id": "otomoto:6149407840",
+  "links": {
+   "otomoto": "https://www.otomoto.pl/osobowe/oferta/volkswagen-polo-ID6IahTq.html",
+   "olx": null
+  },
+  "name": "Volkswagen Polo",
+  "version": "1.4 TDI (Blue Motion Technology) Highline",
+  "engine": "1.4, 90 KM",
+  "fuel": "on",
+  "gear": "manualna",
+  "body": "auta małe",
+  "year": 2014,
+  "km": 101313,
+  "hp": 90,
+  "cc": 1422,
+  "price": 23999,
+  "city": "Skoki",
+  "region": "Wielkopolskie",
+  "seller": "prywatnie",
+  "make": "volkswagen",
+  "model": "polo",
+  "title": "Volkswagen Polo 1.4 TDI (Blue Motion Technology) Highline",
+  "origin": null,
+  "photo": "https://ireland.apollo.olxcdn.com/v1/files/olna3kswroqj3-OTOMOTOPL/image;s=640x480",
+  "equipment": {
+   "ac": 3,
+   "cam": 0,
+   "pdc": 1,
+   "cp": 0
+  },
+  "facts": {
+   "salonPL": false,
+   "firstOwner": false,
+   "aso": false,
+   "noAccident": false,
+   "origin": null,
+   "originFrom": null,
+   "hasVin": false
+  },
+  "out": null,
+  "plus": "Klima manualna.",
+  "watch": null,
+  "why": null,
+  "score": 30,
+  "top": null,
+  "reject": null,
+  "pending": false,
+  "detailed": true,
+  "inAc": false,
+  "manual": false,
+  "byKamil": [],
+  "firstSeen": "2026-11-11",
+  "lastSeen": "2026-11-11",
+  "status": "active",
+  "goneSince": null,
+  "auto": {
+   "equipment": {
+    "ac": 3,
+    "cam": 0,
+    "pdc": 1,
+    "cp": 0
+   },
+   "plus": "Klima manualna.",
+   "watch": null,
+   "reject": null
+  },
+  "detailedAt": "2026-11-11",
+  "rulesVersion": 3,
+  "shownSince": "2026-11-11"
  },
  {
   "id": "otomoto:6151358397",
@@ -11368,7 +11225,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -11439,7 +11296,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -11510,7 +11367,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -11581,7 +11438,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -11652,7 +11509,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -11723,7 +11580,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -11794,7 +11651,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -11865,7 +11722,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -11936,7 +11793,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -12007,7 +11864,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -12078,7 +11935,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -12149,7 +12006,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -12220,7 +12077,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -12291,7 +12148,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -12365,7 +12222,7 @@
    "watch"
   ],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -12436,7 +12293,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -12507,7 +12364,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -12578,7 +12435,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -12649,7 +12506,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -12720,7 +12577,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -12791,7 +12648,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -12809,6 +12666,77 @@
   "rulesVersion": 3,
   "shownSince": "2026-11-10",
   "photo": "https://ireland.apollo.olxcdn.com/v1/files/a160me1g3kq1-OTOMOTOPL/image;s=640x480"
+ },
+ {
+  "id": "otomoto:6151612059",
+  "links": {
+   "otomoto": "https://www.otomoto.pl/osobowe/oferta/skoda-fabia-ID6Ijxjl.html",
+   "olx": null
+  },
+  "name": "Skoda Fabia",
+  "version": "1.4 TDI Active",
+  "engine": "1.4, 90 KM",
+  "fuel": "on",
+  "gear": "manualna",
+  "body": "kombi",
+  "year": 2017,
+  "km": 115000,
+  "hp": 90,
+  "cc": 1422,
+  "price": 24900,
+  "city": "Sieradz",
+  "region": "Łódzkie",
+  "seller": "prywatnie",
+  "make": "skoda",
+  "model": "fabia",
+  "title": "Skoda Fabia 1.4 TDI Active",
+  "origin": "Niemcy",
+  "photo": "https://ireland.apollo.olxcdn.com/v1/files/l96u427bjofi3-OTOMOTOPL/image;s=640x480",
+  "equipment": {
+   "ac": 3,
+   "cam": 0,
+   "pdc": 0,
+   "cp": 0
+  },
+  "facts": {
+   "salonPL": false,
+   "firstOwner": false,
+   "aso": true,
+   "noAccident": true,
+   "origin": "Niemcy",
+   "originFrom": "ogłoszenie",
+   "hasVin": true
+  },
+  "out": null,
+  "plus": "Serwis w ASO, bezwypadkowy.",
+  "watch": "Auto sprowadzone (kraj pochodzenia: Niemcy). Poproś o raport historii z zagranicy, np. z Carvertical.",
+  "why": null,
+  "score": 28,
+  "top": null,
+  "reject": null,
+  "pending": false,
+  "detailed": true,
+  "inAc": false,
+  "manual": false,
+  "byKamil": [],
+  "firstSeen": "2026-11-11",
+  "lastSeen": "2026-11-11",
+  "status": "active",
+  "goneSince": null,
+  "auto": {
+   "equipment": {
+    "ac": 3,
+    "cam": 0,
+    "pdc": 0,
+    "cp": 0
+   },
+   "plus": "Serwis w ASO, bezwypadkowy.",
+   "watch": "Auto sprowadzone (kraj pochodzenia: Niemcy). Poproś o raport historii z zagranicy, np. z Carvertical.",
+   "reject": null
+  },
+  "detailedAt": "2026-11-11",
+  "rulesVersion": 3,
+  "shownSince": "2026-11-11"
  },
  {
   "id": "olx:meriva-lpg-16",
@@ -12917,7 +12845,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -12988,7 +12916,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -13059,7 +12987,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -13130,7 +13058,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -13201,7 +13129,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -13272,7 +13200,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -13343,7 +13271,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -13414,7 +13342,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -13485,7 +13413,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -13556,7 +13484,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -13627,7 +13555,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -13698,7 +13626,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -13769,7 +13697,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -13840,7 +13768,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -13911,7 +13839,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -13946,7 +13874,7 @@
   "km": 98000,
   "hp": 95,
   "cc": 1248,
-  "price": 28400,
+  "price": 27900,
   "city": "Kołaczkowo",
   "region": "Wielkopolskie",
   "seller": "prywatnie",
@@ -13982,7 +13910,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -14056,7 +13984,7 @@
    "watch"
   ],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -14127,7 +14055,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -14198,7 +14126,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -14233,7 +14161,7 @@
   "km": 117500,
   "hp": 95,
   "cc": 1248,
-  "price": 25200,
+  "price": 23200,
   "city": "Konin",
   "region": "Wielkopolskie",
   "seller": "prywatnie",
@@ -14269,7 +14197,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -14340,7 +14268,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -14358,6 +14286,77 @@
   "rulesVersion": 3,
   "shownSince": "2026-11-10",
   "photo": "https://ireland.apollo.olxcdn.com/v1/files/1kgxkb8nndem1-OTOMOTOPL/image;s=640x480"
+ },
+ {
+  "id": "otomoto:6151627477",
+  "links": {
+   "otomoto": "https://www.otomoto.pl/osobowe/oferta/mini-cooper-ID6IjBk1.html",
+   "olx": null
+  },
+  "name": "MINI Cooper",
+  "version": "D",
+  "engine": "1.5, 116 KM",
+  "fuel": "on",
+  "gear": "manualna",
+  "body": "auta miejskie",
+  "year": 2014,
+  "km": 74000,
+  "hp": 116,
+  "cc": 1496,
+  "price": 27500,
+  "city": "Pleszew",
+  "region": "Wielkopolskie",
+  "seller": "prywatnie",
+  "make": "mini",
+  "model": "cooper",
+  "title": "MINI Cooper D",
+  "origin": "Francja",
+  "photo": "https://ireland.apollo.olxcdn.com/v1/files/3uwd7xuu2g6o2-OTOMOTOPL/image;s=640x480",
+  "equipment": {
+   "ac": 3,
+   "cam": 0,
+   "pdc": 0,
+   "cp": 0
+  },
+  "facts": {
+   "salonPL": false,
+   "firstOwner": false,
+   "aso": false,
+   "noAccident": false,
+   "origin": "Francja",
+   "originFrom": "ogłoszenie",
+   "hasVin": true
+  },
+  "out": null,
+  "plus": "Klima manualna.",
+  "watch": "Auto sprowadzone (kraj pochodzenia: Francja). Poproś o raport historii z zagranicy, np. z Carvertical.",
+  "why": null,
+  "score": 25,
+  "top": null,
+  "reject": null,
+  "pending": false,
+  "detailed": true,
+  "inAc": false,
+  "manual": false,
+  "byKamil": [],
+  "firstSeen": "2026-11-11",
+  "lastSeen": "2026-11-11",
+  "status": "active",
+  "goneSince": null,
+  "auto": {
+   "equipment": {
+    "ac": 3,
+    "cam": 0,
+    "pdc": 0,
+    "cp": 0
+   },
+   "plus": "Klima manualna.",
+   "watch": "Auto sprowadzone (kraj pochodzenia: Francja). Poproś o raport historii z zagranicy, np. z Carvertical.",
+   "reject": null
+  },
+  "detailedAt": "2026-11-11",
+  "rulesVersion": 3,
+  "shownSince": "2026-11-11"
  },
  {
   "id": "otomoto:6151370570",
@@ -14411,7 +14410,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -14482,7 +14481,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -14553,7 +14552,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -14624,7 +14623,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -14695,7 +14694,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -14766,7 +14765,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -14837,7 +14836,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -14908,7 +14907,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -14926,6 +14925,77 @@
   "rulesVersion": 3,
   "shownSince": "2026-11-10",
   "photo": "https://ireland.apollo.olxcdn.com/v1/files/h8k2rj12d65e2-OTOMOTOPL/image;s=640x480"
+ },
+ {
+  "id": "otomoto:6150124429",
+  "links": {
+   "otomoto": "https://www.otomoto.pl/osobowe/oferta/citroen-c5-OLX_ID6Idijj.html",
+   "olx": null
+  },
+  "name": "Citroën C5",
+  "version": null,
+  "engine": "1.6, 112 KM",
+  "fuel": "on",
+  "gear": "manualna",
+  "body": "kombi",
+  "year": 2015,
+  "km": 86327,
+  "hp": 112,
+  "cc": 1560,
+  "price": 23900,
+  "city": "Las Stocki",
+  "region": "Lubelskie",
+  "seller": "komis",
+  "make": "citroen",
+  "model": "c5",
+  "title": "Citroën C5",
+  "origin": "Szwecja",
+  "equipment": {
+   "ac": 1,
+   "cam": 0,
+   "pdc": 1,
+   "cp": 0
+  },
+  "facts": {
+   "salonPL": false,
+   "firstOwner": false,
+   "aso": false,
+   "noAccident": false,
+   "origin": "Szwecja",
+   "originFrom": "ogłoszenie",
+   "hasVin": false
+  },
+  "out": null,
+  "plus": null,
+  "watch": "Auto sprowadzone (kraj pochodzenia: Szwecja). Poproś o raport historii z zagranicy, np. z Carvertical.",
+  "why": null,
+  "score": 24,
+  "top": null,
+  "reject": null,
+  "pending": false,
+  "detailed": true,
+  "inAc": false,
+  "manual": false,
+  "byKamil": [],
+  "firstSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
+  "status": "active",
+  "goneSince": null,
+  "auto": {
+   "equipment": {
+    "ac": 1,
+    "cam": 0,
+    "pdc": 1,
+    "cp": 0
+   },
+   "plus": null,
+   "watch": "Auto sprowadzone (kraj pochodzenia: Szwecja). Poproś o raport historii z zagranicy, np. z Carvertical.",
+   "reject": null
+  },
+  "photo": "https://ireland.apollo.olxcdn.com/v1/files/vqubtdur2mv4-OTOMOTOPL/image;s=640x480",
+  "detailedAt": "2026-11-11",
+  "rulesVersion": 3,
+  "shownSince": "2026-11-11"
  },
  {
   "id": "otomoto:6147570556",
@@ -14979,7 +15049,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -15050,7 +15120,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -15121,7 +15191,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -15195,7 +15265,7 @@
    "watch"
   ],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -15266,7 +15336,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -15337,7 +15407,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -15408,7 +15478,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -15479,7 +15549,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -15550,7 +15620,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -15621,7 +15691,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -15639,6 +15709,77 @@
   "rulesVersion": 3,
   "shownSince": "2026-11-10",
   "photo": "https://ireland.apollo.olxcdn.com/v1/files/gpdky1sdl06w1-OTOMOTOPL/image;s=640x480"
+ },
+ {
+  "id": "otomoto:6148312607",
+  "links": {
+   "otomoto": "https://www.otomoto.pl/osobowe/oferta/opel-adam-ID6I5GYn.html",
+   "olx": null
+  },
+  "name": "Opel Adam",
+  "version": "1.4 Glam",
+  "engine": "1.4, 100 KM",
+  "fuel": "pb",
+  "gear": "manualna",
+  "body": "auta małe",
+  "year": 2014,
+  "km": 92000,
+  "hp": 100,
+  "cc": 1398,
+  "price": 16000,
+  "city": "Włocławek",
+  "region": "Kujawsko-pomorskie",
+  "seller": "prywatnie",
+  "make": "opel",
+  "model": "adam",
+  "title": "Opel Adam 1.4 Glam",
+  "origin": null,
+  "photo": "https://ireland.apollo.olxcdn.com/v1/files/lv2r1bhb3wgu3-OTOMOTOPL/image;s=640x480",
+  "equipment": {
+   "ac": 3,
+   "cam": 0,
+   "pdc": 0,
+   "cp": 0
+  },
+  "facts": {
+   "salonPL": false,
+   "firstOwner": false,
+   "aso": false,
+   "noAccident": false,
+   "origin": null,
+   "originFrom": null,
+   "hasVin": true
+  },
+  "out": null,
+  "plus": "Klima manualna.",
+  "watch": null,
+  "why": null,
+  "score": 23,
+  "top": null,
+  "reject": null,
+  "pending": false,
+  "detailed": true,
+  "inAc": false,
+  "manual": false,
+  "byKamil": [],
+  "firstSeen": "2026-11-11",
+  "lastSeen": "2026-11-11",
+  "status": "active",
+  "goneSince": null,
+  "auto": {
+   "equipment": {
+    "ac": 3,
+    "cam": 0,
+    "pdc": 0,
+    "cp": 0
+   },
+   "plus": "Klima manualna.",
+   "watch": null,
+   "reject": null
+  },
+  "detailedAt": "2026-11-11",
+  "rulesVersion": 3,
+  "shownSince": "2026-11-11"
  },
  {
   "id": "otomoto:6151417991",
@@ -15692,7 +15833,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -15763,7 +15904,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -15834,7 +15975,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -15908,7 +16049,7 @@
    "watch"
   ],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -15979,7 +16120,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -16050,7 +16191,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -16068,77 +16209,6 @@
   "shownSince": "2026-11-10",
   "rulesVersion": 3,
   "photo": "https://ireland.apollo.olxcdn.com/v1/files/jokz76vfr1i71-OTOMOTOPL/image;s=640x480"
- },
- {
-  "id": "otomoto:6148728239",
-  "links": {
-   "otomoto": "https://www.otomoto.pl/osobowe/oferta/mini-countryman-ID6I7r67.html",
-   "olx": null
-  },
-  "name": "MINI Countryman",
-  "version": null,
-  "engine": "1.6, 112 KM",
-  "fuel": "on",
-  "gear": "manualna",
-  "body": "kombi",
-  "year": 2014,
-  "km": 111000,
-  "hp": 112,
-  "cc": 1598,
-  "price": 5300,
-  "city": "Osiek Nad Wisłą",
-  "region": "Kujawsko-pomorskie",
-  "seller": "prywatnie",
-  "make": "mini",
-  "model": "countryman",
-  "title": "MINI Countryman",
-  "origin": "Wielka Brytania",
-  "equipment": {
-   "ac": 3,
-   "cam": 0,
-   "pdc": 0,
-   "cp": 0
-  },
-  "facts": {
-   "salonPL": false,
-   "firstOwner": false,
-   "aso": true,
-   "noAccident": true,
-   "origin": "Wielka Brytania",
-   "originFrom": "ogłoszenie",
-   "hasVin": true
-  },
-  "out": null,
-  "plus": "Serwis w ASO, bezwypadkowy.",
-  "watch": "Auto sprowadzone (kraj pochodzenia: Wielka Brytania). Poproś o raport historii z zagranicy, np. z Carvertical.",
-  "why": null,
-  "score": 22,
-  "top": null,
-  "reject": null,
-  "pending": false,
-  "detailed": true,
-  "inAc": false,
-  "manual": false,
-  "byKamil": [],
-  "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
-  "status": "active",
-  "goneSince": null,
-  "auto": {
-   "equipment": {
-    "ac": 3,
-    "cam": 0,
-    "pdc": 0,
-    "cp": 0
-   },
-   "plus": "Serwis w ASO, bezwypadkowy.",
-   "watch": "Auto sprowadzone (kraj pochodzenia: Wielka Brytania). Poproś o raport historii z zagranicy, np. z Carvertical.",
-   "reject": null
-  },
-  "detailedAt": "2026-11-10",
-  "shownSince": "2026-11-10",
-  "rulesVersion": 3,
-  "photo": "https://ireland.apollo.olxcdn.com/v1/files/w4ykedcuzihw-OTOMOTOPL/image;s=640x480"
  },
  {
   "id": "otomoto:6151346952",
@@ -16192,7 +16262,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -16263,7 +16333,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -16334,7 +16404,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -16354,47 +16424,48 @@
   "photo": "https://ireland.apollo.olxcdn.com/v1/files/jfvhc6g42vb41-OTOMOTOPL/image;s=640x480"
  },
  {
-  "id": "otomoto:6151625589",
+  "id": "otomoto:6151005980",
   "links": {
-   "otomoto": "https://www.otomoto.pl/osobowe/oferta/dacia-duster-OLX_ID6IjAPz.html",
+   "otomoto": "https://www.otomoto.pl/osobowe/oferta/peugeot-2008-ID6IgZDS.html",
    "olx": null
   },
-  "name": "Dacia Duster",
+  "name": "Peugeot 2008",
   "version": null,
-  "engine": "1.5, 106 KM",
+  "engine": "1.6, 92 KM",
   "fuel": "on",
   "gear": "manualna",
   "body": "suv",
-  "year": 2013,
-  "km": 53554,
-  "hp": 106,
-  "cc": 1500,
-  "price": 17000,
-  "city": "Jelenia Góra",
+  "year": 2016,
+  "km": 120000,
+  "hp": 92,
+  "cc": 1560,
+  "price": 28800,
+  "city": "Kłodzko",
   "region": "Dolnośląskie",
   "seller": "komis",
-  "make": "dacia",
-  "model": "duster",
-  "title": "Dacia Duster",
-  "origin": "Polska",
+  "make": "peugeot",
+  "model": "2008",
+  "title": "Peugeot 2008",
+  "origin": "Austria",
+  "photo": "https://ireland.apollo.olxcdn.com/v1/files/zsmtik18cr6n2-OTOMOTOPL/image;s=640x480",
   "equipment": {
-   "ac": 2,
+   "ac": 3,
    "cam": 0,
    "pdc": 0,
-   "cp": 0
+   "cp": 2
   },
   "facts": {
-   "salonPL": true,
-   "firstOwner": false,
-   "aso": false,
-   "noAccident": false,
-   "origin": "Polska",
+   "salonPL": false,
+   "firstOwner": true,
+   "aso": true,
+   "noAccident": true,
+   "origin": "Austria",
    "originFrom": "ogłoszenie",
-   "hasVin": false
+   "hasVin": true
   },
   "out": null,
-  "plus": "Polski salon.",
-  "watch": "W ogłoszeniu nie ma słowa o klimatyzacji. Dopytaj.",
+  "plus": "Pierwszy właściciel, serwis w ASO, bezwypadkowy, klima manualna.",
+  "watch": "W ogłoszeniu jest tylko Android Auto. Zapytaj, czy działa CarPlay. Auto sprowadzone (kraj pochodzenia: Austria). Poproś o raport historii z zagranicy, np. z Carvertical.",
   "why": null,
   "score": 22,
   "top": null,
@@ -16404,25 +16475,24 @@
   "inAc": false,
   "manual": false,
   "byKamil": [],
-  "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "firstSeen": "2026-11-11",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
    "equipment": {
-    "ac": 2,
+    "ac": 3,
     "cam": 0,
     "pdc": 0,
-    "cp": 0
+    "cp": 2
    },
-   "plus": "Polski salon.",
-   "watch": "W ogłoszeniu nie ma słowa o klimatyzacji. Dopytaj.",
+   "plus": "Pierwszy właściciel, serwis w ASO, bezwypadkowy, klima manualna.",
+   "watch": "W ogłoszeniu jest tylko Android Auto. Zapytaj, czy działa CarPlay. Auto sprowadzone (kraj pochodzenia: Austria). Poproś o raport historii z zagranicy, np. z Carvertical.",
    "reject": null
   },
-  "detailedAt": "2026-11-10",
+  "detailedAt": "2026-11-11",
   "rulesVersion": 3,
-  "shownSince": "2026-11-10",
-  "photo": "https://ireland.apollo.olxcdn.com/v1/files/su32l7qlqhs71-OTOMOTOPL/image;s=640x480"
+  "shownSince": "2026-11-11"
  },
  {
   "id": "otomoto:6150886151",
@@ -16476,7 +16546,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -16547,7 +16617,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -16618,7 +16688,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -16689,7 +16759,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -16760,7 +16830,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -16831,7 +16901,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -16902,7 +16972,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -16973,7 +17043,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -17044,7 +17114,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -17115,7 +17185,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -17186,7 +17256,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -17204,77 +17274,6 @@
   "rulesVersion": 3,
   "shownSince": "2026-11-10",
   "photo": "https://ireland.apollo.olxcdn.com/v1/files/mqux93rvnqkq1-OTOMOTOPL/image;s=640x480"
- },
- {
-  "id": "otomoto:6151115779",
-  "links": {
-   "otomoto": "https://www.otomoto.pl/osobowe/oferta/peugeot-208-ID6IhscP.html",
-   "olx": null
-  },
-  "name": "Peugeot 208",
-  "version": "1.6 BlueHDi Allure S&S",
-  "engine": "1.6, 100 KM",
-  "fuel": "on",
-  "gear": "manualna",
-  "body": "kompakt",
-  "year": 2016,
-  "km": 100800,
-  "hp": 100,
-  "cc": 1560,
-  "price": 24900,
-  "city": "Zduńska Wola",
-  "region": "Łódzkie",
-  "seller": "komis",
-  "make": "peugeot",
-  "model": "208",
-  "title": "Peugeot 208 1.6 BlueHDi Allure S&S",
-  "origin": null,
-  "equipment": {
-   "ac": 3,
-   "cam": 0,
-   "pdc": 1,
-   "cp": 0
-  },
-  "facts": {
-   "salonPL": false,
-   "firstOwner": false,
-   "aso": false,
-   "noAccident": false,
-   "origin": null,
-   "originFrom": null,
-   "hasVin": true
-  },
-  "out": null,
-  "plus": "Klima manualna.",
-  "watch": null,
-  "why": null,
-  "score": 20,
-  "top": null,
-  "reject": null,
-  "pending": false,
-  "detailed": true,
-  "inAc": false,
-  "manual": false,
-  "byKamil": [],
-  "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
-  "status": "active",
-  "goneSince": null,
-  "auto": {
-   "equipment": {
-    "ac": 3,
-    "cam": 0,
-    "pdc": 1,
-    "cp": 0
-   },
-   "plus": "Klima manualna.",
-   "watch": null,
-   "reject": null
-  },
-  "detailedAt": "2026-11-10",
-  "rulesVersion": 3,
-  "shownSince": "2026-11-10",
-  "photo": "https://ireland.apollo.olxcdn.com/v1/files/dgx0rnzsdrdc2-OTOMOTOPL/image;s=640x480"
  },
  {
   "id": "otomoto:6151503122",
@@ -17328,7 +17327,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -17399,7 +17398,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -17417,6 +17416,148 @@
   "rulesVersion": 3,
   "shownSince": "2026-11-10",
   "photo": "https://ireland.apollo.olxcdn.com/v1/files/wkb5tmlzfqie1-OTOMOTOPL/image;s=640x480"
+ },
+ {
+  "id": "otomoto:6150546893",
+  "links": {
+   "otomoto": "https://www.otomoto.pl/osobowe/oferta/peugeot-2008-OLX_ID6If4df.html",
+   "olx": null
+  },
+  "name": "Peugeot 2008",
+  "version": null,
+  "engine": "1.6, 120 KM",
+  "fuel": "on",
+  "gear": "manualna",
+  "body": "suv",
+  "year": 2016,
+  "km": 123388,
+  "hp": 120,
+  "cc": 1560,
+  "price": 28300,
+  "city": "Białystok",
+  "region": "Podlaskie",
+  "seller": "komis",
+  "make": "peugeot",
+  "model": "2008",
+  "title": "Peugeot 2008",
+  "origin": "Niemcy",
+  "equipment": {
+   "ac": 1,
+   "cam": 0,
+   "pdc": 1,
+   "cp": 0
+  },
+  "facts": {
+   "salonPL": false,
+   "firstOwner": false,
+   "aso": false,
+   "noAccident": false,
+   "origin": "Niemcy",
+   "originFrom": "ogłoszenie",
+   "hasVin": true
+  },
+  "out": "przebieg 123 388 km, ponad limit 120 000 km",
+  "plus": null,
+  "watch": "Auto sprowadzone (kraj pochodzenia: Niemcy). Poproś o raport historii z zagranicy, np. z Carvertical.",
+  "why": null,
+  "score": 20,
+  "top": null,
+  "reject": null,
+  "pending": false,
+  "detailed": true,
+  "inAc": false,
+  "manual": false,
+  "byKamil": [],
+  "firstSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
+  "status": "active",
+  "goneSince": null,
+  "auto": {
+   "equipment": {
+    "ac": 1,
+    "cam": 0,
+    "pdc": 1,
+    "cp": 0
+   },
+   "plus": null,
+   "watch": "Auto sprowadzone (kraj pochodzenia: Niemcy). Poproś o raport historii z zagranicy, np. z Carvertical.",
+   "reject": null
+  },
+  "detailedAt": "2026-11-10",
+  "shownSince": "2026-11-10",
+  "rulesVersion": 3,
+  "photo": "https://ireland.apollo.olxcdn.com/v1/files/drcsgrk09ypv3-OTOMOTOPL/image;s=640x480"
+ },
+ {
+  "id": "otomoto:6151638891",
+  "links": {
+   "otomoto": "https://www.otomoto.pl/osobowe/oferta/peugeot-208-ID6IjEi7.html",
+   "olx": null
+  },
+  "name": "Peugeot 208",
+  "version": "1.6 BlueHDi Allure S&S",
+  "engine": "1.6, 100 KM",
+  "fuel": "on",
+  "gear": "manualna",
+  "body": "kompakt",
+  "year": 2016,
+  "km": 100800,
+  "hp": 100,
+  "cc": 1560,
+  "price": 24900,
+  "city": "Zduńska Wola",
+  "region": "Łódzkie",
+  "seller": "komis",
+  "make": "peugeot",
+  "model": "208",
+  "title": "Peugeot 208 1.6 BlueHDi Allure S&S",
+  "origin": null,
+  "photo": "https://ireland.apollo.olxcdn.com/v1/files/gek16twetu6o3-OTOMOTOPL/image;s=640x480",
+  "equipment": {
+   "ac": 3,
+   "cam": 0,
+   "pdc": 1,
+   "cp": 0
+  },
+  "facts": {
+   "salonPL": false,
+   "firstOwner": false,
+   "aso": false,
+   "noAccident": false,
+   "origin": null,
+   "originFrom": null,
+   "hasVin": true
+  },
+  "out": null,
+  "plus": "Klima manualna.",
+  "watch": null,
+  "why": null,
+  "score": 20,
+  "top": null,
+  "reject": null,
+  "pending": false,
+  "detailed": true,
+  "inAc": false,
+  "manual": false,
+  "byKamil": [],
+  "firstSeen": "2026-11-11",
+  "lastSeen": "2026-11-11",
+  "status": "active",
+  "goneSince": null,
+  "auto": {
+   "equipment": {
+    "ac": 3,
+    "cam": 0,
+    "pdc": 1,
+    "cp": 0
+   },
+   "plus": "Klima manualna.",
+   "watch": null,
+   "reject": null
+  },
+  "detailedAt": "2026-11-11",
+  "rulesVersion": 3,
+  "shownSince": "2026-11-11"
  },
  {
   "id": "olx:insight-11",
@@ -17525,7 +17666,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -17596,7 +17737,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -17667,7 +17808,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -17738,7 +17879,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -17809,7 +17950,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -17880,7 +18021,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -17951,7 +18092,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -18022,7 +18163,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -18093,7 +18234,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -18164,7 +18305,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -18235,7 +18376,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -18306,7 +18447,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -18377,7 +18518,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -18448,7 +18589,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -18466,77 +18607,6 @@
   "rulesVersion": 3,
   "shownSince": "2026-11-10",
   "photo": "https://ireland.apollo.olxcdn.com/v1/files/vvnjyn2umwtc1-OTOMOTOPL/image;s=640x480"
- },
- {
-  "id": "otomoto:6150546893",
-  "links": {
-   "otomoto": "https://www.otomoto.pl/osobowe/oferta/peugeot-2008-OLX_ID6If4df.html",
-   "olx": null
-  },
-  "name": "Peugeot 2008",
-  "version": null,
-  "engine": "1.6, 120 KM",
-  "fuel": "on",
-  "gear": "manualna",
-  "body": "suv",
-  "year": 2016,
-  "km": 123388,
-  "hp": 120,
-  "cc": 1560,
-  "price": 29500,
-  "city": "Białystok",
-  "region": "Podlaskie",
-  "seller": "komis",
-  "make": "peugeot",
-  "model": "2008",
-  "title": "Peugeot 2008",
-  "origin": "Niemcy",
-  "equipment": {
-   "ac": 1,
-   "cam": 0,
-   "pdc": 1,
-   "cp": 0
-  },
-  "facts": {
-   "salonPL": false,
-   "firstOwner": false,
-   "aso": false,
-   "noAccident": false,
-   "origin": "Niemcy",
-   "originFrom": "ogłoszenie",
-   "hasVin": true
-  },
-  "out": "przebieg 123 388 km, ponad limit 120 000 km",
-  "plus": null,
-  "watch": "Auto sprowadzone (kraj pochodzenia: Niemcy). Poproś o raport historii z zagranicy, np. z Carvertical.",
-  "why": null,
-  "score": 17,
-  "top": null,
-  "reject": null,
-  "pending": false,
-  "detailed": true,
-  "inAc": false,
-  "manual": false,
-  "byKamil": [],
-  "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
-  "status": "active",
-  "goneSince": null,
-  "auto": {
-   "equipment": {
-    "ac": 1,
-    "cam": 0,
-    "pdc": 1,
-    "cp": 0
-   },
-   "plus": null,
-   "watch": "Auto sprowadzone (kraj pochodzenia: Niemcy). Poproś o raport historii z zagranicy, np. z Carvertical.",
-   "reject": null
-  },
-  "detailedAt": "2026-11-10",
-  "shownSince": "2026-11-10",
-  "rulesVersion": 3,
-  "photo": "https://ireland.apollo.olxcdn.com/v1/files/drcsgrk09ypv3-OTOMOTOPL/image;s=640x480"
  },
  {
   "id": "otomoto:6149710556",
@@ -18593,7 +18663,7 @@
    "watch"
   ],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -18664,7 +18734,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -18735,7 +18805,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -18806,7 +18876,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -18877,7 +18947,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -18948,7 +19018,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -19019,7 +19089,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -19090,7 +19160,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -19161,7 +19231,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -19232,7 +19302,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -19303,7 +19373,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -19374,7 +19444,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -19445,7 +19515,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -19516,7 +19586,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -19587,7 +19657,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -19658,7 +19728,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -19729,7 +19799,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -19800,7 +19870,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -19871,7 +19941,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -19889,6 +19959,77 @@
   "rulesVersion": 3,
   "shownSince": "2026-11-10",
   "photo": "https://ireland.apollo.olxcdn.com/v1/files/jsnhszk7cbh1-OTOMOTOPL/image;s=640x480"
+ },
+ {
+  "id": "otomoto:6142438821",
+  "links": {
+   "otomoto": "https://www.otomoto.pl/osobowe/oferta/nissan-juke-ID6HH2WT.html",
+   "olx": null
+  },
+  "name": "Nissan Juke",
+  "version": null,
+  "engine": "1.5, 110 KM",
+  "fuel": "on",
+  "gear": "manualna",
+  "body": "kompakt",
+  "year": 2017,
+  "km": 114000,
+  "hp": 110,
+  "cc": 1461,
+  "price": 28500,
+  "city": "Opalenica",
+  "region": "Wielkopolskie",
+  "seller": "prywatnie",
+  "make": "nissan",
+  "model": "juke",
+  "title": "Nissan Juke",
+  "origin": null,
+  "equipment": {
+   "ac": 2,
+   "cam": 0,
+   "pdc": 0,
+   "cp": 0
+  },
+  "facts": {
+   "salonPL": false,
+   "firstOwner": false,
+   "aso": false,
+   "noAccident": false,
+   "origin": null,
+   "originFrom": null,
+   "hasVin": true
+  },
+  "out": null,
+  "plus": null,
+  "watch": "W ogłoszeniu nie ma słowa o klimatyzacji. Dopytaj.",
+  "why": null,
+  "score": 14,
+  "top": null,
+  "reject": null,
+  "pending": false,
+  "detailed": true,
+  "inAc": false,
+  "manual": false,
+  "byKamil": [],
+  "firstSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
+  "status": "active",
+  "goneSince": null,
+  "auto": {
+   "equipment": {
+    "ac": 2,
+    "cam": 0,
+    "pdc": 0,
+    "cp": 0
+   },
+   "plus": null,
+   "watch": "W ogłoszeniu nie ma słowa o klimatyzacji. Dopytaj.",
+   "reject": null
+  },
+  "detailedAt": "2026-11-10",
+  "rulesVersion": 3,
+  "shownSince": "2026-11-10",
+  "photo": "https://ireland.apollo.olxcdn.com/v1/files/7damzjw1znxv3-OTOMOTOPL/image;s=640x480"
  },
  {
   "id": "otomoto:6151540851",
@@ -19942,7 +20083,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -20013,7 +20154,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -20084,7 +20225,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -20155,7 +20296,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -20226,7 +20367,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -20244,77 +20385,6 @@
   "shownSince": "2026-11-10",
   "rulesVersion": 3,
   "photo": "https://ireland.apollo.olxcdn.com/v1/files/lqivvl57gujx1-OTOMOTOPL/image;s=640x480"
- },
- {
-  "id": "otomoto:6150827869",
-  "links": {
-   "otomoto": "https://www.otomoto.pl/osobowe/oferta/renault-megane-ID6Igfj7.html",
-   "olx": null
-  },
-  "name": "Renault Megane",
-  "version": null,
-  "engine": "1.5, 90 KM",
-  "fuel": "on",
-  "gear": "manualna",
-  "body": "kompakt",
-  "year": 2018,
-  "km": 112640,
-  "hp": 90,
-  "cc": 1461,
-  "price": 29500,
-  "city": "Zakrzewo",
-  "region": "Wielkopolskie",
-  "seller": "prywatnie",
-  "make": "renault",
-  "model": "megane",
-  "title": "Renault Megane",
-  "origin": null,
-  "equipment": {
-   "ac": 2,
-   "cam": 0,
-   "pdc": 0,
-   "cp": 0
-  },
-  "facts": {
-   "salonPL": false,
-   "firstOwner": false,
-   "aso": false,
-   "noAccident": false,
-   "origin": null,
-   "originFrom": null,
-   "hasVin": true
-  },
-  "out": null,
-  "plus": null,
-  "watch": "W ogłoszeniu nie ma słowa o klimatyzacji. Dopytaj.",
-  "why": null,
-  "score": 13,
-  "top": null,
-  "reject": null,
-  "pending": false,
-  "detailed": true,
-  "inAc": false,
-  "manual": false,
-  "byKamil": [],
-  "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
-  "status": "active",
-  "goneSince": null,
-  "auto": {
-   "equipment": {
-    "ac": 2,
-    "cam": 0,
-    "pdc": 0,
-    "cp": 0
-   },
-   "plus": null,
-   "watch": "W ogłoszeniu nie ma słowa o klimatyzacji. Dopytaj.",
-   "reject": null
-  },
-  "detailedAt": "2026-11-10",
-  "rulesVersion": 3,
-  "shownSince": "2026-11-10",
-  "photo": "https://ireland.apollo.olxcdn.com/v1/files/zp0fa345t8c-OTOMOTOPL/image;s=640x480"
  },
  {
   "id": "otomoto:6151622712",
@@ -20368,7 +20438,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -20439,7 +20509,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -20457,6 +20527,77 @@
   "rulesVersion": 3,
   "shownSince": "2026-11-10",
   "photo": "https://ireland.apollo.olxcdn.com/v1/files/5w2tjkimw1571-OTOMOTOPL/image;s=640x480"
+ },
+ {
+  "id": "otomoto:6151630154",
+  "links": {
+   "otomoto": "https://www.otomoto.pl/osobowe/oferta/chevrolet-aveo-ID6IjC1c.html",
+   "olx": null
+  },
+  "name": "Chevrolet Aveo",
+  "version": null,
+  "engine": "1.2, 95 KM",
+  "fuel": "on",
+  "gear": "manualna",
+  "body": "kompakt",
+  "year": 2013,
+  "km": 107929,
+  "hp": 95,
+  "cc": 1248,
+  "price": 13900,
+  "city": "Kraków",
+  "region": "Małopolskie",
+  "seller": "komis",
+  "make": "chevrolet",
+  "model": "aveo",
+  "title": "Chevrolet Aveo",
+  "origin": "Włochy",
+  "photo": "https://ireland.apollo.olxcdn.com/v1/files/454tu8fhc4pw2-OTOMOTOPL/image;s=640x480",
+  "equipment": {
+   "ac": 3,
+   "cam": 0,
+   "pdc": 1,
+   "cp": 0
+  },
+  "facts": {
+   "salonPL": false,
+   "firstOwner": false,
+   "aso": false,
+   "noAccident": false,
+   "origin": "Włochy",
+   "originFrom": "ogłoszenie",
+   "hasVin": true
+  },
+  "out": null,
+  "plus": "Klima manualna.",
+  "watch": "Auto sprowadzone (kraj pochodzenia: Włochy). Poproś o raport historii z zagranicy, np. z Carvertical.",
+  "why": null,
+  "score": 13,
+  "top": null,
+  "reject": null,
+  "pending": false,
+  "detailed": true,
+  "inAc": false,
+  "manual": false,
+  "byKamil": [],
+  "firstSeen": "2026-11-11",
+  "lastSeen": "2026-11-11",
+  "status": "active",
+  "goneSince": null,
+  "auto": {
+   "equipment": {
+    "ac": 3,
+    "cam": 0,
+    "pdc": 1,
+    "cp": 0
+   },
+   "plus": "Klima manualna.",
+   "watch": "Auto sprowadzone (kraj pochodzenia: Włochy). Poproś o raport historii z zagranicy, np. z Carvertical.",
+   "reject": null
+  },
+  "detailedAt": "2026-11-11",
+  "rulesVersion": 3,
+  "shownSince": "2026-11-11"
  },
  {
   "id": "otomoto:6151247676",
@@ -20510,7 +20651,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -20581,7 +20722,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -20652,7 +20793,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -20723,7 +20864,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -20794,7 +20935,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -20865,7 +21006,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -20883,77 +21024,6 @@
   "shownSince": "2026-11-10",
   "rulesVersion": 3,
   "photo": "https://ireland.apollo.olxcdn.com/v1/files/kxhdeal2ibps3-OTOMOTOPL/image;s=640x480"
- },
- {
-  "id": "otomoto:6142438821",
-  "links": {
-   "otomoto": "https://www.otomoto.pl/osobowe/oferta/nissan-juke-ID6HH2WT.html",
-   "olx": null
-  },
-  "name": "Nissan Juke",
-  "version": null,
-  "engine": "1.5, 110 KM",
-  "fuel": "on",
-  "gear": "manualna",
-  "body": "kompakt",
-  "year": 2017,
-  "km": 114000,
-  "hp": 110,
-  "cc": 1461,
-  "price": 29500,
-  "city": "Opalenica",
-  "region": "Wielkopolskie",
-  "seller": "prywatnie",
-  "make": "nissan",
-  "model": "juke",
-  "title": "Nissan Juke",
-  "origin": null,
-  "equipment": {
-   "ac": 2,
-   "cam": 0,
-   "pdc": 0,
-   "cp": 0
-  },
-  "facts": {
-   "salonPL": false,
-   "firstOwner": false,
-   "aso": false,
-   "noAccident": false,
-   "origin": null,
-   "originFrom": null,
-   "hasVin": true
-  },
-  "out": null,
-  "plus": null,
-  "watch": "W ogłoszeniu nie ma słowa o klimatyzacji. Dopytaj.",
-  "why": null,
-  "score": 11,
-  "top": null,
-  "reject": null,
-  "pending": false,
-  "detailed": true,
-  "inAc": false,
-  "manual": false,
-  "byKamil": [],
-  "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
-  "status": "active",
-  "goneSince": null,
-  "auto": {
-   "equipment": {
-    "ac": 2,
-    "cam": 0,
-    "pdc": 0,
-    "cp": 0
-   },
-   "plus": null,
-   "watch": "W ogłoszeniu nie ma słowa o klimatyzacji. Dopytaj.",
-   "reject": null
-  },
-  "detailedAt": "2026-11-10",
-  "rulesVersion": 3,
-  "shownSince": "2026-11-10",
-  "photo": "https://ireland.apollo.olxcdn.com/v1/files/7damzjw1znxv3-OTOMOTOPL/image;s=640x480"
  },
  {
   "id": "otomoto:6151201248",
@@ -21007,7 +21077,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -21078,7 +21148,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -21149,7 +21219,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -21220,7 +21290,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -21291,7 +21361,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -21362,7 +21432,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -21433,7 +21503,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -21504,7 +21574,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -21575,7 +21645,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -21646,7 +21716,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -21717,7 +21787,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -21788,7 +21858,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -21859,7 +21929,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -21930,7 +22000,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -22001,7 +22071,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -22019,77 +22089,6 @@
   "rulesVersion": 3,
   "shownSince": "2026-11-10",
   "photo": "https://ireland.apollo.olxcdn.com/v1/files/7zlqv1nnugn72-OTOMOTOPL/image;s=640x480"
- },
- {
-  "id": "otomoto:6151011237",
-  "links": {
-   "otomoto": "https://www.otomoto.pl/osobowe/oferta/citroen-ds4-ID6Ih10F.html",
-   "olx": null
-  },
-  "name": "Citroën DS4",
-  "version": null,
-  "engine": "1.6, 120 KM",
-  "fuel": "on",
-  "gear": "automat",
-  "body": "kompakt",
-  "year": 2015,
-  "km": 120357,
-  "hp": 120,
-  "cc": 1560,
-  "price": 26500,
-  "city": "Tarnowskie Góry",
-  "region": "Śląskie",
-  "seller": "prywatnie",
-  "make": "citroen",
-  "model": "ds4",
-  "title": "Citroën DS4",
-  "origin": null,
-  "equipment": {
-   "ac": 2,
-   "cam": 0,
-   "pdc": 0,
-   "cp": 0
-  },
-  "facts": {
-   "salonPL": false,
-   "firstOwner": false,
-   "aso": false,
-   "noAccident": false,
-   "origin": null,
-   "originFrom": null,
-   "hasVin": true
-  },
-  "out": "przebieg 120 357 km, ponad limit 120 000 km",
-  "plus": null,
-  "watch": "W ogłoszeniu nie ma słowa o klimatyzacji. Dopytaj.",
-  "why": null,
-  "score": 9,
-  "top": null,
-  "reject": null,
-  "pending": false,
-  "detailed": true,
-  "inAc": false,
-  "manual": false,
-  "byKamil": [],
-  "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
-  "status": "active",
-  "goneSince": null,
-  "auto": {
-   "equipment": {
-    "ac": 2,
-    "cam": 0,
-    "pdc": 0,
-    "cp": 0
-   },
-   "plus": null,
-   "watch": "W ogłoszeniu nie ma słowa o klimatyzacji. Dopytaj.",
-   "reject": null
-  },
-  "detailedAt": "2026-11-10",
-  "rulesVersion": 3,
-  "shownSince": "2026-11-10",
-  "photo": "https://ireland.apollo.olxcdn.com/v1/files/s85o81wqrc452-OTOMOTOPL/image;s=640x480"
  },
  {
   "id": "otomoto:6148783533",
@@ -22143,7 +22142,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -22214,7 +22213,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -22285,7 +22284,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -22356,7 +22355,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -22427,7 +22426,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -22444,7 +22443,7 @@
   "detailedAt": "2026-11-10",
   "rulesVersion": 3,
   "shownSince": "2026-11-10",
-  "photo": "https://ireland.apollo.olxcdn.com/v1/files/5oljgr12wwg43-OTOMOTOPL/image;s=640x480"
+  "photo": "https://ireland.apollo.olxcdn.com/v1/files/7l55tg2r1nib-OTOMOTOPL/image;s=640x480"
  },
  {
   "id": "otomoto:6150909254",
@@ -22498,7 +22497,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -22569,7 +22568,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -22640,7 +22639,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -22711,7 +22710,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -22782,7 +22781,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -22853,7 +22852,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -22924,7 +22923,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -22995,7 +22994,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -23066,7 +23065,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -23137,7 +23136,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -23208,7 +23207,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -23279,7 +23278,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -23350,7 +23349,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -23421,7 +23420,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -23492,7 +23491,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -23563,7 +23562,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -23634,7 +23633,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -23705,7 +23704,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -23776,7 +23775,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -23847,7 +23846,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -23918,7 +23917,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -23989,7 +23988,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -24060,7 +24059,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -24077,76 +24076,6 @@
   "detailedAt": "2026-11-10",
   "rulesVersion": 3,
   "photo": "https://ireland.apollo.olxcdn.com/v1/files/9t37tc8cttx51-OTOMOTOPL/image;s=640x480"
- },
- {
-  "id": "otomoto:6151614316",
-  "links": {
-   "otomoto": "https://www.otomoto.pl/osobowe/oferta/toyota-yaris-ID6IjxTK.html",
-   "olx": null
-  },
-  "name": "Toyota Yaris",
-  "version": "Hybrid 1.5 Comfort",
-  "engine": "1.5, 116 KM",
-  "fuel": "hev",
-  "gear": "automat",
-  "body": "auta małe",
-  "year": 2025,
-  "km": 9500,
-  "hp": 116,
-  "cc": 1490,
-  "price": 13530,
-  "city": "Katowice",
-  "region": "Śląskie",
-  "seller": "prywatnie",
-  "make": "toyota",
-  "model": "yaris",
-  "title": "Toyota Yaris Hybrid 1.5 Comfort",
-  "origin": "Polska",
-  "equipment": {
-   "ac": 1,
-   "cam": 1,
-   "pdc": 0,
-   "cp": 2
-  },
-  "facts": {
-   "salonPL": true,
-   "firstOwner": true,
-   "aso": true,
-   "noAccident": true,
-   "origin": "Polska",
-   "originFrom": "ogłoszenie",
-   "hasVin": true
-  },
-  "out": null,
-  "plus": "Polski salon, pierwszy właściciel, serwis w ASO, bezwypadkowy, klima automatyczna.",
-  "watch": "W ogłoszeniu jest tylko Android Auto. Zapytaj, czy działa CarPlay.",
-  "why": null,
-  "score": 100,
-  "top": null,
-  "reject": "Cesja leasingu: cena to tylko odstępne",
-  "pending": false,
-  "detailed": true,
-  "inAc": true,
-  "manual": false,
-  "byKamil": [],
-  "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
-  "status": "active",
-  "goneSince": null,
-  "auto": {
-   "equipment": {
-    "ac": 1,
-    "cam": 1,
-    "pdc": 0,
-    "cp": 2
-   },
-   "plus": "Polski salon, pierwszy właściciel, serwis w ASO, bezwypadkowy, klima automatyczna.",
-   "watch": "W ogłoszeniu jest tylko Android Auto. Zapytaj, czy działa CarPlay.",
-   "reject": "Cesja leasingu: cena to tylko odstępne"
-  },
-  "detailedAt": "2026-11-10",
-  "rulesVersion": 3,
-  "photo": "https://ireland.apollo.olxcdn.com/v1/files/8ckek376yw1t2-OTOMOTOPL/image;s=640x480"
  },
  {
   "id": "otomoto:6151354472",
@@ -24203,7 +24132,7 @@
    "why"
   ],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -24220,76 +24149,6 @@
   "detailedAt": "2026-11-10",
   "rulesVersion": 3,
   "photo": "https://ireland.apollo.olxcdn.com/v1/files/4ma9bafl57ny2-OTOMOTOPL/image;s=640x480"
- },
- {
-  "id": "otomoto:6149970908",
-  "links": {
-   "otomoto": "https://www.otomoto.pl/osobowe/oferta/toyota-corolla-ID6IcEna.html",
-   "olx": null
-  },
-  "name": "Toyota Corolla",
-  "version": "1.8 Comfort",
-  "engine": "1.8, 122 KM",
-  "fuel": "hev",
-  "gear": "automat",
-  "body": "kombi",
-  "year": 2021,
-  "km": 120000,
-  "hp": 122,
-  "cc": 1798,
-  "price": 19900,
-  "city": "Rzeszów",
-  "region": "Podkarpackie",
-  "seller": "prywatnie",
-  "make": "toyota",
-  "model": "corolla",
-  "title": "Toyota Corolla 1.8 Comfort",
-  "origin": "Polska",
-  "equipment": {
-   "ac": 1,
-   "cam": 1,
-   "pdc": 0,
-   "cp": 1
-  },
-  "facts": {
-   "salonPL": true,
-   "firstOwner": false,
-   "aso": true,
-   "noAccident": false,
-   "origin": "Polska",
-   "originFrom": "ogłoszenie",
-   "hasVin": true
-  },
-  "out": null,
-  "plus": "Polski salon, serwis w ASO, klima dwustrefowa.",
-  "watch": null,
-  "why": null,
-  "score": 75,
-  "top": null,
-  "reject": "Cesja leasingu: cena to tylko odstępne",
-  "pending": false,
-  "detailed": true,
-  "inAc": true,
-  "manual": false,
-  "byKamil": [],
-  "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
-  "status": "active",
-  "goneSince": null,
-  "auto": {
-   "equipment": {
-    "ac": 1,
-    "cam": 1,
-    "pdc": 0,
-    "cp": 1
-   },
-   "plus": "Polski salon, serwis w ASO, klima dwustrefowa.",
-   "watch": null,
-   "reject": "Cesja leasingu: cena to tylko odstępne"
-  },
-  "detailedAt": "2026-11-10",
-  "rulesVersion": 3,
-  "photo": "https://ireland.apollo.olxcdn.com/v1/files/r0xdjf5w3vo1-OTOMOTOPL/image;s=640x480"
  },
  {
   "id": "otomoto:6151188661",
@@ -24343,7 +24202,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -24360,146 +24219,6 @@
   "detailedAt": "2026-11-10",
   "rulesVersion": 3,
   "photo": "https://ireland.apollo.olxcdn.com/v1/files/7f2mw42wqqac1-OTOMOTOPL/image;s=640x480"
- },
- {
-  "id": "otomoto:6151331997",
-  "links": {
-   "otomoto": "https://www.otomoto.pl/osobowe/oferta/toyota-rav4-ID6Iimsd.html",
-   "olx": null
-  },
-  "name": "Toyota RAV4",
-  "version": null,
-  "engine": "2.5, 222 KM",
-  "fuel": "hev",
-  "gear": "automat",
-  "body": "suv",
-  "year": 2022,
-  "km": 155000,
-  "hp": 222,
-  "cc": 2487,
-  "price": 24600,
-  "city": "Sokołów Podlaski",
-  "region": "Mazowieckie",
-  "seller": "prywatnie",
-  "make": "toyota",
-  "model": "rav4",
-  "title": "Toyota RAV4",
-  "origin": "Polska",
-  "equipment": {
-   "ac": 0,
-   "cam": 0,
-   "pdc": 0,
-   "cp": 0
-  },
-  "facts": {
-   "salonPL": true,
-   "firstOwner": true,
-   "aso": true,
-   "noAccident": true,
-   "origin": "Polska",
-   "originFrom": "ogłoszenie",
-   "hasVin": true
-  },
-  "out": "przebieg 155 000 km, ponad limit 120 000 km",
-  "plus": "Polski salon, pierwszy właściciel, serwis w ASO, bezwypadkowy.",
-  "watch": null,
-  "why": null,
-  "score": 58,
-  "top": null,
-  "reject": "Cesja leasingu: cena to tylko odstępne",
-  "pending": false,
-  "detailed": true,
-  "inAc": false,
-  "manual": false,
-  "byKamil": [],
-  "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
-  "status": "active",
-  "goneSince": null,
-  "auto": {
-   "equipment": {
-    "ac": 0,
-    "cam": 0,
-    "pdc": 0,
-    "cp": 0
-   },
-   "plus": "Polski salon, pierwszy właściciel, serwis w ASO, bezwypadkowy.",
-   "watch": null,
-   "reject": "Cesja leasingu: cena to tylko odstępne"
-  },
-  "detailedAt": "2026-11-10",
-  "rulesVersion": 3,
-  "photo": "https://ireland.apollo.olxcdn.com/v1/files/ok7w8sons90f2-OTOMOTOPL/image;s=640x480"
- },
- {
-  "id": "otomoto:6150390062",
-  "links": {
-   "otomoto": "https://www.otomoto.pl/osobowe/oferta/dacia-sandero-ID6IeppI.html",
-   "olx": null
-  },
-  "name": "Dacia Sandero",
-  "version": "Blue dCi 95 Stepway Celebration",
-  "engine": "1.5, 95 KM",
-  "fuel": "on",
-  "gear": "manualna",
-  "body": "suv",
-  "year": 2019,
-  "km": 34248,
-  "hp": 95,
-  "cc": 1461,
-  "price": 23000,
-  "city": "Poznań",
-  "region": "Wielkopolskie",
-  "seller": "prywatnie",
-  "make": "dacia",
-  "model": "sandero",
-  "title": "Dacia Sandero Blue dCi 95 Stepway Celebration",
-  "origin": "Niemcy",
-  "equipment": {
-   "ac": 0,
-   "cam": 0,
-   "pdc": 1,
-   "cp": 1
-  },
-  "facts": {
-   "salonPL": false,
-   "firstOwner": false,
-   "aso": false,
-   "noAccident": true,
-   "origin": "Niemcy",
-   "originFrom": "ogłoszenie",
-   "hasVin": true
-  },
-  "out": null,
-  "plus": "Bezwypadkowy.",
-  "watch": "Auto sprowadzone (kraj pochodzenia: Niemcy). Poproś o raport historii z zagranicy, np. z Carvertical.",
-  "why": null,
-  "score": 57,
-  "top": null,
-  "reject": "Uszkodzone według opisu",
-  "pending": false,
-  "detailed": true,
-  "inAc": false,
-  "manual": false,
-  "byKamil": [],
-  "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
-  "status": "active",
-  "goneSince": null,
-  "auto": {
-   "equipment": {
-    "ac": 0,
-    "cam": 0,
-    "pdc": 1,
-    "cp": 1
-   },
-   "plus": "Bezwypadkowy.",
-   "watch": "Auto sprowadzone (kraj pochodzenia: Niemcy). Poproś o raport historii z zagranicy, np. z Carvertical.",
-   "reject": "Uszkodzone według opisu"
-  },
-  "detailedAt": "2026-11-10",
-  "rulesVersion": 3,
-  "photo": "https://ireland.apollo.olxcdn.com/v1/files/7jq0hsbxr5tq2-OTOMOTOPL/image;s=640x480"
  },
  {
   "id": "otomoto:6151217237",
@@ -24553,7 +24272,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -24623,7 +24342,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -24694,7 +24413,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -24764,7 +24483,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -24834,7 +24553,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -24904,7 +24623,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -24974,7 +24693,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -25008,7 +24727,7 @@
   "km": 108000,
   "hp": 115,
   "cc": 1461,
-  "price": 27200,
+  "price": 26200,
   "city": "Gorzów Wielkopolski",
   "region": "Lubuskie",
   "seller": "prywatnie",
@@ -25044,7 +24763,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -25114,7 +24833,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -25184,7 +24903,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -25254,7 +24973,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -25324,7 +25043,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -25392,7 +25111,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -25462,7 +25181,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -25530,7 +25249,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -25600,7 +25319,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -25617,76 +25336,6 @@
   "detailedAt": "2026-11-10",
   "rulesVersion": 3,
   "photo": "https://ireland.apollo.olxcdn.com/v1/files/654lij7jdbm42-OTOMOTOPL/image;s=640x480"
- },
- {
-  "id": "otomoto:6151216804",
-  "links": {
-   "otomoto": "https://www.otomoto.pl/osobowe/oferta/volkswagen-caddy-OLX_ID6IhSug.html",
-   "olx": null
-  },
-  "name": "Volkswagen Caddy",
-  "version": null,
-  "engine": "1.6, 105 KM",
-  "fuel": "on",
-  "gear": "manualna",
-  "body": "kombi",
-  "year": 2015,
-  "km": 38000,
-  "hp": 105,
-  "cc": 1598,
-  "price": 21000,
-  "city": "Chełm",
-  "region": "Lubelskie",
-  "seller": "komis",
-  "make": "volkswagen",
-  "model": "caddy",
-  "title": "Volkswagen Caddy",
-  "origin": "Polska",
-  "equipment": {
-   "ac": 2,
-   "cam": 0,
-   "pdc": 0,
-   "cp": 0
-  },
-  "facts": {
-   "salonPL": true,
-   "firstOwner": false,
-   "aso": false,
-   "noAccident": false,
-   "origin": "Polska",
-   "originFrom": "ogłoszenie",
-   "hasVin": false
-  },
-  "out": null,
-  "plus": "Polski salon.",
-  "watch": "W ogłoszeniu nie ma słowa o klimatyzacji. Dopytaj.",
-  "why": null,
-  "score": 27,
-  "top": null,
-  "reject": "Dostawczak z szybami, nie dla Sylwii",
-  "pending": false,
-  "detailed": true,
-  "inAc": false,
-  "manual": false,
-  "byKamil": [],
-  "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
-  "status": "active",
-  "goneSince": null,
-  "auto": {
-   "equipment": {
-    "ac": 2,
-    "cam": 0,
-    "pdc": 0,
-    "cp": 0
-   },
-   "plus": "Polski salon.",
-   "watch": "W ogłoszeniu nie ma słowa o klimatyzacji. Dopytaj.",
-   "reject": null
-  },
-  "detailedAt": "2026-11-10",
-  "rulesVersion": 3,
-  "photo": "https://ireland.apollo.olxcdn.com/v1/files/t85q9y08upy61-OTOMOTOPL/image;s=640x480"
  },
  {
   "id": "otomoto:6149807510",
@@ -25740,7 +25389,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -25810,7 +25459,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -25880,7 +25529,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -25950,7 +25599,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -26018,7 +25667,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -26088,7 +25737,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -26158,7 +25807,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -26228,7 +25877,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -26298,7 +25947,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -26366,7 +26015,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -26436,7 +26085,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -26470,7 +26119,7 @@
   "km": 240,
   "hp": 110,
   "cc": 1598,
-  "price": 26500,
+  "price": 26000,
   "city": "Prószków",
   "region": "Opolskie",
   "seller": "komis",
@@ -26506,7 +26155,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -26574,7 +26223,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -26642,7 +26291,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -26713,7 +26362,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -26728,6 +26377,76 @@
    "reject": "Podejrzanie mały przebieg (211 km)"
   },
   "photo": "https://ireland.apollo.olxcdn.com/v1/files/s14ijmcjjozi3-OTOMOTOPL/image;s=640x480"
+ },
+ {
+  "id": "otomoto:6151448984",
+  "links": {
+   "otomoto": "https://www.otomoto.pl/osobowe/oferta/volkswagen-golf-ID6IiQT6.html",
+   "olx": null
+  },
+  "name": "Volkswagen Golf",
+  "version": null,
+  "engine": "1.6, 105 KM",
+  "fuel": "on",
+  "gear": "manualna",
+  "body": "kompakt",
+  "year": 2014,
+  "km": 76000,
+  "hp": 105,
+  "cc": 1598,
+  "price": 31000,
+  "city": "Jelenia Góra",
+  "region": "Dolnośląskie",
+  "seller": "prywatnie",
+  "make": "volkswagen",
+  "model": "golf",
+  "title": "Volkswagen Golf",
+  "origin": "Niemcy",
+  "photo": "https://ireland.apollo.olxcdn.com/v1/files/jrx2mwfj5cio2-OTOMOTOPL/image;s=640x480",
+  "equipment": {
+   "ac": 1,
+   "cam": 0,
+   "pdc": 0,
+   "cp": 0
+  },
+  "facts": {
+   "salonPL": false,
+   "firstOwner": false,
+   "aso": false,
+   "noAccident": false,
+   "origin": "Niemcy",
+   "originFrom": "ogłoszenie",
+   "hasVin": true
+  },
+  "out": "cena 31 000 zł, ponad budżet 30 000 zł, do negocjacji",
+  "plus": "Klima dwustrefowa.",
+  "watch": "Auto sprowadzone (kraj pochodzenia: Niemcy). Poproś o raport historii z zagranicy, np. z Carvertical.",
+  "why": null,
+  "score": 20,
+  "top": null,
+  "reject": "Uszkodzone według opisu",
+  "pending": false,
+  "detailed": true,
+  "inAc": true,
+  "manual": false,
+  "byKamil": [],
+  "firstSeen": "2026-11-11",
+  "lastSeen": "2026-11-11",
+  "status": "active",
+  "goneSince": null,
+  "auto": {
+   "equipment": {
+    "ac": 1,
+    "cam": 0,
+    "pdc": 0,
+    "cp": 0
+   },
+   "plus": "Klima dwustrefowa.",
+   "watch": "Auto sprowadzone (kraj pochodzenia: Niemcy). Poproś o raport historii z zagranicy, np. z Carvertical.",
+   "reject": "Uszkodzone według opisu"
+  },
+  "detailedAt": "2026-11-11",
+  "rulesVersion": 3
  },
  {
   "id": "otomoto:6151346777",
@@ -26781,7 +26500,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -26813,7 +26532,7 @@
   "km": 290,
   "hp": 105,
   "cc": 1598,
-  "price": 19600,
+  "price": 18700,
   "city": "Buk",
   "region": "Wielkopolskie",
   "seller": "komis",
@@ -26849,7 +26568,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -26917,7 +26636,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -26987,7 +26706,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -27057,7 +26776,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -27128,7 +26847,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -27196,7 +26915,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -27264,7 +26983,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -27332,7 +27051,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -27347,74 +27066,6 @@
    "reject": "Podejrzanie mały przebieg (190 km)"
   },
   "photo": "https://ireland.apollo.olxcdn.com/v1/files/td2s6okxm408-OTOMOTOPL/image;s=640x480"
- },
- {
-  "id": "otomoto:6143152390",
-  "links": {
-   "otomoto": "https://www.otomoto.pl/osobowe/oferta/volkswagen-golf-variant-ID6HK2z4.html",
-   "olx": null
-  },
-  "name": "Volkswagen Golf Variant",
-  "version": "1.6 TDI BlueMotion Trendline",
-  "engine": "1.6, 110 KM",
-  "fuel": "on",
-  "gear": "manualna",
-  "body": null,
-  "year": 2015,
-  "km": 378,
-  "hp": 110,
-  "cc": 1598,
-  "price": 19499,
-  "city": "Hrubieszów",
-  "region": "Lubelskie",
-  "seller": "prywatnie",
-  "make": "volkswagen",
-  "model": "golf-variant",
-  "title": "Volkswagen Golf Variant 1.6 TDI BlueMotion Trendline",
-  "origin": "Niemcy",
-  "equipment": {
-   "ac": 2,
-   "cam": 2,
-   "pdc": 2,
-   "cp": 2
-  },
-  "facts": {
-   "salonPL": false,
-   "firstOwner": false,
-   "aso": false,
-   "noAccident": false,
-   "origin": "Niemcy",
-   "originFrom": "ogłoszenie",
-   "hasVin": false
-  },
-  "out": null,
-  "plus": null,
-  "watch": "Auto sprowadzone (kraj pochodzenia: Niemcy). Poproś o raport historii z zagranicy, np. z Carvertical.",
-  "why": null,
-  "score": 15,
-  "top": null,
-  "reject": "Podejrzanie mały przebieg (378 km)",
-  "pending": true,
-  "detailed": false,
-  "inAc": false,
-  "manual": false,
-  "byKamil": [],
-  "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
-  "status": "active",
-  "goneSince": null,
-  "auto": {
-   "equipment": {
-    "ac": 2,
-    "cam": 2,
-    "pdc": 2,
-    "cp": 2
-   },
-   "plus": null,
-   "watch": "Auto sprowadzone (kraj pochodzenia: Niemcy). Poproś o raport historii z zagranicy, np. z Carvertical.",
-   "reject": "Podejrzanie mały przebieg (378 km)"
-  },
-  "photo": "https://ireland.apollo.olxcdn.com/v1/files/ldmuljy10ibf-OTOMOTOPL/image;s=640x480"
  },
  {
   "id": "otomoto:6149545759",
@@ -27468,7 +27119,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -27536,7 +27187,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -27604,7 +27255,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -27672,7 +27323,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -27743,7 +27394,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -27760,6 +27411,74 @@
   "detailedAt": "2026-11-10",
   "rulesVersion": 3,
   "photo": "https://ireland.apollo.olxcdn.com/v1/files/ajxbuegmyoiw-OTOMOTOPL/image;s=640x480"
+ },
+ {
+  "id": "otomoto:6151631478",
+  "links": {
+   "otomoto": "https://www.otomoto.pl/osobowe/oferta/toyota-verso-OLX_ID6IjCmy.html",
+   "olx": null
+  },
+  "name": "Toyota Verso",
+  "version": null,
+  "engine": "1.6, 112 KM",
+  "fuel": "on",
+  "gear": "manualna",
+  "body": null,
+  "year": 2014,
+  "km": 257,
+  "hp": 112,
+  "cc": 1600,
+  "price": 22000,
+  "city": "Łódź",
+  "region": "Łódzkie",
+  "seller": "komis",
+  "make": "toyota",
+  "model": "verso",
+  "title": "Toyota Verso",
+  "origin": "Polska",
+  "photo": "https://ireland.apollo.olxcdn.com/v1/files/uhkk86lo5h4q3-OTOMOTOPL/image;s=640x480",
+  "equipment": {
+   "ac": 2,
+   "cam": 2,
+   "pdc": 2,
+   "cp": 2
+  },
+  "facts": {
+   "salonPL": true,
+   "firstOwner": false,
+   "aso": false,
+   "noAccident": false,
+   "origin": "Polska",
+   "originFrom": "ogłoszenie",
+   "hasVin": false
+  },
+  "out": null,
+  "plus": null,
+  "watch": null,
+  "why": null,
+  "score": 14,
+  "top": null,
+  "reject": "Podejrzanie mały przebieg (257 km)",
+  "pending": true,
+  "detailed": false,
+  "inAc": false,
+  "manual": false,
+  "byKamil": [],
+  "firstSeen": "2026-11-11",
+  "lastSeen": "2026-11-11",
+  "status": "active",
+  "goneSince": null,
+  "auto": {
+   "equipment": {
+    "ac": 2,
+    "cam": 2,
+    "pdc": 2,
+    "cp": 2
+   },
+   "plus": null,
+   "watch": null,
+   "reject": "Podejrzanie mały przebieg (257 km)"
+  }
  },
  {
   "id": "otomoto:6151008202",
@@ -27813,7 +27532,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -27883,7 +27602,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -27954,7 +27673,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -28022,7 +27741,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -28092,7 +27811,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -28160,7 +27879,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -28228,7 +27947,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -28296,7 +28015,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -28366,7 +28085,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -28434,7 +28153,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -28505,7 +28224,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -28575,7 +28294,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -28643,7 +28362,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -28658,74 +28377,6 @@
    "reject": "Podejrzanie mały przebieg (202 km)"
   },
   "photo": "https://ireland.apollo.olxcdn.com/v1/files/aw0sdfxy8xzs3-OTOMOTOPL/image;s=640x480"
- },
- {
-  "id": "otomoto:6151299254",
-  "links": {
-   "otomoto": "https://www.otomoto.pl/osobowe/oferta/toyota-prius-ID6IidV6.html",
-   "olx": null
-  },
-  "name": "Toyota Prius",
-  "version": null,
-  "engine": "1.8, 136 KM",
-  "fuel": "hev",
-  "gear": "automat",
-  "body": null,
-  "year": 2011,
-  "km": 842,
-  "hp": 136,
-  "cc": 1798,
-  "price": 17900,
-  "city": "Koszalin",
-  "region": "Zachodniopomorskie",
-  "seller": "prywatnie",
-  "make": "toyota",
-  "model": "prius",
-  "title": "Toyota Prius",
-  "origin": null,
-  "equipment": {
-   "ac": 2,
-   "cam": 2,
-   "pdc": 2,
-   "cp": 2
-  },
-  "facts": {
-   "salonPL": false,
-   "firstOwner": false,
-   "aso": false,
-   "noAccident": false,
-   "origin": null,
-   "originFrom": null,
-   "hasVin": false
-  },
-  "out": null,
-  "plus": null,
-  "watch": null,
-  "why": null,
-  "score": 7,
-  "top": null,
-  "reject": "Podejrzanie mały przebieg (842 km)",
-  "pending": true,
-  "detailed": false,
-  "inAc": false,
-  "manual": false,
-  "byKamil": [],
-  "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
-  "status": "active",
-  "goneSince": null,
-  "auto": {
-   "equipment": {
-    "ac": 2,
-    "cam": 2,
-    "pdc": 2,
-    "cp": 2
-   },
-   "plus": null,
-   "watch": null,
-   "reject": "Podejrzanie mały przebieg (842 km)"
-  },
-  "photo": "https://ireland.apollo.olxcdn.com/v1/files/xwa51hqeqlog2-OTOMOTOPL/image;s=640x480"
  },
  {
   "id": "otomoto:6151565240",
@@ -28779,7 +28430,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -28847,7 +28498,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -28915,7 +28566,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -28983,7 +28634,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -29051,7 +28702,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -29119,7 +28770,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -29187,7 +28838,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -29258,7 +28909,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -29326,7 +28977,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -29394,7 +29045,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -29462,7 +29113,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -29530,7 +29181,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -29598,7 +29249,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -29666,7 +29317,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -29734,7 +29385,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -29802,7 +29453,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -29870,7 +29521,7 @@
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
-  "lastSeen": "2026-11-10",
+  "lastSeen": "2026-11-11",
   "status": "active",
   "goneSince": null,
   "auto": {
@@ -29885,6 +29536,577 @@
    "reject": "Podejrzanie mały przebieg (278 km)"
   },
   "photo": "https://ireland.apollo.olxcdn.com/v1/files/auvj47ww902j1-OTOMOTOPL/image;s=640x480"
+ },
+ {
+  "id": "otomoto:6150123819",
+  "links": {
+   "otomoto": "https://www.otomoto.pl/osobowe/oferta/citroen-c3-ID6Idi9t.html",
+   "olx": null
+  },
+  "name": "Citroën C3",
+  "version": "BlueHDi 100 S&S ORIGINS",
+  "engine": "1.5, 102 KM",
+  "fuel": "on",
+  "gear": "manualna",
+  "body": "auta małe",
+  "year": 2019,
+  "km": 37000,
+  "hp": 102,
+  "cc": 1499,
+  "price": 31000,
+  "city": "Nowa Sól",
+  "region": "Lubuskie",
+  "seller": "prywatnie",
+  "make": "citroen",
+  "model": "c3",
+  "title": "Citroën C3 BlueHDi 100 S&S ORIGINS",
+  "origin": null,
+  "equipment": {
+   "ac": 1,
+   "cam": 1,
+   "pdc": 1,
+   "cp": 1
+  },
+  "facts": {
+   "salonPL": false,
+   "firstOwner": false,
+   "aso": false,
+   "noAccident": false,
+   "origin": null,
+   "originFrom": null,
+   "hasVin": true
+  },
+  "out": "cena 31 000 zł, ponad budżet 30 000 zł, do negocjacji",
+  "plus": "Bardzo mały przebieg jak na rocznik.",
+  "watch": "Przy tak niskim przebiegu sprawdź historię na historiapojazdu.gov.pl.",
+  "why": null,
+  "score": 72,
+  "top": null,
+  "reject": null,
+  "pending": false,
+  "detailed": true,
+  "inAc": true,
+  "manual": false,
+  "byKamil": [
+   "plus",
+   "watch"
+  ],
+  "firstSeen": "2026-11-10",
+  "lastSeen": "2026-11-10",
+  "status": "gone",
+  "goneSince": "2026-11-11",
+  "auto": {
+   "equipment": {
+    "ac": 1,
+    "cam": 1,
+    "pdc": 1,
+    "cp": 1
+   },
+   "plus": "Klima automatyczna.",
+   "watch": null,
+   "reject": null
+  },
+  "detailedAt": "2026-11-10",
+  "shownSince": "2026-11-10",
+  "rulesVersion": 3,
+  "photo": "https://ireland.apollo.olxcdn.com/v1/files/xn24eho9ymkt1-OTOMOTOPL/image;s=640x480"
+ },
+ {
+  "id": "otomoto:6151439476",
+  "links": {
+   "otomoto": "https://www.otomoto.pl/osobowe/oferta/citroen-c4-cactus-ID6IiOpK.html",
+   "olx": null
+  },
+  "name": "Citroën C4 Cactus",
+  "version": "BlueHDi 100 Stop&Start Origins",
+  "engine": "1.5, 102 KM",
+  "fuel": "on",
+  "gear": "manualna",
+  "body": "kompakt",
+  "year": 2018,
+  "km": 101200,
+  "hp": 102,
+  "cc": 1499,
+  "price": 29000,
+  "city": "Strzelce Krajeńskie",
+  "region": "Lubuskie",
+  "seller": "prywatnie",
+  "make": "citroen",
+  "model": "c4-cactus",
+  "title": "Citroën C4 Cactus BlueHDi 100 Stop&Start Origins",
+  "origin": null,
+  "equipment": {
+   "ac": 1,
+   "cam": 0,
+   "pdc": 1,
+   "cp": 1
+  },
+  "facts": {
+   "salonPL": false,
+   "firstOwner": false,
+   "aso": false,
+   "noAccident": false,
+   "origin": null,
+   "originFrom": null,
+   "hasVin": true
+  },
+  "out": null,
+  "plus": "Klima automatyczna.",
+  "watch": null,
+  "why": null,
+  "score": 49,
+  "top": null,
+  "reject": null,
+  "pending": false,
+  "detailed": true,
+  "inAc": true,
+  "manual": false,
+  "byKamil": [],
+  "firstSeen": "2026-11-10",
+  "lastSeen": "2026-11-10",
+  "status": "gone",
+  "goneSince": "2026-11-11",
+  "auto": {
+   "equipment": {
+    "ac": 1,
+    "cam": 0,
+    "pdc": 1,
+    "cp": 1
+   },
+   "plus": "Klima automatyczna.",
+   "watch": null,
+   "reject": null
+  },
+  "detailedAt": "2026-11-10",
+  "shownSince": "2026-11-10",
+  "rulesVersion": 3,
+  "photo": "https://ireland.apollo.olxcdn.com/v1/files/q5rck76ojb4p-OTOMOTOPL/image;s=640x480"
+ },
+ {
+  "id": "otomoto:6151268868",
+  "links": {
+   "otomoto": "https://www.otomoto.pl/osobowe/oferta/renault-clio-ID6Ii620.html",
+   "olx": null
+  },
+  "name": "Renault Clio",
+  "version": null,
+  "engine": "1.5, 90 KM",
+  "fuel": "on",
+  "gear": "manualna",
+  "body": "auta miejskie",
+  "year": 2016,
+  "km": 81702,
+  "hp": 90,
+  "cc": 1461,
+  "price": 26999,
+  "city": "Lesznowola",
+  "region": "Mazowieckie",
+  "seller": "prywatnie",
+  "make": "renault",
+  "model": "clio",
+  "title": "Renault Clio",
+  "origin": "Polska",
+  "equipment": {
+   "ac": 3,
+   "cam": 0,
+   "pdc": 0,
+   "cp": 0
+  },
+  "facts": {
+   "salonPL": true,
+   "firstOwner": false,
+   "aso": false,
+   "noAccident": true,
+   "origin": "Polska",
+   "originFrom": "ogłoszenie",
+   "hasVin": true
+  },
+  "out": null,
+  "plus": "Polski salon, bezwypadkowy.",
+  "watch": null,
+  "why": null,
+  "score": 47,
+  "top": null,
+  "reject": null,
+  "pending": false,
+  "detailed": true,
+  "inAc": false,
+  "manual": false,
+  "byKamil": [],
+  "firstSeen": "2026-11-10",
+  "lastSeen": "2026-11-10",
+  "status": "gone",
+  "goneSince": "2026-11-11",
+  "auto": {
+   "equipment": {
+    "ac": 3,
+    "cam": 0,
+    "pdc": 0,
+    "cp": 0
+   },
+   "plus": "Polski salon, bezwypadkowy.",
+   "watch": null,
+   "reject": null
+  },
+  "detailedAt": "2026-11-10",
+  "rulesVersion": 3,
+  "shownSince": "2026-11-10",
+  "photo": "https://ireland.apollo.olxcdn.com/v1/files/shj5o43pd3ol2-OTOMOTOPL/image;s=640x480"
+ },
+ {
+  "id": "otomoto:6151624124",
+  "links": {
+   "otomoto": "https://www.otomoto.pl/osobowe/oferta/opel-adam-ID6IjArV.html",
+   "olx": null
+  },
+  "name": "Opel Adam",
+  "version": "1.4 Jam",
+  "engine": "1.4, 87 KM",
+  "fuel": "pb",
+  "gear": "manualna",
+  "body": "auta miejskie",
+  "year": 2015,
+  "km": 103506,
+  "hp": 87,
+  "cc": 1398,
+  "price": 23900,
+  "city": "Tarnobrzeg",
+  "region": "Podkarpackie",
+  "seller": "prywatnie",
+  "make": "opel",
+  "model": "adam",
+  "title": "Opel Adam 1.4 Jam",
+  "origin": "Niemcy",
+  "equipment": {
+   "ac": 3,
+   "cam": 0,
+   "pdc": 0,
+   "cp": 1
+  },
+  "facts": {
+   "salonPL": false,
+   "firstOwner": false,
+   "aso": true,
+   "noAccident": true,
+   "origin": "Niemcy",
+   "originFrom": "ogłoszenie",
+   "hasVin": true
+  },
+  "out": null,
+  "plus": "Serwis w ASO, bezwypadkowy, klima manualna.",
+  "watch": "Auto sprowadzone (kraj pochodzenia: Niemcy). Poproś o raport historii z zagranicy, np. z Carvertical.",
+  "why": null,
+  "score": 46,
+  "top": null,
+  "reject": null,
+  "pending": false,
+  "detailed": true,
+  "inAc": false,
+  "manual": false,
+  "byKamil": [],
+  "firstSeen": "2026-11-10",
+  "lastSeen": "2026-11-10",
+  "status": "gone",
+  "goneSince": "2026-11-11",
+  "auto": {
+   "equipment": {
+    "ac": 3,
+    "cam": 0,
+    "pdc": 0,
+    "cp": 1
+   },
+   "plus": "Serwis w ASO, bezwypadkowy, klima manualna.",
+   "watch": "Auto sprowadzone (kraj pochodzenia: Niemcy). Poproś o raport historii z zagranicy, np. z Carvertical.",
+   "reject": null
+  },
+  "detailedAt": "2026-11-10",
+  "rulesVersion": 3,
+  "shownSince": "2026-11-10",
+  "photo": "https://ireland.apollo.olxcdn.com/v1/files/kg1wodzdc8v-OTOMOTOPL/image;s=640x480"
+ },
+ {
+  "id": "otomoto:6148775523",
+  "links": {
+   "otomoto": "https://www.otomoto.pl/osobowe/oferta/mini-one-ID6I7DoL.html",
+   "olx": null
+  },
+  "name": "MINI ONE",
+  "version": "D Blackyard",
+  "engine": "1.5, 95 KM",
+  "fuel": "on",
+  "gear": "manualna",
+  "body": "auta miejskie",
+  "year": 2016,
+  "km": 90700,
+  "hp": 95,
+  "cc": 1496,
+  "price": 24000,
+  "city": "Lublin",
+  "region": "Lubelskie",
+  "seller": "prywatnie",
+  "make": "mini",
+  "model": "one",
+  "title": "MINI ONE D Blackyard",
+  "origin": "Francja",
+  "equipment": {
+   "ac": 1,
+   "cam": 0,
+   "pdc": 1,
+   "cp": 0
+  },
+  "facts": {
+   "salonPL": false,
+   "firstOwner": false,
+   "aso": false,
+   "noAccident": false,
+   "origin": "Francja",
+   "originFrom": "ogłoszenie",
+   "hasVin": true
+  },
+  "out": null,
+  "plus": "Klima dwustrefowa.",
+  "watch": "Auto sprowadzone (kraj pochodzenia: Francja). Poproś o raport historii z zagranicy, np. z Carvertical.",
+  "why": null,
+  "score": 40,
+  "top": null,
+  "reject": null,
+  "pending": false,
+  "detailed": true,
+  "inAc": true,
+  "manual": false,
+  "byKamil": [],
+  "firstSeen": "2026-11-10",
+  "lastSeen": "2026-11-10",
+  "status": "gone",
+  "goneSince": "2026-11-11",
+  "auto": {
+   "equipment": {
+    "ac": 1,
+    "cam": 0,
+    "pdc": 1,
+    "cp": 0
+   },
+   "plus": "Klima dwustrefowa.",
+   "watch": "Auto sprowadzone (kraj pochodzenia: Francja). Poproś o raport historii z zagranicy, np. z Carvertical.",
+   "reject": null
+  },
+  "detailedAt": "2026-11-10",
+  "shownSince": "2026-11-10",
+  "rulesVersion": 3,
+  "photo": "https://ireland.apollo.olxcdn.com/v1/files/2ynqlx9i1pi4-OTOMOTOPL/image;s=640x480"
+ },
+ {
+  "id": "otomoto:6151517249",
+  "links": {
+   "otomoto": "https://www.otomoto.pl/osobowe/oferta/renault-clio-ID6Ij8E9.html",
+   "olx": null
+  },
+  "name": "Renault Clio",
+  "version": null,
+  "engine": "1.5, 90 KM",
+  "fuel": "on",
+  "gear": "manualna",
+  "body": "auta miejskie",
+  "year": 2017,
+  "km": 100829,
+  "hp": 90,
+  "cc": 1461,
+  "price": 26900,
+  "city": "Twardogóra",
+  "region": "Dolnośląskie",
+  "seller": "prywatnie",
+  "make": "renault",
+  "model": "clio",
+  "title": "Renault Clio",
+  "origin": "Niemcy",
+  "equipment": {
+   "ac": 1,
+   "cam": 0,
+   "pdc": 0,
+   "cp": 0
+  },
+  "facts": {
+   "salonPL": false,
+   "firstOwner": false,
+   "aso": false,
+   "noAccident": false,
+   "origin": "Niemcy",
+   "originFrom": "ogłoszenie",
+   "hasVin": true
+  },
+  "out": null,
+  "plus": "Klima automatyczna.",
+  "watch": "Auto sprowadzone (kraj pochodzenia: Niemcy). Poproś o raport historii z zagranicy, np. z Carvertical.",
+  "why": null,
+  "score": 33,
+  "top": null,
+  "reject": null,
+  "pending": false,
+  "detailed": true,
+  "inAc": true,
+  "manual": false,
+  "byKamil": [],
+  "firstSeen": "2026-11-10",
+  "lastSeen": "2026-11-10",
+  "status": "gone",
+  "goneSince": "2026-11-11",
+  "auto": {
+   "equipment": {
+    "ac": 1,
+    "cam": 0,
+    "pdc": 0,
+    "cp": 0
+   },
+   "plus": "Klima automatyczna.",
+   "watch": "Auto sprowadzone (kraj pochodzenia: Niemcy). Poproś o raport historii z zagranicy, np. z Carvertical.",
+   "reject": null
+  },
+  "detailedAt": "2026-11-10",
+  "rulesVersion": 3,
+  "shownSince": "2026-11-10",
+  "photo": "https://ireland.apollo.olxcdn.com/v1/files/5osu1tcdsub31-OTOMOTOPL/image;s=640x480"
+ },
+ {
+  "id": "otomoto:6148728239",
+  "links": {
+   "otomoto": "https://www.otomoto.pl/osobowe/oferta/mini-countryman-ID6I7r67.html",
+   "olx": null
+  },
+  "name": "MINI Countryman",
+  "version": null,
+  "engine": "1.6, 112 KM",
+  "fuel": "on",
+  "gear": "manualna",
+  "body": "kombi",
+  "year": 2014,
+  "km": 111000,
+  "hp": 112,
+  "cc": 1598,
+  "price": 5300,
+  "city": "Osiek Nad Wisłą",
+  "region": "Kujawsko-pomorskie",
+  "seller": "prywatnie",
+  "make": "mini",
+  "model": "countryman",
+  "title": "MINI Countryman",
+  "origin": "Wielka Brytania",
+  "equipment": {
+   "ac": 3,
+   "cam": 0,
+   "pdc": 0,
+   "cp": 0
+  },
+  "facts": {
+   "salonPL": false,
+   "firstOwner": false,
+   "aso": true,
+   "noAccident": true,
+   "origin": "Wielka Brytania",
+   "originFrom": "ogłoszenie",
+   "hasVin": true
+  },
+  "out": null,
+  "plus": "Serwis w ASO, bezwypadkowy.",
+  "watch": "Auto sprowadzone (kraj pochodzenia: Wielka Brytania). Poproś o raport historii z zagranicy, np. z Carvertical.",
+  "why": null,
+  "score": 22,
+  "top": null,
+  "reject": null,
+  "pending": false,
+  "detailed": true,
+  "inAc": false,
+  "manual": false,
+  "byKamil": [],
+  "firstSeen": "2026-11-10",
+  "lastSeen": "2026-11-10",
+  "status": "gone",
+  "goneSince": "2026-11-11",
+  "auto": {
+   "equipment": {
+    "ac": 3,
+    "cam": 0,
+    "pdc": 0,
+    "cp": 0
+   },
+   "plus": "Serwis w ASO, bezwypadkowy.",
+   "watch": "Auto sprowadzone (kraj pochodzenia: Wielka Brytania). Poproś o raport historii z zagranicy, np. z Carvertical.",
+   "reject": null
+  },
+  "detailedAt": "2026-11-10",
+  "shownSince": "2026-11-10",
+  "rulesVersion": 3,
+  "photo": "https://ireland.apollo.olxcdn.com/v1/files/w4ykedcuzihw-OTOMOTOPL/image;s=640x480"
+ },
+ {
+  "id": "otomoto:6151625589",
+  "links": {
+   "otomoto": "https://www.otomoto.pl/osobowe/oferta/dacia-duster-OLX_ID6IjAPz.html",
+   "olx": null
+  },
+  "name": "Dacia Duster",
+  "version": null,
+  "engine": "1.5, 106 KM",
+  "fuel": "on",
+  "gear": "manualna",
+  "body": "suv",
+  "year": 2013,
+  "km": 53554,
+  "hp": 106,
+  "cc": 1500,
+  "price": 17000,
+  "city": "Jelenia Góra",
+  "region": "Dolnośląskie",
+  "seller": "komis",
+  "make": "dacia",
+  "model": "duster",
+  "title": "Dacia Duster",
+  "origin": "Polska",
+  "equipment": {
+   "ac": 2,
+   "cam": 0,
+   "pdc": 0,
+   "cp": 0
+  },
+  "facts": {
+   "salonPL": true,
+   "firstOwner": false,
+   "aso": false,
+   "noAccident": false,
+   "origin": "Polska",
+   "originFrom": "ogłoszenie",
+   "hasVin": false
+  },
+  "out": null,
+  "plus": "Polski salon.",
+  "watch": "W ogłoszeniu nie ma słowa o klimatyzacji. Dopytaj.",
+  "why": null,
+  "score": 22,
+  "top": null,
+  "reject": null,
+  "pending": false,
+  "detailed": true,
+  "inAc": false,
+  "manual": false,
+  "byKamil": [],
+  "firstSeen": "2026-11-10",
+  "lastSeen": "2026-11-10",
+  "status": "gone",
+  "goneSince": "2026-11-11",
+  "auto": {
+   "equipment": {
+    "ac": 2,
+    "cam": 0,
+    "pdc": 0,
+    "cp": 0
+   },
+   "plus": "Polski salon.",
+   "watch": "W ogłoszeniu nie ma słowa o klimatyzacji. Dopytaj.",
+   "reject": null
+  },
+  "detailedAt": "2026-11-10",
+  "rulesVersion": 3,
+  "shownSince": "2026-11-10",
+  "photo": "https://ireland.apollo.olxcdn.com/v1/files/su32l7qlqhs71-OTOMOTOPL/image;s=640x480"
  },
  {
   "id": "otomoto:6151013515",
@@ -29955,70 +30177,217 @@
   "shownSince": "2026-11-10"
  },
  {
-  "id": "otomoto:6150124429",
+  "id": "otomoto:6151115779",
   "links": {
-   "otomoto": "https://www.otomoto.pl/osobowe/oferta/citroen-c5-OLX_ID6Idijj.html",
+   "otomoto": "https://www.otomoto.pl/osobowe/oferta/peugeot-208-ID6IhscP.html",
    "olx": null
   },
-  "name": "Citroën C5",
-  "version": null,
-  "engine": "1.6, 112 KM",
+  "name": "Peugeot 208",
+  "version": "1.6 BlueHDi Allure S&S",
+  "engine": "1.6, 100 KM",
   "fuel": "on",
   "gear": "manualna",
-  "body": null,
-  "year": 2015,
-  "km": 86327,
-  "hp": 112,
+  "body": "kompakt",
+  "year": 2016,
+  "km": 100800,
+  "hp": 100,
   "cc": 1560,
-  "price": 24500,
-  "city": "Las Stocki",
-  "region": "Lubelskie",
+  "price": 24900,
+  "city": "Zduńska Wola",
+  "region": "Łódzkie",
   "seller": "komis",
-  "make": "citroen",
-  "model": "c5",
-  "title": "Citroën C5",
-  "origin": "Szwecja",
+  "make": "peugeot",
+  "model": "208",
+  "title": "Peugeot 208 1.6 BlueHDi Allure S&S",
+  "origin": null,
   "equipment": {
-   "ac": 2,
-   "cam": 2,
-   "pdc": 2,
-   "cp": 2
+   "ac": 3,
+   "cam": 0,
+   "pdc": 1,
+   "cp": 0
   },
   "facts": {
    "salonPL": false,
    "firstOwner": false,
    "aso": false,
    "noAccident": false,
-   "origin": "Szwecja",
-   "hasVin": false
+   "origin": null,
+   "originFrom": null,
+   "hasVin": true
   },
   "out": null,
-  "plus": null,
-  "watch": "Sprowadzony, kraj pochodzenia: Szwecja. Poproś o raport historii z zagranicy (np. Carvertical).",
+  "plus": "Klima manualna.",
+  "watch": null,
   "why": null,
-  "score": -2,
+  "score": 20,
   "top": null,
   "reject": null,
-  "pending": true,
-  "detailed": false,
+  "pending": false,
+  "detailed": true,
   "inAc": false,
   "manual": false,
   "byKamil": [],
   "firstSeen": "2026-11-10",
   "lastSeen": "2026-11-10",
   "status": "gone",
-  "goneSince": "2026-11-10",
+  "goneSince": "2026-11-11",
+  "auto": {
+   "equipment": {
+    "ac": 3,
+    "cam": 0,
+    "pdc": 1,
+    "cp": 0
+   },
+   "plus": "Klima manualna.",
+   "watch": null,
+   "reject": null
+  },
+  "detailedAt": "2026-11-10",
+  "rulesVersion": 3,
+  "shownSince": "2026-11-10",
+  "photo": "https://ireland.apollo.olxcdn.com/v1/files/dgx0rnzsdrdc2-OTOMOTOPL/image;s=640x480"
+ },
+ {
+  "id": "otomoto:6150827869",
+  "links": {
+   "otomoto": "https://www.otomoto.pl/osobowe/oferta/renault-megane-ID6Igfj7.html",
+   "olx": null
+  },
+  "name": "Renault Megane",
+  "version": null,
+  "engine": "1.5, 90 KM",
+  "fuel": "on",
+  "gear": "manualna",
+  "body": "kompakt",
+  "year": 2018,
+  "km": 112640,
+  "hp": 90,
+  "cc": 1461,
+  "price": 29500,
+  "city": "Zakrzewo",
+  "region": "Wielkopolskie",
+  "seller": "prywatnie",
+  "make": "renault",
+  "model": "megane",
+  "title": "Renault Megane",
+  "origin": null,
+  "equipment": {
+   "ac": 2,
+   "cam": 0,
+   "pdc": 0,
+   "cp": 0
+  },
+  "facts": {
+   "salonPL": false,
+   "firstOwner": false,
+   "aso": false,
+   "noAccident": false,
+   "origin": null,
+   "originFrom": null,
+   "hasVin": true
+  },
+  "out": null,
+  "plus": null,
+  "watch": "W ogłoszeniu nie ma słowa o klimatyzacji. Dopytaj.",
+  "why": null,
+  "score": 13,
+  "top": null,
+  "reject": null,
+  "pending": false,
+  "detailed": true,
+  "inAc": false,
+  "manual": false,
+  "byKamil": [],
+  "firstSeen": "2026-11-10",
+  "lastSeen": "2026-11-10",
+  "status": "gone",
+  "goneSince": "2026-11-11",
   "auto": {
    "equipment": {
     "ac": 2,
-    "cam": 2,
-    "pdc": 2,
-    "cp": 2
+    "cam": 0,
+    "pdc": 0,
+    "cp": 0
    },
    "plus": null,
-   "watch": "Sprowadzony, kraj pochodzenia: Szwecja. Poproś o raport historii z zagranicy (np. Carvertical).",
+   "watch": "W ogłoszeniu nie ma słowa o klimatyzacji. Dopytaj.",
    "reject": null
-  }
+  },
+  "detailedAt": "2026-11-10",
+  "rulesVersion": 3,
+  "shownSince": "2026-11-10",
+  "photo": "https://ireland.apollo.olxcdn.com/v1/files/zp0fa345t8c-OTOMOTOPL/image;s=640x480"
+ },
+ {
+  "id": "otomoto:6151011237",
+  "links": {
+   "otomoto": "https://www.otomoto.pl/osobowe/oferta/citroen-ds4-ID6Ih10F.html",
+   "olx": null
+  },
+  "name": "Citroën DS4",
+  "version": null,
+  "engine": "1.6, 120 KM",
+  "fuel": "on",
+  "gear": "automat",
+  "body": "kompakt",
+  "year": 2015,
+  "km": 120357,
+  "hp": 120,
+  "cc": 1560,
+  "price": 26500,
+  "city": "Tarnowskie Góry",
+  "region": "Śląskie",
+  "seller": "prywatnie",
+  "make": "citroen",
+  "model": "ds4",
+  "title": "Citroën DS4",
+  "origin": null,
+  "equipment": {
+   "ac": 2,
+   "cam": 0,
+   "pdc": 0,
+   "cp": 0
+  },
+  "facts": {
+   "salonPL": false,
+   "firstOwner": false,
+   "aso": false,
+   "noAccident": false,
+   "origin": null,
+   "originFrom": null,
+   "hasVin": true
+  },
+  "out": "przebieg 120 357 km, ponad limit 120 000 km",
+  "plus": null,
+  "watch": "W ogłoszeniu nie ma słowa o klimatyzacji. Dopytaj.",
+  "why": null,
+  "score": 9,
+  "top": null,
+  "reject": null,
+  "pending": false,
+  "detailed": true,
+  "inAc": false,
+  "manual": false,
+  "byKamil": [],
+  "firstSeen": "2026-11-10",
+  "lastSeen": "2026-11-10",
+  "status": "gone",
+  "goneSince": "2026-11-11",
+  "auto": {
+   "equipment": {
+    "ac": 2,
+    "cam": 0,
+    "pdc": 0,
+    "cp": 0
+   },
+   "plus": null,
+   "watch": "W ogłoszeniu nie ma słowa o klimatyzacji. Dopytaj.",
+   "reject": null
+  },
+  "detailedAt": "2026-11-10",
+  "rulesVersion": 3,
+  "shownSince": "2026-11-10",
+  "photo": "https://ireland.apollo.olxcdn.com/v1/files/s85o81wqrc452-OTOMOTOPL/image;s=640x480"
  },
  {
   "id": "otomoto:6150275216",
@@ -30085,6 +30454,492 @@
    "watch": null,
    "reject": null
   }
+ },
+ {
+  "id": "otomoto:6151614316",
+  "links": {
+   "otomoto": "https://www.otomoto.pl/osobowe/oferta/toyota-yaris-ID6IjxTK.html",
+   "olx": null
+  },
+  "name": "Toyota Yaris",
+  "version": "Hybrid 1.5 Comfort",
+  "engine": "1.5, 116 KM",
+  "fuel": "hev",
+  "gear": "automat",
+  "body": "auta małe",
+  "year": 2025,
+  "km": 9500,
+  "hp": 116,
+  "cc": 1490,
+  "price": 13530,
+  "city": "Katowice",
+  "region": "Śląskie",
+  "seller": "prywatnie",
+  "make": "toyota",
+  "model": "yaris",
+  "title": "Toyota Yaris Hybrid 1.5 Comfort",
+  "origin": "Polska",
+  "equipment": {
+   "ac": 1,
+   "cam": 1,
+   "pdc": 0,
+   "cp": 2
+  },
+  "facts": {
+   "salonPL": true,
+   "firstOwner": true,
+   "aso": true,
+   "noAccident": true,
+   "origin": "Polska",
+   "originFrom": "ogłoszenie",
+   "hasVin": true
+  },
+  "out": null,
+  "plus": "Polski salon, pierwszy właściciel, serwis w ASO, bezwypadkowy, klima automatyczna.",
+  "watch": "W ogłoszeniu jest tylko Android Auto. Zapytaj, czy działa CarPlay.",
+  "why": null,
+  "score": 100,
+  "top": null,
+  "reject": "Cesja leasingu: cena to tylko odstępne",
+  "pending": false,
+  "detailed": true,
+  "inAc": true,
+  "manual": false,
+  "byKamil": [],
+  "firstSeen": "2026-11-10",
+  "lastSeen": "2026-11-10",
+  "status": "gone",
+  "goneSince": "2026-11-11",
+  "auto": {
+   "equipment": {
+    "ac": 1,
+    "cam": 1,
+    "pdc": 0,
+    "cp": 2
+   },
+   "plus": "Polski salon, pierwszy właściciel, serwis w ASO, bezwypadkowy, klima automatyczna.",
+   "watch": "W ogłoszeniu jest tylko Android Auto. Zapytaj, czy działa CarPlay.",
+   "reject": "Cesja leasingu: cena to tylko odstępne"
+  },
+  "detailedAt": "2026-11-10",
+  "rulesVersion": 3,
+  "photo": "https://ireland.apollo.olxcdn.com/v1/files/8ckek376yw1t2-OTOMOTOPL/image;s=640x480"
+ },
+ {
+  "id": "otomoto:6149970908",
+  "links": {
+   "otomoto": "https://www.otomoto.pl/osobowe/oferta/toyota-corolla-ID6IcEna.html",
+   "olx": null
+  },
+  "name": "Toyota Corolla",
+  "version": "1.8 Comfort",
+  "engine": "1.8, 122 KM",
+  "fuel": "hev",
+  "gear": "automat",
+  "body": "kombi",
+  "year": 2021,
+  "km": 120000,
+  "hp": 122,
+  "cc": 1798,
+  "price": 19900,
+  "city": "Rzeszów",
+  "region": "Podkarpackie",
+  "seller": "prywatnie",
+  "make": "toyota",
+  "model": "corolla",
+  "title": "Toyota Corolla 1.8 Comfort",
+  "origin": "Polska",
+  "equipment": {
+   "ac": 1,
+   "cam": 1,
+   "pdc": 0,
+   "cp": 1
+  },
+  "facts": {
+   "salonPL": true,
+   "firstOwner": false,
+   "aso": true,
+   "noAccident": false,
+   "origin": "Polska",
+   "originFrom": "ogłoszenie",
+   "hasVin": true
+  },
+  "out": null,
+  "plus": "Polski salon, serwis w ASO, klima dwustrefowa.",
+  "watch": null,
+  "why": null,
+  "score": 75,
+  "top": null,
+  "reject": "Cesja leasingu: cena to tylko odstępne",
+  "pending": false,
+  "detailed": true,
+  "inAc": true,
+  "manual": false,
+  "byKamil": [],
+  "firstSeen": "2026-11-10",
+  "lastSeen": "2026-11-10",
+  "status": "gone",
+  "goneSince": "2026-11-11",
+  "auto": {
+   "equipment": {
+    "ac": 1,
+    "cam": 1,
+    "pdc": 0,
+    "cp": 1
+   },
+   "plus": "Polski salon, serwis w ASO, klima dwustrefowa.",
+   "watch": null,
+   "reject": "Cesja leasingu: cena to tylko odstępne"
+  },
+  "detailedAt": "2026-11-10",
+  "rulesVersion": 3,
+  "photo": "https://ireland.apollo.olxcdn.com/v1/files/r0xdjf5w3vo1-OTOMOTOPL/image;s=640x480"
+ },
+ {
+  "id": "otomoto:6151331997",
+  "links": {
+   "otomoto": "https://www.otomoto.pl/osobowe/oferta/toyota-rav4-ID6Iimsd.html",
+   "olx": null
+  },
+  "name": "Toyota RAV4",
+  "version": null,
+  "engine": "2.5, 222 KM",
+  "fuel": "hev",
+  "gear": "automat",
+  "body": "suv",
+  "year": 2022,
+  "km": 155000,
+  "hp": 222,
+  "cc": 2487,
+  "price": 24600,
+  "city": "Sokołów Podlaski",
+  "region": "Mazowieckie",
+  "seller": "prywatnie",
+  "make": "toyota",
+  "model": "rav4",
+  "title": "Toyota RAV4",
+  "origin": "Polska",
+  "equipment": {
+   "ac": 0,
+   "cam": 0,
+   "pdc": 0,
+   "cp": 0
+  },
+  "facts": {
+   "salonPL": true,
+   "firstOwner": true,
+   "aso": true,
+   "noAccident": true,
+   "origin": "Polska",
+   "originFrom": "ogłoszenie",
+   "hasVin": true
+  },
+  "out": "przebieg 155 000 km, ponad limit 120 000 km",
+  "plus": "Polski salon, pierwszy właściciel, serwis w ASO, bezwypadkowy.",
+  "watch": null,
+  "why": null,
+  "score": 58,
+  "top": null,
+  "reject": "Cesja leasingu: cena to tylko odstępne",
+  "pending": false,
+  "detailed": true,
+  "inAc": false,
+  "manual": false,
+  "byKamil": [],
+  "firstSeen": "2026-11-10",
+  "lastSeen": "2026-11-10",
+  "status": "gone",
+  "goneSince": "2026-11-11",
+  "auto": {
+   "equipment": {
+    "ac": 0,
+    "cam": 0,
+    "pdc": 0,
+    "cp": 0
+   },
+   "plus": "Polski salon, pierwszy właściciel, serwis w ASO, bezwypadkowy.",
+   "watch": null,
+   "reject": "Cesja leasingu: cena to tylko odstępne"
+  },
+  "detailedAt": "2026-11-10",
+  "rulesVersion": 3,
+  "photo": "https://ireland.apollo.olxcdn.com/v1/files/ok7w8sons90f2-OTOMOTOPL/image;s=640x480"
+ },
+ {
+  "id": "otomoto:6150390062",
+  "links": {
+   "otomoto": "https://www.otomoto.pl/osobowe/oferta/dacia-sandero-ID6IeppI.html",
+   "olx": null
+  },
+  "name": "Dacia Sandero",
+  "version": "Blue dCi 95 Stepway Celebration",
+  "engine": "1.5, 95 KM",
+  "fuel": "on",
+  "gear": "manualna",
+  "body": "suv",
+  "year": 2019,
+  "km": 34248,
+  "hp": 95,
+  "cc": 1461,
+  "price": 23000,
+  "city": "Poznań",
+  "region": "Wielkopolskie",
+  "seller": "prywatnie",
+  "make": "dacia",
+  "model": "sandero",
+  "title": "Dacia Sandero Blue dCi 95 Stepway Celebration",
+  "origin": "Niemcy",
+  "equipment": {
+   "ac": 0,
+   "cam": 0,
+   "pdc": 1,
+   "cp": 1
+  },
+  "facts": {
+   "salonPL": false,
+   "firstOwner": false,
+   "aso": false,
+   "noAccident": true,
+   "origin": "Niemcy",
+   "originFrom": "ogłoszenie",
+   "hasVin": true
+  },
+  "out": null,
+  "plus": "Bezwypadkowy.",
+  "watch": "Auto sprowadzone (kraj pochodzenia: Niemcy). Poproś o raport historii z zagranicy, np. z Carvertical.",
+  "why": null,
+  "score": 57,
+  "top": null,
+  "reject": "Uszkodzone według opisu",
+  "pending": false,
+  "detailed": true,
+  "inAc": false,
+  "manual": false,
+  "byKamil": [],
+  "firstSeen": "2026-11-10",
+  "lastSeen": "2026-11-10",
+  "status": "gone",
+  "goneSince": "2026-11-11",
+  "auto": {
+   "equipment": {
+    "ac": 0,
+    "cam": 0,
+    "pdc": 1,
+    "cp": 1
+   },
+   "plus": "Bezwypadkowy.",
+   "watch": "Auto sprowadzone (kraj pochodzenia: Niemcy). Poproś o raport historii z zagranicy, np. z Carvertical.",
+   "reject": "Uszkodzone według opisu"
+  },
+  "detailedAt": "2026-11-10",
+  "rulesVersion": 3,
+  "photo": "https://ireland.apollo.olxcdn.com/v1/files/7jq0hsbxr5tq2-OTOMOTOPL/image;s=640x480"
+ },
+ {
+  "id": "otomoto:6151216804",
+  "links": {
+   "otomoto": "https://www.otomoto.pl/osobowe/oferta/volkswagen-caddy-OLX_ID6IhSug.html",
+   "olx": null
+  },
+  "name": "Volkswagen Caddy",
+  "version": null,
+  "engine": "1.6, 105 KM",
+  "fuel": "on",
+  "gear": "manualna",
+  "body": "kombi",
+  "year": 2015,
+  "km": 38000,
+  "hp": 105,
+  "cc": 1598,
+  "price": 21000,
+  "city": "Chełm",
+  "region": "Lubelskie",
+  "seller": "komis",
+  "make": "volkswagen",
+  "model": "caddy",
+  "title": "Volkswagen Caddy",
+  "origin": "Polska",
+  "equipment": {
+   "ac": 2,
+   "cam": 0,
+   "pdc": 0,
+   "cp": 0
+  },
+  "facts": {
+   "salonPL": true,
+   "firstOwner": false,
+   "aso": false,
+   "noAccident": false,
+   "origin": "Polska",
+   "originFrom": "ogłoszenie",
+   "hasVin": false
+  },
+  "out": null,
+  "plus": "Polski salon.",
+  "watch": "W ogłoszeniu nie ma słowa o klimatyzacji. Dopytaj.",
+  "why": null,
+  "score": 27,
+  "top": null,
+  "reject": "Dostawczak z szybami, nie dla Sylwii",
+  "pending": false,
+  "detailed": true,
+  "inAc": false,
+  "manual": false,
+  "byKamil": [],
+  "firstSeen": "2026-11-10",
+  "lastSeen": "2026-11-10",
+  "status": "gone",
+  "goneSince": "2026-11-11",
+  "auto": {
+   "equipment": {
+    "ac": 2,
+    "cam": 0,
+    "pdc": 0,
+    "cp": 0
+   },
+   "plus": "Polski salon.",
+   "watch": "W ogłoszeniu nie ma słowa o klimatyzacji. Dopytaj.",
+   "reject": null
+  },
+  "detailedAt": "2026-11-10",
+  "rulesVersion": 3,
+  "photo": "https://ireland.apollo.olxcdn.com/v1/files/t85q9y08upy61-OTOMOTOPL/image;s=640x480"
+ },
+ {
+  "id": "otomoto:6143152390",
+  "links": {
+   "otomoto": "https://www.otomoto.pl/osobowe/oferta/volkswagen-golf-variant-ID6HK2z4.html",
+   "olx": null
+  },
+  "name": "Volkswagen Golf Variant",
+  "version": "1.6 TDI BlueMotion Trendline",
+  "engine": "1.6, 110 KM",
+  "fuel": "on",
+  "gear": "manualna",
+  "body": null,
+  "year": 2015,
+  "km": 378,
+  "hp": 110,
+  "cc": 1598,
+  "price": 19499,
+  "city": "Hrubieszów",
+  "region": "Lubelskie",
+  "seller": "prywatnie",
+  "make": "volkswagen",
+  "model": "golf-variant",
+  "title": "Volkswagen Golf Variant 1.6 TDI BlueMotion Trendline",
+  "origin": "Niemcy",
+  "equipment": {
+   "ac": 2,
+   "cam": 2,
+   "pdc": 2,
+   "cp": 2
+  },
+  "facts": {
+   "salonPL": false,
+   "firstOwner": false,
+   "aso": false,
+   "noAccident": false,
+   "origin": "Niemcy",
+   "originFrom": "ogłoszenie",
+   "hasVin": false
+  },
+  "out": null,
+  "plus": null,
+  "watch": "Auto sprowadzone (kraj pochodzenia: Niemcy). Poproś o raport historii z zagranicy, np. z Carvertical.",
+  "why": null,
+  "score": 15,
+  "top": null,
+  "reject": "Podejrzanie mały przebieg (378 km)",
+  "pending": true,
+  "detailed": false,
+  "inAc": false,
+  "manual": false,
+  "byKamil": [],
+  "firstSeen": "2026-11-10",
+  "lastSeen": "2026-11-10",
+  "status": "gone",
+  "goneSince": "2026-11-11",
+  "auto": {
+   "equipment": {
+    "ac": 2,
+    "cam": 2,
+    "pdc": 2,
+    "cp": 2
+   },
+   "plus": null,
+   "watch": "Auto sprowadzone (kraj pochodzenia: Niemcy). Poproś o raport historii z zagranicy, np. z Carvertical.",
+   "reject": "Podejrzanie mały przebieg (378 km)"
+  },
+  "photo": "https://ireland.apollo.olxcdn.com/v1/files/ldmuljy10ibf-OTOMOTOPL/image;s=640x480"
+ },
+ {
+  "id": "otomoto:6151299254",
+  "links": {
+   "otomoto": "https://www.otomoto.pl/osobowe/oferta/toyota-prius-ID6IidV6.html",
+   "olx": null
+  },
+  "name": "Toyota Prius",
+  "version": null,
+  "engine": "1.8, 136 KM",
+  "fuel": "hev",
+  "gear": "automat",
+  "body": null,
+  "year": 2011,
+  "km": 842,
+  "hp": 136,
+  "cc": 1798,
+  "price": 17900,
+  "city": "Koszalin",
+  "region": "Zachodniopomorskie",
+  "seller": "prywatnie",
+  "make": "toyota",
+  "model": "prius",
+  "title": "Toyota Prius",
+  "origin": null,
+  "equipment": {
+   "ac": 2,
+   "cam": 2,
+   "pdc": 2,
+   "cp": 2
+  },
+  "facts": {
+   "salonPL": false,
+   "firstOwner": false,
+   "aso": false,
+   "noAccident": false,
+   "origin": null,
+   "originFrom": null,
+   "hasVin": false
+  },
+  "out": null,
+  "plus": null,
+  "watch": null,
+  "why": null,
+  "score": 7,
+  "top": null,
+  "reject": "Podejrzanie mały przebieg (842 km)",
+  "pending": true,
+  "detailed": false,
+  "inAc": false,
+  "manual": false,
+  "byKamil": [],
+  "firstSeen": "2026-11-10",
+  "lastSeen": "2026-11-10",
+  "status": "gone",
+  "goneSince": "2026-11-11",
+  "auto": {
+   "equipment": {
+    "ac": 2,
+    "cam": 2,
+    "pdc": 2,
+    "cp": 2
+   },
+   "plus": null,
+   "watch": null,
+   "reject": "Podejrzanie mały przebieg (842 km)"
+  },
+  "photo": "https://ireland.apollo.olxcdn.com/v1/files/xwa51hqeqlog2-OTOMOTOPL/image;s=640x480"
  },
  {
   "id": "otomoto:6151079795",

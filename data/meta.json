@@ -1,11 +1,11 @@
 {
- "lastRun": "2026-11-10T15:29:37+01:00",
- "lastAttempt": "2026-11-10T15:29:37+01:00",
- "ranBy": "mac",
- "newCount": 338,
+ "lastRun": "2026-11-11T11:29:16+01:00",
+ "lastAttempt": "2026-11-11T11:29:16+01:00",
+ "ranBy": "actions",
+ "newCount": 11,
  "activeCount": 338,
- "rejectedCount": 85,
- "pendingDetails": 1,
+ "rejectedCount": 80,
+ "pendingDetails": 0,
  "sources": {
   "otomoto": "ok",
   "olx": "zablokowane dla automatu (403), sprawdzaj ręcznie"
