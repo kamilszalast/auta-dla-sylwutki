@@ -5,7 +5,7 @@ import time
 from datetime import datetime
 from pathlib import Path
 
-from . import config, otomoto, overrides, ranking, rules, store
+from . import config, otomoto, overrides, ranking, rules, store, storage as storage_mod
 from .http import Blocked, FetchError, NotFound
 
 LABELS = {"on": "diesel", "lpg": "gaz", "hev": "hybryda", "pb": "Opel Adam"}
@@ -23,7 +23,7 @@ def _sentence(parts):
     return text[:1].upper() + text[1:] + "." if text else None
 
 
-def _search(fetcher, errors):
+def _search(fetcher, errors, deadline=None):
     """Returns (seen, lists_complete, any_ok)."""
     seen, complete, any_ok = {}, True, False
     for query in config.QUERIES:
@@ -31,6 +31,9 @@ def _search(fetcher, errors):
             label = LABELS[query["key"]] + (" z klimą automatyczną" if with_ac else "")
             page, pages = 1, 1
             while page <= pages:
+                if deadline is not None and clock() > deadline:
+                    errors.append("Skończył się czas w trakcie wyszukiwania. Część list sprawdzę przy jutrzejszej aktualizacji.")
+                    return seen, False, any_ok
                 try:
                     total, items = otomoto.parse_list(fetcher.get(otomoto.search_url(query, with_ac, page)))
                 except Blocked as e:
@@ -67,8 +70,8 @@ def _store_classification(car, result):
                    "watch": " ".join(result["watch"]) or None, "reject": result["reject"]}
 
 
-def _details(cars, fetcher, today, limit, errors):
-    """Fetch listing pages: new cars first, then cars checked with older rules."""
+def _detail_queue(cars):
+    """Cars whose listing page we still need: new cars first, then cars checked with older rules."""
     new, outdated = [], []
     for car in cars:
         if car["status"] != "active" or car.get("manual"):
@@ -82,12 +85,17 @@ def _details(cars, fetcher, today, limit, errors):
             new.append(car)
     new.sort(key=lambda c: (not c.get("inAc"), -c["year"], c["km"]))
     outdated.sort(key=lambda c: bool((c.get("auto") or {}).get("reject")))  # cars Sylwia sees first
+    return new + outdated
+
+
+def _details(cars, fetcher, today, limit, errors, deadline=None):
+    """Fetch listing pages until the queue, the limit or the time runs out."""
     failed = in_row = 0
-    start = clock()
-    for car in (new + outdated)[:limit]:
-        if clock() - start > config.DETAIL_BUDGET_S:
-            errors.append("Pobieranie ogłoszeń przerwane po %d minutach. Reszta przy następnej aktualizacji."
-                          % (config.DETAIL_BUDGET_S // 60))
+    if deadline is None:
+        deadline = clock() + config.DETAIL_BUDGET_S
+    for car in _detail_queue(cars)[:limit]:
+        if clock() > deadline:
+            errors.append("Skończył się czas na pobieranie ogłoszeń. Reszta przy następnej aktualizacji.")
             break
         if in_row >= config.MAX_FAILURES_IN_ROW:
             errors.append("Pobieranie ogłoszeń przerwane po %d błędach z rzędu. Reszta przy następnej aktualizacji."
@@ -142,30 +150,44 @@ def finalize(cars, data, today, errors):
     return cars
 
 
-def run(root, fetcher, now, ran_by, detail_limit, force):
+def run(root, fetcher, now, ran_by, detail_limit, force, storage=None, budget_s=None, continue_details=False):
+    """One update. budget_s caps the whole turn (Vercel functions stop after 5 minutes);
+    continue_details lets a later turn on the same day fetch the listing pages the earlier turn left."""
     data = Path(root) / "data"
-    offers_path, meta_path = data / "offers.json", data / "meta.json"
-    meta = store.load(meta_path, {})
+    storage = storage or storage_mod.Local(data)
+    deadline = clock() + budget_s if budget_s else None
+    meta = storage.read("meta.json", {})
     today = now.date().isoformat()
-    if not force and (meta.get("lastRun") or "")[:10] == today:
-        print("Dzisiejsze dane już są (%s, %s). Koniec bez zmian." % (meta["lastRun"], meta.get("ranBy")))
-        return 0
-
     stamp = now.isoformat(timespec="seconds")
+    if not force and (meta.get("lastRun") or "")[:10] == today:
+        cars = storage.read("offers.json", [])
+        if not continue_details or not _detail_queue(cars):
+            print("Dzisiejsze dane już są (%s, %s). Koniec bez zmian." % (meta["lastRun"], meta.get("ranBy")))
+            return 0
+        # Keep today's search problems. Drop notes about leftover or failed listings (this turn retries them)
+        # and overrides messages (finalize adds them again).
+        errors = [e for e in meta.get("errors") or []
+                  if not any(m in e for m in ("Reszta przy następnej", "Spróbuję przy następnej", "overrides.json"))]
+        _details(cars, fetcher, today, detail_limit, errors, deadline)
+        return _publish(storage, finalize(cars, data, today, errors), today, stamp, ran_by, errors)
+
     errors = []
-    seen, complete, any_ok = _search(fetcher, errors)
+    seen, complete, any_ok = _search(fetcher, errors, deadline)
     if not any_ok:
         meta.update(lastAttempt=stamp, errors=errors[:20],
                     sources={"otomoto": "błąd", "olx": OLX_STATUS})
-        store.save_json(meta_path, meta)
+        storage.write("meta.json", meta)
         print("Otomoto nie odpowiedziało. Zostają dane z poprzedniej aktualizacji.\n" + "\n".join(errors))
         return 1
 
-    cars, _ = store.merge(store.load(offers_path, []), seen, today, complete)
-    _details(cars, fetcher, today, detail_limit, errors)
+    cars, _ = store.merge(storage.read("offers.json", []), seen, today, complete)
+    _details(cars, fetcher, today, detail_limit, errors, deadline)
+    return _publish(storage, finalize(cars, data, today, errors), today, stamp, ran_by, errors)
 
-    cars = finalize(cars, data, today, errors)
 
+def _publish(storage, cars, today, stamp, ran_by, errors):
+    """Write offers.json and meta.json for the page."""
+    errors = list(dict.fromkeys(errors))
     active = [c for c in cars if c["status"] == "active"]
     meta = {
         "lastRun": stamp, "lastAttempt": stamp, "ranBy": ran_by,
@@ -176,8 +198,8 @@ def run(root, fetcher, now, ran_by, detail_limit, force):
         "sources": {"otomoto": "ok" if not errors else "częściowo", "olx": OLX_STATUS},
         "errors": errors[:20],
     }
-    store.save_json(offers_path, cars)
-    store.save_json(meta_path, meta)
+    storage.write("offers.json", cars)
+    storage.write("meta.json", meta)
     print("Aktualizacja %s: %d aut na stronie, nowe: %d, odrzucone: %d, czeka na szczegóły: %d."
           % (stamp, meta["activeCount"], meta["newCount"], meta["rejectedCount"], meta["pendingDetails"]))
     prefix = "::warning::" if os.environ.get("GITHUB_ACTIONS") else "Uwaga: "

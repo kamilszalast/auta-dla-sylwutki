@@ -1,13 +1,31 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
+  "framework": null,
+  "regions": [
+    "fra1"
+  ],
   "crons": [
-    { "path": "/api/trigger", "schedule": "0 5 * * *" },
-    { "path": "/api/trigger", "schedule": "0 7 * * *" }
+    {
+      "path": "/api/run",
+      "schedule": "0 4 * * *"
+    },
+    {
+      "path": "/api/run",
+      "schedule": "0 6 * * *"
+    },
+    {
+      "path": "/api/run",
+      "schedule": "0 8 * * *"
+    }
   ],
   "functions": {
-    "api/trigger.py": {
-      "maxDuration": 30,
-      "excludeFiles": "{data/**,scraper/**,tests/**,index.html,.github/**}"
+    "api/run.py": {
+      "maxDuration": 300,
+      "excludeFiles": "{tests/**,index.html,.github/**}"
+    },
+    "api/data.py": {
+      "maxDuration": 15,
+      "excludeFiles": "{tests/**,index.html,.github/**}"
     }
   }
 }

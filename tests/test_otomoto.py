@@ -157,6 +157,20 @@ class FetcherTest(unittest.TestCase):
         self.assertEqual(f.get("https://www.otomoto.pl/x"), "ok")
         self.assertEqual(waits[:2], [10, 30])
 
+    def test_custom_backoff_limits_retries(self):
+        import urllib.error
+        waits, calls = [], []
+
+        def opener(req, timeout):
+            calls.append(timeout)
+            raise urllib.error.HTTPError(req.full_url, 503, "busy", {}, None)
+
+        f = Fetcher(delay=(0, 0), sleep=waits.append, opener=opener, backoff=(5,), timeout=10)
+        with self.assertRaises(FetchError):
+            f.get("https://www.otomoto.pl/x")
+        self.assertEqual(waits, [5])
+        self.assertEqual(calls, [10, 10])
+
     def test_read_errors_are_retried(self):
         import http.client
         import socket

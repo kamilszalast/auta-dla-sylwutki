@@ -702,8 +702,18 @@ h2.book { font-size: 1.95rem; line-height: 1.02; font-weight: 850; font-stretch:
     var next = document.querySelectorAll('#list .entry')[LIMIT];
     if (next) { next.setAttribute('tabindex', '-1'); next.focus({ preventScroll: true }); }
   });
-  Promise.all([fetch('data/offers.json', { cache: 'no-store' }), fetch('data/meta.json', { cache: 'no-store' })])
-    .then(function (r) { if (!r[0].ok || !r[1].ok) throw new Error('HTTP'); return Promise.all([r[0].json(), r[1].json()]); })
+  // On Vercel the data comes from /api/data (Vercel Blob). Where that API does not exist (GitHub Pages, a local
+  // preview) the page reads data/*.json. A failing API is an error, not a reason to show the old copy from the repo.
+  function getJson(name) {
+    return fetch('api/data?name=' + name, { cache: 'no-store' })
+      .then(function (r) {
+        if (r.ok && /json/.test(r.headers.get('content-type') || '')) return r;
+        if (r.status >= 500) throw new Error('HTTP ' + r.status);
+        return fetch('data/' + name + '.json', { cache: 'no-store' });
+      })
+      .then(function (r) { if (!r.ok) throw new Error('HTTP'); return r.json(); });
+  }
+  Promise.all([getJson('offers'), getJson('meta')])
     .then(init)
     .catch(fail);
 

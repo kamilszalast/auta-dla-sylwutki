@@ -1,7 +1,9 @@
-# Vercel gets only the page, its data and the cron function.
-# Local notes and the scraper stay out, also when someone deploys from a working copy with `vercel deploy`.
-/*
-!/index.html
-!/data
-!/api
-!/vercel.json
+# Vercel needs only index.html, data/, scraper/ and api/. Everything below stays out,
+# also when someone deploys from a working copy with `vercel deploy` (local notes are *.md).
+*.md
+.impeccable
+.superpowers
+.claude
+.github
+tests
+__pycache__

@@ -25,8 +25,10 @@ class NotFound(FetchError):
 
 
 class Fetcher:
-    def __init__(self, delay=config.DELAY, sleep=time.sleep, opener=urllib.request.urlopen):
+    def __init__(self, delay=config.DELAY, sleep=time.sleep, opener=urllib.request.urlopen, backoff=BACKOFF, timeout=30):
         self.delay = delay
+        self.backoff = backoff
+        self.timeout = timeout
         self.sleep = sleep
         self.opener = opener
         self.count = 0
@@ -36,9 +38,9 @@ class Fetcher:
             self.sleep(random.uniform(*self.delay))
         self.count += 1
         req = urllib.request.Request(url, headers={"User-Agent": USER_AGENT, "Accept-Language": "pl-PL,pl;q=0.9"})
-        for attempt in range(len(BACKOFF) + 1):
+        for attempt in range(len(self.backoff) + 1):
             try:
-                with self.opener(req, timeout=30) as resp:
+                with self.opener(req, timeout=self.timeout) as resp:
                     return resp.read().decode("utf-8", "replace")
             except urllib.error.HTTPError as e:
                 if e.code == 403:
@@ -50,6 +52,6 @@ class Fetcher:
                 error = "HTTP %d" % e.code
             except (http.client.HTTPException, OSError) as e:  # URLError, timeouts, broken reads
                 error = "%s: %s" % (type(e).__name__, e)
-            if attempt < len(BACKOFF):
-                self.sleep(BACKOFF[attempt])
+            if attempt < len(self.backoff):
+                self.sleep(self.backoff[attempt])
         raise FetchError("%s: %s" % (url, error))

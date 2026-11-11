@@ -222,6 +222,69 @@ class RobustnessTest(unittest.TestCase):
         self.assertEqual(self.run_pipeline(f), 0)
         self.assertGreater(self.read("meta.json")["activeCount"], 20)
 
+    def test_later_turn_same_day_finishes_pending_details(self):
+        first = FakeFetcher()
+        self.run_pipeline(first, detail_limit=5)
+        pending = self.read("meta.json")["pendingDetails"]
+        self.assertGreater(pending, 0)
+        later = FakeFetcher()
+        self.assertEqual(self.run_pipeline(later, now=NOW + timedelta(hours=2), continue_details=True), 0)
+        self.assertEqual(later.urls, later.ads())  # no list pages again, only listing pages
+        self.assertEqual(len(later.ads()), pending)
+        meta = self.read("meta.json")
+        self.assertEqual(meta["pendingDetails"], 0)
+        self.assertTrue(meta["lastRun"].startswith("2026-11-11T08:04"))
+        self.assertEqual(meta["newCount"], meta["activeCount"])  # cars from the first turn still count as new today
+
+    def test_later_turn_clears_retried_failures_and_keeps_one_overrides_error(self):
+        (self.root / "data" / "overrides.json").write_text("{ zepsute")
+        first = FakeFetcher(fail=lambda u: FetchError("HTTP 503") if "/oferta/" in u else None)
+        self.run_pipeline(first, detail_limit=2)  # two failed listing pages, below the 3-in-a-row stop
+        self.assertTrue(any("Nie udało się pobrać" in e for e in self.read("meta.json")["errors"]))
+        self.run_pipeline(FakeFetcher(), now=NOW + timedelta(hours=2), continue_details=True)
+        errors = self.read("meta.json")["errors"]
+        self.assertFalse(any("Nie udało się pobrać" in e for e in errors))
+        self.assertEqual(sum("overrides.json" in e for e in errors), 1)
+
+    def test_later_turn_without_pending_work_does_nothing(self):
+        self.run_pipeline(FakeFetcher())
+        meta_before = self.read("meta.json")
+        later = FakeFetcher()
+        self.assertEqual(self.run_pipeline(later, now=NOW + timedelta(hours=2), continue_details=True), 0)
+        self.assertEqual(later.urls, [])
+        self.assertEqual(self.read("meta.json"), meta_before)
+
+    def test_run_reads_and_writes_through_given_storage(self):
+        class Memory:
+            def __init__(self):
+                self.files = {}
+
+            def read(self, name, default):
+                return self.files.get(name, default)
+
+            def write(self, name, obj):
+                self.files[name] = obj
+        mem = Memory()
+        self.assertEqual(self.run_pipeline(FakeFetcher(), storage=mem), 0)
+        self.assertGreater(mem.files["meta.json"]["activeCount"], 20)
+        self.assertTrue(mem.files["offers.json"])
+        self.assertFalse((self.root / "data" / "offers.json").exists())
+
+    def test_budget_ends_search_early_without_marking_cars_gone(self):
+        self.run_pipeline(FakeFetcher())
+        before = {c["id"] for c in self.read("offers.json") if c["status"] == "active"}
+        ticks = iter(range(0, 100000, 400))
+        orig = pipeline.clock
+        pipeline.clock = lambda: next(ticks)
+        self.addCleanup(setattr, pipeline, "clock", orig)
+        f = FakeFetcher()
+        f.lists = empty_list_html()  # if the search ran fully, empty lists would still not drop cars
+        self.run_pipeline(f, now=NOW + timedelta(days=1), budget_s=1000)
+        self.assertLess(len(f.urls), 8)  # 4 queries x 2 = 8 list pages without the budget
+        after = {c["id"] for c in self.read("offers.json") if c["status"] == "active"}
+        self.assertEqual(before, after)
+        self.assertTrue(any("czas" in e for e in self.read("meta.json")["errors"]))
+
     def test_detail_time_budget(self):
         ticks = iter(range(0, 100000, 400))
         orig = pipeline.clock
