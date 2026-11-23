@@ -102,7 +102,7 @@ h1 { font-size: clamp(2.15rem, 9.4vw, 3.3rem); line-height: .9; font-weight: 900
 .calls li { display: grid; grid-template-columns: 1fr auto; gap: 2px 10px; align-items: center; padding-block: 8px; border-top: 1px solid #f0c4d5; }
 .calls b { font-weight: 650; }
 .calls small { grid-column: 1; color: #5e3e4f; font-size: .88rem; }
-.calls .acts { grid-column: 2; grid-row: 1 / span 2; display: flex; gap: 6px; }
+.calls .acts { grid-column: 2; grid-row: 1 / span 3; display: flex; gap: 6px; }
 .calls a, .calls button { min-height: 44px; display: inline-flex; align-items: center; padding: 0 10px; border-radius: 8px; font: 650 .9rem var(--f-read); }
 .calls a { background: #24121c; color: #fffafc; text-decoration: none; }
 .calls button { appearance: none; background: none; border: 1.5px solid #24121c; color: #24121c; cursor: pointer; }
@@ -223,7 +223,9 @@ h2.book { font-size: 1.95rem; line-height: 1.02; font-weight: 850; font-stretch:
 .voided ul li { padding-block: 0; border-bottom: 0; }
 .voided li a { display: flex; min-height: 44px; align-items: center; color: var(--ink-2); font-size: .95rem; }
 .show-all { appearance: none; width: 100%; min-height: 50px; margin-top: 16px; border-radius: 10px; border: 2px solid var(--ink); background: transparent; color: var(--ink); font: 750 1rem var(--f-read); cursor: pointer; }
-.calls .gone { color: #24121c; font-weight: 700; }
+.calls .delta { grid-column: 1; font-size: .88rem; font-weight: 700; color: #24121c; }
+.sticker .watch-msg { font-size: .88rem; color: #5e3e4f; }
+.sticker .watch-msg.err { color: #24121c; font-weight: 650; }
 .loading { padding-block: 22px; color: var(--ink-2); }
 
 .update-ledger { display: grid; border-top: 1px solid rgba(42, 15, 28, .3); }
@@ -296,9 +298,10 @@ h2.book { font-size: 1.95rem; line-height: 1.02; font-weight: 850; font-stretch:
       <a href="#wszystkie">Wszystkie auta</a>
       <a href="#przeglad">Przed oglądaniem</a>
     </nav>
-    <section class="sticker" aria-labelledby="call-h" id="telefon">
-      <h2 id="call-h">Do telefonu</h2>
-      <div id="calls"></div>
+    <section class="sticker" aria-labelledby="call-h" id="obserwowane">
+      <h2 id="call-h">Obserwowane</h2>
+      <div id="calls"><p class="empty-call">Wczytuję obserwowane…</p></div>
+      <p class="watch-msg" id="watch-msg" role="status" hidden></p>
     </section>
   </div>
 </header>
@@ -455,7 +458,19 @@ h2.book { font-size: 1.95rem; line-height: 1.02; font-weight: 850; font-stretch:
     } catch (e) {}
     history.replaceState(null, '', location.pathname + location.search);
   })();
-  var calls = load('sylwia-telefon', []);
+  // Obserwowane: one shared list on the server (/api/watch). Changing it needs the key from the edit link
+  // (?edycja=<key>), kept on this device; without it the list is read-only and the buttons stay hidden.
+  var KEY_NAME = 'obserwowane-klucz';
+  (function () {
+    var m = /[?&]edycja=([^&#]+)/.exec(location.search);
+    if (!m) return;
+    try { localStorage.setItem(KEY_NAME, decodeURIComponent(m[1])); } catch (e) {}
+    var rest = location.search.replace(/([?&])edycja=[^&#]*&?/, '$1').replace(/[?&]$/, '');
+    history.replaceState(null, '', location.pathname + rest + location.hash);
+  })();
+  var watchKey = (function () { try { return localStorage.getItem(KEY_NAME) || ''; } catch (e) { return ''; } })();
+  var watched = [], watchById = {}, canEdit = false, watchState = 'loading', carsReady = false;
+  var watching = function (id) { return !!watchById[id]; };
 
   function fmtDay(iso) { var d = iso.split('-'); return d[2] + '.' + d[1] + '.' + d[0]; }
   function fmtStamp(iso) {
@@ -540,13 +555,13 @@ h2.book { font-size: 1.95rem; line-height: 1.02; font-weight: 850; font-stretch:
     return '<figure class="shot">' + (href ? '<a href="' + esc(href) + '" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">' + img + '</a>' : img) + '</figure>';
   }
   function entry(c, ranked, pressId) {
-    var picked = calls.indexOf(c.id) > -1;
+    var picked = watching(c.id);
     var engine = /gaz|hybryd/.test(c.engine) ? c.engine : c.engine + ', ' + FUEL[c.fuel];
     var pending = !c.detailed && !c.manual;
     return '<article class="entry' + (ranked ? ' top' : '') + (picked ? ' picked' : '') + '" data-id="' + esc(c.id) + '">' +
       shot(c) +
       '<div class="entry-h' + (avgFor(c) ? ' has-gauge' : '') + '">' + gauge(c) +
-        '<h3>' + (ranked ? '<span class="sr">Polecane numer ' + c.top + ': </span>' : '') + esc(c.name) + (picked ? '<span class="sr"> (na liście do telefonu)</span>' : '') + '</h3><p class="price">' + nb(c.price) + '&nbsp;zł</p>' + priceNote(c) + '</div>' +
+        '<h3>' + (ranked ? '<span class="sr">Polecane numer ' + c.top + ': </span>' : '') + esc(c.name) + (picked ? '<span class="sr"> (obserwujesz)</span>' : '') + '</h3><p class="price">' + nb(c.price) + '&nbsp;zł</p>' + priceNote(c) + '</div>' +
       (c.fresh ? '<p class="new-entry">Nowa na liście</p>' : '') +
       (c.out ? '<p class="out">' + mark('m-ask') + '<span>Poza kryteriami: ' + esc(c.out) + '</span></p>' : '') +
       '<dl class="fields">' +
@@ -566,23 +581,87 @@ h2.book { font-size: 1.95rem; line-height: 1.02; font-weight: 850; font-stretch:
         (pending ? '<p>' + mark('m-ask') + '<span>Szczegóły ogłoszenia sprawdzimy przy następnej aktualizacji. Do tego czasu kamerę, czujniki i CarPlay trzeba dopytać.</span></p>' : '') +
       '</div>' +
       '<div class="acts-row">' + links(c) +
-        '<button type="button" class="pick' + (picked ? ' on' : '') + '" data-pick="' + esc(c.id) + '">' + (picked ? 'Usuń z listy do telefonu<span class="sr">: ' + esc(c.name) + '</span>' : 'Do telefonu<span class="sr">: dodaj ' + esc(c.name) + ' do listy</span>') + '</button></div>' +
+        (canEdit && (c.oto || c.olx) ? '<button type="button" class="pick' + (picked ? ' on' : '') + '" data-pick="' + esc(c.id) + '">' + (picked ? 'Usuń z obserwowanych<span class="sr">: ' + esc(c.name) + '</span>' : 'Obserwuj<span class="sr"> ' + esc(c.name) + '</span>') + '</button>' : '') + '</div>' +
       '</article>';
   }
 
   function renderCalls() {
     var el = document.getElementById('calls');
-    // ids missing from today's data stay saved (e.g. a broken overrides.json day), just hidden
-    var known = calls.filter(function (id) { return byId[id]; });
-    document.getElementById('telefon').classList.toggle('is-empty', !known.length);
-    if (!known.length) { el.innerHTML = '<p class="empty-call">Stuknij „Do telefonu” przy aucie, a trafi tutaj.</p>'; return; }
-    el.innerHTML = '<ul class="calls">' + known.map(function (id) {
-      var c = byId[id], href = c.oto || c.olx, gone = c.status !== 'active';
-      return '<li><b>' + esc(c.name) + ', ' + c.year + '</b><small class="num">' + nb(c.price) + ' zł, ' + esc(c.city) +
-        (gone ? ' · <span class="gone">Ogłoszenie nieaktywne</span>' : '') + '</small>' +
-        '<span class="acts"><a href="' + esc(href) + '" target="_blank" rel="noopener">Ogłoszenie<span class="sr"> ' + esc(c.name) + ' (nowa karta)</span></a>' +
-        '<button type="button" data-unpick="' + esc(id) + '">Usuń<span class="sr"> ' + esc(c.name) + ' z listy</span></button></span></li>';
+    document.getElementById('obserwowane').classList.toggle('is-empty', !watched.length);
+    if (watchState === 'loading') { el.innerHTML = '<p class="empty-call">Wczytuję obserwowane…</p>'; return; }
+    if (watchState === 'error' && !watched.length) { el.innerHTML = '<p class="empty-call">Nie udało się wczytać obserwowanych. Odśwież stronę za chwilę.</p>'; return; }
+    if (!watched.length) {
+      var legacy = !canEdit && load('sylwia-telefon', []).length;
+      el.innerHTML = '<p class="empty-call">' + (canEdit ? 'Stuknij „Obserwuj” przy aucie, a trafi tutaj.'
+        : legacy ? 'Auta zapisane wcześniej „Do telefonu” przeniosą się tutaj, gdy otworzysz link do edycji od Kamila.'
+        : 'Na razie nic tu nie ma. Auta dodasz z linku do edycji od Kamila.') + '</p>';
+      return;
+    }
+    el.innerHTML = '<ul class="calls">' + watched.map(function (w) {
+      var c = carsReady ? byId[w.id] : null, gone = carsReady && (!c || c.status !== 'active');
+      var price = c ? c.price : w.price, href = (c && (c.oto || c.olx)) || w.url, name = (c && c.name) || w.name;
+      var year = (c && c.year) || w.year, city = (c && c.city) || w.city;
+      var delta = c && !gone && w.price && c.price !== w.price ? c.price - w.price : 0;
+      var since = w.added ? ' od ' + fmtDay(w.added).slice(0, 5) : ' od dodania';
+      return '<li><b>' + esc(name) + (year ? ', ' + year : '') + '</b><small class="num">' +
+        (price ? nb(price) + ' zł' : '') + (city ? (price ? ', ' : '') + esc(city) : '') + '</small>' +
+        (gone ? '<small class="delta">Ogłoszenie nieaktywne</small>'
+          : delta ? '<small class="delta num">' + (delta < 0 ? '↓ Taniej o ' : '↑ Drożej o ') + nb(Math.abs(delta)) + ' zł' + since + '</small>' : '') +
+        '<span class="acts"><a href="' + esc(href) + '" target="_blank" rel="noopener">Ogłoszenie<span class="sr"> ' + esc(name) + ' (nowa karta)</span></a>' +
+        (canEdit ? '<button type="button" data-unpick="' + esc(w.id) + '">Usuń<span class="sr"> ' + esc(name) + ' z obserwowanych</span></button>' : '') + '</span></li>';
     }).join('') + '</ul>';
+  }
+  function watchMsg(text, isErr) {
+    var m = document.getElementById('watch-msg');
+    m.hidden = !text;
+    m.className = 'watch-msg' + (isErr ? ' err' : '');
+    m.textContent = text || '';
+  }
+  function setWatched(items) {
+    watched = items || [];
+    watchById = {};
+    watched.forEach(function (w) { watchById[w.id] = w; });
+  }
+  // Changes from this device go one at a time, so a quick second tap (or the import) never saves over the first.
+  var queue = Promise.resolve(), pending = 0;
+  function watchPost(body) {
+    pending++;
+    var run = queue.then(function () { return watchApi(body); });
+    queue = run.then(function () {}, function () {});
+    return run.then(function (d) { pending--; return d; }, function (e) { pending--; throw e; });
+  }
+  function watchApi(body) {
+    var opts = { cache: 'no-store', headers: {} };
+    if (watchKey) opts.headers['X-Watch-Key'] = watchKey;
+    if (body) { opts.method = 'POST'; opts.headers['Content-Type'] = 'application/json'; opts.body = JSON.stringify(body); }
+    return fetch('api/watch', opts).then(function (r) {
+      if (!r.ok || !/json/.test(r.headers.get('content-type') || '')) { var e = new Error('HTTP ' + r.status); e.status = r.status; throw e; }
+      return r.json();
+    });
+  }
+  function rerender(press) { renderCalls(); if (carsReady) { renderTop(press); renderList(press); } }
+  function loadWatched() {
+    return watchApi().then(function (d) {
+      if (pending) return;  // a change is on its way; its answer brings the fresh list
+      setWatched(d.items);
+      canEdit = !!d.canEdit;
+      // drop the key only when the server has one and says ours is wrong (not when WATCH_KEY is missing there)
+      if (watchKey && !canEdit && d.keySet) { try { localStorage.removeItem(KEY_NAME); } catch (e) {} watchKey = ''; }
+      watchState = 'ok';
+      rerender();
+      importSaved();
+    }, function () { watchState = 'error'; rerender(); });
+  }
+  function itemOf(c) { return { id: c.id, name: c.name, year: c.year, city: c.city, price: c.price, url: c.oto || c.olx }; }
+  // Cars saved in "Do telefonu" on this device before 23.11.2026 move to the shared list once.
+  function importSaved() {
+    if (!canEdit || !carsReady) return;
+    var old = load('sylwia-telefon', []);
+    if (!old.length) return;
+    var items = old.map(function (id) { return byId[id]; }).filter(function (c) { return c && (c.oto || c.olx); }).map(itemOf);
+    var done = function () { save('sylwia-telefon-przeniesione', old); try { localStorage.removeItem('sylwia-telefon'); } catch (e) {} };
+    if (!items.length) { done(); return; }
+    watchPost({ op: 'import', items: items }).then(function (d) { done(); setWatched(d.items); rerender(); }, function () {});
   }
 
   var state = Object.assign({ fuel: 'all', pl: false, sort: 'rec', seller: 'all' }, load('sylwia-filtry', {}));
@@ -670,13 +749,24 @@ h2.book { font-size: 1.95rem; line-height: 1.02; font-weight: 850; font-stretch:
     stale.innerHTML = mark('m-ask') + '<span>Od ostatniej aktualizacji minęło ponad półtorej doby. Automat mógł nie zadziałać, daj znać Kamilowi.</span>';
   }
   function toggle(id) {
-    var i = calls.indexOf(id);
-    if (i > -1) calls.splice(i, 1); else calls.push(id);
-    save('sylwia-telefon', calls);
-    var press = i > -1 ? null : id;
-    renderCalls(); renderTop(press); renderList(press);
+    if (!canEdit) return;
+    var c = byId[id], was = watching(id), before = watched.slice();
+    if (!was && !(c && (c.oto || c.olx))) return;
+    // Show the change at once; the server answer (or an error) settles it.
+    setWatched(was ? watched.filter(function (w) { return w.id !== id; }) : watched.concat([itemOf(c)]));
+    var press = was ? null : id;
+    watchMsg('');
+    rerender(press);
     var btn = document.querySelector('[data-pick="' + id + '"]');
     if (btn) btn.focus({ preventScroll: true });
+    watchPost(was ? { op: 'remove', id: id } : { op: 'add', item: itemOf(c) }).then(function (d) {
+      if (!pending) { setWatched(d.items); rerender(); }
+    }, function (e) {
+      if (!pending) setWatched(before); else setWatched(was ? watched.concat([before.filter(function (w) { return w.id === id; })[0]]) : watched.filter(function (w) { return w.id !== id; }));
+      rerender();
+      if (e.status === 403) { canEdit = false; watchKey = ''; try { localStorage.removeItem(KEY_NAME); } catch (x) {} rerender(); }
+      watchMsg(e.status === 403 ? 'Link do edycji już nie działa. Poproś Kamila o nowy.' : 'Nie udało się zapisać zmiany. Sprawdź internet i spróbuj jeszcze raz.', true);
+    });
   }
   function refilter() { showAll = false; renderList(); }
 
@@ -688,7 +778,9 @@ h2.book { font-size: 1.95rem; line-height: 1.02; font-weight: 850; font-stretch:
     cars.forEach(function (c) { byId[c.id] = view(c); });
     averages();
     freshCount = cars.filter(function (c) { return c.fresh && visible(c); }).length;
+    carsReady = true;
     renderCover(); renderCalls(); renderTop(); renderList(); renderVoid();
+    importSaved();
   }
   function fail() {
     var msg = 'Nie udało się wczytać ofert. Odśwież stronę za chwilę, a jeśli to nie pomoże, daj znać Kamilowi.';
@@ -743,6 +835,9 @@ h2.book { font-size: 1.95rem; line-height: 1.02; font-weight: 850; font-stretch:
   Promise.all([getJson('offers'), getJson('meta')])
     .then(init)
     .catch(fail);
+  loadWatched();
+  // The other person may have changed the list: read it again when the page comes back to the front.
+  document.addEventListener('visibilitychange', function () { if (document.visibilityState === 'visible' && watchState !== 'loading') loadWatched(); });
 
   var checks = [
     ['Sprawdź historię auta', 'Na historiapojazdu.gov.pl wpisz VIN, numer rejestracyjny i datę pierwszej rejestracji. Zobaczysz przebiegi z przeglądów i szkody. Poproś sprzedającego o te dane przez telefon.'],

@@ -26,6 +26,10 @@
     "api/data.py": {
       "maxDuration": 15,
       "excludeFiles": "{tests/**,index.html,.github/**}"
+    },
+    "api/watch.py": {
+      "maxDuration": 15,
+      "excludeFiles": "{tests/**,index.html,.github/**}"
     }
   }
 }

@@ -19,13 +19,13 @@ def load(name):
     return mod
 
 
-def get(handler_cls, path, env, headers=None):
+def get(handler_cls, path, env, headers=None, data=None):
     server = http.server.HTTPServer(("127.0.0.1", 0), handler_cls)
     threading.Thread(target=server.serve_forever, daemon=True).start()
     old = {k: os.environ.get(k) for k in env}
     os.environ.update(env)
     try:
-        req = urllib.request.Request("http://127.0.0.1:%d%s" % (server.server_port, path), headers=headers or {})
+        req = urllib.request.Request("http://127.0.0.1:%d%s" % (server.server_port, path), headers=headers or {}, data=data)
         try:
             with urllib.request.urlopen(req, timeout=5) as r:
                 return r.status, r.read().decode(), dict(r.headers)
@@ -63,6 +63,25 @@ class DataHandlerTest(unittest.TestCase):
     def test_unknown_name_is_404(self):
         code, _, _ = get(load("data").handler, "/api/data?name=overrides", {"BLOB_READ_WRITE_TOKEN": ""})
         self.assertEqual(code, 404)
+
+
+class WatchHandlerTest(unittest.TestCase):
+    ENV = {"BLOB_READ_WRITE_TOKEN": "", "BLOB_STORE_ID": "", "VERCEL_OIDC_TOKEN": "", "WATCH_KEY": "k3y"}
+
+    def test_without_blob_the_list_is_empty_and_read_only_without_the_key(self):
+        code, body, headers = get(load("watch").handler, "/api/watch", self.ENV)
+        self.assertEqual(code, 200)
+        self.assertEqual(json.loads(body), {"items": [], "canEdit": False, "keySet": True})
+        self.assertEqual(headers["Cache-Control"], "no-store")
+
+    def test_the_key_header_unlocks_editing(self):
+        code, body, _ = get(load("watch").handler, "/api/watch", self.ENV, {"X-Watch-Key": "k3y"})
+        self.assertEqual((code, json.loads(body)["canEdit"]), (200, True))
+
+    def test_post_with_a_wrong_key_is_403(self):
+        code, _, _ = get(load("watch").handler, "/api/watch", self.ENV, {"X-Watch-Key": "nope", "Content-Type": "application/json"},
+                         data=json.dumps({"op": "remove", "id": "otomoto:1"}).encode())
+        self.assertEqual(code, 403)
 
 
 if __name__ == "__main__":

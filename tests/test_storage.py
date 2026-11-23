@@ -77,7 +77,7 @@ class BlobTest(unittest.TestCase):
         api, download = opener.requests
         self.assertEqual(api.get_header("Authorization"), "Bearer " + TOKEN)
         self.assertEqual(api.get_header("X-api-version"), "12")
-        self.assertTrue(download.full_url.endswith("meta.json?v=1234"))  # skip the CDN's cached copy
+        self.assertTrue(download.full_url.endswith("meta.json?v=1234000"))  # skip the CDN's cached copy
         self.assertIsNone(download.get_header("Authorization"))  # never send the token to the CDN
 
     def test_oidc_auth_sends_store_id(self):

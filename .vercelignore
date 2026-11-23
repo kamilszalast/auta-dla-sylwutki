@@ -7,3 +7,4 @@
 .github
 tests
 __pycache__
+data/watch.json

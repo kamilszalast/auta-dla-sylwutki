@@ -68,7 +68,7 @@ class Blob:
         except OSError as e:
             raise StorageError("Blob: odczyt %s nie udał się (%s)" % (name, e))
         try:
-            req = urllib.request.Request("%s?v=%d" % (info["url"], self.now()))  # skip the CDN's cached copy
+            req = urllib.request.Request("%s?v=%d" % (info["url"], self.now() * 1000))  # skip the CDN's cached copy (ms: two reads in one second must not share it)
             with self.opener(req, timeout=20) as resp:
                 return json.loads(resp.read().decode("utf-8"))
         except (OSError, ValueError, KeyError) as e:
