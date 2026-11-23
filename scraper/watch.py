@@ -5,15 +5,25 @@ page link can read it; changing it needs the key in the X-Watch-Key header. Each
 car (name, year, city, price on the day it was added, link), so the page can still show it after the
 listing disappears from offers.json.
 
-Stored in Vercel Blob as data/watch.json: {"items": [...]}.
+In Vercel Blob each version of the list gets its own path, data/watch/v/<version>.json = {"items": [...]}, never
+overwritten; data/watch.json points at the current one through its content type ("...; version=<version>").
+Vercel's CDN keeps an overwritten blob for up to a minute, also with a query string in the URL, so reading the
+list right after a write gave the old one and the next write lost the change. The pointer is read through the
+Blob API (head, no CDN) and the CDN has never seen a new version's path. Reading costs two simple operations,
+a change two advanced ones (Hobby: 2,000 a month). Locally (no Blob) the list is one file, data/watch.json,
+and a pointer without a version (that older format) is read as the list itself.
 """
 import hmac
 import json
+import re
+import secrets
+import time
 from urllib.parse import urlsplit
 
 from .storage import StorageError
 
 FILE = "watch.json"
+VERSIONS = "watch/v/"
 MAX_ITEMS = 300
 MAX_BODY = 64 * 1024
 HOSTS = ("otomoto.pl", "olx.pl")
@@ -111,16 +121,54 @@ def _json(code, obj):
         "Content-Type": "application/json; charset=utf-8", "Cache-Control": "no-store"}
 
 
-def _items(storage):
-    data = storage.read(FILE, None) or {}
+def _clean_list(data):
     items = data.get("items") if isinstance(data, dict) else None
     return [i for i in items if isinstance(i, dict) and i.get("id")] if isinstance(items, list) else []
+
+
+def read_items(storage):
+    """(items, version); version is None on a new store and for the local file."""
+    if not hasattr(storage, "head"):
+        return _clean_list(storage.read(FILE, None)), None
+    for _ in range(3):
+        info = storage.head(FILE)
+        if info is None:
+            return [], None  # nobody has added anything yet
+        m = re.search(r"version=([\w-]+)", info.get("contentType") or "")
+        if not m:
+            data = storage.read(FILE, None)  # the older one-file format: the list itself
+            if not isinstance(data, dict) or "items" not in data:
+                raise StorageError("Blob: nie rozpoznaję pliku listy obserwowanych")
+            return _clean_list(data), None
+        url = info.get("url") or ""
+        if not url.endswith("/" + FILE):
+            raise StorageError("Blob: brak adresu listy obserwowanych")
+        data = storage.fetch(url[:-len(FILE)] + VERSIONS + m.group(1) + ".json")
+        if data is not None:
+            return _clean_list(data), m.group(1)
+        # None: another change has just replaced that version, so read the pointer again
+    raise StorageError("Blob: lista obserwowanych zmienia się za szybko")
+
+
+def write_items(storage, items, prev):
+    """A new version, then the pointer to it; the version before goes (deleting is free)."""
+    if not hasattr(storage, "head"):
+        storage.write(FILE, {"items": items})
+        return
+    ver = "%d-%s" % (time.time() * 1000, secrets.token_hex(3))
+    storage.write(VERSIONS + ver + ".json", {"items": items})
+    storage.write(FILE, {"version": ver}, content_type="application/json; charset=utf-8; version=" + ver)
+    if prev:
+        try:
+            storage.delete([VERSIONS + prev + ".json"])
+        except StorageError:
+            pass  # an old version stays behind; nothing reads it
 
 
 def get_response(storage, key, given):
     """(status, body, headers) for GET /api/watch."""
     try:
-        items = _items(storage)
+        items = read_items(storage)[0]
     except StorageError as e:
         return _json(502, {"error": str(e)})
     # keySet: without WATCH_KEY on the server nobody can edit, but the page keeps its key for when it is set again
@@ -137,10 +185,13 @@ def post_response(storage, key, given, body, today):
         return _json(413, {"error": "Za dużo danych."})
     try:
         req = json.loads(body.decode("utf-8"))
-        items = apply(_items(storage), req, today)
-        storage.write(FILE, {"items": items})
     except (ValueError, UnicodeDecodeError):
         return _json(400, {"error": "Zły JSON."})
+    try:
+        current, ver = read_items(storage)
+        items = apply(current, req, today)
+        if items != current:  # e.g. the same car again: no write, writes count against the Blob limit
+            write_items(storage, items, ver)
     except WatchError as e:
         return _json(e.code, {"error": str(e)})
     except (StorageError, OSError) as e:

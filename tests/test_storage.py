@@ -66,6 +66,25 @@ class MemoryFallback:
 
 
 class BlobTest(unittest.TestCase):
+    def test_head_answers_metadata_or_none_and_delete_posts_paths(self):
+        opener = Opener({
+            ("GET", "https://vercel.com/api/blob/?url=data%2Fwatch.json"): json.dumps({"contentType": "application/json; version=1"}).encode(),
+            ("GET", "https://vercel.com/api/blob/?url=data%2Fnone.json"): http_error(404, "not_found"),
+            ("POST", "https://vercel.com/api/blob/delete"): b"",
+        })
+        s = storage.Blob(TOKEN, MemoryFallback({}), opener=opener)
+        self.assertEqual(s.head("watch.json"), {"contentType": "application/json; version=1"})
+        self.assertIsNone(s.head("none.json"))
+        s.delete(["watch/v/1.json"])
+        self.assertEqual(json.loads(opener.requests[-1].data), {"urls": ["data/watch/v/1.json"]})
+
+    def test_fetch_answers_none_for_a_missing_blob(self):
+        url = "https://store123.public.blob.vercel-storage.com/data/watch/v/1.json"
+        s = storage.Blob(TOKEN, MemoryFallback({}), opener=Opener({("GET", url): b'{"items": []}'}))
+        self.assertEqual(s.fetch(url), {"items": []})
+        s = storage.Blob(TOKEN, MemoryFallback({}), opener=Opener({("GET", url): urllib.error.HTTPError(url, 404, "nf", {}, io.BytesIO())}))
+        self.assertIsNone(s.fetch(url))
+
     def test_read_looks_up_url_then_downloads_fresh_copy(self):
         opener = Opener({
             ("GET", "https://vercel.com/api/blob/?url=data%2Fmeta.json"): json.dumps(

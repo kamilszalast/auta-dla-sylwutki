@@ -24,6 +24,40 @@ class Mem:
         self.data = obj
 
 
+class MemBlob:
+    """Like storage.Blob: head (API, fresh), fetch by URL, read/write with a content type, delete."""
+    BASE = "https://store.public.blob.vercel-storage.com/data/"
+
+    def __init__(self, head_error=None, delete_error=None):
+        self.files, self.writes, self.deleted, self.misses = {}, [], [], 0
+        self.head_error, self.delete_error = head_error, delete_error
+
+    def head(self, name):
+        if self.head_error:
+            raise self.head_error
+        return {"contentType": self.files[name][1], "url": self.BASE + name} if name in self.files else None
+
+    def fetch(self, url):
+        if self.misses:  # the version was replaced between head and fetch
+            self.misses -= 1
+            return None
+        return self.read(url[len(self.BASE):], None)
+
+    def read(self, name, default):
+        return self.files[name][0] if name in self.files else default
+
+    def write(self, name, obj, content_type="application/json; charset=utf-8"):
+        self.writes.append(name)
+        self.files[name] = (obj, content_type)
+
+    def delete(self, names):
+        if self.delete_error:
+            raise self.delete_error
+        self.deleted += names
+        for n in names:
+            self.files.pop(n, None)
+
+
 def post(storage, req, given=KEY, key=KEY, today="2026-11-23"):
     code, body, _ = watch.post_response(storage, key, given, json.dumps(req).encode(), today)
     return code, json.loads(body)
@@ -114,6 +148,54 @@ class ResponsesTest(unittest.TestCase):
         self.assertEqual(code, 400)
         self.assertEqual(post(mem, {"op": "add", "item": dict(CAR, url="https://evil.example/")})[0], 400)
         self.assertEqual(mem.writes, [])
+
+    def test_on_blob_each_change_is_a_new_version_behind_the_pointer(self):
+        blob = MemBlob()
+        post(blob, {"op": "add", "item": CAR})
+        first, pointer = blob.writes
+        self.assertRegex(first, r"^watch/v/\d{13}-[0-9a-f]{6}\.json$")
+        self.assertEqual(pointer, "watch.json")
+        self.assertTrue(blob.files[pointer][1].endswith("; version=" + first[len("watch/v/"):-len(".json")]))
+        post(blob, {"op": "add", "item": dict(CAR, id="otomoto:2")})
+        self.assertEqual(blob.deleted, [first])
+        self.assertEqual([i["id"] for i in watch.read_items(blob)[0]], [CAR["id"], "otomoto:2"])
+        self.assertEqual(json.loads(watch.get_response(blob, KEY, None)[1])["items"], watch.read_items(blob)[0])
+
+    def test_adding_a_watched_car_again_writes_nothing(self):
+        blob = MemBlob()
+        post(blob, {"op": "add", "item": CAR})
+        n = len(blob.writes)
+        self.assertEqual(post(blob, {"op": "add", "item": CAR})[0], 200)
+        self.assertEqual(len(blob.writes), n)
+
+    def test_a_version_replaced_between_head_and_fetch_is_read_again(self):
+        blob = MemBlob()
+        post(blob, {"op": "add", "item": CAR})
+        blob.misses = 1
+        self.assertEqual([i["id"] for i in watch.read_items(blob)[0]], [CAR["id"]])
+
+    def test_a_failed_delete_does_not_fail_the_change(self):
+        blob = MemBlob(delete_error=StorageError("Blob: usunięcie nie udało się"))
+        post(blob, {"op": "add", "item": CAR})
+        code, body = post(blob, {"op": "add", "item": dict(CAR, id="otomoto:2")})
+        self.assertEqual((code, [i["id"] for i in body["items"]]), (200, [CAR["id"], "otomoto:2"]))
+        self.assertEqual([i["id"] for i in watch.read_items(blob)[0]], [CAR["id"], "otomoto:2"])
+
+    def test_a_pointer_without_a_version_is_the_older_one_file_list(self):
+        blob = MemBlob()
+        blob.files["watch.json"] = ({"items": [dict(CAR, added="2026-11-20")]}, "application/json; charset=utf-8")
+        self.assertEqual(watch.read_items(blob), ([dict(CAR, added="2026-11-20")], None))
+        post(blob, {"op": "add", "item": dict(CAR, id="otomoto:2")})
+        self.assertEqual([i["id"] for i in watch.read_items(blob)[0]], [CAR["id"], "otomoto:2"])
+        blob.files["watch.json"] = ({}, "application/json; charset=utf-8")
+        with self.assertRaises(StorageError):
+            watch.read_items(blob)
+
+    def test_blob_head_error_is_502_and_nothing_is_saved(self):
+        blob = MemBlob(head_error=StorageError("Blob: odczyt nie udał się"))
+        self.assertEqual(watch.get_response(blob, KEY, None)[0], 502)
+        self.assertEqual(post(blob, {"op": "add", "item": CAR})[0], 502)
+        self.assertEqual(blob.writes, [])
 
     def test_storage_error_is_502(self):
         self.assertEqual(watch.get_response(Mem(fail=True), KEY, None)[0], 502)

@@ -1,4 +1,4 @@
-"""The shared watch list: GET/POST /api/watch on Vercel Blob (data/watch.json). Logic: scraper/watch.py.
+"""The shared watch list: GET/POST /api/watch on Vercel Blob (data/watch.json + data/watch/v/). Logic: scraper/watch.py.
 
 Vercel project environment variable WATCH_KEY: the key in the edit link (?edycja=<WATCH_KEY>)."""
 import os
